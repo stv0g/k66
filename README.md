@@ -1,4 +1,3 @@
-[![Build Status](https://dev.azure.com/stefanhoelzl/k64/_apis/build/status/stefanhoelzl.k64?branchName=master)](https://dev.azure.com/stefanhoelzl/k64/_build/latest?definitionId=1&branchName=master)
 [![Crates.io](https://img.shields.io/crates/v/k64.svg)](https://crates.io/crates/k64)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
