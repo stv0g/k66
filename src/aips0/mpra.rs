@@ -42,6 +42,147 @@ impl super::MPRA {
         self.write(|w| w)
     }
 }
+#[doc = "Possible values of the field `MPL6`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum MPL6R {
+    #[doc = "Accesses from this master are forced to user-mode."]
+    _0,
+    #[doc = "Accesses from this master are not forced to user-mode."]
+    _1,
+}
+impl MPL6R {
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            MPL6R::_0 => false,
+            MPL6R::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> MPL6R {
+        match value {
+            false => MPL6R::_0,
+            true => MPL6R::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == MPL6R::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == MPL6R::_1
+    }
+}
+#[doc = "Possible values of the field `MTW6`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum MTW6R {
+    #[doc = "This master is not trusted for write accesses."]
+    _0,
+    #[doc = "This master is trusted for write accesses."]
+    _1,
+}
+impl MTW6R {
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            MTW6R::_0 => false,
+            MTW6R::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> MTW6R {
+        match value {
+            false => MTW6R::_0,
+            true => MTW6R::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == MTW6R::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == MTW6R::_1
+    }
+}
+#[doc = "Possible values of the field `MTR6`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum MTR6R {
+    #[doc = "This master is not trusted for read accesses."]
+    _0,
+    #[doc = "This master is trusted for read accesses."]
+    _1,
+}
+impl MTR6R {
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            MTR6R::_0 => false,
+            MTR6R::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> MTR6R {
+        match value {
+            false => MTR6R::_0,
+            true => MTR6R::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == MTR6R::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == MTR6R::_1
+    }
+}
 #[doc = "Possible values of the field `MPL5`"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum MPL5R {
@@ -886,6 +1027,180 @@ impl MTR0R {
     #[inline]
     pub fn is_1(&self) -> bool {
         *self == MTR0R::_1
+    }
+}
+#[doc = "Values that can be written to the field `MPL6`"]
+pub enum MPL6W {
+    #[doc = "Accesses from this master are forced to user-mode."]
+    _0,
+    #[doc = "Accesses from this master are not forced to user-mode."]
+    _1,
+}
+impl MPL6W {
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _bits(&self) -> bool {
+        match *self {
+            MPL6W::_0 => false,
+            MPL6W::_1 => true,
+        }
+    }
+}
+#[doc = r" Proxy"]
+pub struct _MPL6W<'a> {
+    w: &'a mut W,
+}
+impl<'a> _MPL6W<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: MPL6W) -> &'a mut W {
+        {
+            self.bit(variant._bits())
+        }
+    }
+    #[doc = "Accesses from this master are forced to user-mode."]
+    #[inline]
+    pub fn _0(self) -> &'a mut W {
+        self.variant(MPL6W::_0)
+    }
+    #[doc = "Accesses from this master are not forced to user-mode."]
+    #[inline]
+    pub fn _1(self) -> &'a mut W {
+        self.variant(MPL6W::_1)
+    }
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 4;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = "Values that can be written to the field `MTW6`"]
+pub enum MTW6W {
+    #[doc = "This master is not trusted for write accesses."]
+    _0,
+    #[doc = "This master is trusted for write accesses."]
+    _1,
+}
+impl MTW6W {
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _bits(&self) -> bool {
+        match *self {
+            MTW6W::_0 => false,
+            MTW6W::_1 => true,
+        }
+    }
+}
+#[doc = r" Proxy"]
+pub struct _MTW6W<'a> {
+    w: &'a mut W,
+}
+impl<'a> _MTW6W<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: MTW6W) -> &'a mut W {
+        {
+            self.bit(variant._bits())
+        }
+    }
+    #[doc = "This master is not trusted for write accesses."]
+    #[inline]
+    pub fn _0(self) -> &'a mut W {
+        self.variant(MTW6W::_0)
+    }
+    #[doc = "This master is trusted for write accesses."]
+    #[inline]
+    pub fn _1(self) -> &'a mut W {
+        self.variant(MTW6W::_1)
+    }
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 5;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = "Values that can be written to the field `MTR6`"]
+pub enum MTR6W {
+    #[doc = "This master is not trusted for read accesses."]
+    _0,
+    #[doc = "This master is trusted for read accesses."]
+    _1,
+}
+impl MTR6W {
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _bits(&self) -> bool {
+        match *self {
+            MTR6W::_0 => false,
+            MTR6W::_1 => true,
+        }
+    }
+}
+#[doc = r" Proxy"]
+pub struct _MTR6W<'a> {
+    w: &'a mut W,
+}
+impl<'a> _MTR6W<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: MTR6W) -> &'a mut W {
+        {
+            self.bit(variant._bits())
+        }
+    }
+    #[doc = "This master is not trusted for read accesses."]
+    #[inline]
+    pub fn _0(self) -> &'a mut W {
+        self.variant(MTR6W::_0)
+    }
+    #[doc = "This master is trusted for read accesses."]
+    #[inline]
+    pub fn _1(self) -> &'a mut W {
+        self.variant(MTR6W::_1)
+    }
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 6;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
     }
 }
 #[doc = "Values that can be written to the field `MPL5`"]
@@ -1938,6 +2253,33 @@ impl R {
     pub fn bits(&self) -> u32 {
         self.bits
     }
+    #[doc = "Bit 4 - Master 6 Privilege Level"]
+    #[inline]
+    pub fn mpl6(&self) -> MPL6R {
+        MPL6R::_from({
+            const MASK: bool = true;
+            const OFFSET: u8 = 4;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        })
+    }
+    #[doc = "Bit 5 - Master 6 Trusted for Writes"]
+    #[inline]
+    pub fn mtw6(&self) -> MTW6R {
+        MTW6R::_from({
+            const MASK: bool = true;
+            const OFFSET: u8 = 5;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        })
+    }
+    #[doc = "Bit 6 - Master 6 Trusted for Read"]
+    #[inline]
+    pub fn mtr6(&self) -> MTR6R {
+        MTR6R::_from({
+            const MASK: bool = true;
+            const OFFSET: u8 = 6;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        })
+    }
     #[doc = "Bit 8 - Master 5 Privilege Level"]
     #[inline]
     pub fn mpl5(&self) -> MPL5R {
@@ -2112,6 +2454,21 @@ impl W {
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;
         self
+    }
+    #[doc = "Bit 4 - Master 6 Privilege Level"]
+    #[inline]
+    pub fn mpl6(&mut self) -> _MPL6W {
+        _MPL6W { w: self }
+    }
+    #[doc = "Bit 5 - Master 6 Trusted for Writes"]
+    #[inline]
+    pub fn mtw6(&mut self) -> _MTW6W {
+        _MTW6W { w: self }
+    }
+    #[doc = "Bit 6 - Master 6 Trusted for Read"]
+    #[inline]
+    pub fn mtr6(&mut self) -> _MTR6W {
+        _MTR6W { w: self }
     }
     #[doc = "Bit 8 - Master 5 Privilege Level"]
     #[inline]

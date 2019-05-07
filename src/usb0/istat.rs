@@ -168,16 +168,15 @@ impl RESUMER {
         self.bit()
     }
 }
-#[doc = r" Value of the field"]
-pub struct ATTACHR {
-    bits: bool,
+#[doc = "Possible values of the field `ATTACH`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum ATTACHR {
+    #[doc = "No Attach is detected since the last time the ATTACH bit was cleared."]
+    _0,
+    #[doc = "A peripheral is now present and must be configured (a stable non-SE0 state is detected for more than 2.5 us)."]
+    _1,
 }
 impl ATTACHR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
     #[doc = r" Returns `true` if the bit is clear (0)"]
     #[inline]
     pub fn bit_is_clear(&self) -> bool {
@@ -187,6 +186,33 @@ impl ATTACHR {
     #[inline]
     pub fn bit_is_set(&self) -> bool {
         self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            ATTACHR::_0 => false,
+            ATTACHR::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> ATTACHR {
+        match value {
+            false => ATTACHR::_0,
+            true => ATTACHR::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == ATTACHR::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == ATTACHR::_1
     }
 }
 #[doc = r" Value of the field"]
@@ -348,11 +374,46 @@ impl<'a> _RESUMEW<'a> {
         self.w
     }
 }
+#[doc = "Values that can be written to the field `ATTACH`"]
+pub enum ATTACHW {
+    #[doc = "No Attach is detected since the last time the ATTACH bit was cleared."]
+    _0,
+    #[doc = "A peripheral is now present and must be configured (a stable non-SE0 state is detected for more than 2.5 us)."]
+    _1,
+}
+impl ATTACHW {
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _bits(&self) -> bool {
+        match *self {
+            ATTACHW::_0 => false,
+            ATTACHW::_1 => true,
+        }
+    }
+}
 #[doc = r" Proxy"]
 pub struct _ATTACHW<'a> {
     w: &'a mut W,
 }
 impl<'a> _ATTACHW<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: ATTACHW) -> &'a mut W {
+        {
+            self.bit(variant._bits())
+        }
+    }
+    #[doc = "No Attach is detected since the last time the ATTACH bit was cleared."]
+    #[inline]
+    pub fn _0(self) -> &'a mut W {
+        self.variant(ATTACHW::_0)
+    }
+    #[doc = "A peripheral is now present and must be configured (a stable non-SE0 state is detected for more than 2.5 us)."]
+    #[inline]
+    pub fn _1(self) -> &'a mut W {
+        self.variant(ATTACHW::_1)
+    }
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
@@ -463,12 +524,11 @@ impl R {
     #[doc = "Bit 6 - Attach Interrupt"]
     #[inline]
     pub fn attach(&self) -> ATTACHR {
-        let bits = {
+        ATTACHR::_from({
             const MASK: bool = true;
             const OFFSET: u8 = 6;
             ((self.bits >> OFFSET) & MASK as u8) != 0
-        };
-        ATTACHR { bits }
+        })
     }
     #[doc = "Bit 7 - Stall Interrupt"]
     #[inline]

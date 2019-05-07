@@ -74,7 +74,7 @@ impl R {
     pub fn bits(&self) -> u8 {
         self.bits
     }
-    #[doc = "Bits 0:7 - Controls the lower mark periods of the modulator for all modes."]
+    #[doc = "Bits 0:7 - MB\\[7:0\\]"]
     #[inline]
     pub fn mb(&self) -> MBR {
         let bits = {
@@ -97,7 +97,7 @@ impl W {
         self.bits = bits;
         self
     }
-    #[doc = "Bits 0:7 - Controls the lower mark periods of the modulator for all modes."]
+    #[doc = "Bits 0:7 - MB\\[7:0\\]"]
     #[inline]
     pub fn mb(&mut self) -> _MBW {
         _MBW { w: self }

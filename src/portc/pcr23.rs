@@ -466,23 +466,23 @@ impl LKR {
 #[doc = "Possible values of the field `IRQC`"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum IRQCR {
-    #[doc = "Interrupt/DMA request disabled."]
+    #[doc = "Interrupt Status Flag (ISF) is disabled."]
     _0000,
-    #[doc = "DMA request on rising edge."]
+    #[doc = "ISF flag and DMA request on rising edge."]
     _0001,
-    #[doc = "DMA request on falling edge."]
+    #[doc = "ISF flag and DMA request on falling edge."]
     _0010,
-    #[doc = "DMA request on either edge."]
+    #[doc = "ISF flag and DMA request on either edge."]
     _0011,
-    #[doc = "Interrupt when logic 0."]
+    #[doc = "ISF flag and Interrupt when logic 0."]
     _1000,
-    #[doc = "Interrupt on rising-edge."]
+    #[doc = "ISF flag and Interrupt on rising-edge."]
     _1001,
-    #[doc = "Interrupt on falling-edge."]
+    #[doc = "ISF flag and Interrupt on falling-edge."]
     _1010,
-    #[doc = "Interrupt on either edge."]
+    #[doc = "ISF flag and Interrupt on either edge."]
     _1011,
-    #[doc = "Interrupt when logic 1."]
+    #[doc = "ISF flag and Interrupt when logic 1."]
     _1100,
     #[doc = r" Reserved"]
     _Reserved(u8),
@@ -772,23 +772,23 @@ impl<'a> _LKW<'a> {
 }
 #[doc = "Values that can be written to the field `IRQC`"]
 pub enum IRQCW {
-    #[doc = "Interrupt/DMA request disabled."]
+    #[doc = "Interrupt Status Flag (ISF) is disabled."]
     _0000,
-    #[doc = "DMA request on rising edge."]
+    #[doc = "ISF flag and DMA request on rising edge."]
     _0001,
-    #[doc = "DMA request on falling edge."]
+    #[doc = "ISF flag and DMA request on falling edge."]
     _0010,
-    #[doc = "DMA request on either edge."]
+    #[doc = "ISF flag and DMA request on either edge."]
     _0011,
-    #[doc = "Interrupt when logic 0."]
+    #[doc = "ISF flag and Interrupt when logic 0."]
     _1000,
-    #[doc = "Interrupt on rising-edge."]
+    #[doc = "ISF flag and Interrupt on rising-edge."]
     _1001,
-    #[doc = "Interrupt on falling-edge."]
+    #[doc = "ISF flag and Interrupt on falling-edge."]
     _1010,
-    #[doc = "Interrupt on either edge."]
+    #[doc = "ISF flag and Interrupt on either edge."]
     _1011,
-    #[doc = "Interrupt when logic 1."]
+    #[doc = "ISF flag and Interrupt when logic 1."]
     _1100,
 }
 impl IRQCW {
@@ -819,47 +819,47 @@ impl<'a> _IRQCW<'a> {
     pub fn variant(self, variant: IRQCW) -> &'a mut W {
         unsafe { self.bits(variant._bits()) }
     }
-    #[doc = "Interrupt/DMA request disabled."]
+    #[doc = "Interrupt Status Flag (ISF) is disabled."]
     #[inline]
     pub fn _0000(self) -> &'a mut W {
         self.variant(IRQCW::_0000)
     }
-    #[doc = "DMA request on rising edge."]
+    #[doc = "ISF flag and DMA request on rising edge."]
     #[inline]
     pub fn _0001(self) -> &'a mut W {
         self.variant(IRQCW::_0001)
     }
-    #[doc = "DMA request on falling edge."]
+    #[doc = "ISF flag and DMA request on falling edge."]
     #[inline]
     pub fn _0010(self) -> &'a mut W {
         self.variant(IRQCW::_0010)
     }
-    #[doc = "DMA request on either edge."]
+    #[doc = "ISF flag and DMA request on either edge."]
     #[inline]
     pub fn _0011(self) -> &'a mut W {
         self.variant(IRQCW::_0011)
     }
-    #[doc = "Interrupt when logic 0."]
+    #[doc = "ISF flag and Interrupt when logic 0."]
     #[inline]
     pub fn _1000(self) -> &'a mut W {
         self.variant(IRQCW::_1000)
     }
-    #[doc = "Interrupt on rising-edge."]
+    #[doc = "ISF flag and Interrupt on rising-edge."]
     #[inline]
     pub fn _1001(self) -> &'a mut W {
         self.variant(IRQCW::_1001)
     }
-    #[doc = "Interrupt on falling-edge."]
+    #[doc = "ISF flag and Interrupt on falling-edge."]
     #[inline]
     pub fn _1010(self) -> &'a mut W {
         self.variant(IRQCW::_1010)
     }
-    #[doc = "Interrupt on either edge."]
+    #[doc = "ISF flag and Interrupt on either edge."]
     #[inline]
     pub fn _1011(self) -> &'a mut W {
         self.variant(IRQCW::_1011)
     }
-    #[doc = "Interrupt when logic 1."]
+    #[doc = "ISF flag and Interrupt when logic 1."]
     #[inline]
     pub fn _1100(self) -> &'a mut W {
         self.variant(IRQCW::_1100)

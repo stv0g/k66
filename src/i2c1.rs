@@ -13,7 +13,7 @@ pub struct RegisterBlock {
     pub d: D,
     #[doc = "0x05 - I2C Control Register 2"]
     pub c2: C2,
-    #[doc = "0x06 - I2C Programmable Input Glitch Filter register"]
+    #[doc = "0x06 - I2C Programmable Input Glitch Filter Register"]
     pub flt: FLT,
     #[doc = "0x07 - I2C Range Address register"]
     pub ra: RA,
@@ -62,11 +62,11 @@ pub struct C2 {
 }
 #[doc = "I2C Control Register 2"]
 pub mod c2;
-#[doc = "I2C Programmable Input Glitch Filter register"]
+#[doc = "I2C Programmable Input Glitch Filter Register"]
 pub struct FLT {
     register: ::vcell::VolatileCell<u8>,
 }
-#[doc = "I2C Programmable Input Glitch Filter register"]
+#[doc = "I2C Programmable Input Glitch Filter Register"]
 pub mod flt;
 #[doc = "I2C Range Address register"]
 pub struct RA {

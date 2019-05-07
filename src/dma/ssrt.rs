@@ -22,7 +22,7 @@ impl<'a> _SSRTW<'a> {
     #[doc = r" Writes raw bits to the field"]
     #[inline]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 15;
+        const MASK: u8 = 31;
         const OFFSET: u8 = 0;
         self.w.bits &= !((MASK as u8) << OFFSET);
         self.w.bits |= ((value & MASK) as u8) << OFFSET;
@@ -157,7 +157,7 @@ impl W {
         self.bits = bits;
         self
     }
-    #[doc = "Bits 0:3 - Set START Bit"]
+    #[doc = "Bits 0:4 - Set START Bit"]
     #[inline]
     pub fn ssrt(&mut self) -> _SSRTW {
         _SSRTW { w: self }

@@ -150,9 +150,9 @@ impl RXEDGIER {
 #[doc = "Possible values of the field `LBKDIE`"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum LBKDIER {
-    #[doc = "LBKDIF interrupt and DMA transfer requests disabled."]
+    #[doc = "LBKDIF interrupt requests disabled."]
     _0,
-    #[doc = "LBKDIF interrupt or DMA transfer requests enabled."]
+    #[doc = "LBKDIF interrupt requests enabled."]
     _1,
 }
 impl LBKDIER {
@@ -327,9 +327,9 @@ impl<'a> _RXEDGIEW<'a> {
 }
 #[doc = "Values that can be written to the field `LBKDIE`"]
 pub enum LBKDIEW {
-    #[doc = "LBKDIF interrupt and DMA transfer requests disabled."]
+    #[doc = "LBKDIF interrupt requests disabled."]
     _0,
-    #[doc = "LBKDIF interrupt or DMA transfer requests enabled."]
+    #[doc = "LBKDIF interrupt requests enabled."]
     _1,
 }
 impl LBKDIEW {
@@ -355,12 +355,12 @@ impl<'a> _LBKDIEW<'a> {
             self.bit(variant._bits())
         }
     }
-    #[doc = "LBKDIF interrupt and DMA transfer requests disabled."]
+    #[doc = "LBKDIF interrupt requests disabled."]
     #[inline]
     pub fn _0(self) -> &'a mut W {
         self.variant(LBKDIEW::_0)
     }
-    #[doc = "LBKDIF interrupt or DMA transfer requests enabled."]
+    #[doc = "LBKDIF interrupt requests enabled."]
     #[inline]
     pub fn _1(self) -> &'a mut W {
         self.variant(LBKDIEW::_1)
@@ -417,7 +417,7 @@ impl R {
             ((self.bits >> OFFSET) & MASK as u8) != 0
         })
     }
-    #[doc = "Bit 7 - LIN Break Detect Interrupt or DMA Request Enable"]
+    #[doc = "Bit 7 - LIN Break Detect Interrupt Enable"]
     #[inline]
     pub fn lbkdie(&self) -> LBKDIER {
         LBKDIER::_from({
@@ -454,7 +454,7 @@ impl W {
     pub fn rxedgie(&mut self) -> _RXEDGIEW {
         _RXEDGIEW { w: self }
     }
-    #[doc = "Bit 7 - LIN Break Detect Interrupt or DMA Request Enable"]
+    #[doc = "Bit 7 - LIN Break Detect Interrupt Enable"]
     #[inline]
     pub fn lbkdie(&mut self) -> _LBKDIEW {
         _LBKDIEW { w: self }

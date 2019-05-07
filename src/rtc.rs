@@ -17,7 +17,15 @@ pub struct RegisterBlock {
     pub lr: LR,
     #[doc = "0x1c - RTC Interrupt Enable Register"]
     pub ier: IER,
-    _reserved0: [u8; 2016usize],
+    #[doc = "0x20 - RTC Tamper Time Seconds Register"]
+    pub ttsr: TTSR,
+    #[doc = "0x24 - RTC Monotonic Enable Register"]
+    pub mer: MER,
+    #[doc = "0x28 - RTC Monotonic Counter Low Register"]
+    pub mclr: MCLR,
+    #[doc = "0x2c - RTC Monotonic Counter High Register"]
+    pub mchr: MCHR,
+    _reserved0: [u8; 2000usize],
     #[doc = "0x800 - RTC Write Access Register"]
     pub war: WAR,
     #[doc = "0x804 - RTC Read Access Register"]
@@ -71,6 +79,30 @@ pub struct IER {
 }
 #[doc = "RTC Interrupt Enable Register"]
 pub mod ier;
+#[doc = "RTC Tamper Time Seconds Register"]
+pub struct TTSR {
+    register: ::vcell::VolatileCell<u32>,
+}
+#[doc = "RTC Tamper Time Seconds Register"]
+pub mod ttsr;
+#[doc = "RTC Monotonic Enable Register"]
+pub struct MER {
+    register: ::vcell::VolatileCell<u32>,
+}
+#[doc = "RTC Monotonic Enable Register"]
+pub mod mer;
+#[doc = "RTC Monotonic Counter Low Register"]
+pub struct MCLR {
+    register: ::vcell::VolatileCell<u32>,
+}
+#[doc = "RTC Monotonic Counter Low Register"]
+pub mod mclr;
+#[doc = "RTC Monotonic Counter High Register"]
+pub struct MCHR {
+    register: ::vcell::VolatileCell<u32>,
+}
+#[doc = "RTC Monotonic Counter High Register"]
+pub mod mchr;
 #[doc = "RTC Write Access Register"]
 pub struct WAR {
     register: ::vcell::VolatileCell<u32>,

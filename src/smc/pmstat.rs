@@ -28,11 +28,11 @@ impl R {
     pub fn bits(&self) -> u8 {
         self.bits
     }
-    #[doc = "Bits 0:6 - When debug is enabled, the PMSTAT will not update to STOP or VLPS"]
+    #[doc = "Bits 0:7 - Power Mode Status"]
     #[inline]
     pub fn pmstat(&self) -> PMSTATR {
         let bits = {
-            const MASK: u8 = 127;
+            const MASK: u8 = 255;
             const OFFSET: u8 = 0;
             ((self.bits >> OFFSET) & MASK as u8) as u8
         };

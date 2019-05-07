@@ -28,7 +28,7 @@ impl R {
     pub fn bits(&self) -> u32 {
         self.bits
     }
-    #[doc = "Bits 0:15 - Packet count"]
+    #[doc = "Bits 0:15 - Number of 256- to 511-byte transmit packets"]
     #[inline]
     pub fn txpkts(&self) -> TXPKTSR {
         let bits = {

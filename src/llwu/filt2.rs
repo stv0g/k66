@@ -46,9 +46,9 @@ impl super::FILT2 {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum FILTSELR {
     #[doc = "Select LLWU_P0 for filter"]
-    _0000,
-    #[doc = "Select LLWU_P15 for filter"]
-    _1111,
+    _00000,
+    #[doc = "Select LLWU_P31 for filter"]
+    _11111,
     #[doc = r" Reserved"]
     _Reserved(u8),
 }
@@ -57,8 +57,8 @@ impl FILTSELR {
     #[inline]
     pub fn bits(&self) -> u8 {
         match *self {
-            FILTSELR::_0000 => 0,
-            FILTSELR::_1111 => 15,
+            FILTSELR::_00000 => 0,
+            FILTSELR::_11111 => 31,
             FILTSELR::_Reserved(bits) => bits,
         }
     }
@@ -67,20 +67,20 @@ impl FILTSELR {
     #[inline]
     pub fn _from(value: u8) -> FILTSELR {
         match value {
-            0 => FILTSELR::_0000,
-            15 => FILTSELR::_1111,
+            0 => FILTSELR::_00000,
+            31 => FILTSELR::_11111,
             i => FILTSELR::_Reserved(i),
         }
     }
-    #[doc = "Checks if the value of the field is `_0000`"]
+    #[doc = "Checks if the value of the field is `_00000`"]
     #[inline]
-    pub fn is_0000(&self) -> bool {
-        *self == FILTSELR::_0000
+    pub fn is_00000(&self) -> bool {
+        *self == FILTSELR::_00000
     }
-    #[doc = "Checks if the value of the field is `_1111`"]
+    #[doc = "Checks if the value of the field is `_11111`"]
     #[inline]
-    pub fn is_1111(&self) -> bool {
-        *self == FILTSELR::_1111
+    pub fn is_11111(&self) -> bool {
+        *self == FILTSELR::_11111
     }
 }
 #[doc = "Possible values of the field `FILTE`"]
@@ -189,9 +189,9 @@ impl FILTFR {
 #[doc = "Values that can be written to the field `FILTSEL`"]
 pub enum FILTSELW {
     #[doc = "Select LLWU_P0 for filter"]
-    _0000,
-    #[doc = "Select LLWU_P15 for filter"]
-    _1111,
+    _00000,
+    #[doc = "Select LLWU_P31 for filter"]
+    _11111,
 }
 impl FILTSELW {
     #[allow(missing_docs)]
@@ -199,8 +199,8 @@ impl FILTSELW {
     #[inline]
     pub fn _bits(&self) -> u8 {
         match *self {
-            FILTSELW::_0000 => 0,
-            FILTSELW::_1111 => 15,
+            FILTSELW::_00000 => 0,
+            FILTSELW::_11111 => 31,
         }
     }
 }
@@ -216,18 +216,18 @@ impl<'a> _FILTSELW<'a> {
     }
     #[doc = "Select LLWU_P0 for filter"]
     #[inline]
-    pub fn _0000(self) -> &'a mut W {
-        self.variant(FILTSELW::_0000)
+    pub fn _00000(self) -> &'a mut W {
+        self.variant(FILTSELW::_00000)
     }
-    #[doc = "Select LLWU_P15 for filter"]
+    #[doc = "Select LLWU_P31 for filter"]
     #[inline]
-    pub fn _1111(self) -> &'a mut W {
-        self.variant(FILTSELW::_1111)
+    pub fn _11111(self) -> &'a mut W {
+        self.variant(FILTSELW::_11111)
     }
     #[doc = r" Writes raw bits to the field"]
     #[inline]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 15;
+        const MASK: u8 = 31;
         const OFFSET: u8 = 0;
         self.w.bits &= !((MASK as u8) << OFFSET);
         self.w.bits |= ((value & MASK) as u8) << OFFSET;
@@ -364,11 +364,11 @@ impl R {
     pub fn bits(&self) -> u8 {
         self.bits
     }
-    #[doc = "Bits 0:3 - Filter Pin Select"]
+    #[doc = "Bits 0:4 - Filter Pin Select"]
     #[inline]
     pub fn filtsel(&self) -> FILTSELR {
         FILTSELR::_from({
-            const MASK: u8 = 15;
+            const MASK: u8 = 31;
             const OFFSET: u8 = 0;
             ((self.bits >> OFFSET) & MASK as u8) as u8
         })
@@ -404,7 +404,7 @@ impl W {
         self.bits = bits;
         self
     }
-    #[doc = "Bits 0:3 - Filter Pin Select"]
+    #[doc = "Bits 0:4 - Filter Pin Select"]
     #[inline]
     pub fn filtsel(&mut self) -> _FILTSELW {
         _FILTSELW { w: self }

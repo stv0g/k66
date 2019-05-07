@@ -284,7 +284,7 @@ pub enum PFSIZER {
     _1011,
     #[doc = "1024 KB of program flash memory"]
     _1101,
-    #[doc = "1024 KB of program flash memory"]
+    #[doc = "2048 KB of program flash memory"]
     _1111,
     #[doc = r" Reserved"]
     _Reserved(u8),
@@ -370,7 +370,7 @@ pub enum NVMSIZER {
     _1001,
     #[doc = "512 KB of FlexNVM"]
     _1011,
-    #[doc = "512 KB of FlexNVM"]
+    #[doc = "256 KB of FlexNVM"]
     _1111,
     #[doc = r" Reserved"]
     _Reserved(u8),

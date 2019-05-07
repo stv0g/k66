@@ -403,7 +403,7 @@ impl ERRCHNR {
 pub enum CPER {
     #[doc = "No channel priority error"]
     _0,
-    #[doc = "The last recorded error was a configuration error in the channel priorities . Channel priorities are not unique."]
+    #[doc = "The last recorded error was a configuration error in the channel priorities within a group. Channel priorities within a group are not unique."]
     _1,
 }
 impl CPER {
@@ -443,6 +443,53 @@ impl CPER {
     #[inline]
     pub fn is_1(&self) -> bool {
         *self == CPER::_1
+    }
+}
+#[doc = "Possible values of the field `GPE`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum GPER {
+    #[doc = "No group priority error"]
+    _0,
+    #[doc = "The last recorded error was a configuration error among the group priorities. All group priorities are not unique."]
+    _1,
+}
+impl GPER {
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            GPER::_0 => false,
+            GPER::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> GPER {
+        match value {
+            false => GPER::_0,
+            true => GPER::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == GPER::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == GPER::_1
     }
 }
 #[doc = "Possible values of the field `ECX`"]
@@ -495,9 +542,9 @@ impl ECXR {
 #[doc = "Possible values of the field `VLD`"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum VLDR {
-    #[doc = "No ERR bits are set"]
+    #[doc = "No ERR bits are set."]
     _0,
-    #[doc = "At least one ERR bit is set indicating a valid error exists that has not been cleared"]
+    #[doc = "At least one ERR bit is set indicating a valid error exists that has not been cleared."]
     _1,
 }
 impl VLDR {
@@ -617,11 +664,11 @@ impl R {
             ((self.bits >> OFFSET) & MASK as u32) != 0
         })
     }
-    #[doc = "Bits 8:11 - Error Channel Number or Canceled Channel Number"]
+    #[doc = "Bits 8:12 - Error Channel Number or Canceled Channel Number"]
     #[inline]
     pub fn errchn(&self) -> ERRCHNR {
         let bits = {
-            const MASK: u8 = 15;
+            const MASK: u8 = 31;
             const OFFSET: u8 = 8;
             ((self.bits >> OFFSET) & MASK as u32) as u8
         };
@@ -633,6 +680,15 @@ impl R {
         CPER::_from({
             const MASK: bool = true;
             const OFFSET: u8 = 14;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        })
+    }
+    #[doc = "Bit 15 - Group Priority Error"]
+    #[inline]
+    pub fn gpe(&self) -> GPER {
+        GPER::_from({
+            const MASK: bool = true;
+            const OFFSET: u8 = 15;
             ((self.bits >> OFFSET) & MASK as u32) != 0
         })
     }

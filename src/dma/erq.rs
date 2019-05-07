@@ -794,6 +794,758 @@ impl ERQ15R {
         *self == ERQ15R::_1
     }
 }
+#[doc = "Possible values of the field `ERQ16`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum ERQ16R {
+    #[doc = "The DMA request signal for the corresponding channel is disabled"]
+    _0,
+    #[doc = "The DMA request signal for the corresponding channel is enabled"]
+    _1,
+}
+impl ERQ16R {
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            ERQ16R::_0 => false,
+            ERQ16R::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> ERQ16R {
+        match value {
+            false => ERQ16R::_0,
+            true => ERQ16R::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == ERQ16R::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == ERQ16R::_1
+    }
+}
+#[doc = "Possible values of the field `ERQ17`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum ERQ17R {
+    #[doc = "The DMA request signal for the corresponding channel is disabled"]
+    _0,
+    #[doc = "The DMA request signal for the corresponding channel is enabled"]
+    _1,
+}
+impl ERQ17R {
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            ERQ17R::_0 => false,
+            ERQ17R::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> ERQ17R {
+        match value {
+            false => ERQ17R::_0,
+            true => ERQ17R::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == ERQ17R::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == ERQ17R::_1
+    }
+}
+#[doc = "Possible values of the field `ERQ18`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum ERQ18R {
+    #[doc = "The DMA request signal for the corresponding channel is disabled"]
+    _0,
+    #[doc = "The DMA request signal for the corresponding channel is enabled"]
+    _1,
+}
+impl ERQ18R {
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            ERQ18R::_0 => false,
+            ERQ18R::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> ERQ18R {
+        match value {
+            false => ERQ18R::_0,
+            true => ERQ18R::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == ERQ18R::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == ERQ18R::_1
+    }
+}
+#[doc = "Possible values of the field `ERQ19`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum ERQ19R {
+    #[doc = "The DMA request signal for the corresponding channel is disabled"]
+    _0,
+    #[doc = "The DMA request signal for the corresponding channel is enabled"]
+    _1,
+}
+impl ERQ19R {
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            ERQ19R::_0 => false,
+            ERQ19R::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> ERQ19R {
+        match value {
+            false => ERQ19R::_0,
+            true => ERQ19R::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == ERQ19R::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == ERQ19R::_1
+    }
+}
+#[doc = "Possible values of the field `ERQ20`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum ERQ20R {
+    #[doc = "The DMA request signal for the corresponding channel is disabled"]
+    _0,
+    #[doc = "The DMA request signal for the corresponding channel is enabled"]
+    _1,
+}
+impl ERQ20R {
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            ERQ20R::_0 => false,
+            ERQ20R::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> ERQ20R {
+        match value {
+            false => ERQ20R::_0,
+            true => ERQ20R::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == ERQ20R::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == ERQ20R::_1
+    }
+}
+#[doc = "Possible values of the field `ERQ21`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum ERQ21R {
+    #[doc = "The DMA request signal for the corresponding channel is disabled"]
+    _0,
+    #[doc = "The DMA request signal for the corresponding channel is enabled"]
+    _1,
+}
+impl ERQ21R {
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            ERQ21R::_0 => false,
+            ERQ21R::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> ERQ21R {
+        match value {
+            false => ERQ21R::_0,
+            true => ERQ21R::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == ERQ21R::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == ERQ21R::_1
+    }
+}
+#[doc = "Possible values of the field `ERQ22`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum ERQ22R {
+    #[doc = "The DMA request signal for the corresponding channel is disabled"]
+    _0,
+    #[doc = "The DMA request signal for the corresponding channel is enabled"]
+    _1,
+}
+impl ERQ22R {
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            ERQ22R::_0 => false,
+            ERQ22R::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> ERQ22R {
+        match value {
+            false => ERQ22R::_0,
+            true => ERQ22R::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == ERQ22R::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == ERQ22R::_1
+    }
+}
+#[doc = "Possible values of the field `ERQ23`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum ERQ23R {
+    #[doc = "The DMA request signal for the corresponding channel is disabled"]
+    _0,
+    #[doc = "The DMA request signal for the corresponding channel is enabled"]
+    _1,
+}
+impl ERQ23R {
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            ERQ23R::_0 => false,
+            ERQ23R::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> ERQ23R {
+        match value {
+            false => ERQ23R::_0,
+            true => ERQ23R::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == ERQ23R::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == ERQ23R::_1
+    }
+}
+#[doc = "Possible values of the field `ERQ24`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum ERQ24R {
+    #[doc = "The DMA request signal for the corresponding channel is disabled"]
+    _0,
+    #[doc = "The DMA request signal for the corresponding channel is enabled"]
+    _1,
+}
+impl ERQ24R {
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            ERQ24R::_0 => false,
+            ERQ24R::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> ERQ24R {
+        match value {
+            false => ERQ24R::_0,
+            true => ERQ24R::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == ERQ24R::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == ERQ24R::_1
+    }
+}
+#[doc = "Possible values of the field `ERQ25`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum ERQ25R {
+    #[doc = "The DMA request signal for the corresponding channel is disabled"]
+    _0,
+    #[doc = "The DMA request signal for the corresponding channel is enabled"]
+    _1,
+}
+impl ERQ25R {
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            ERQ25R::_0 => false,
+            ERQ25R::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> ERQ25R {
+        match value {
+            false => ERQ25R::_0,
+            true => ERQ25R::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == ERQ25R::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == ERQ25R::_1
+    }
+}
+#[doc = "Possible values of the field `ERQ26`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum ERQ26R {
+    #[doc = "The DMA request signal for the corresponding channel is disabled"]
+    _0,
+    #[doc = "The DMA request signal for the corresponding channel is enabled"]
+    _1,
+}
+impl ERQ26R {
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            ERQ26R::_0 => false,
+            ERQ26R::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> ERQ26R {
+        match value {
+            false => ERQ26R::_0,
+            true => ERQ26R::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == ERQ26R::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == ERQ26R::_1
+    }
+}
+#[doc = "Possible values of the field `ERQ27`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum ERQ27R {
+    #[doc = "The DMA request signal for the corresponding channel is disabled"]
+    _0,
+    #[doc = "The DMA request signal for the corresponding channel is enabled"]
+    _1,
+}
+impl ERQ27R {
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            ERQ27R::_0 => false,
+            ERQ27R::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> ERQ27R {
+        match value {
+            false => ERQ27R::_0,
+            true => ERQ27R::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == ERQ27R::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == ERQ27R::_1
+    }
+}
+#[doc = "Possible values of the field `ERQ28`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum ERQ28R {
+    #[doc = "The DMA request signal for the corresponding channel is disabled"]
+    _0,
+    #[doc = "The DMA request signal for the corresponding channel is enabled"]
+    _1,
+}
+impl ERQ28R {
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            ERQ28R::_0 => false,
+            ERQ28R::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> ERQ28R {
+        match value {
+            false => ERQ28R::_0,
+            true => ERQ28R::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == ERQ28R::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == ERQ28R::_1
+    }
+}
+#[doc = "Possible values of the field `ERQ29`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum ERQ29R {
+    #[doc = "The DMA request signal for the corresponding channel is disabled"]
+    _0,
+    #[doc = "The DMA request signal for the corresponding channel is enabled"]
+    _1,
+}
+impl ERQ29R {
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            ERQ29R::_0 => false,
+            ERQ29R::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> ERQ29R {
+        match value {
+            false => ERQ29R::_0,
+            true => ERQ29R::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == ERQ29R::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == ERQ29R::_1
+    }
+}
+#[doc = "Possible values of the field `ERQ30`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum ERQ30R {
+    #[doc = "The DMA request signal for the corresponding channel is disabled"]
+    _0,
+    #[doc = "The DMA request signal for the corresponding channel is enabled"]
+    _1,
+}
+impl ERQ30R {
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            ERQ30R::_0 => false,
+            ERQ30R::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> ERQ30R {
+        match value {
+            false => ERQ30R::_0,
+            true => ERQ30R::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == ERQ30R::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == ERQ30R::_1
+    }
+}
+#[doc = "Possible values of the field `ERQ31`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum ERQ31R {
+    #[doc = "The DMA request signal for the corresponding channel is disabled"]
+    _0,
+    #[doc = "The DMA request signal for the corresponding channel is enabled"]
+    _1,
+}
+impl ERQ31R {
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            ERQ31R::_0 => false,
+            ERQ31R::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> ERQ31R {
+        match value {
+            false => ERQ31R::_0,
+            true => ERQ31R::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == ERQ31R::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == ERQ31R::_1
+    }
+}
 #[doc = "Values that can be written to the field `ERQ0`"]
 pub enum ERQ0W {
     #[doc = "The DMA request signal for the corresponding channel is disabled"]
@@ -1722,6 +2474,934 @@ impl<'a> _ERQ15W<'a> {
         self.w
     }
 }
+#[doc = "Values that can be written to the field `ERQ16`"]
+pub enum ERQ16W {
+    #[doc = "The DMA request signal for the corresponding channel is disabled"]
+    _0,
+    #[doc = "The DMA request signal for the corresponding channel is enabled"]
+    _1,
+}
+impl ERQ16W {
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _bits(&self) -> bool {
+        match *self {
+            ERQ16W::_0 => false,
+            ERQ16W::_1 => true,
+        }
+    }
+}
+#[doc = r" Proxy"]
+pub struct _ERQ16W<'a> {
+    w: &'a mut W,
+}
+impl<'a> _ERQ16W<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: ERQ16W) -> &'a mut W {
+        {
+            self.bit(variant._bits())
+        }
+    }
+    #[doc = "The DMA request signal for the corresponding channel is disabled"]
+    #[inline]
+    pub fn _0(self) -> &'a mut W {
+        self.variant(ERQ16W::_0)
+    }
+    #[doc = "The DMA request signal for the corresponding channel is enabled"]
+    #[inline]
+    pub fn _1(self) -> &'a mut W {
+        self.variant(ERQ16W::_1)
+    }
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 16;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = "Values that can be written to the field `ERQ17`"]
+pub enum ERQ17W {
+    #[doc = "The DMA request signal for the corresponding channel is disabled"]
+    _0,
+    #[doc = "The DMA request signal for the corresponding channel is enabled"]
+    _1,
+}
+impl ERQ17W {
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _bits(&self) -> bool {
+        match *self {
+            ERQ17W::_0 => false,
+            ERQ17W::_1 => true,
+        }
+    }
+}
+#[doc = r" Proxy"]
+pub struct _ERQ17W<'a> {
+    w: &'a mut W,
+}
+impl<'a> _ERQ17W<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: ERQ17W) -> &'a mut W {
+        {
+            self.bit(variant._bits())
+        }
+    }
+    #[doc = "The DMA request signal for the corresponding channel is disabled"]
+    #[inline]
+    pub fn _0(self) -> &'a mut W {
+        self.variant(ERQ17W::_0)
+    }
+    #[doc = "The DMA request signal for the corresponding channel is enabled"]
+    #[inline]
+    pub fn _1(self) -> &'a mut W {
+        self.variant(ERQ17W::_1)
+    }
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 17;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = "Values that can be written to the field `ERQ18`"]
+pub enum ERQ18W {
+    #[doc = "The DMA request signal for the corresponding channel is disabled"]
+    _0,
+    #[doc = "The DMA request signal for the corresponding channel is enabled"]
+    _1,
+}
+impl ERQ18W {
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _bits(&self) -> bool {
+        match *self {
+            ERQ18W::_0 => false,
+            ERQ18W::_1 => true,
+        }
+    }
+}
+#[doc = r" Proxy"]
+pub struct _ERQ18W<'a> {
+    w: &'a mut W,
+}
+impl<'a> _ERQ18W<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: ERQ18W) -> &'a mut W {
+        {
+            self.bit(variant._bits())
+        }
+    }
+    #[doc = "The DMA request signal for the corresponding channel is disabled"]
+    #[inline]
+    pub fn _0(self) -> &'a mut W {
+        self.variant(ERQ18W::_0)
+    }
+    #[doc = "The DMA request signal for the corresponding channel is enabled"]
+    #[inline]
+    pub fn _1(self) -> &'a mut W {
+        self.variant(ERQ18W::_1)
+    }
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 18;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = "Values that can be written to the field `ERQ19`"]
+pub enum ERQ19W {
+    #[doc = "The DMA request signal for the corresponding channel is disabled"]
+    _0,
+    #[doc = "The DMA request signal for the corresponding channel is enabled"]
+    _1,
+}
+impl ERQ19W {
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _bits(&self) -> bool {
+        match *self {
+            ERQ19W::_0 => false,
+            ERQ19W::_1 => true,
+        }
+    }
+}
+#[doc = r" Proxy"]
+pub struct _ERQ19W<'a> {
+    w: &'a mut W,
+}
+impl<'a> _ERQ19W<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: ERQ19W) -> &'a mut W {
+        {
+            self.bit(variant._bits())
+        }
+    }
+    #[doc = "The DMA request signal for the corresponding channel is disabled"]
+    #[inline]
+    pub fn _0(self) -> &'a mut W {
+        self.variant(ERQ19W::_0)
+    }
+    #[doc = "The DMA request signal for the corresponding channel is enabled"]
+    #[inline]
+    pub fn _1(self) -> &'a mut W {
+        self.variant(ERQ19W::_1)
+    }
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 19;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = "Values that can be written to the field `ERQ20`"]
+pub enum ERQ20W {
+    #[doc = "The DMA request signal for the corresponding channel is disabled"]
+    _0,
+    #[doc = "The DMA request signal for the corresponding channel is enabled"]
+    _1,
+}
+impl ERQ20W {
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _bits(&self) -> bool {
+        match *self {
+            ERQ20W::_0 => false,
+            ERQ20W::_1 => true,
+        }
+    }
+}
+#[doc = r" Proxy"]
+pub struct _ERQ20W<'a> {
+    w: &'a mut W,
+}
+impl<'a> _ERQ20W<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: ERQ20W) -> &'a mut W {
+        {
+            self.bit(variant._bits())
+        }
+    }
+    #[doc = "The DMA request signal for the corresponding channel is disabled"]
+    #[inline]
+    pub fn _0(self) -> &'a mut W {
+        self.variant(ERQ20W::_0)
+    }
+    #[doc = "The DMA request signal for the corresponding channel is enabled"]
+    #[inline]
+    pub fn _1(self) -> &'a mut W {
+        self.variant(ERQ20W::_1)
+    }
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 20;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = "Values that can be written to the field `ERQ21`"]
+pub enum ERQ21W {
+    #[doc = "The DMA request signal for the corresponding channel is disabled"]
+    _0,
+    #[doc = "The DMA request signal for the corresponding channel is enabled"]
+    _1,
+}
+impl ERQ21W {
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _bits(&self) -> bool {
+        match *self {
+            ERQ21W::_0 => false,
+            ERQ21W::_1 => true,
+        }
+    }
+}
+#[doc = r" Proxy"]
+pub struct _ERQ21W<'a> {
+    w: &'a mut W,
+}
+impl<'a> _ERQ21W<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: ERQ21W) -> &'a mut W {
+        {
+            self.bit(variant._bits())
+        }
+    }
+    #[doc = "The DMA request signal for the corresponding channel is disabled"]
+    #[inline]
+    pub fn _0(self) -> &'a mut W {
+        self.variant(ERQ21W::_0)
+    }
+    #[doc = "The DMA request signal for the corresponding channel is enabled"]
+    #[inline]
+    pub fn _1(self) -> &'a mut W {
+        self.variant(ERQ21W::_1)
+    }
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 21;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = "Values that can be written to the field `ERQ22`"]
+pub enum ERQ22W {
+    #[doc = "The DMA request signal for the corresponding channel is disabled"]
+    _0,
+    #[doc = "The DMA request signal for the corresponding channel is enabled"]
+    _1,
+}
+impl ERQ22W {
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _bits(&self) -> bool {
+        match *self {
+            ERQ22W::_0 => false,
+            ERQ22W::_1 => true,
+        }
+    }
+}
+#[doc = r" Proxy"]
+pub struct _ERQ22W<'a> {
+    w: &'a mut W,
+}
+impl<'a> _ERQ22W<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: ERQ22W) -> &'a mut W {
+        {
+            self.bit(variant._bits())
+        }
+    }
+    #[doc = "The DMA request signal for the corresponding channel is disabled"]
+    #[inline]
+    pub fn _0(self) -> &'a mut W {
+        self.variant(ERQ22W::_0)
+    }
+    #[doc = "The DMA request signal for the corresponding channel is enabled"]
+    #[inline]
+    pub fn _1(self) -> &'a mut W {
+        self.variant(ERQ22W::_1)
+    }
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 22;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = "Values that can be written to the field `ERQ23`"]
+pub enum ERQ23W {
+    #[doc = "The DMA request signal for the corresponding channel is disabled"]
+    _0,
+    #[doc = "The DMA request signal for the corresponding channel is enabled"]
+    _1,
+}
+impl ERQ23W {
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _bits(&self) -> bool {
+        match *self {
+            ERQ23W::_0 => false,
+            ERQ23W::_1 => true,
+        }
+    }
+}
+#[doc = r" Proxy"]
+pub struct _ERQ23W<'a> {
+    w: &'a mut W,
+}
+impl<'a> _ERQ23W<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: ERQ23W) -> &'a mut W {
+        {
+            self.bit(variant._bits())
+        }
+    }
+    #[doc = "The DMA request signal for the corresponding channel is disabled"]
+    #[inline]
+    pub fn _0(self) -> &'a mut W {
+        self.variant(ERQ23W::_0)
+    }
+    #[doc = "The DMA request signal for the corresponding channel is enabled"]
+    #[inline]
+    pub fn _1(self) -> &'a mut W {
+        self.variant(ERQ23W::_1)
+    }
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 23;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = "Values that can be written to the field `ERQ24`"]
+pub enum ERQ24W {
+    #[doc = "The DMA request signal for the corresponding channel is disabled"]
+    _0,
+    #[doc = "The DMA request signal for the corresponding channel is enabled"]
+    _1,
+}
+impl ERQ24W {
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _bits(&self) -> bool {
+        match *self {
+            ERQ24W::_0 => false,
+            ERQ24W::_1 => true,
+        }
+    }
+}
+#[doc = r" Proxy"]
+pub struct _ERQ24W<'a> {
+    w: &'a mut W,
+}
+impl<'a> _ERQ24W<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: ERQ24W) -> &'a mut W {
+        {
+            self.bit(variant._bits())
+        }
+    }
+    #[doc = "The DMA request signal for the corresponding channel is disabled"]
+    #[inline]
+    pub fn _0(self) -> &'a mut W {
+        self.variant(ERQ24W::_0)
+    }
+    #[doc = "The DMA request signal for the corresponding channel is enabled"]
+    #[inline]
+    pub fn _1(self) -> &'a mut W {
+        self.variant(ERQ24W::_1)
+    }
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 24;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = "Values that can be written to the field `ERQ25`"]
+pub enum ERQ25W {
+    #[doc = "The DMA request signal for the corresponding channel is disabled"]
+    _0,
+    #[doc = "The DMA request signal for the corresponding channel is enabled"]
+    _1,
+}
+impl ERQ25W {
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _bits(&self) -> bool {
+        match *self {
+            ERQ25W::_0 => false,
+            ERQ25W::_1 => true,
+        }
+    }
+}
+#[doc = r" Proxy"]
+pub struct _ERQ25W<'a> {
+    w: &'a mut W,
+}
+impl<'a> _ERQ25W<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: ERQ25W) -> &'a mut W {
+        {
+            self.bit(variant._bits())
+        }
+    }
+    #[doc = "The DMA request signal for the corresponding channel is disabled"]
+    #[inline]
+    pub fn _0(self) -> &'a mut W {
+        self.variant(ERQ25W::_0)
+    }
+    #[doc = "The DMA request signal for the corresponding channel is enabled"]
+    #[inline]
+    pub fn _1(self) -> &'a mut W {
+        self.variant(ERQ25W::_1)
+    }
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 25;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = "Values that can be written to the field `ERQ26`"]
+pub enum ERQ26W {
+    #[doc = "The DMA request signal for the corresponding channel is disabled"]
+    _0,
+    #[doc = "The DMA request signal for the corresponding channel is enabled"]
+    _1,
+}
+impl ERQ26W {
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _bits(&self) -> bool {
+        match *self {
+            ERQ26W::_0 => false,
+            ERQ26W::_1 => true,
+        }
+    }
+}
+#[doc = r" Proxy"]
+pub struct _ERQ26W<'a> {
+    w: &'a mut W,
+}
+impl<'a> _ERQ26W<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: ERQ26W) -> &'a mut W {
+        {
+            self.bit(variant._bits())
+        }
+    }
+    #[doc = "The DMA request signal for the corresponding channel is disabled"]
+    #[inline]
+    pub fn _0(self) -> &'a mut W {
+        self.variant(ERQ26W::_0)
+    }
+    #[doc = "The DMA request signal for the corresponding channel is enabled"]
+    #[inline]
+    pub fn _1(self) -> &'a mut W {
+        self.variant(ERQ26W::_1)
+    }
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 26;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = "Values that can be written to the field `ERQ27`"]
+pub enum ERQ27W {
+    #[doc = "The DMA request signal for the corresponding channel is disabled"]
+    _0,
+    #[doc = "The DMA request signal for the corresponding channel is enabled"]
+    _1,
+}
+impl ERQ27W {
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _bits(&self) -> bool {
+        match *self {
+            ERQ27W::_0 => false,
+            ERQ27W::_1 => true,
+        }
+    }
+}
+#[doc = r" Proxy"]
+pub struct _ERQ27W<'a> {
+    w: &'a mut W,
+}
+impl<'a> _ERQ27W<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: ERQ27W) -> &'a mut W {
+        {
+            self.bit(variant._bits())
+        }
+    }
+    #[doc = "The DMA request signal for the corresponding channel is disabled"]
+    #[inline]
+    pub fn _0(self) -> &'a mut W {
+        self.variant(ERQ27W::_0)
+    }
+    #[doc = "The DMA request signal for the corresponding channel is enabled"]
+    #[inline]
+    pub fn _1(self) -> &'a mut W {
+        self.variant(ERQ27W::_1)
+    }
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 27;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = "Values that can be written to the field `ERQ28`"]
+pub enum ERQ28W {
+    #[doc = "The DMA request signal for the corresponding channel is disabled"]
+    _0,
+    #[doc = "The DMA request signal for the corresponding channel is enabled"]
+    _1,
+}
+impl ERQ28W {
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _bits(&self) -> bool {
+        match *self {
+            ERQ28W::_0 => false,
+            ERQ28W::_1 => true,
+        }
+    }
+}
+#[doc = r" Proxy"]
+pub struct _ERQ28W<'a> {
+    w: &'a mut W,
+}
+impl<'a> _ERQ28W<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: ERQ28W) -> &'a mut W {
+        {
+            self.bit(variant._bits())
+        }
+    }
+    #[doc = "The DMA request signal for the corresponding channel is disabled"]
+    #[inline]
+    pub fn _0(self) -> &'a mut W {
+        self.variant(ERQ28W::_0)
+    }
+    #[doc = "The DMA request signal for the corresponding channel is enabled"]
+    #[inline]
+    pub fn _1(self) -> &'a mut W {
+        self.variant(ERQ28W::_1)
+    }
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 28;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = "Values that can be written to the field `ERQ29`"]
+pub enum ERQ29W {
+    #[doc = "The DMA request signal for the corresponding channel is disabled"]
+    _0,
+    #[doc = "The DMA request signal for the corresponding channel is enabled"]
+    _1,
+}
+impl ERQ29W {
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _bits(&self) -> bool {
+        match *self {
+            ERQ29W::_0 => false,
+            ERQ29W::_1 => true,
+        }
+    }
+}
+#[doc = r" Proxy"]
+pub struct _ERQ29W<'a> {
+    w: &'a mut W,
+}
+impl<'a> _ERQ29W<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: ERQ29W) -> &'a mut W {
+        {
+            self.bit(variant._bits())
+        }
+    }
+    #[doc = "The DMA request signal for the corresponding channel is disabled"]
+    #[inline]
+    pub fn _0(self) -> &'a mut W {
+        self.variant(ERQ29W::_0)
+    }
+    #[doc = "The DMA request signal for the corresponding channel is enabled"]
+    #[inline]
+    pub fn _1(self) -> &'a mut W {
+        self.variant(ERQ29W::_1)
+    }
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 29;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = "Values that can be written to the field `ERQ30`"]
+pub enum ERQ30W {
+    #[doc = "The DMA request signal for the corresponding channel is disabled"]
+    _0,
+    #[doc = "The DMA request signal for the corresponding channel is enabled"]
+    _1,
+}
+impl ERQ30W {
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _bits(&self) -> bool {
+        match *self {
+            ERQ30W::_0 => false,
+            ERQ30W::_1 => true,
+        }
+    }
+}
+#[doc = r" Proxy"]
+pub struct _ERQ30W<'a> {
+    w: &'a mut W,
+}
+impl<'a> _ERQ30W<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: ERQ30W) -> &'a mut W {
+        {
+            self.bit(variant._bits())
+        }
+    }
+    #[doc = "The DMA request signal for the corresponding channel is disabled"]
+    #[inline]
+    pub fn _0(self) -> &'a mut W {
+        self.variant(ERQ30W::_0)
+    }
+    #[doc = "The DMA request signal for the corresponding channel is enabled"]
+    #[inline]
+    pub fn _1(self) -> &'a mut W {
+        self.variant(ERQ30W::_1)
+    }
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 30;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = "Values that can be written to the field `ERQ31`"]
+pub enum ERQ31W {
+    #[doc = "The DMA request signal for the corresponding channel is disabled"]
+    _0,
+    #[doc = "The DMA request signal for the corresponding channel is enabled"]
+    _1,
+}
+impl ERQ31W {
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _bits(&self) -> bool {
+        match *self {
+            ERQ31W::_0 => false,
+            ERQ31W::_1 => true,
+        }
+    }
+}
+#[doc = r" Proxy"]
+pub struct _ERQ31W<'a> {
+    w: &'a mut W,
+}
+impl<'a> _ERQ31W<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: ERQ31W) -> &'a mut W {
+        {
+            self.bit(variant._bits())
+        }
+    }
+    #[doc = "The DMA request signal for the corresponding channel is disabled"]
+    #[inline]
+    pub fn _0(self) -> &'a mut W {
+        self.variant(ERQ31W::_0)
+    }
+    #[doc = "The DMA request signal for the corresponding channel is enabled"]
+    #[inline]
+    pub fn _1(self) -> &'a mut W {
+        self.variant(ERQ31W::_1)
+    }
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 31;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
 impl R {
     #[doc = r" Value of the register as raw bits"]
     #[inline]
@@ -1872,6 +3552,150 @@ impl R {
             ((self.bits >> OFFSET) & MASK as u32) != 0
         })
     }
+    #[doc = "Bit 16 - Enable DMA Request 16"]
+    #[inline]
+    pub fn erq16(&self) -> ERQ16R {
+        ERQ16R::_from({
+            const MASK: bool = true;
+            const OFFSET: u8 = 16;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        })
+    }
+    #[doc = "Bit 17 - Enable DMA Request 17"]
+    #[inline]
+    pub fn erq17(&self) -> ERQ17R {
+        ERQ17R::_from({
+            const MASK: bool = true;
+            const OFFSET: u8 = 17;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        })
+    }
+    #[doc = "Bit 18 - Enable DMA Request 18"]
+    #[inline]
+    pub fn erq18(&self) -> ERQ18R {
+        ERQ18R::_from({
+            const MASK: bool = true;
+            const OFFSET: u8 = 18;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        })
+    }
+    #[doc = "Bit 19 - Enable DMA Request 19"]
+    #[inline]
+    pub fn erq19(&self) -> ERQ19R {
+        ERQ19R::_from({
+            const MASK: bool = true;
+            const OFFSET: u8 = 19;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        })
+    }
+    #[doc = "Bit 20 - Enable DMA Request 20"]
+    #[inline]
+    pub fn erq20(&self) -> ERQ20R {
+        ERQ20R::_from({
+            const MASK: bool = true;
+            const OFFSET: u8 = 20;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        })
+    }
+    #[doc = "Bit 21 - Enable DMA Request 21"]
+    #[inline]
+    pub fn erq21(&self) -> ERQ21R {
+        ERQ21R::_from({
+            const MASK: bool = true;
+            const OFFSET: u8 = 21;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        })
+    }
+    #[doc = "Bit 22 - Enable DMA Request 22"]
+    #[inline]
+    pub fn erq22(&self) -> ERQ22R {
+        ERQ22R::_from({
+            const MASK: bool = true;
+            const OFFSET: u8 = 22;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        })
+    }
+    #[doc = "Bit 23 - Enable DMA Request 23"]
+    #[inline]
+    pub fn erq23(&self) -> ERQ23R {
+        ERQ23R::_from({
+            const MASK: bool = true;
+            const OFFSET: u8 = 23;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        })
+    }
+    #[doc = "Bit 24 - Enable DMA Request 24"]
+    #[inline]
+    pub fn erq24(&self) -> ERQ24R {
+        ERQ24R::_from({
+            const MASK: bool = true;
+            const OFFSET: u8 = 24;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        })
+    }
+    #[doc = "Bit 25 - Enable DMA Request 25"]
+    #[inline]
+    pub fn erq25(&self) -> ERQ25R {
+        ERQ25R::_from({
+            const MASK: bool = true;
+            const OFFSET: u8 = 25;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        })
+    }
+    #[doc = "Bit 26 - Enable DMA Request 26"]
+    #[inline]
+    pub fn erq26(&self) -> ERQ26R {
+        ERQ26R::_from({
+            const MASK: bool = true;
+            const OFFSET: u8 = 26;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        })
+    }
+    #[doc = "Bit 27 - Enable DMA Request 27"]
+    #[inline]
+    pub fn erq27(&self) -> ERQ27R {
+        ERQ27R::_from({
+            const MASK: bool = true;
+            const OFFSET: u8 = 27;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        })
+    }
+    #[doc = "Bit 28 - Enable DMA Request 28"]
+    #[inline]
+    pub fn erq28(&self) -> ERQ28R {
+        ERQ28R::_from({
+            const MASK: bool = true;
+            const OFFSET: u8 = 28;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        })
+    }
+    #[doc = "Bit 29 - Enable DMA Request 29"]
+    #[inline]
+    pub fn erq29(&self) -> ERQ29R {
+        ERQ29R::_from({
+            const MASK: bool = true;
+            const OFFSET: u8 = 29;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        })
+    }
+    #[doc = "Bit 30 - Enable DMA Request 30"]
+    #[inline]
+    pub fn erq30(&self) -> ERQ30R {
+        ERQ30R::_from({
+            const MASK: bool = true;
+            const OFFSET: u8 = 30;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        })
+    }
+    #[doc = "Bit 31 - Enable DMA Request 31"]
+    #[inline]
+    pub fn erq31(&self) -> ERQ31R {
+        ERQ31R::_from({
+            const MASK: bool = true;
+            const OFFSET: u8 = 31;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        })
+    }
 }
 impl W {
     #[doc = r" Reset value of the register"]
@@ -1964,5 +3788,85 @@ impl W {
     #[inline]
     pub fn erq15(&mut self) -> _ERQ15W {
         _ERQ15W { w: self }
+    }
+    #[doc = "Bit 16 - Enable DMA Request 16"]
+    #[inline]
+    pub fn erq16(&mut self) -> _ERQ16W {
+        _ERQ16W { w: self }
+    }
+    #[doc = "Bit 17 - Enable DMA Request 17"]
+    #[inline]
+    pub fn erq17(&mut self) -> _ERQ17W {
+        _ERQ17W { w: self }
+    }
+    #[doc = "Bit 18 - Enable DMA Request 18"]
+    #[inline]
+    pub fn erq18(&mut self) -> _ERQ18W {
+        _ERQ18W { w: self }
+    }
+    #[doc = "Bit 19 - Enable DMA Request 19"]
+    #[inline]
+    pub fn erq19(&mut self) -> _ERQ19W {
+        _ERQ19W { w: self }
+    }
+    #[doc = "Bit 20 - Enable DMA Request 20"]
+    #[inline]
+    pub fn erq20(&mut self) -> _ERQ20W {
+        _ERQ20W { w: self }
+    }
+    #[doc = "Bit 21 - Enable DMA Request 21"]
+    #[inline]
+    pub fn erq21(&mut self) -> _ERQ21W {
+        _ERQ21W { w: self }
+    }
+    #[doc = "Bit 22 - Enable DMA Request 22"]
+    #[inline]
+    pub fn erq22(&mut self) -> _ERQ22W {
+        _ERQ22W { w: self }
+    }
+    #[doc = "Bit 23 - Enable DMA Request 23"]
+    #[inline]
+    pub fn erq23(&mut self) -> _ERQ23W {
+        _ERQ23W { w: self }
+    }
+    #[doc = "Bit 24 - Enable DMA Request 24"]
+    #[inline]
+    pub fn erq24(&mut self) -> _ERQ24W {
+        _ERQ24W { w: self }
+    }
+    #[doc = "Bit 25 - Enable DMA Request 25"]
+    #[inline]
+    pub fn erq25(&mut self) -> _ERQ25W {
+        _ERQ25W { w: self }
+    }
+    #[doc = "Bit 26 - Enable DMA Request 26"]
+    #[inline]
+    pub fn erq26(&mut self) -> _ERQ26W {
+        _ERQ26W { w: self }
+    }
+    #[doc = "Bit 27 - Enable DMA Request 27"]
+    #[inline]
+    pub fn erq27(&mut self) -> _ERQ27W {
+        _ERQ27W { w: self }
+    }
+    #[doc = "Bit 28 - Enable DMA Request 28"]
+    #[inline]
+    pub fn erq28(&mut self) -> _ERQ28W {
+        _ERQ28W { w: self }
+    }
+    #[doc = "Bit 29 - Enable DMA Request 29"]
+    #[inline]
+    pub fn erq29(&mut self) -> _ERQ29W {
+        _ERQ29W { w: self }
+    }
+    #[doc = "Bit 30 - Enable DMA Request 30"]
+    #[inline]
+    pub fn erq30(&mut self) -> _ERQ30W {
+        _ERQ30W { w: self }
+    }
+    #[doc = "Bit 31 - Enable DMA Request 31"]
+    #[inline]
+    pub fn erq31(&mut self) -> _ERQ31W {
+        _ERQ31W { w: self }
     }
 }

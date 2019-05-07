@@ -42,16 +42,15 @@ impl super::MIBC {
         self.write(|w| w)
     }
 }
-#[doc = r" Value of the field"]
-pub struct MIB_CLEARR {
-    bits: bool,
+#[doc = "Possible values of the field `MIB_CLEAR`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum MIB_CLEARR {
+    #[doc = "See note above."]
+    _0,
+    #[doc = "All statistics counters are reset to 0."]
+    _1,
 }
 impl MIB_CLEARR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
     #[doc = r" Returns `true` if the bit is clear (0)"]
     #[inline]
     pub fn bit_is_clear(&self) -> bool {
@@ -62,17 +61,43 @@ impl MIB_CLEARR {
     pub fn bit_is_set(&self) -> bool {
         self.bit()
     }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            MIB_CLEARR::_0 => false,
+            MIB_CLEARR::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> MIB_CLEARR {
+        match value {
+            false => MIB_CLEARR::_0,
+            true => MIB_CLEARR::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == MIB_CLEARR::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == MIB_CLEARR::_1
+    }
 }
-#[doc = r" Value of the field"]
-pub struct MIB_IDLER {
-    bits: bool,
+#[doc = "Possible values of the field `MIB_IDLE`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum MIB_IDLER {
+    #[doc = "The MIB block is updating MIB counters."]
+    _0,
+    #[doc = "The MIB block is not currently updating any MIB counters."]
+    _1,
 }
 impl MIB_IDLER {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
     #[doc = r" Returns `true` if the bit is clear (0)"]
     #[inline]
     pub fn bit_is_clear(&self) -> bool {
@@ -83,17 +108,43 @@ impl MIB_IDLER {
     pub fn bit_is_set(&self) -> bool {
         self.bit()
     }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            MIB_IDLER::_0 => false,
+            MIB_IDLER::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> MIB_IDLER {
+        match value {
+            false => MIB_IDLER::_0,
+            true => MIB_IDLER::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == MIB_IDLER::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == MIB_IDLER::_1
+    }
 }
-#[doc = r" Value of the field"]
-pub struct MIB_DISR {
-    bits: bool,
+#[doc = "Possible values of the field `MIB_DIS`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum MIB_DISR {
+    #[doc = "MIB logic is enabled."]
+    _0,
+    #[doc = "MIB logic is disabled. The MIB logic halts and does not update any MIB counters."]
+    _1,
 }
 impl MIB_DISR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
     #[doc = r" Returns `true` if the bit is clear (0)"]
     #[inline]
     pub fn bit_is_clear(&self) -> bool {
@@ -103,6 +154,51 @@ impl MIB_DISR {
     #[inline]
     pub fn bit_is_set(&self) -> bool {
         self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            MIB_DISR::_0 => false,
+            MIB_DISR::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> MIB_DISR {
+        match value {
+            false => MIB_DISR::_0,
+            true => MIB_DISR::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == MIB_DISR::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == MIB_DISR::_1
+    }
+}
+#[doc = "Values that can be written to the field `MIB_CLEAR`"]
+pub enum MIB_CLEARW {
+    #[doc = "See note above."]
+    _0,
+    #[doc = "All statistics counters are reset to 0."]
+    _1,
+}
+impl MIB_CLEARW {
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _bits(&self) -> bool {
+        match *self {
+            MIB_CLEARW::_0 => false,
+            MIB_CLEARW::_1 => true,
+        }
     }
 }
 #[doc = r" Proxy"]
@@ -110,6 +206,23 @@ pub struct _MIB_CLEARW<'a> {
     w: &'a mut W,
 }
 impl<'a> _MIB_CLEARW<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: MIB_CLEARW) -> &'a mut W {
+        {
+            self.bit(variant._bits())
+        }
+    }
+    #[doc = "See note above."]
+    #[inline]
+    pub fn _0(self) -> &'a mut W {
+        self.variant(MIB_CLEARW::_0)
+    }
+    #[doc = "All statistics counters are reset to 0."]
+    #[inline]
+    pub fn _1(self) -> &'a mut W {
+        self.variant(MIB_CLEARW::_1)
+    }
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
@@ -128,11 +241,46 @@ impl<'a> _MIB_CLEARW<'a> {
         self.w
     }
 }
+#[doc = "Values that can be written to the field `MIB_DIS`"]
+pub enum MIB_DISW {
+    #[doc = "MIB logic is enabled."]
+    _0,
+    #[doc = "MIB logic is disabled. The MIB logic halts and does not update any MIB counters."]
+    _1,
+}
+impl MIB_DISW {
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _bits(&self) -> bool {
+        match *self {
+            MIB_DISW::_0 => false,
+            MIB_DISW::_1 => true,
+        }
+    }
+}
 #[doc = r" Proxy"]
 pub struct _MIB_DISW<'a> {
     w: &'a mut W,
 }
 impl<'a> _MIB_DISW<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: MIB_DISW) -> &'a mut W {
+        {
+            self.bit(variant._bits())
+        }
+    }
+    #[doc = "MIB logic is enabled."]
+    #[inline]
+    pub fn _0(self) -> &'a mut W {
+        self.variant(MIB_DISW::_0)
+    }
+    #[doc = "MIB logic is disabled. The MIB logic halts and does not update any MIB counters."]
+    #[inline]
+    pub fn _1(self) -> &'a mut W {
+        self.variant(MIB_DISW::_1)
+    }
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
@@ -160,32 +308,29 @@ impl R {
     #[doc = "Bit 29 - MIB Clear"]
     #[inline]
     pub fn mib_clear(&self) -> MIB_CLEARR {
-        let bits = {
+        MIB_CLEARR::_from({
             const MASK: bool = true;
             const OFFSET: u8 = 29;
             ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        MIB_CLEARR { bits }
+        })
     }
     #[doc = "Bit 30 - MIB Idle"]
     #[inline]
     pub fn mib_idle(&self) -> MIB_IDLER {
-        let bits = {
+        MIB_IDLER::_from({
             const MASK: bool = true;
             const OFFSET: u8 = 30;
             ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        MIB_IDLER { bits }
+        })
     }
     #[doc = "Bit 31 - Disable MIB Logic"]
     #[inline]
     pub fn mib_dis(&self) -> MIB_DISR {
-        let bits = {
+        MIB_DISR::_from({
             const MASK: bool = true;
             const OFFSET: u8 = 31;
             ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        MIB_DISR { bits }
+        })
     }
 }
 impl W {

@@ -36,7 +36,10 @@ pub struct RegisterBlock {
     _reserved4: [u8; 4usize],
     #[doc = "0x34 - Hardware Request Status Register"]
     pub hrs: HRS,
-    _reserved5: [u8; 200usize],
+    _reserved5: [u8; 12usize],
+    #[doc = "0x44 - Enable Asynchronous Request in Stop Register"]
+    pub ears: EARS,
+    _reserved6: [u8; 184usize],
     #[doc = "0x100 - Channel n Priority Register"]
     pub dchpri3: DCHPRI,
     #[doc = "0x101 - Channel n Priority Register"]
@@ -69,14 +72,46 @@ pub struct RegisterBlock {
     pub dchpri13: DCHPRI,
     #[doc = "0x10f - Channel n Priority Register"]
     pub dchpri12: DCHPRI,
-    _reserved6: [u8; 3824usize],
+    #[doc = "0x110 - Channel n Priority Register"]
+    pub dchpri19: DCHPRI,
+    #[doc = "0x111 - Channel n Priority Register"]
+    pub dchpri18: DCHPRI,
+    #[doc = "0x112 - Channel n Priority Register"]
+    pub dchpri17: DCHPRI,
+    #[doc = "0x113 - Channel n Priority Register"]
+    pub dchpri16: DCHPRI,
+    #[doc = "0x114 - Channel n Priority Register"]
+    pub dchpri23: DCHPRI,
+    #[doc = "0x115 - Channel n Priority Register"]
+    pub dchpri22: DCHPRI,
+    #[doc = "0x116 - Channel n Priority Register"]
+    pub dchpri21: DCHPRI,
+    #[doc = "0x117 - Channel n Priority Register"]
+    pub dchpri20: DCHPRI,
+    #[doc = "0x118 - Channel n Priority Register"]
+    pub dchpri27: DCHPRI,
+    #[doc = "0x119 - Channel n Priority Register"]
+    pub dchpri26: DCHPRI,
+    #[doc = "0x11a - Channel n Priority Register"]
+    pub dchpri25: DCHPRI,
+    #[doc = "0x11b - Channel n Priority Register"]
+    pub dchpri24: DCHPRI,
+    #[doc = "0x11c - Channel n Priority Register"]
+    pub dchpri31: DCHPRI,
+    #[doc = "0x11d - Channel n Priority Register"]
+    pub dchpri30: DCHPRI,
+    #[doc = "0x11e - Channel n Priority Register"]
+    pub dchpri29: DCHPRI,
+    #[doc = "0x11f - Channel n Priority Register"]
+    pub dchpri28: DCHPRI,
+    _reserved7: [u8; 3808usize],
     #[doc = "0x1000 - TCD Source Address"]
     pub tcd0_saddr: TCD_SADDR,
     #[doc = "0x1004 - TCD Signed Source Address Offset"]
     pub tcd0_soff: TCD_SOFF,
     #[doc = "0x1006 - TCD Transfer Attributes"]
     pub tcd0_attr: TCD_ATTR,
-    #[doc = "0x1008 - TCD Minor Byte Count (Minor Loop Disabled)"]
+    #[doc = "0x1008 - TCD Minor Byte Count (Minor Loop Mapping Disabled)"]
     pub tcd0_nbytes_mlno: TCD_NBYTES_MLNO,
     #[doc = "0x100c - TCD Last Source Address Adjustment"]
     pub tcd0_slast: TCD_SLAST,
@@ -98,7 +133,7 @@ pub struct RegisterBlock {
     pub tcd1_soff: TCD_SOFF,
     #[doc = "0x1026 - TCD Transfer Attributes"]
     pub tcd1_attr: TCD_ATTR,
-    #[doc = "0x1028 - TCD Minor Byte Count (Minor Loop Disabled)"]
+    #[doc = "0x1028 - TCD Minor Byte Count (Minor Loop Mapping Disabled)"]
     pub tcd1_nbytes_mlno: TCD_NBYTES_MLNO,
     #[doc = "0x102c - TCD Last Source Address Adjustment"]
     pub tcd1_slast: TCD_SLAST,
@@ -120,7 +155,7 @@ pub struct RegisterBlock {
     pub tcd2_soff: TCD_SOFF,
     #[doc = "0x1046 - TCD Transfer Attributes"]
     pub tcd2_attr: TCD_ATTR,
-    #[doc = "0x1048 - TCD Minor Byte Count (Minor Loop Disabled)"]
+    #[doc = "0x1048 - TCD Minor Byte Count (Minor Loop Mapping Disabled)"]
     pub tcd2_nbytes_mlno: TCD_NBYTES_MLNO,
     #[doc = "0x104c - TCD Last Source Address Adjustment"]
     pub tcd2_slast: TCD_SLAST,
@@ -142,7 +177,7 @@ pub struct RegisterBlock {
     pub tcd3_soff: TCD_SOFF,
     #[doc = "0x1066 - TCD Transfer Attributes"]
     pub tcd3_attr: TCD_ATTR,
-    #[doc = "0x1068 - TCD Minor Byte Count (Minor Loop Disabled)"]
+    #[doc = "0x1068 - TCD Minor Byte Count (Minor Loop Mapping Disabled)"]
     pub tcd3_nbytes_mlno: TCD_NBYTES_MLNO,
     #[doc = "0x106c - TCD Last Source Address Adjustment"]
     pub tcd3_slast: TCD_SLAST,
@@ -164,7 +199,7 @@ pub struct RegisterBlock {
     pub tcd4_soff: TCD_SOFF,
     #[doc = "0x1086 - TCD Transfer Attributes"]
     pub tcd4_attr: TCD_ATTR,
-    #[doc = "0x1088 - TCD Minor Byte Count (Minor Loop Disabled)"]
+    #[doc = "0x1088 - TCD Minor Byte Count (Minor Loop Mapping Disabled)"]
     pub tcd4_nbytes_mlno: TCD_NBYTES_MLNO,
     #[doc = "0x108c - TCD Last Source Address Adjustment"]
     pub tcd4_slast: TCD_SLAST,
@@ -186,7 +221,7 @@ pub struct RegisterBlock {
     pub tcd5_soff: TCD_SOFF,
     #[doc = "0x10a6 - TCD Transfer Attributes"]
     pub tcd5_attr: TCD_ATTR,
-    #[doc = "0x10a8 - TCD Minor Byte Count (Minor Loop Disabled)"]
+    #[doc = "0x10a8 - TCD Minor Byte Count (Minor Loop Mapping Disabled)"]
     pub tcd5_nbytes_mlno: TCD_NBYTES_MLNO,
     #[doc = "0x10ac - TCD Last Source Address Adjustment"]
     pub tcd5_slast: TCD_SLAST,
@@ -208,7 +243,7 @@ pub struct RegisterBlock {
     pub tcd6_soff: TCD_SOFF,
     #[doc = "0x10c6 - TCD Transfer Attributes"]
     pub tcd6_attr: TCD_ATTR,
-    #[doc = "0x10c8 - TCD Minor Byte Count (Minor Loop Disabled)"]
+    #[doc = "0x10c8 - TCD Minor Byte Count (Minor Loop Mapping Disabled)"]
     pub tcd6_nbytes_mlno: TCD_NBYTES_MLNO,
     #[doc = "0x10cc - TCD Last Source Address Adjustment"]
     pub tcd6_slast: TCD_SLAST,
@@ -230,7 +265,7 @@ pub struct RegisterBlock {
     pub tcd7_soff: TCD_SOFF,
     #[doc = "0x10e6 - TCD Transfer Attributes"]
     pub tcd7_attr: TCD_ATTR,
-    #[doc = "0x10e8 - TCD Minor Byte Count (Minor Loop Disabled)"]
+    #[doc = "0x10e8 - TCD Minor Byte Count (Minor Loop Mapping Disabled)"]
     pub tcd7_nbytes_mlno: TCD_NBYTES_MLNO,
     #[doc = "0x10ec - TCD Last Source Address Adjustment"]
     pub tcd7_slast: TCD_SLAST,
@@ -252,7 +287,7 @@ pub struct RegisterBlock {
     pub tcd8_soff: TCD_SOFF,
     #[doc = "0x1106 - TCD Transfer Attributes"]
     pub tcd8_attr: TCD_ATTR,
-    #[doc = "0x1108 - TCD Minor Byte Count (Minor Loop Disabled)"]
+    #[doc = "0x1108 - TCD Minor Byte Count (Minor Loop Mapping Disabled)"]
     pub tcd8_nbytes_mlno: TCD_NBYTES_MLNO,
     #[doc = "0x110c - TCD Last Source Address Adjustment"]
     pub tcd8_slast: TCD_SLAST,
@@ -274,7 +309,7 @@ pub struct RegisterBlock {
     pub tcd9_soff: TCD_SOFF,
     #[doc = "0x1126 - TCD Transfer Attributes"]
     pub tcd9_attr: TCD_ATTR,
-    #[doc = "0x1128 - TCD Minor Byte Count (Minor Loop Disabled)"]
+    #[doc = "0x1128 - TCD Minor Byte Count (Minor Loop Mapping Disabled)"]
     pub tcd9_nbytes_mlno: TCD_NBYTES_MLNO,
     #[doc = "0x112c - TCD Last Source Address Adjustment"]
     pub tcd9_slast: TCD_SLAST,
@@ -296,7 +331,7 @@ pub struct RegisterBlock {
     pub tcd10_soff: TCD_SOFF,
     #[doc = "0x1146 - TCD Transfer Attributes"]
     pub tcd10_attr: TCD_ATTR,
-    #[doc = "0x1148 - TCD Minor Byte Count (Minor Loop Disabled)"]
+    #[doc = "0x1148 - TCD Minor Byte Count (Minor Loop Mapping Disabled)"]
     pub tcd10_nbytes_mlno: TCD_NBYTES_MLNO,
     #[doc = "0x114c - TCD Last Source Address Adjustment"]
     pub tcd10_slast: TCD_SLAST,
@@ -318,7 +353,7 @@ pub struct RegisterBlock {
     pub tcd11_soff: TCD_SOFF,
     #[doc = "0x1166 - TCD Transfer Attributes"]
     pub tcd11_attr: TCD_ATTR,
-    #[doc = "0x1168 - TCD Minor Byte Count (Minor Loop Disabled)"]
+    #[doc = "0x1168 - TCD Minor Byte Count (Minor Loop Mapping Disabled)"]
     pub tcd11_nbytes_mlno: TCD_NBYTES_MLNO,
     #[doc = "0x116c - TCD Last Source Address Adjustment"]
     pub tcd11_slast: TCD_SLAST,
@@ -340,7 +375,7 @@ pub struct RegisterBlock {
     pub tcd12_soff: TCD_SOFF,
     #[doc = "0x1186 - TCD Transfer Attributes"]
     pub tcd12_attr: TCD_ATTR,
-    #[doc = "0x1188 - TCD Minor Byte Count (Minor Loop Disabled)"]
+    #[doc = "0x1188 - TCD Minor Byte Count (Minor Loop Mapping Disabled)"]
     pub tcd12_nbytes_mlno: TCD_NBYTES_MLNO,
     #[doc = "0x118c - TCD Last Source Address Adjustment"]
     pub tcd12_slast: TCD_SLAST,
@@ -362,7 +397,7 @@ pub struct RegisterBlock {
     pub tcd13_soff: TCD_SOFF,
     #[doc = "0x11a6 - TCD Transfer Attributes"]
     pub tcd13_attr: TCD_ATTR,
-    #[doc = "0x11a8 - TCD Minor Byte Count (Minor Loop Disabled)"]
+    #[doc = "0x11a8 - TCD Minor Byte Count (Minor Loop Mapping Disabled)"]
     pub tcd13_nbytes_mlno: TCD_NBYTES_MLNO,
     #[doc = "0x11ac - TCD Last Source Address Adjustment"]
     pub tcd13_slast: TCD_SLAST,
@@ -384,7 +419,7 @@ pub struct RegisterBlock {
     pub tcd14_soff: TCD_SOFF,
     #[doc = "0x11c6 - TCD Transfer Attributes"]
     pub tcd14_attr: TCD_ATTR,
-    #[doc = "0x11c8 - TCD Minor Byte Count (Minor Loop Disabled)"]
+    #[doc = "0x11c8 - TCD Minor Byte Count (Minor Loop Mapping Disabled)"]
     pub tcd14_nbytes_mlno: TCD_NBYTES_MLNO,
     #[doc = "0x11cc - TCD Last Source Address Adjustment"]
     pub tcd14_slast: TCD_SLAST,
@@ -406,7 +441,7 @@ pub struct RegisterBlock {
     pub tcd15_soff: TCD_SOFF,
     #[doc = "0x11e6 - TCD Transfer Attributes"]
     pub tcd15_attr: TCD_ATTR,
-    #[doc = "0x11e8 - TCD Minor Byte Count (Minor Loop Disabled)"]
+    #[doc = "0x11e8 - TCD Minor Byte Count (Minor Loop Mapping Disabled)"]
     pub tcd15_nbytes_mlno: TCD_NBYTES_MLNO,
     #[doc = "0x11ec - TCD Last Source Address Adjustment"]
     pub tcd15_slast: TCD_SLAST,
@@ -422,6 +457,358 @@ pub struct RegisterBlock {
     pub tcd15_csr: TCD_CSR,
     #[doc = "0x11fe - TCD Beginning Minor Loop Link, Major Loop Count (Channel Linking Disabled)"]
     pub tcd15_biter_elinkno: TCD_BITER_ELINKNO,
+    #[doc = "0x1200 - TCD Source Address"]
+    pub tcd16_saddr: TCD_SADDR,
+    #[doc = "0x1204 - TCD Signed Source Address Offset"]
+    pub tcd16_soff: TCD_SOFF,
+    #[doc = "0x1206 - TCD Transfer Attributes"]
+    pub tcd16_attr: TCD_ATTR,
+    #[doc = "0x1208 - TCD Minor Byte Count (Minor Loop Mapping Disabled)"]
+    pub tcd16_nbytes_mlno: TCD_NBYTES_MLNO,
+    #[doc = "0x120c - TCD Last Source Address Adjustment"]
+    pub tcd16_slast: TCD_SLAST,
+    #[doc = "0x1210 - TCD Destination Address"]
+    pub tcd16_daddr: TCD_DADDR,
+    #[doc = "0x1214 - TCD Signed Destination Address Offset"]
+    pub tcd16_doff: TCD_DOFF,
+    #[doc = "0x1216 - TCD Current Minor Loop Link, Major Loop Count (Channel Linking Disabled)"]
+    pub tcd16_citer_elinkno: TCD_CITER_ELINKNO,
+    #[doc = "0x1218 - TCD Last Destination Address Adjustment/Scatter Gather Address"]
+    pub tcd16_dlastsga: TCD_DLASTSGA,
+    #[doc = "0x121c - TCD Control and Status"]
+    pub tcd16_csr: TCD_CSR,
+    #[doc = "0x121e - TCD Beginning Minor Loop Link, Major Loop Count (Channel Linking Disabled)"]
+    pub tcd16_biter_elinkno: TCD_BITER_ELINKNO,
+    #[doc = "0x1220 - TCD Source Address"]
+    pub tcd17_saddr: TCD_SADDR,
+    #[doc = "0x1224 - TCD Signed Source Address Offset"]
+    pub tcd17_soff: TCD_SOFF,
+    #[doc = "0x1226 - TCD Transfer Attributes"]
+    pub tcd17_attr: TCD_ATTR,
+    #[doc = "0x1228 - TCD Minor Byte Count (Minor Loop Mapping Disabled)"]
+    pub tcd17_nbytes_mlno: TCD_NBYTES_MLNO,
+    #[doc = "0x122c - TCD Last Source Address Adjustment"]
+    pub tcd17_slast: TCD_SLAST,
+    #[doc = "0x1230 - TCD Destination Address"]
+    pub tcd17_daddr: TCD_DADDR,
+    #[doc = "0x1234 - TCD Signed Destination Address Offset"]
+    pub tcd17_doff: TCD_DOFF,
+    #[doc = "0x1236 - TCD Current Minor Loop Link, Major Loop Count (Channel Linking Disabled)"]
+    pub tcd17_citer_elinkno: TCD_CITER_ELINKNO,
+    #[doc = "0x1238 - TCD Last Destination Address Adjustment/Scatter Gather Address"]
+    pub tcd17_dlastsga: TCD_DLASTSGA,
+    #[doc = "0x123c - TCD Control and Status"]
+    pub tcd17_csr: TCD_CSR,
+    #[doc = "0x123e - TCD Beginning Minor Loop Link, Major Loop Count (Channel Linking Disabled)"]
+    pub tcd17_biter_elinkno: TCD_BITER_ELINKNO,
+    #[doc = "0x1240 - TCD Source Address"]
+    pub tcd18_saddr: TCD_SADDR,
+    #[doc = "0x1244 - TCD Signed Source Address Offset"]
+    pub tcd18_soff: TCD_SOFF,
+    #[doc = "0x1246 - TCD Transfer Attributes"]
+    pub tcd18_attr: TCD_ATTR,
+    #[doc = "0x1248 - TCD Minor Byte Count (Minor Loop Mapping Disabled)"]
+    pub tcd18_nbytes_mlno: TCD_NBYTES_MLNO,
+    #[doc = "0x124c - TCD Last Source Address Adjustment"]
+    pub tcd18_slast: TCD_SLAST,
+    #[doc = "0x1250 - TCD Destination Address"]
+    pub tcd18_daddr: TCD_DADDR,
+    #[doc = "0x1254 - TCD Signed Destination Address Offset"]
+    pub tcd18_doff: TCD_DOFF,
+    #[doc = "0x1256 - TCD Current Minor Loop Link, Major Loop Count (Channel Linking Disabled)"]
+    pub tcd18_citer_elinkno: TCD_CITER_ELINKNO,
+    #[doc = "0x1258 - TCD Last Destination Address Adjustment/Scatter Gather Address"]
+    pub tcd18_dlastsga: TCD_DLASTSGA,
+    #[doc = "0x125c - TCD Control and Status"]
+    pub tcd18_csr: TCD_CSR,
+    #[doc = "0x125e - TCD Beginning Minor Loop Link, Major Loop Count (Channel Linking Disabled)"]
+    pub tcd18_biter_elinkno: TCD_BITER_ELINKNO,
+    #[doc = "0x1260 - TCD Source Address"]
+    pub tcd19_saddr: TCD_SADDR,
+    #[doc = "0x1264 - TCD Signed Source Address Offset"]
+    pub tcd19_soff: TCD_SOFF,
+    #[doc = "0x1266 - TCD Transfer Attributes"]
+    pub tcd19_attr: TCD_ATTR,
+    #[doc = "0x1268 - TCD Minor Byte Count (Minor Loop Mapping Disabled)"]
+    pub tcd19_nbytes_mlno: TCD_NBYTES_MLNO,
+    #[doc = "0x126c - TCD Last Source Address Adjustment"]
+    pub tcd19_slast: TCD_SLAST,
+    #[doc = "0x1270 - TCD Destination Address"]
+    pub tcd19_daddr: TCD_DADDR,
+    #[doc = "0x1274 - TCD Signed Destination Address Offset"]
+    pub tcd19_doff: TCD_DOFF,
+    #[doc = "0x1276 - TCD Current Minor Loop Link, Major Loop Count (Channel Linking Disabled)"]
+    pub tcd19_citer_elinkno: TCD_CITER_ELINKNO,
+    #[doc = "0x1278 - TCD Last Destination Address Adjustment/Scatter Gather Address"]
+    pub tcd19_dlastsga: TCD_DLASTSGA,
+    #[doc = "0x127c - TCD Control and Status"]
+    pub tcd19_csr: TCD_CSR,
+    #[doc = "0x127e - TCD Beginning Minor Loop Link, Major Loop Count (Channel Linking Disabled)"]
+    pub tcd19_biter_elinkno: TCD_BITER_ELINKNO,
+    #[doc = "0x1280 - TCD Source Address"]
+    pub tcd20_saddr: TCD_SADDR,
+    #[doc = "0x1284 - TCD Signed Source Address Offset"]
+    pub tcd20_soff: TCD_SOFF,
+    #[doc = "0x1286 - TCD Transfer Attributes"]
+    pub tcd20_attr: TCD_ATTR,
+    #[doc = "0x1288 - TCD Minor Byte Count (Minor Loop Mapping Disabled)"]
+    pub tcd20_nbytes_mlno: TCD_NBYTES_MLNO,
+    #[doc = "0x128c - TCD Last Source Address Adjustment"]
+    pub tcd20_slast: TCD_SLAST,
+    #[doc = "0x1290 - TCD Destination Address"]
+    pub tcd20_daddr: TCD_DADDR,
+    #[doc = "0x1294 - TCD Signed Destination Address Offset"]
+    pub tcd20_doff: TCD_DOFF,
+    #[doc = "0x1296 - TCD Current Minor Loop Link, Major Loop Count (Channel Linking Disabled)"]
+    pub tcd20_citer_elinkno: TCD_CITER_ELINKNO,
+    #[doc = "0x1298 - TCD Last Destination Address Adjustment/Scatter Gather Address"]
+    pub tcd20_dlastsga: TCD_DLASTSGA,
+    #[doc = "0x129c - TCD Control and Status"]
+    pub tcd20_csr: TCD_CSR,
+    #[doc = "0x129e - TCD Beginning Minor Loop Link, Major Loop Count (Channel Linking Disabled)"]
+    pub tcd20_biter_elinkno: TCD_BITER_ELINKNO,
+    #[doc = "0x12a0 - TCD Source Address"]
+    pub tcd21_saddr: TCD_SADDR,
+    #[doc = "0x12a4 - TCD Signed Source Address Offset"]
+    pub tcd21_soff: TCD_SOFF,
+    #[doc = "0x12a6 - TCD Transfer Attributes"]
+    pub tcd21_attr: TCD_ATTR,
+    #[doc = "0x12a8 - TCD Minor Byte Count (Minor Loop Mapping Disabled)"]
+    pub tcd21_nbytes_mlno: TCD_NBYTES_MLNO,
+    #[doc = "0x12ac - TCD Last Source Address Adjustment"]
+    pub tcd21_slast: TCD_SLAST,
+    #[doc = "0x12b0 - TCD Destination Address"]
+    pub tcd21_daddr: TCD_DADDR,
+    #[doc = "0x12b4 - TCD Signed Destination Address Offset"]
+    pub tcd21_doff: TCD_DOFF,
+    #[doc = "0x12b6 - TCD Current Minor Loop Link, Major Loop Count (Channel Linking Disabled)"]
+    pub tcd21_citer_elinkno: TCD_CITER_ELINKNO,
+    #[doc = "0x12b8 - TCD Last Destination Address Adjustment/Scatter Gather Address"]
+    pub tcd21_dlastsga: TCD_DLASTSGA,
+    #[doc = "0x12bc - TCD Control and Status"]
+    pub tcd21_csr: TCD_CSR,
+    #[doc = "0x12be - TCD Beginning Minor Loop Link, Major Loop Count (Channel Linking Disabled)"]
+    pub tcd21_biter_elinkno: TCD_BITER_ELINKNO,
+    #[doc = "0x12c0 - TCD Source Address"]
+    pub tcd22_saddr: TCD_SADDR,
+    #[doc = "0x12c4 - TCD Signed Source Address Offset"]
+    pub tcd22_soff: TCD_SOFF,
+    #[doc = "0x12c6 - TCD Transfer Attributes"]
+    pub tcd22_attr: TCD_ATTR,
+    #[doc = "0x12c8 - TCD Minor Byte Count (Minor Loop Mapping Disabled)"]
+    pub tcd22_nbytes_mlno: TCD_NBYTES_MLNO,
+    #[doc = "0x12cc - TCD Last Source Address Adjustment"]
+    pub tcd22_slast: TCD_SLAST,
+    #[doc = "0x12d0 - TCD Destination Address"]
+    pub tcd22_daddr: TCD_DADDR,
+    #[doc = "0x12d4 - TCD Signed Destination Address Offset"]
+    pub tcd22_doff: TCD_DOFF,
+    #[doc = "0x12d6 - TCD Current Minor Loop Link, Major Loop Count (Channel Linking Disabled)"]
+    pub tcd22_citer_elinkno: TCD_CITER_ELINKNO,
+    #[doc = "0x12d8 - TCD Last Destination Address Adjustment/Scatter Gather Address"]
+    pub tcd22_dlastsga: TCD_DLASTSGA,
+    #[doc = "0x12dc - TCD Control and Status"]
+    pub tcd22_csr: TCD_CSR,
+    #[doc = "0x12de - TCD Beginning Minor Loop Link, Major Loop Count (Channel Linking Disabled)"]
+    pub tcd22_biter_elinkno: TCD_BITER_ELINKNO,
+    #[doc = "0x12e0 - TCD Source Address"]
+    pub tcd23_saddr: TCD_SADDR,
+    #[doc = "0x12e4 - TCD Signed Source Address Offset"]
+    pub tcd23_soff: TCD_SOFF,
+    #[doc = "0x12e6 - TCD Transfer Attributes"]
+    pub tcd23_attr: TCD_ATTR,
+    #[doc = "0x12e8 - TCD Minor Byte Count (Minor Loop Mapping Disabled)"]
+    pub tcd23_nbytes_mlno: TCD_NBYTES_MLNO,
+    #[doc = "0x12ec - TCD Last Source Address Adjustment"]
+    pub tcd23_slast: TCD_SLAST,
+    #[doc = "0x12f0 - TCD Destination Address"]
+    pub tcd23_daddr: TCD_DADDR,
+    #[doc = "0x12f4 - TCD Signed Destination Address Offset"]
+    pub tcd23_doff: TCD_DOFF,
+    #[doc = "0x12f6 - TCD Current Minor Loop Link, Major Loop Count (Channel Linking Disabled)"]
+    pub tcd23_citer_elinkno: TCD_CITER_ELINKNO,
+    #[doc = "0x12f8 - TCD Last Destination Address Adjustment/Scatter Gather Address"]
+    pub tcd23_dlastsga: TCD_DLASTSGA,
+    #[doc = "0x12fc - TCD Control and Status"]
+    pub tcd23_csr: TCD_CSR,
+    #[doc = "0x12fe - TCD Beginning Minor Loop Link, Major Loop Count (Channel Linking Disabled)"]
+    pub tcd23_biter_elinkno: TCD_BITER_ELINKNO,
+    #[doc = "0x1300 - TCD Source Address"]
+    pub tcd24_saddr: TCD_SADDR,
+    #[doc = "0x1304 - TCD Signed Source Address Offset"]
+    pub tcd24_soff: TCD_SOFF,
+    #[doc = "0x1306 - TCD Transfer Attributes"]
+    pub tcd24_attr: TCD_ATTR,
+    #[doc = "0x1308 - TCD Minor Byte Count (Minor Loop Mapping Disabled)"]
+    pub tcd24_nbytes_mlno: TCD_NBYTES_MLNO,
+    #[doc = "0x130c - TCD Last Source Address Adjustment"]
+    pub tcd24_slast: TCD_SLAST,
+    #[doc = "0x1310 - TCD Destination Address"]
+    pub tcd24_daddr: TCD_DADDR,
+    #[doc = "0x1314 - TCD Signed Destination Address Offset"]
+    pub tcd24_doff: TCD_DOFF,
+    #[doc = "0x1316 - TCD Current Minor Loop Link, Major Loop Count (Channel Linking Disabled)"]
+    pub tcd24_citer_elinkno: TCD_CITER_ELINKNO,
+    #[doc = "0x1318 - TCD Last Destination Address Adjustment/Scatter Gather Address"]
+    pub tcd24_dlastsga: TCD_DLASTSGA,
+    #[doc = "0x131c - TCD Control and Status"]
+    pub tcd24_csr: TCD_CSR,
+    #[doc = "0x131e - TCD Beginning Minor Loop Link, Major Loop Count (Channel Linking Disabled)"]
+    pub tcd24_biter_elinkno: TCD_BITER_ELINKNO,
+    #[doc = "0x1320 - TCD Source Address"]
+    pub tcd25_saddr: TCD_SADDR,
+    #[doc = "0x1324 - TCD Signed Source Address Offset"]
+    pub tcd25_soff: TCD_SOFF,
+    #[doc = "0x1326 - TCD Transfer Attributes"]
+    pub tcd25_attr: TCD_ATTR,
+    #[doc = "0x1328 - TCD Minor Byte Count (Minor Loop Mapping Disabled)"]
+    pub tcd25_nbytes_mlno: TCD_NBYTES_MLNO,
+    #[doc = "0x132c - TCD Last Source Address Adjustment"]
+    pub tcd25_slast: TCD_SLAST,
+    #[doc = "0x1330 - TCD Destination Address"]
+    pub tcd25_daddr: TCD_DADDR,
+    #[doc = "0x1334 - TCD Signed Destination Address Offset"]
+    pub tcd25_doff: TCD_DOFF,
+    #[doc = "0x1336 - TCD Current Minor Loop Link, Major Loop Count (Channel Linking Disabled)"]
+    pub tcd25_citer_elinkno: TCD_CITER_ELINKNO,
+    #[doc = "0x1338 - TCD Last Destination Address Adjustment/Scatter Gather Address"]
+    pub tcd25_dlastsga: TCD_DLASTSGA,
+    #[doc = "0x133c - TCD Control and Status"]
+    pub tcd25_csr: TCD_CSR,
+    #[doc = "0x133e - TCD Beginning Minor Loop Link, Major Loop Count (Channel Linking Disabled)"]
+    pub tcd25_biter_elinkno: TCD_BITER_ELINKNO,
+    #[doc = "0x1340 - TCD Source Address"]
+    pub tcd26_saddr: TCD_SADDR,
+    #[doc = "0x1344 - TCD Signed Source Address Offset"]
+    pub tcd26_soff: TCD_SOFF,
+    #[doc = "0x1346 - TCD Transfer Attributes"]
+    pub tcd26_attr: TCD_ATTR,
+    #[doc = "0x1348 - TCD Minor Byte Count (Minor Loop Mapping Disabled)"]
+    pub tcd26_nbytes_mlno: TCD_NBYTES_MLNO,
+    #[doc = "0x134c - TCD Last Source Address Adjustment"]
+    pub tcd26_slast: TCD_SLAST,
+    #[doc = "0x1350 - TCD Destination Address"]
+    pub tcd26_daddr: TCD_DADDR,
+    #[doc = "0x1354 - TCD Signed Destination Address Offset"]
+    pub tcd26_doff: TCD_DOFF,
+    #[doc = "0x1356 - TCD Current Minor Loop Link, Major Loop Count (Channel Linking Disabled)"]
+    pub tcd26_citer_elinkno: TCD_CITER_ELINKNO,
+    #[doc = "0x1358 - TCD Last Destination Address Adjustment/Scatter Gather Address"]
+    pub tcd26_dlastsga: TCD_DLASTSGA,
+    #[doc = "0x135c - TCD Control and Status"]
+    pub tcd26_csr: TCD_CSR,
+    #[doc = "0x135e - TCD Beginning Minor Loop Link, Major Loop Count (Channel Linking Disabled)"]
+    pub tcd26_biter_elinkno: TCD_BITER_ELINKNO,
+    #[doc = "0x1360 - TCD Source Address"]
+    pub tcd27_saddr: TCD_SADDR,
+    #[doc = "0x1364 - TCD Signed Source Address Offset"]
+    pub tcd27_soff: TCD_SOFF,
+    #[doc = "0x1366 - TCD Transfer Attributes"]
+    pub tcd27_attr: TCD_ATTR,
+    #[doc = "0x1368 - TCD Minor Byte Count (Minor Loop Mapping Disabled)"]
+    pub tcd27_nbytes_mlno: TCD_NBYTES_MLNO,
+    #[doc = "0x136c - TCD Last Source Address Adjustment"]
+    pub tcd27_slast: TCD_SLAST,
+    #[doc = "0x1370 - TCD Destination Address"]
+    pub tcd27_daddr: TCD_DADDR,
+    #[doc = "0x1374 - TCD Signed Destination Address Offset"]
+    pub tcd27_doff: TCD_DOFF,
+    #[doc = "0x1376 - TCD Current Minor Loop Link, Major Loop Count (Channel Linking Disabled)"]
+    pub tcd27_citer_elinkno: TCD_CITER_ELINKNO,
+    #[doc = "0x1378 - TCD Last Destination Address Adjustment/Scatter Gather Address"]
+    pub tcd27_dlastsga: TCD_DLASTSGA,
+    #[doc = "0x137c - TCD Control and Status"]
+    pub tcd27_csr: TCD_CSR,
+    #[doc = "0x137e - TCD Beginning Minor Loop Link, Major Loop Count (Channel Linking Disabled)"]
+    pub tcd27_biter_elinkno: TCD_BITER_ELINKNO,
+    #[doc = "0x1380 - TCD Source Address"]
+    pub tcd28_saddr: TCD_SADDR,
+    #[doc = "0x1384 - TCD Signed Source Address Offset"]
+    pub tcd28_soff: TCD_SOFF,
+    #[doc = "0x1386 - TCD Transfer Attributes"]
+    pub tcd28_attr: TCD_ATTR,
+    #[doc = "0x1388 - TCD Minor Byte Count (Minor Loop Mapping Disabled)"]
+    pub tcd28_nbytes_mlno: TCD_NBYTES_MLNO,
+    #[doc = "0x138c - TCD Last Source Address Adjustment"]
+    pub tcd28_slast: TCD_SLAST,
+    #[doc = "0x1390 - TCD Destination Address"]
+    pub tcd28_daddr: TCD_DADDR,
+    #[doc = "0x1394 - TCD Signed Destination Address Offset"]
+    pub tcd28_doff: TCD_DOFF,
+    #[doc = "0x1396 - TCD Current Minor Loop Link, Major Loop Count (Channel Linking Disabled)"]
+    pub tcd28_citer_elinkno: TCD_CITER_ELINKNO,
+    #[doc = "0x1398 - TCD Last Destination Address Adjustment/Scatter Gather Address"]
+    pub tcd28_dlastsga: TCD_DLASTSGA,
+    #[doc = "0x139c - TCD Control and Status"]
+    pub tcd28_csr: TCD_CSR,
+    #[doc = "0x139e - TCD Beginning Minor Loop Link, Major Loop Count (Channel Linking Disabled)"]
+    pub tcd28_biter_elinkno: TCD_BITER_ELINKNO,
+    #[doc = "0x13a0 - TCD Source Address"]
+    pub tcd29_saddr: TCD_SADDR,
+    #[doc = "0x13a4 - TCD Signed Source Address Offset"]
+    pub tcd29_soff: TCD_SOFF,
+    #[doc = "0x13a6 - TCD Transfer Attributes"]
+    pub tcd29_attr: TCD_ATTR,
+    #[doc = "0x13a8 - TCD Minor Byte Count (Minor Loop Mapping Disabled)"]
+    pub tcd29_nbytes_mlno: TCD_NBYTES_MLNO,
+    #[doc = "0x13ac - TCD Last Source Address Adjustment"]
+    pub tcd29_slast: TCD_SLAST,
+    #[doc = "0x13b0 - TCD Destination Address"]
+    pub tcd29_daddr: TCD_DADDR,
+    #[doc = "0x13b4 - TCD Signed Destination Address Offset"]
+    pub tcd29_doff: TCD_DOFF,
+    #[doc = "0x13b6 - TCD Current Minor Loop Link, Major Loop Count (Channel Linking Disabled)"]
+    pub tcd29_citer_elinkno: TCD_CITER_ELINKNO,
+    #[doc = "0x13b8 - TCD Last Destination Address Adjustment/Scatter Gather Address"]
+    pub tcd29_dlastsga: TCD_DLASTSGA,
+    #[doc = "0x13bc - TCD Control and Status"]
+    pub tcd29_csr: TCD_CSR,
+    #[doc = "0x13be - TCD Beginning Minor Loop Link, Major Loop Count (Channel Linking Disabled)"]
+    pub tcd29_biter_elinkno: TCD_BITER_ELINKNO,
+    #[doc = "0x13c0 - TCD Source Address"]
+    pub tcd30_saddr: TCD_SADDR,
+    #[doc = "0x13c4 - TCD Signed Source Address Offset"]
+    pub tcd30_soff: TCD_SOFF,
+    #[doc = "0x13c6 - TCD Transfer Attributes"]
+    pub tcd30_attr: TCD_ATTR,
+    #[doc = "0x13c8 - TCD Minor Byte Count (Minor Loop Mapping Disabled)"]
+    pub tcd30_nbytes_mlno: TCD_NBYTES_MLNO,
+    #[doc = "0x13cc - TCD Last Source Address Adjustment"]
+    pub tcd30_slast: TCD_SLAST,
+    #[doc = "0x13d0 - TCD Destination Address"]
+    pub tcd30_daddr: TCD_DADDR,
+    #[doc = "0x13d4 - TCD Signed Destination Address Offset"]
+    pub tcd30_doff: TCD_DOFF,
+    #[doc = "0x13d6 - TCD Current Minor Loop Link, Major Loop Count (Channel Linking Disabled)"]
+    pub tcd30_citer_elinkno: TCD_CITER_ELINKNO,
+    #[doc = "0x13d8 - TCD Last Destination Address Adjustment/Scatter Gather Address"]
+    pub tcd30_dlastsga: TCD_DLASTSGA,
+    #[doc = "0x13dc - TCD Control and Status"]
+    pub tcd30_csr: TCD_CSR,
+    #[doc = "0x13de - TCD Beginning Minor Loop Link, Major Loop Count (Channel Linking Disabled)"]
+    pub tcd30_biter_elinkno: TCD_BITER_ELINKNO,
+    #[doc = "0x13e0 - TCD Source Address"]
+    pub tcd31_saddr: TCD_SADDR,
+    #[doc = "0x13e4 - TCD Signed Source Address Offset"]
+    pub tcd31_soff: TCD_SOFF,
+    #[doc = "0x13e6 - TCD Transfer Attributes"]
+    pub tcd31_attr: TCD_ATTR,
+    #[doc = "0x13e8 - TCD Minor Byte Count (Minor Loop Mapping Disabled)"]
+    pub tcd31_nbytes_mlno: TCD_NBYTES_MLNO,
+    #[doc = "0x13ec - TCD Last Source Address Adjustment"]
+    pub tcd31_slast: TCD_SLAST,
+    #[doc = "0x13f0 - TCD Destination Address"]
+    pub tcd31_daddr: TCD_DADDR,
+    #[doc = "0x13f4 - TCD Signed Destination Address Offset"]
+    pub tcd31_doff: TCD_DOFF,
+    #[doc = "0x13f6 - TCD Current Minor Loop Link, Major Loop Count (Channel Linking Disabled)"]
+    pub tcd31_citer_elinkno: TCD_CITER_ELINKNO,
+    #[doc = "0x13f8 - TCD Last Destination Address Adjustment/Scatter Gather Address"]
+    pub tcd31_dlastsga: TCD_DLASTSGA,
+    #[doc = "0x13fc - TCD Control and Status"]
+    pub tcd31_csr: TCD_CSR,
+    #[doc = "0x13fe - TCD Beginning Minor Loop Link, Major Loop Count (Channel Linking Disabled)"]
+    pub tcd31_biter_elinkno: TCD_BITER_ELINKNO,
 }
 #[doc = "Control Register"]
 pub struct CR {
@@ -513,6 +900,12 @@ pub struct HRS {
 }
 #[doc = "Hardware Request Status Register"]
 pub mod hrs;
+#[doc = "Enable Asynchronous Request in Stop Register"]
+pub struct EARS {
+    register: ::vcell::VolatileCell<u32>,
+}
+#[doc = "Enable Asynchronous Request in Stop Register"]
+pub mod ears;
 #[doc = "Channel n Priority Register"]
 pub struct DCHPRI {
     register: ::vcell::VolatileCell<u8>,
@@ -537,23 +930,23 @@ pub struct TCD_ATTR {
 }
 #[doc = "TCD Transfer Attributes"]
 pub mod tcd_attr;
-#[doc = "TCD Minor Byte Count (Minor Loop Disabled)"]
+#[doc = "TCD Minor Byte Count (Minor Loop Mapping Disabled)"]
 pub struct TCD_NBYTES_MLNO {
     register: ::vcell::VolatileCell<u32>,
 }
-#[doc = "TCD Minor Byte Count (Minor Loop Disabled)"]
+#[doc = "TCD Minor Byte Count (Minor Loop Mapping Disabled)"]
 pub mod tcd_nbytes_mlno;
-#[doc = "TCD Signed Minor Loop Offset (Minor Loop Enabled and Offset Disabled)"]
+#[doc = "TCD Signed Minor Loop Offset (Minor Loop Mapping Enabled and Offset Disabled)"]
 pub struct TCD_NBYTES_MLOFFNO {
     register: ::vcell::VolatileCell<u32>,
 }
-#[doc = "TCD Signed Minor Loop Offset (Minor Loop Enabled and Offset Disabled)"]
+#[doc = "TCD Signed Minor Loop Offset (Minor Loop Mapping Enabled and Offset Disabled)"]
 pub mod tcd_nbytes_mloffno;
-#[doc = "TCD Signed Minor Loop Offset (Minor Loop and Offset Enabled)"]
+#[doc = "TCD Signed Minor Loop Offset (Minor Loop Mapping and Offset Enabled)"]
 pub struct TCD_NBYTES_MLOFFYES {
     register: ::vcell::VolatileCell<u32>,
 }
-#[doc = "TCD Signed Minor Loop Offset (Minor Loop and Offset Enabled)"]
+#[doc = "TCD Signed Minor Loop Offset (Minor Loop Mapping and Offset Enabled)"]
 pub mod tcd_nbytes_mloffyes;
 #[doc = "TCD Last Source Address Adjustment"]
 pub struct TCD_SLAST {

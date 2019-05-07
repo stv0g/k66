@@ -134,7 +134,7 @@ impl<'a> _LINKCHW<'a> {
     #[doc = r" Writes raw bits to the field"]
     #[inline]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 15;
+        const MASK: u8 = 31;
         const OFFSET: u8 = 9;
         self.w.bits &= !((MASK as u16) << OFFSET);
         self.w.bits |= ((value & MASK) as u16) << OFFSET;
@@ -215,11 +215,11 @@ impl R {
         };
         CITERR { bits }
     }
-    #[doc = "Bits 9:12 - Link Channel Number"]
+    #[doc = "Bits 9:13 - Minor Loop Link Channel Number"]
     #[inline]
     pub fn linkch(&self) -> LINKCHR {
         let bits = {
-            const MASK: u8 = 15;
+            const MASK: u8 = 31;
             const OFFSET: u8 = 9;
             ((self.bits >> OFFSET) & MASK as u16) as u8
         };
@@ -252,7 +252,7 @@ impl W {
     pub fn citer(&mut self) -> _CITERW {
         _CITERW { w: self }
     }
-    #[doc = "Bits 9:12 - Link Channel Number"]
+    #[doc = "Bits 9:13 - Minor Loop Link Channel Number"]
     #[inline]
     pub fn linkch(&mut self) -> _LINKCHW {
         _LINKCHW { w: self }

@@ -45,13 +45,13 @@ impl super::MCR {
 #[doc = "Possible values of the field `MICS`"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum MICSR {
-    #[doc = "MCLK divider input clock 0 selected."]
+    #[doc = "MCLK divider input clock 0 is selected."]
     _00,
-    #[doc = "MCLK divider input clock 1 selected."]
+    #[doc = "MCLK divider input clock 1 is selected."]
     _01,
-    #[doc = "MCLK divider input clock 2 selected."]
+    #[doc = "MCLK divider input clock 2 is selected."]
     _10,
-    #[doc = "MCLK divider input clock 3 selected."]
+    #[doc = "MCLK divider input clock 3 is selected."]
     _11,
 }
 impl MICSR {
@@ -194,13 +194,13 @@ impl DUFR {
 }
 #[doc = "Values that can be written to the field `MICS`"]
 pub enum MICSW {
-    #[doc = "MCLK divider input clock 0 selected."]
+    #[doc = "MCLK divider input clock 0 is selected."]
     _00,
-    #[doc = "MCLK divider input clock 1 selected."]
+    #[doc = "MCLK divider input clock 1 is selected."]
     _01,
-    #[doc = "MCLK divider input clock 2 selected."]
+    #[doc = "MCLK divider input clock 2 is selected."]
     _10,
-    #[doc = "MCLK divider input clock 3 selected."]
+    #[doc = "MCLK divider input clock 3 is selected."]
     _11,
 }
 impl MICSW {
@@ -228,22 +228,22 @@ impl<'a> _MICSW<'a> {
             self.bits(variant._bits())
         }
     }
-    #[doc = "MCLK divider input clock 0 selected."]
+    #[doc = "MCLK divider input clock 0 is selected."]
     #[inline]
     pub fn _00(self) -> &'a mut W {
         self.variant(MICSW::_00)
     }
-    #[doc = "MCLK divider input clock 1 selected."]
+    #[doc = "MCLK divider input clock 1 is selected."]
     #[inline]
     pub fn _01(self) -> &'a mut W {
         self.variant(MICSW::_01)
     }
-    #[doc = "MCLK divider input clock 2 selected."]
+    #[doc = "MCLK divider input clock 2 is selected."]
     #[inline]
     pub fn _10(self) -> &'a mut W {
         self.variant(MICSW::_10)
     }
-    #[doc = "MCLK divider input clock 3 selected."]
+    #[doc = "MCLK divider input clock 3 is selected."]
     #[inline]
     pub fn _11(self) -> &'a mut W {
         self.variant(MICSW::_11)

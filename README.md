@@ -2,8 +2,8 @@
 [![Crates.io](https://img.shields.io/crates/v/k64.svg)](https://crates.io/crates/k64)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-# k64
-Peripheral access API for Kinetis K64 microcontroller
+# k66
+Peripheral access API for Kinetis K66 microcontroller
 
 ## Getting Started
 check out the following ressources to get started with embedded in Rust:

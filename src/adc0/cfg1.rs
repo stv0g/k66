@@ -47,7 +47,7 @@ impl super::CFG1 {
 pub enum ADICLKR {
     #[doc = "Bus clock"]
     _00,
-    #[doc = "Alternate clock 2 (ALTCLK2)"]
+    #[doc = "Bus clock divided by 2(BUSCLK/2)"]
     _01,
     #[doc = "Alternate clock (ALTCLK)"]
     _10,
@@ -308,7 +308,7 @@ impl ADLPCR {
 pub enum ADICLKW {
     #[doc = "Bus clock"]
     _00,
-    #[doc = "Alternate clock 2 (ALTCLK2)"]
+    #[doc = "Bus clock divided by 2(BUSCLK/2)"]
     _01,
     #[doc = "Alternate clock (ALTCLK)"]
     _10,
@@ -345,7 +345,7 @@ impl<'a> _ADICLKW<'a> {
     pub fn _00(self) -> &'a mut W {
         self.variant(ADICLKW::_00)
     }
-    #[doc = "Alternate clock 2 (ALTCLK2)"]
+    #[doc = "Bus clock divided by 2(BUSCLK/2)"]
     #[inline]
     pub fn _01(self) -> &'a mut W {
         self.variant(ADICLKW::_01)

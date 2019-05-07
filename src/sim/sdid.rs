@@ -380,6 +380,8 @@ impl SUBFAMIDR {
 #[doc = "Possible values of the field `FAMILYID`"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum FAMILYIDR {
+    #[doc = "K0x Family"]
+    _0000,
     #[doc = "K1x Family"]
     _0001,
     #[doc = "K2x Family"]
@@ -392,6 +394,8 @@ pub enum FAMILYIDR {
     _0110,
     #[doc = "K7x Family"]
     _0111,
+    #[doc = "K8x Family"]
+    _1000,
     #[doc = r" Reserved"]
     _Reserved(u8),
 }
@@ -400,12 +404,14 @@ impl FAMILYIDR {
     #[inline]
     pub fn bits(&self) -> u8 {
         match *self {
+            FAMILYIDR::_0000 => 0,
             FAMILYIDR::_0001 => 1,
             FAMILYIDR::_0010 => 2,
             FAMILYIDR::_0011 => 3,
             FAMILYIDR::_0100 => 4,
             FAMILYIDR::_0110 => 6,
             FAMILYIDR::_0111 => 7,
+            FAMILYIDR::_1000 => 8,
             FAMILYIDR::_Reserved(bits) => bits,
         }
     }
@@ -414,14 +420,21 @@ impl FAMILYIDR {
     #[inline]
     pub fn _from(value: u8) -> FAMILYIDR {
         match value {
+            0 => FAMILYIDR::_0000,
             1 => FAMILYIDR::_0001,
             2 => FAMILYIDR::_0010,
             3 => FAMILYIDR::_0011,
             4 => FAMILYIDR::_0100,
             6 => FAMILYIDR::_0110,
             7 => FAMILYIDR::_0111,
+            8 => FAMILYIDR::_1000,
             i => FAMILYIDR::_Reserved(i),
         }
+    }
+    #[doc = "Checks if the value of the field is `_0000`"]
+    #[inline]
+    pub fn is_0000(&self) -> bool {
+        *self == FAMILYIDR::_0000
     }
     #[doc = "Checks if the value of the field is `_0001`"]
     #[inline]
@@ -452,6 +465,11 @@ impl FAMILYIDR {
     #[inline]
     pub fn is_0111(&self) -> bool {
         *self == FAMILYIDR::_0111
+    }
+    #[doc = "Checks if the value of the field is `_1000`"]
+    #[inline]
+    pub fn is_1000(&self) -> bool {
+        *self == FAMILYIDR::_1000
     }
 }
 impl R {

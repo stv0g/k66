@@ -1,12 +1,12 @@
 [package]
-name = "k64"
-version = "0.1.0"
-authors = ["Stefan Hoelzl <stefan.hoelzl@posteo.de>"]
+name = "k66"
+version = "0.0.1"
+authors = ["Steffen Vogel <post@steffenvogel.de>", "Stefan Hoelzl <stefan.hoelzl@posteo.de>"]
 categories = ["embedded", "hardware-support", "no-std"]
-description = "Peripheral access API for Kinetis K64 microcontrollers"
+description = "Peripheral access API for Kinetis K66 microcontrollers"
 keywords = ["arm", "cortex-m", "kinetis", "svd2rust"]
 license = "MIT"
-repository = "https://github.com/stefanhoelzl/k64"
+repository = "https://github.com/stv0g/k66"
 
 [dependencies]
 cortex-m = "0.5.8"

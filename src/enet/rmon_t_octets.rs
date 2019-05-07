@@ -28,7 +28,7 @@ impl R {
     pub fn bits(&self) -> u32 {
         self.bits
     }
-    #[doc = "Bits 0:31 - Octet count"]
+    #[doc = "Bits 0:31 - Number of transmit octets"]
     #[inline]
     pub fn txocts(&self) -> TXOCTSR {
         let bits = {

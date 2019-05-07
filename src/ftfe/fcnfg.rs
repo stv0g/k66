@@ -45,9 +45,9 @@ impl super::FCNFG {
 #[doc = "Possible values of the field `EEERDY`"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum EEERDYR {
-    #[doc = "For devices with FlexNVM: FlexRAM is not available for EEPROM operation."]
+    #[doc = "For devices with FlexNVM: FlexRAM is not available for EEPROM operation For devices without FlexNVM: See RAMRDY for availability of programming acceleration RAM"]
     _0,
-    #[doc = "For devices with FlexNVM: FlexRAM is available for EEPROM operations where: reads from the FlexRAM return data previously written to the FlexRAM in EEPROM mode and writes launch an EEPROM operation to store the written data in the FlexRAM and EEPROM backup."]
+    #[doc = "For devices with FlexNVM: FlexRAM is available for EEPROM operations where: reads from the FlexRAM return data previously written to the FlexRAM in EEPROM mode and writes launch an EEPROM operation to store the written data in the FlexRAM and EEPROM backup For devices without FlexNVM: Reserved"]
     _1,
 }
 impl EEERDYR {
@@ -92,9 +92,9 @@ impl EEERDYR {
 #[doc = "Possible values of the field `RAMRDY`"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum RAMRDYR {
-    #[doc = "For devices with FlexNVM: FlexRAM is not available for traditional RAM access. For devices without FlexNVM: Programming acceleration RAM is not available."]
+    #[doc = "For devices with FlexNVM: FlexRAM is not available for traditional RAM access For devices without FlexNVM: Programming acceleration RAM is not available"]
     _0,
-    #[doc = "For devices with FlexNVM: FlexRAM is available as traditional RAM only; writes to the FlexRAM do not trigger EEPROM operations. For devices without FlexNVM: Programming acceleration RAM is available."]
+    #[doc = "For devices with FlexNVM: FlexRAM is available as traditional RAM only; writes to the FlexRAM do not trigger EEPROM operations For devices without FlexNVM: Programming acceleration RAM is available"]
     _1,
 }
 impl RAMRDYR {
@@ -139,7 +139,7 @@ impl RAMRDYR {
 #[doc = "Possible values of the field `PFLSH`"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum PFLSHR {
-    #[doc = "For devices with FlexNVM: FTFE configuration supports two program flash blocks and two FlexNVM blocks For devices with program flash only: Reserved"]
+    #[doc = "For devices with FlexNVM: FTFE configuration supports two or three program flash blocks and two FlexNVM blocks For devices with program flash only: Reserved"]
     _0,
     #[doc = "For devices with FlexNVM: Reserved For devices with program flash only: FTFE configuration supports four program flash blocks"]
     _1,
@@ -186,9 +186,9 @@ impl PFLSHR {
 #[doc = "Possible values of the field `SWAP`"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum SWAPR {
-    #[doc = "For devices with FlexNVM: Program flash 0 block is located at relative address 0x0000 For devices with program flash only: Program flash 0 block is located at relative address 0x0000"]
+    #[doc = "For devices with FlexNVM: Program flash 0 block is located at relative address 0x0000 For devices with program flash only: Program flash 0/1 blocks are located at relative address 0x0000"]
     _0,
-    #[doc = "For devices with FlexNVM: Reserved For devices with program flash only: Program flash 1 block is located at relative address 0x0000"]
+    #[doc = "For devices with FlexNVM: Reserved For devices with program flash only: Program flash 2/3 blocks are located at relative address 0x0000"]
     _1,
 }
 impl SWAPR {
@@ -235,7 +235,7 @@ impl SWAPR {
 pub enum ERSSUSPR {
     #[doc = "No suspend requested"]
     _0,
-    #[doc = "Suspend the current Erase Flash Sector command execution."]
+    #[doc = "Suspend the current Erase Flash Sector command execution"]
     _1,
 }
 impl ERSSUSPR {
@@ -282,7 +282,7 @@ impl ERSSUSPR {
 pub enum ERSAREQR {
     #[doc = "No request or request complete"]
     _0,
-    #[doc = "Request to: run the Erase All Blocks command, verify the erased state, program the security byte in the Flash Configuration Field to the unsecure state, and release MCU security by setting the FSEC\\[SEC\\] field to the unsecure state."]
+    #[doc = "Request to: run the Erase All Blocks command, verify the erased state, program the security byte in the Flash Configuration Field to the unsecure state, and release MCU security by setting the FSEC\\[SEC\\] field to the unsecure state"]
     _1,
 }
 impl ERSAREQR {
@@ -422,7 +422,7 @@ impl CCIER {
 pub enum ERSSUSPW {
     #[doc = "No suspend requested"]
     _0,
-    #[doc = "Suspend the current Erase Flash Sector command execution."]
+    #[doc = "Suspend the current Erase Flash Sector command execution"]
     _1,
 }
 impl ERSSUSPW {
@@ -453,7 +453,7 @@ impl<'a> _ERSSUSPW<'a> {
     pub fn _0(self) -> &'a mut W {
         self.variant(ERSSUSPW::_0)
     }
-    #[doc = "Suspend the current Erase Flash Sector command execution."]
+    #[doc = "Suspend the current Erase Flash Sector command execution"]
     #[inline]
     pub fn _1(self) -> &'a mut W {
         self.variant(ERSSUSPW::_1)

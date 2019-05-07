@@ -45,9 +45,9 @@ impl super::MODE {
 #[doc = "Possible values of the field `FTMEN`"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum FTMENR {
-    #[doc = "Only the TPM-compatible registers (first set of registers) can be used without any restriction. Do not use the FTM-specific registers."]
+    #[doc = "TPM compatibility. Free running counter and synchronization compatible with TPM."]
     _0,
-    #[doc = "All registers including the FTM-specific registers (second set of registers) are available for use with no restrictions."]
+    #[doc = "Free running counter and synchronization are different from TPM behavior."]
     _1,
 }
 impl FTMENR {
@@ -356,9 +356,9 @@ impl FAULTIER {
 }
 #[doc = "Values that can be written to the field `FTMEN`"]
 pub enum FTMENW {
-    #[doc = "Only the TPM-compatible registers (first set of registers) can be used without any restriction. Do not use the FTM-specific registers."]
+    #[doc = "TPM compatibility. Free running counter and synchronization compatible with TPM."]
     _0,
-    #[doc = "All registers including the FTM-specific registers (second set of registers) are available for use with no restrictions."]
+    #[doc = "Free running counter and synchronization are different from TPM behavior."]
     _1,
 }
 impl FTMENW {
@@ -384,12 +384,12 @@ impl<'a> _FTMENW<'a> {
             self.bit(variant._bits())
         }
     }
-    #[doc = "Only the TPM-compatible registers (first set of registers) can be used without any restriction. Do not use the FTM-specific registers."]
+    #[doc = "TPM compatibility. Free running counter and synchronization compatible with TPM."]
     #[inline]
     pub fn _0(self) -> &'a mut W {
         self.variant(FTMENW::_0)
     }
-    #[doc = "All registers including the FTM-specific registers (second set of registers) are available for use with no restrictions."]
+    #[doc = "Free running counter and synchronization are different from TPM behavior."]
     #[inline]
     pub fn _1(self) -> &'a mut W {
         self.variant(FTMENW::_1)

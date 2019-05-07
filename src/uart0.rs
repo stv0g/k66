@@ -54,7 +54,7 @@ pub struct RegisterBlock {
     #[doc = "0x1a - UART 7816 Interrupt Status Register"]
     pub is7816: IS7816,
     #[doc = "0x1b - UART 7816 Wait Parameter Register"]
-    pub wp7816t0: WP7816T0,
+    pub wp7816: WP7816,
     #[doc = "0x1c - UART 7816 Wait N Register"]
     pub wn7816: WN7816,
     #[doc = "0x1d - UART 7816 Wait FD Register"]
@@ -63,6 +63,19 @@ pub struct RegisterBlock {
     pub et7816: ET7816,
     #[doc = "0x1f - UART 7816 Transmit Length Register"]
     pub tl7816: TL7816,
+    _reserved2: [u8; 26usize],
+    #[doc = "0x3a - UART 7816 ATR Duration Timer Register A"]
+    pub ap7816a_t0: AP7816A_T0,
+    #[doc = "0x3b - UART 7816 ATR Duration Timer Register B"]
+    pub ap7816b_t0: AP7816B_T0,
+    #[doc = "0x3c - UART 7816 Wait Parameter Register A"]
+    pub wp7816a_t0: WP7816A_T0,
+    #[doc = "0x3d - UART 7816 Wait Parameter Register B"]
+    pub wp7816b_t0: WP7816B_T0,
+    #[doc = "0x3e - UART 7816 Wait and Guard Parameter Register"]
+    pub wgp7816_t1: WGP7816_T1,
+    #[doc = "0x3f - UART 7816 Wait Parameter Register C"]
+    pub wp7816c_t1: WP7816C_T1,
 }
 #[doc = "UART Baud Rate Registers: High"]
 pub struct BDH {
@@ -215,17 +228,11 @@ pub struct IS7816 {
 #[doc = "UART 7816 Interrupt Status Register"]
 pub mod is7816;
 #[doc = "UART 7816 Wait Parameter Register"]
-pub struct WP7816T0 {
+pub struct WP7816 {
     register: ::vcell::VolatileCell<u8>,
 }
 #[doc = "UART 7816 Wait Parameter Register"]
-pub mod wp7816t0;
-#[doc = "UART 7816 Wait Parameter Register"]
-pub struct WP7816T1 {
-    register: ::vcell::VolatileCell<u8>,
-}
-#[doc = "UART 7816 Wait Parameter Register"]
-pub mod wp7816t1;
+pub mod wp7816;
 #[doc = "UART 7816 Wait N Register"]
 pub struct WN7816 {
     register: ::vcell::VolatileCell<u8>,
@@ -250,3 +257,51 @@ pub struct TL7816 {
 }
 #[doc = "UART 7816 Transmit Length Register"]
 pub mod tl7816;
+#[doc = "UART 7816 ATR Duration Timer Register A"]
+pub struct AP7816A_T0 {
+    register: ::vcell::VolatileCell<u8>,
+}
+#[doc = "UART 7816 ATR Duration Timer Register A"]
+pub mod ap7816a_t0;
+#[doc = "UART 7816 ATR Duration Timer Register B"]
+pub struct AP7816B_T0 {
+    register: ::vcell::VolatileCell<u8>,
+}
+#[doc = "UART 7816 ATR Duration Timer Register B"]
+pub mod ap7816b_t0;
+#[doc = "UART 7816 Wait Parameter Register A"]
+pub struct WP7816A_T0 {
+    register: ::vcell::VolatileCell<u8>,
+}
+#[doc = "UART 7816 Wait Parameter Register A"]
+pub mod wp7816a_t0;
+#[doc = "UART 7816 Wait Parameter Register A"]
+pub struct WP7816A_T1 {
+    register: ::vcell::VolatileCell<u8>,
+}
+#[doc = "UART 7816 Wait Parameter Register A"]
+pub mod wp7816a_t1;
+#[doc = "UART 7816 Wait Parameter Register B"]
+pub struct WP7816B_T0 {
+    register: ::vcell::VolatileCell<u8>,
+}
+#[doc = "UART 7816 Wait Parameter Register B"]
+pub mod wp7816b_t0;
+#[doc = "UART 7816 Wait Parameter Register B"]
+pub struct WP7816B_T1 {
+    register: ::vcell::VolatileCell<u8>,
+}
+#[doc = "UART 7816 Wait Parameter Register B"]
+pub mod wp7816b_t1;
+#[doc = "UART 7816 Wait and Guard Parameter Register"]
+pub struct WGP7816_T1 {
+    register: ::vcell::VolatileCell<u8>,
+}
+#[doc = "UART 7816 Wait and Guard Parameter Register"]
+pub mod wgp7816_t1;
+#[doc = "UART 7816 Wait Parameter Register C"]
+pub struct WP7816C_T1 {
+    register: ::vcell::VolatileCell<u8>,
+}
+#[doc = "UART 7816 Wait Parameter Register C"]
+pub mod wp7816c_t1;

@@ -92,9 +92,9 @@ impl EDBGR {
 #[doc = "Possible values of the field `ERCA`"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum ERCAR {
-    #[doc = "Fixed priority arbitration is used for channel selection ."]
+    #[doc = "Fixed priority arbitration is used for channel selection within each group."]
     _0,
-    #[doc = "Round robin arbitration is used for channel selection ."]
+    #[doc = "Round robin arbitration is used for channel selection within each group."]
     _1,
 }
 impl ERCAR {
@@ -134,6 +134,53 @@ impl ERCAR {
     #[inline]
     pub fn is_1(&self) -> bool {
         *self == ERCAR::_1
+    }
+}
+#[doc = "Possible values of the field `ERGA`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum ERGAR {
+    #[doc = "Fixed priority arbitration is used for selection among the groups."]
+    _0,
+    #[doc = "Round robin arbitration is used for selection among the groups."]
+    _1,
+}
+impl ERGAR {
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            ERGAR::_0 => false,
+            ERGAR::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> ERGAR {
+        match value {
+            false => ERGAR::_0,
+            true => ERGAR::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == ERGAR::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == ERGAR::_1
     }
 }
 #[doc = "Possible values of the field `HOE`"]
@@ -324,6 +371,48 @@ impl EMLMR {
         *self == EMLMR::_1
     }
 }
+#[doc = r" Value of the field"]
+pub struct GRP0PRIR {
+    bits: bool,
+}
+impl GRP0PRIR {
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        self.bits
+    }
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+}
+#[doc = r" Value of the field"]
+pub struct GRP1PRIR {
+    bits: bool,
+}
+impl GRP1PRIR {
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        self.bits
+    }
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+}
 #[doc = "Possible values of the field `ECX`"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum ECXR {
@@ -478,9 +567,9 @@ impl<'a> _EDBGW<'a> {
 }
 #[doc = "Values that can be written to the field `ERCA`"]
 pub enum ERCAW {
-    #[doc = "Fixed priority arbitration is used for channel selection ."]
+    #[doc = "Fixed priority arbitration is used for channel selection within each group."]
     _0,
-    #[doc = "Round robin arbitration is used for channel selection ."]
+    #[doc = "Round robin arbitration is used for channel selection within each group."]
     _1,
 }
 impl ERCAW {
@@ -506,12 +595,12 @@ impl<'a> _ERCAW<'a> {
             self.bit(variant._bits())
         }
     }
-    #[doc = "Fixed priority arbitration is used for channel selection ."]
+    #[doc = "Fixed priority arbitration is used for channel selection within each group."]
     #[inline]
     pub fn _0(self) -> &'a mut W {
         self.variant(ERCAW::_0)
     }
-    #[doc = "Round robin arbitration is used for channel selection ."]
+    #[doc = "Round robin arbitration is used for channel selection within each group."]
     #[inline]
     pub fn _1(self) -> &'a mut W {
         self.variant(ERCAW::_1)
@@ -529,6 +618,64 @@ impl<'a> _ERCAW<'a> {
     pub fn bit(self, value: bool) -> &'a mut W {
         const MASK: bool = true;
         const OFFSET: u8 = 2;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = "Values that can be written to the field `ERGA`"]
+pub enum ERGAW {
+    #[doc = "Fixed priority arbitration is used for selection among the groups."]
+    _0,
+    #[doc = "Round robin arbitration is used for selection among the groups."]
+    _1,
+}
+impl ERGAW {
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _bits(&self) -> bool {
+        match *self {
+            ERGAW::_0 => false,
+            ERGAW::_1 => true,
+        }
+    }
+}
+#[doc = r" Proxy"]
+pub struct _ERGAW<'a> {
+    w: &'a mut W,
+}
+impl<'a> _ERGAW<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: ERGAW) -> &'a mut W {
+        {
+            self.bit(variant._bits())
+        }
+    }
+    #[doc = "Fixed priority arbitration is used for selection among the groups."]
+    #[inline]
+    pub fn _0(self) -> &'a mut W {
+        self.variant(ERGAW::_0)
+    }
+    #[doc = "Round robin arbitration is used for selection among the groups."]
+    #[inline]
+    pub fn _1(self) -> &'a mut W {
+        self.variant(ERGAW::_1)
+    }
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 3;
         self.w.bits &= !((MASK as u32) << OFFSET);
         self.w.bits |= ((value & MASK) as u32) << OFFSET;
         self.w
@@ -766,6 +913,52 @@ impl<'a> _EMLMW<'a> {
         self.w
     }
 }
+#[doc = r" Proxy"]
+pub struct _GRP0PRIW<'a> {
+    w: &'a mut W,
+}
+impl<'a> _GRP0PRIW<'a> {
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 8;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = r" Proxy"]
+pub struct _GRP1PRIW<'a> {
+    w: &'a mut W,
+}
+impl<'a> _GRP1PRIW<'a> {
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 10;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
 #[doc = "Values that can be written to the field `ECX`"]
 pub enum ECXW {
     #[doc = "Normal operation"]
@@ -906,6 +1099,15 @@ impl R {
             ((self.bits >> OFFSET) & MASK as u32) != 0
         })
     }
+    #[doc = "Bit 3 - Enable Round Robin Group Arbitration"]
+    #[inline]
+    pub fn erga(&self) -> ERGAR {
+        ERGAR::_from({
+            const MASK: bool = true;
+            const OFFSET: u8 = 3;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        })
+    }
     #[doc = "Bit 4 - Halt On Error"]
     #[inline]
     pub fn hoe(&self) -> HOER {
@@ -942,6 +1144,26 @@ impl R {
             ((self.bits >> OFFSET) & MASK as u32) != 0
         })
     }
+    #[doc = "Bit 8 - Channel Group 0 Priority"]
+    #[inline]
+    pub fn grp0pri(&self) -> GRP0PRIR {
+        let bits = {
+            const MASK: bool = true;
+            const OFFSET: u8 = 8;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        };
+        GRP0PRIR { bits }
+    }
+    #[doc = "Bit 10 - Channel Group 1 Priority"]
+    #[inline]
+    pub fn grp1pri(&self) -> GRP1PRIR {
+        let bits = {
+            const MASK: bool = true;
+            const OFFSET: u8 = 10;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        };
+        GRP1PRIR { bits }
+    }
     #[doc = "Bit 16 - Error Cancel Transfer"]
     #[inline]
     pub fn ecx(&self) -> ECXR {
@@ -965,7 +1187,7 @@ impl W {
     #[doc = r" Reset value of the register"]
     #[inline]
     pub fn reset_value() -> W {
-        W { bits: 0 }
+        W { bits: 1024 }
     }
     #[doc = r" Writes raw bits to the register"]
     #[inline]
@@ -982,6 +1204,11 @@ impl W {
     #[inline]
     pub fn erca(&mut self) -> _ERCAW {
         _ERCAW { w: self }
+    }
+    #[doc = "Bit 3 - Enable Round Robin Group Arbitration"]
+    #[inline]
+    pub fn erga(&mut self) -> _ERGAW {
+        _ERGAW { w: self }
     }
     #[doc = "Bit 4 - Halt On Error"]
     #[inline]
@@ -1002,6 +1229,16 @@ impl W {
     #[inline]
     pub fn emlm(&mut self) -> _EMLMW {
         _EMLMW { w: self }
+    }
+    #[doc = "Bit 8 - Channel Group 0 Priority"]
+    #[inline]
+    pub fn grp0pri(&mut self) -> _GRP0PRIW {
+        _GRP0PRIW { w: self }
+    }
+    #[doc = "Bit 10 - Channel Group 1 Priority"]
+    #[inline]
+    pub fn grp1pri(&mut self) -> _GRP1PRIW {
+        _GRP1PRIW { w: self }
     }
     #[doc = "Bit 16 - Error Cancel Transfer"]
     #[inline]

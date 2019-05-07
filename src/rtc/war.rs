@@ -418,6 +418,194 @@ impl IERWR {
         *self == IERWR::_1
     }
 }
+#[doc = "Possible values of the field `TTSW`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum TTSWR {
+    #[doc = "Writes to the Tamper Time Seconds Register are ignored."]
+    _0,
+    #[doc = "Writes to the Tamper Time Seconds Register complete as normal."]
+    _1,
+}
+impl TTSWR {
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            TTSWR::_0 => false,
+            TTSWR::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> TTSWR {
+        match value {
+            false => TTSWR::_0,
+            true => TTSWR::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == TTSWR::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == TTSWR::_1
+    }
+}
+#[doc = "Possible values of the field `MERW`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum MERWR {
+    #[doc = "Writes to the Monotonic Enable Register are ignored."]
+    _0,
+    #[doc = "Writes to the Monotonic Enable Register complete as normal."]
+    _1,
+}
+impl MERWR {
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            MERWR::_0 => false,
+            MERWR::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> MERWR {
+        match value {
+            false => MERWR::_0,
+            true => MERWR::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == MERWR::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == MERWR::_1
+    }
+}
+#[doc = "Possible values of the field `MCLW`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum MCLWR {
+    #[doc = "Writes to the Monotonic Counter Low Register are ignored."]
+    _0,
+    #[doc = "Writes to the Monotonic Counter Low Register complete as normal."]
+    _1,
+}
+impl MCLWR {
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            MCLWR::_0 => false,
+            MCLWR::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> MCLWR {
+        match value {
+            false => MCLWR::_0,
+            true => MCLWR::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == MCLWR::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == MCLWR::_1
+    }
+}
+#[doc = "Possible values of the field `MCHW`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum MCHWR {
+    #[doc = "Writes to the Monotonic Counter High Register are ignored."]
+    _0,
+    #[doc = "Writes to the Monotonic Counter High Register complete as normal."]
+    _1,
+}
+impl MCHWR {
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            MCHWR::_0 => false,
+            MCHWR::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> MCHWR {
+        match value {
+            false => MCHWR::_0,
+            true => MCHWR::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == MCHWR::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == MCHWR::_1
+    }
+}
 #[doc = "Values that can be written to the field `TSRW`"]
 pub enum TSRWW {
     #[doc = "Writes to the Time Seconds Register are ignored."]
@@ -882,6 +1070,238 @@ impl<'a> _IERWW<'a> {
         self.w
     }
 }
+#[doc = "Values that can be written to the field `TTSW`"]
+pub enum TTSWW {
+    #[doc = "Writes to the Tamper Time Seconds Register are ignored."]
+    _0,
+    #[doc = "Writes to the Tamper Time Seconds Register complete as normal."]
+    _1,
+}
+impl TTSWW {
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _bits(&self) -> bool {
+        match *self {
+            TTSWW::_0 => false,
+            TTSWW::_1 => true,
+        }
+    }
+}
+#[doc = r" Proxy"]
+pub struct _TTSWW<'a> {
+    w: &'a mut W,
+}
+impl<'a> _TTSWW<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: TTSWW) -> &'a mut W {
+        {
+            self.bit(variant._bits())
+        }
+    }
+    #[doc = "Writes to the Tamper Time Seconds Register are ignored."]
+    #[inline]
+    pub fn _0(self) -> &'a mut W {
+        self.variant(TTSWW::_0)
+    }
+    #[doc = "Writes to the Tamper Time Seconds Register complete as normal."]
+    #[inline]
+    pub fn _1(self) -> &'a mut W {
+        self.variant(TTSWW::_1)
+    }
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 8;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = "Values that can be written to the field `MERW`"]
+pub enum MERWW {
+    #[doc = "Writes to the Monotonic Enable Register are ignored."]
+    _0,
+    #[doc = "Writes to the Monotonic Enable Register complete as normal."]
+    _1,
+}
+impl MERWW {
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _bits(&self) -> bool {
+        match *self {
+            MERWW::_0 => false,
+            MERWW::_1 => true,
+        }
+    }
+}
+#[doc = r" Proxy"]
+pub struct _MERWW<'a> {
+    w: &'a mut W,
+}
+impl<'a> _MERWW<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: MERWW) -> &'a mut W {
+        {
+            self.bit(variant._bits())
+        }
+    }
+    #[doc = "Writes to the Monotonic Enable Register are ignored."]
+    #[inline]
+    pub fn _0(self) -> &'a mut W {
+        self.variant(MERWW::_0)
+    }
+    #[doc = "Writes to the Monotonic Enable Register complete as normal."]
+    #[inline]
+    pub fn _1(self) -> &'a mut W {
+        self.variant(MERWW::_1)
+    }
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 9;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = "Values that can be written to the field `MCLW`"]
+pub enum MCLWW {
+    #[doc = "Writes to the Monotonic Counter Low Register are ignored."]
+    _0,
+    #[doc = "Writes to the Monotonic Counter Low Register complete as normal."]
+    _1,
+}
+impl MCLWW {
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _bits(&self) -> bool {
+        match *self {
+            MCLWW::_0 => false,
+            MCLWW::_1 => true,
+        }
+    }
+}
+#[doc = r" Proxy"]
+pub struct _MCLWW<'a> {
+    w: &'a mut W,
+}
+impl<'a> _MCLWW<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: MCLWW) -> &'a mut W {
+        {
+            self.bit(variant._bits())
+        }
+    }
+    #[doc = "Writes to the Monotonic Counter Low Register are ignored."]
+    #[inline]
+    pub fn _0(self) -> &'a mut W {
+        self.variant(MCLWW::_0)
+    }
+    #[doc = "Writes to the Monotonic Counter Low Register complete as normal."]
+    #[inline]
+    pub fn _1(self) -> &'a mut W {
+        self.variant(MCLWW::_1)
+    }
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 10;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = "Values that can be written to the field `MCHW`"]
+pub enum MCHWW {
+    #[doc = "Writes to the Monotonic Counter High Register are ignored."]
+    _0,
+    #[doc = "Writes to the Monotonic Counter High Register complete as normal."]
+    _1,
+}
+impl MCHWW {
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _bits(&self) -> bool {
+        match *self {
+            MCHWW::_0 => false,
+            MCHWW::_1 => true,
+        }
+    }
+}
+#[doc = r" Proxy"]
+pub struct _MCHWW<'a> {
+    w: &'a mut W,
+}
+impl<'a> _MCHWW<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: MCHWW) -> &'a mut W {
+        {
+            self.bit(variant._bits())
+        }
+    }
+    #[doc = "Writes to the Monotonic Counter High Register are ignored."]
+    #[inline]
+    pub fn _0(self) -> &'a mut W {
+        self.variant(MCHWW::_0)
+    }
+    #[doc = "Writes to the Monotonic Counter High Register complete as normal."]
+    #[inline]
+    pub fn _1(self) -> &'a mut W {
+        self.variant(MCHWW::_1)
+    }
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 11;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
 impl R {
     #[doc = r" Value of the register as raw bits"]
     #[inline]
@@ -960,12 +1380,48 @@ impl R {
             ((self.bits >> OFFSET) & MASK as u32) != 0
         })
     }
+    #[doc = "Bit 8 - Tamper Time Seconds Write"]
+    #[inline]
+    pub fn ttsw(&self) -> TTSWR {
+        TTSWR::_from({
+            const MASK: bool = true;
+            const OFFSET: u8 = 8;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        })
+    }
+    #[doc = "Bit 9 - Monotonic Enable Register Write"]
+    #[inline]
+    pub fn merw(&self) -> MERWR {
+        MERWR::_from({
+            const MASK: bool = true;
+            const OFFSET: u8 = 9;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        })
+    }
+    #[doc = "Bit 10 - Monotonic Counter Low Write"]
+    #[inline]
+    pub fn mclw(&self) -> MCLWR {
+        MCLWR::_from({
+            const MASK: bool = true;
+            const OFFSET: u8 = 10;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        })
+    }
+    #[doc = "Bit 11 - Monotonic Counter High Write"]
+    #[inline]
+    pub fn mchw(&self) -> MCHWR {
+        MCHWR::_from({
+            const MASK: bool = true;
+            const OFFSET: u8 = 11;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        })
+    }
 }
 impl W {
     #[doc = r" Reset value of the register"]
     #[inline]
     pub fn reset_value() -> W {
-        W { bits: 255 }
+        W { bits: 65535 }
     }
     #[doc = r" Writes raw bits to the register"]
     #[inline]
@@ -1012,5 +1468,25 @@ impl W {
     #[inline]
     pub fn ierw(&mut self) -> _IERWW {
         _IERWW { w: self }
+    }
+    #[doc = "Bit 8 - Tamper Time Seconds Write"]
+    #[inline]
+    pub fn ttsw(&mut self) -> _TTSWW {
+        _TTSWW { w: self }
+    }
+    #[doc = "Bit 9 - Monotonic Enable Register Write"]
+    #[inline]
+    pub fn merw(&mut self) -> _MERWW {
+        _MERWW { w: self }
+    }
+    #[doc = "Bit 10 - Monotonic Counter Low Write"]
+    #[inline]
+    pub fn mclw(&mut self) -> _MCLWW {
+        _MCLWW { w: self }
+    }
+    #[doc = "Bit 11 - Monotonic Counter High Write"]
+    #[inline]
+    pub fn mchw(&mut self) -> _MCHWW {
+        _MCHWW { w: self }
     }
 }

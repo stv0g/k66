@@ -92,9 +92,9 @@ impl AVLLSR {
 #[doc = "Possible values of the field `ALLS`"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum ALLSR {
-    #[doc = "LLS is not allowed"]
+    #[doc = "Any LLSx mode is not allowed"]
     _0,
-    #[doc = "LLS is allowed"]
+    #[doc = "Any LLSx mode is allowed"]
     _1,
 }
 impl ALLSR {
@@ -183,6 +183,53 @@ impl AVLPR {
         *self == AVLPR::_1
     }
 }
+#[doc = "Possible values of the field `AHSRUN`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum AHSRUNR {
+    #[doc = "HSRUN is not allowed"]
+    _0,
+    #[doc = "HSRUN is allowed"]
+    _1,
+}
+impl AHSRUNR {
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            AHSRUNR::_0 => false,
+            AHSRUNR::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> AHSRUNR {
+        match value {
+            false => AHSRUNR::_0,
+            true => AHSRUNR::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == AHSRUNR::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == AHSRUNR::_1
+    }
+}
 #[doc = "Values that can be written to the field `AVLLS`"]
 pub enum AVLLSW {
     #[doc = "Any VLLSx mode is not allowed"]
@@ -243,9 +290,9 @@ impl<'a> _AVLLSW<'a> {
 }
 #[doc = "Values that can be written to the field `ALLS`"]
 pub enum ALLSW {
-    #[doc = "LLS is not allowed"]
+    #[doc = "Any LLSx mode is not allowed"]
     _0,
-    #[doc = "LLS is allowed"]
+    #[doc = "Any LLSx mode is allowed"]
     _1,
 }
 impl ALLSW {
@@ -271,12 +318,12 @@ impl<'a> _ALLSW<'a> {
             self.bit(variant._bits())
         }
     }
-    #[doc = "LLS is not allowed"]
+    #[doc = "Any LLSx mode is not allowed"]
     #[inline]
     pub fn _0(self) -> &'a mut W {
         self.variant(ALLSW::_0)
     }
-    #[doc = "LLS is allowed"]
+    #[doc = "Any LLSx mode is allowed"]
     #[inline]
     pub fn _1(self) -> &'a mut W {
         self.variant(ALLSW::_1)
@@ -357,6 +404,64 @@ impl<'a> _AVLPW<'a> {
         self.w
     }
 }
+#[doc = "Values that can be written to the field `AHSRUN`"]
+pub enum AHSRUNW {
+    #[doc = "HSRUN is not allowed"]
+    _0,
+    #[doc = "HSRUN is allowed"]
+    _1,
+}
+impl AHSRUNW {
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _bits(&self) -> bool {
+        match *self {
+            AHSRUNW::_0 => false,
+            AHSRUNW::_1 => true,
+        }
+    }
+}
+#[doc = r" Proxy"]
+pub struct _AHSRUNW<'a> {
+    w: &'a mut W,
+}
+impl<'a> _AHSRUNW<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: AHSRUNW) -> &'a mut W {
+        {
+            self.bit(variant._bits())
+        }
+    }
+    #[doc = "HSRUN is not allowed"]
+    #[inline]
+    pub fn _0(self) -> &'a mut W {
+        self.variant(AHSRUNW::_0)
+    }
+    #[doc = "HSRUN is allowed"]
+    #[inline]
+    pub fn _1(self) -> &'a mut W {
+        self.variant(AHSRUNW::_1)
+    }
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 7;
+        self.w.bits &= !((MASK as u8) << OFFSET);
+        self.w.bits |= ((value & MASK) as u8) << OFFSET;
+        self.w
+    }
+}
 impl R {
     #[doc = r" Value of the register as raw bits"]
     #[inline]
@@ -390,6 +495,15 @@ impl R {
             ((self.bits >> OFFSET) & MASK as u8) != 0
         })
     }
+    #[doc = "Bit 7 - Allow High Speed Run mode"]
+    #[inline]
+    pub fn ahsrun(&self) -> AHSRUNR {
+        AHSRUNR::_from({
+            const MASK: bool = true;
+            const OFFSET: u8 = 7;
+            ((self.bits >> OFFSET) & MASK as u8) != 0
+        })
+    }
 }
 impl W {
     #[doc = r" Reset value of the register"]
@@ -417,5 +531,10 @@ impl W {
     #[inline]
     pub fn avlp(&mut self) -> _AVLPW {
         _AVLPW { w: self }
+    }
+    #[doc = "Bit 7 - Allow High Speed Run mode"]
+    #[inline]
+    pub fn ahsrun(&mut self) -> _AHSRUNW {
+        _AHSRUNW { w: self }
     }
 }

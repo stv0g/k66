@@ -230,6 +230,194 @@ impl LRLR {
         *self == LRLR::_1
     }
 }
+#[doc = "Possible values of the field `TTSL`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum TTSLR {
+    #[doc = "Tamper Time Seconds Register is locked and writes are ignored."]
+    _0,
+    #[doc = "Tamper Time Seconds Register is not locked and writes complete as normal."]
+    _1,
+}
+impl TTSLR {
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            TTSLR::_0 => false,
+            TTSLR::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> TTSLR {
+        match value {
+            false => TTSLR::_0,
+            true => TTSLR::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == TTSLR::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == TTSLR::_1
+    }
+}
+#[doc = "Possible values of the field `MEL`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum MELR {
+    #[doc = "Monotonic Enable Register is locked and writes are ignored."]
+    _0,
+    #[doc = "Monotonic Enable Register is not locked and writes complete as normal."]
+    _1,
+}
+impl MELR {
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            MELR::_0 => false,
+            MELR::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> MELR {
+        match value {
+            false => MELR::_0,
+            true => MELR::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == MELR::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == MELR::_1
+    }
+}
+#[doc = "Possible values of the field `MCLL`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum MCLLR {
+    #[doc = "Monotonic Counter Low Register is locked and writes are ignored."]
+    _0,
+    #[doc = "Monotonic Counter Low Register is not locked and writes complete as normal."]
+    _1,
+}
+impl MCLLR {
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            MCLLR::_0 => false,
+            MCLLR::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> MCLLR {
+        match value {
+            false => MCLLR::_0,
+            true => MCLLR::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == MCLLR::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == MCLLR::_1
+    }
+}
+#[doc = "Possible values of the field `MCHL`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum MCHLR {
+    #[doc = "Monotonic Counter High Register is locked and writes are ignored."]
+    _0,
+    #[doc = "Monotonic Counter High Register is not locked and writes complete as normal."]
+    _1,
+}
+impl MCHLR {
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            MCHLR::_0 => false,
+            MCHLR::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> MCHLR {
+        match value {
+            false => MCHLR::_0,
+            true => MCHLR::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == MCHLR::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == MCHLR::_1
+    }
+}
 #[doc = "Values that can be written to the field `TCL`"]
 pub enum TCLW {
     #[doc = "Time Compensation Register is locked and writes are ignored."]
@@ -462,6 +650,238 @@ impl<'a> _LRLW<'a> {
         self.w
     }
 }
+#[doc = "Values that can be written to the field `TTSL`"]
+pub enum TTSLW {
+    #[doc = "Tamper Time Seconds Register is locked and writes are ignored."]
+    _0,
+    #[doc = "Tamper Time Seconds Register is not locked and writes complete as normal."]
+    _1,
+}
+impl TTSLW {
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _bits(&self) -> bool {
+        match *self {
+            TTSLW::_0 => false,
+            TTSLW::_1 => true,
+        }
+    }
+}
+#[doc = r" Proxy"]
+pub struct _TTSLW<'a> {
+    w: &'a mut W,
+}
+impl<'a> _TTSLW<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: TTSLW) -> &'a mut W {
+        {
+            self.bit(variant._bits())
+        }
+    }
+    #[doc = "Tamper Time Seconds Register is locked and writes are ignored."]
+    #[inline]
+    pub fn _0(self) -> &'a mut W {
+        self.variant(TTSLW::_0)
+    }
+    #[doc = "Tamper Time Seconds Register is not locked and writes complete as normal."]
+    #[inline]
+    pub fn _1(self) -> &'a mut W {
+        self.variant(TTSLW::_1)
+    }
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 8;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = "Values that can be written to the field `MEL`"]
+pub enum MELW {
+    #[doc = "Monotonic Enable Register is locked and writes are ignored."]
+    _0,
+    #[doc = "Monotonic Enable Register is not locked and writes complete as normal."]
+    _1,
+}
+impl MELW {
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _bits(&self) -> bool {
+        match *self {
+            MELW::_0 => false,
+            MELW::_1 => true,
+        }
+    }
+}
+#[doc = r" Proxy"]
+pub struct _MELW<'a> {
+    w: &'a mut W,
+}
+impl<'a> _MELW<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: MELW) -> &'a mut W {
+        {
+            self.bit(variant._bits())
+        }
+    }
+    #[doc = "Monotonic Enable Register is locked and writes are ignored."]
+    #[inline]
+    pub fn _0(self) -> &'a mut W {
+        self.variant(MELW::_0)
+    }
+    #[doc = "Monotonic Enable Register is not locked and writes complete as normal."]
+    #[inline]
+    pub fn _1(self) -> &'a mut W {
+        self.variant(MELW::_1)
+    }
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 9;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = "Values that can be written to the field `MCLL`"]
+pub enum MCLLW {
+    #[doc = "Monotonic Counter Low Register is locked and writes are ignored."]
+    _0,
+    #[doc = "Monotonic Counter Low Register is not locked and writes complete as normal."]
+    _1,
+}
+impl MCLLW {
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _bits(&self) -> bool {
+        match *self {
+            MCLLW::_0 => false,
+            MCLLW::_1 => true,
+        }
+    }
+}
+#[doc = r" Proxy"]
+pub struct _MCLLW<'a> {
+    w: &'a mut W,
+}
+impl<'a> _MCLLW<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: MCLLW) -> &'a mut W {
+        {
+            self.bit(variant._bits())
+        }
+    }
+    #[doc = "Monotonic Counter Low Register is locked and writes are ignored."]
+    #[inline]
+    pub fn _0(self) -> &'a mut W {
+        self.variant(MCLLW::_0)
+    }
+    #[doc = "Monotonic Counter Low Register is not locked and writes complete as normal."]
+    #[inline]
+    pub fn _1(self) -> &'a mut W {
+        self.variant(MCLLW::_1)
+    }
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 10;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = "Values that can be written to the field `MCHL`"]
+pub enum MCHLW {
+    #[doc = "Monotonic Counter High Register is locked and writes are ignored."]
+    _0,
+    #[doc = "Monotonic Counter High Register is not locked and writes complete as normal."]
+    _1,
+}
+impl MCHLW {
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _bits(&self) -> bool {
+        match *self {
+            MCHLW::_0 => false,
+            MCHLW::_1 => true,
+        }
+    }
+}
+#[doc = r" Proxy"]
+pub struct _MCHLW<'a> {
+    w: &'a mut W,
+}
+impl<'a> _MCHLW<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: MCHLW) -> &'a mut W {
+        {
+            self.bit(variant._bits())
+        }
+    }
+    #[doc = "Monotonic Counter High Register is locked and writes are ignored."]
+    #[inline]
+    pub fn _0(self) -> &'a mut W {
+        self.variant(MCHLW::_0)
+    }
+    #[doc = "Monotonic Counter High Register is not locked and writes complete as normal."]
+    #[inline]
+    pub fn _1(self) -> &'a mut W {
+        self.variant(MCHLW::_1)
+    }
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 11;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
 impl R {
     #[doc = r" Value of the register as raw bits"]
     #[inline]
@@ -504,12 +924,48 @@ impl R {
             ((self.bits >> OFFSET) & MASK as u32) != 0
         })
     }
+    #[doc = "Bit 8 - Tamper Time Seconds Lock"]
+    #[inline]
+    pub fn ttsl(&self) -> TTSLR {
+        TTSLR::_from({
+            const MASK: bool = true;
+            const OFFSET: u8 = 8;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        })
+    }
+    #[doc = "Bit 9 - Monotonic Enable Lock"]
+    #[inline]
+    pub fn mel(&self) -> MELR {
+        MELR::_from({
+            const MASK: bool = true;
+            const OFFSET: u8 = 9;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        })
+    }
+    #[doc = "Bit 10 - Monotonic Counter Low Lock"]
+    #[inline]
+    pub fn mcll(&self) -> MCLLR {
+        MCLLR::_from({
+            const MASK: bool = true;
+            const OFFSET: u8 = 10;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        })
+    }
+    #[doc = "Bit 11 - Monotonic Counter High Lock"]
+    #[inline]
+    pub fn mchl(&self) -> MCHLR {
+        MCHLR::_from({
+            const MASK: bool = true;
+            const OFFSET: u8 = 11;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        })
+    }
 }
 impl W {
     #[doc = r" Reset value of the register"]
     #[inline]
     pub fn reset_value() -> W {
-        W { bits: 255 }
+        W { bits: 65535 }
     }
     #[doc = r" Writes raw bits to the register"]
     #[inline]
@@ -536,5 +992,25 @@ impl W {
     #[inline]
     pub fn lrl(&mut self) -> _LRLW {
         _LRLW { w: self }
+    }
+    #[doc = "Bit 8 - Tamper Time Seconds Lock"]
+    #[inline]
+    pub fn ttsl(&mut self) -> _TTSLW {
+        _TTSLW { w: self }
+    }
+    #[doc = "Bit 9 - Monotonic Enable Lock"]
+    #[inline]
+    pub fn mel(&mut self) -> _MELW {
+        _MELW { w: self }
+    }
+    #[doc = "Bit 10 - Monotonic Counter Low Lock"]
+    #[inline]
+    pub fn mcll(&mut self) -> _MCLLW {
+        _MCLLW { w: self }
+    }
+    #[doc = "Bit 11 - Monotonic Counter High Lock"]
+    #[inline]
+    pub fn mchl(&mut self) -> _MCHLW {
+        _MCHLW { w: self }
     }
 }

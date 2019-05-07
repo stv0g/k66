@@ -644,7 +644,7 @@ impl R {
             ((self.bits >> OFFSET) & MASK as u8) != 0
         })
     }
-    #[doc = "Bit 5 - Indicates that the internal signals that control the LINE_STATE_CHG field of OTGISTAT are stable for at least 1 millisecond"]
+    #[doc = "Bit 5 - Indicates that the internal signals that control the LINE_STATE_CHG field of OTGISTAT are stable for at least 1 ms"]
     #[inline]
     pub fn linestatestable(&self) -> LINESTATESTABLER {
         LINESTATESTABLER::_from({
@@ -700,7 +700,7 @@ impl W {
     pub fn sess_vld(&mut self) -> _SESS_VLDW {
         _SESS_VLDW { w: self }
     }
-    #[doc = "Bit 5 - Indicates that the internal signals that control the LINE_STATE_CHG field of OTGISTAT are stable for at least 1 millisecond"]
+    #[doc = "Bit 5 - Indicates that the internal signals that control the LINE_STATE_CHG field of OTGISTAT are stable for at least 1 ms"]
     #[inline]
     pub fn linestatestable(&mut self) -> _LINESTATESTABLEW {
         _LINESTATESTABLEW { w: self }

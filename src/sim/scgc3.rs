@@ -89,6 +89,194 @@ impl RNGAR {
         *self == RNGAR::_1
     }
 }
+#[doc = "Possible values of the field `USBHS`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum USBHSR {
+    #[doc = "Clock disabled"]
+    _0,
+    #[doc = "Clock enabled"]
+    _1,
+}
+impl USBHSR {
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            USBHSR::_0 => false,
+            USBHSR::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> USBHSR {
+        match value {
+            false => USBHSR::_0,
+            true => USBHSR::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == USBHSR::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == USBHSR::_1
+    }
+}
+#[doc = "Possible values of the field `USBHSPHY`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum USBHSPHYR {
+    #[doc = "Clock disabled"]
+    _0,
+    #[doc = "Clock enabled"]
+    _1,
+}
+impl USBHSPHYR {
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            USBHSPHYR::_0 => false,
+            USBHSPHYR::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> USBHSPHYR {
+        match value {
+            false => USBHSPHYR::_0,
+            true => USBHSPHYR::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == USBHSPHYR::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == USBHSPHYR::_1
+    }
+}
+#[doc = "Possible values of the field `USBHSDCD`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum USBHSDCDR {
+    #[doc = "Clock disabled"]
+    _0,
+    #[doc = "Clock enabled"]
+    _1,
+}
+impl USBHSDCDR {
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            USBHSDCDR::_0 => false,
+            USBHSDCDR::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> USBHSDCDR {
+        match value {
+            false => USBHSDCDR::_0,
+            true => USBHSDCDR::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == USBHSDCDR::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == USBHSDCDR::_1
+    }
+}
+#[doc = "Possible values of the field `FLEXCAN1`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum FLEXCAN1R {
+    #[doc = "Clock disabled"]
+    _0,
+    #[doc = "Clock enabled"]
+    _1,
+}
+impl FLEXCAN1R {
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            FLEXCAN1R::_0 => false,
+            FLEXCAN1R::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> FLEXCAN1R {
+        match value {
+            false => FLEXCAN1R::_0,
+            true => FLEXCAN1R::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == FLEXCAN1R::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == FLEXCAN1R::_1
+    }
+}
 #[doc = "Possible values of the field `SPI2`"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum SPI2R {
@@ -377,6 +565,238 @@ impl<'a> _RNGAW<'a> {
     pub fn bit(self, value: bool) -> &'a mut W {
         const MASK: bool = true;
         const OFFSET: u8 = 0;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = "Values that can be written to the field `USBHS`"]
+pub enum USBHSW {
+    #[doc = "Clock disabled"]
+    _0,
+    #[doc = "Clock enabled"]
+    _1,
+}
+impl USBHSW {
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _bits(&self) -> bool {
+        match *self {
+            USBHSW::_0 => false,
+            USBHSW::_1 => true,
+        }
+    }
+}
+#[doc = r" Proxy"]
+pub struct _USBHSW<'a> {
+    w: &'a mut W,
+}
+impl<'a> _USBHSW<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: USBHSW) -> &'a mut W {
+        {
+            self.bit(variant._bits())
+        }
+    }
+    #[doc = "Clock disabled"]
+    #[inline]
+    pub fn _0(self) -> &'a mut W {
+        self.variant(USBHSW::_0)
+    }
+    #[doc = "Clock enabled"]
+    #[inline]
+    pub fn _1(self) -> &'a mut W {
+        self.variant(USBHSW::_1)
+    }
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 1;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = "Values that can be written to the field `USBHSPHY`"]
+pub enum USBHSPHYW {
+    #[doc = "Clock disabled"]
+    _0,
+    #[doc = "Clock enabled"]
+    _1,
+}
+impl USBHSPHYW {
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _bits(&self) -> bool {
+        match *self {
+            USBHSPHYW::_0 => false,
+            USBHSPHYW::_1 => true,
+        }
+    }
+}
+#[doc = r" Proxy"]
+pub struct _USBHSPHYW<'a> {
+    w: &'a mut W,
+}
+impl<'a> _USBHSPHYW<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: USBHSPHYW) -> &'a mut W {
+        {
+            self.bit(variant._bits())
+        }
+    }
+    #[doc = "Clock disabled"]
+    #[inline]
+    pub fn _0(self) -> &'a mut W {
+        self.variant(USBHSPHYW::_0)
+    }
+    #[doc = "Clock enabled"]
+    #[inline]
+    pub fn _1(self) -> &'a mut W {
+        self.variant(USBHSPHYW::_1)
+    }
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 2;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = "Values that can be written to the field `USBHSDCD`"]
+pub enum USBHSDCDW {
+    #[doc = "Clock disabled"]
+    _0,
+    #[doc = "Clock enabled"]
+    _1,
+}
+impl USBHSDCDW {
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _bits(&self) -> bool {
+        match *self {
+            USBHSDCDW::_0 => false,
+            USBHSDCDW::_1 => true,
+        }
+    }
+}
+#[doc = r" Proxy"]
+pub struct _USBHSDCDW<'a> {
+    w: &'a mut W,
+}
+impl<'a> _USBHSDCDW<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: USBHSDCDW) -> &'a mut W {
+        {
+            self.bit(variant._bits())
+        }
+    }
+    #[doc = "Clock disabled"]
+    #[inline]
+    pub fn _0(self) -> &'a mut W {
+        self.variant(USBHSDCDW::_0)
+    }
+    #[doc = "Clock enabled"]
+    #[inline]
+    pub fn _1(self) -> &'a mut W {
+        self.variant(USBHSDCDW::_1)
+    }
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 3;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = "Values that can be written to the field `FLEXCAN1`"]
+pub enum FLEXCAN1W {
+    #[doc = "Clock disabled"]
+    _0,
+    #[doc = "Clock enabled"]
+    _1,
+}
+impl FLEXCAN1W {
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _bits(&self) -> bool {
+        match *self {
+            FLEXCAN1W::_0 => false,
+            FLEXCAN1W::_1 => true,
+        }
+    }
+}
+#[doc = r" Proxy"]
+pub struct _FLEXCAN1W<'a> {
+    w: &'a mut W,
+}
+impl<'a> _FLEXCAN1W<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: FLEXCAN1W) -> &'a mut W {
+        {
+            self.bit(variant._bits())
+        }
+    }
+    #[doc = "Clock disabled"]
+    #[inline]
+    pub fn _0(self) -> &'a mut W {
+        self.variant(FLEXCAN1W::_0)
+    }
+    #[doc = "Clock enabled"]
+    #[inline]
+    pub fn _1(self) -> &'a mut W {
+        self.variant(FLEXCAN1W::_1)
+    }
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 4;
         self.w.bits &= !((MASK as u32) << OFFSET);
         self.w.bits |= ((value & MASK) as u32) << OFFSET;
         self.w
@@ -687,6 +1107,42 @@ impl R {
             ((self.bits >> OFFSET) & MASK as u32) != 0
         })
     }
+    #[doc = "Bit 1 - USBHS Clock Gate Control"]
+    #[inline]
+    pub fn usbhs(&self) -> USBHSR {
+        USBHSR::_from({
+            const MASK: bool = true;
+            const OFFSET: u8 = 1;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        })
+    }
+    #[doc = "Bit 2 - USBHS PHY Clock Gate Control"]
+    #[inline]
+    pub fn usbhsphy(&self) -> USBHSPHYR {
+        USBHSPHYR::_from({
+            const MASK: bool = true;
+            const OFFSET: u8 = 2;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        })
+    }
+    #[doc = "Bit 3 - USBHS DCD Clock Gate Control"]
+    #[inline]
+    pub fn usbhsdcd(&self) -> USBHSDCDR {
+        USBHSDCDR::_from({
+            const MASK: bool = true;
+            const OFFSET: u8 = 3;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        })
+    }
+    #[doc = "Bit 4 - FlexCAN1 Clock Gate Control"]
+    #[inline]
+    pub fn flexcan1(&self) -> FLEXCAN1R {
+        FLEXCAN1R::_from({
+            const MASK: bool = true;
+            const OFFSET: u8 = 4;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        })
+    }
     #[doc = "Bit 12 - SPI2 Clock Gate Control"]
     #[inline]
     pub fn spi2(&self) -> SPI2R {
@@ -749,6 +1205,26 @@ impl W {
     #[inline]
     pub fn rnga(&mut self) -> _RNGAW {
         _RNGAW { w: self }
+    }
+    #[doc = "Bit 1 - USBHS Clock Gate Control"]
+    #[inline]
+    pub fn usbhs(&mut self) -> _USBHSW {
+        _USBHSW { w: self }
+    }
+    #[doc = "Bit 2 - USBHS PHY Clock Gate Control"]
+    #[inline]
+    pub fn usbhsphy(&mut self) -> _USBHSPHYW {
+        _USBHSPHYW { w: self }
+    }
+    #[doc = "Bit 3 - USBHS DCD Clock Gate Control"]
+    #[inline]
+    pub fn usbhsdcd(&mut self) -> _USBHSDCDW {
+        _USBHSDCDW { w: self }
+    }
+    #[doc = "Bit 4 - FlexCAN1 Clock Gate Control"]
+    #[inline]
+    pub fn flexcan1(&mut self) -> _FLEXCAN1W {
+        _FLEXCAN1W { w: self }
     }
     #[doc = "Bit 12 - SPI2 Clock Gate Control"]
     #[inline]

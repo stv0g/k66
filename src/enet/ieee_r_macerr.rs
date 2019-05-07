@@ -28,7 +28,7 @@ impl R {
     pub fn bits(&self) -> u32 {
         self.bits
     }
-    #[doc = "Bits 0:15 - Count"]
+    #[doc = "Bits 0:15 - Receive FIFO overflow count"]
     #[inline]
     pub fn count(&self) -> COUNTR {
         let bits = {

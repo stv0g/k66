@@ -49,7 +49,7 @@ pub enum STOPMR {
     _000,
     #[doc = "Very-Low-Power Stop (VLPS)"]
     _010,
-    #[doc = "Low-Leakage Stop (LLS)"]
+    #[doc = "Low-Leakage Stop (LLSx)"]
     _011,
     #[doc = "Very-Low-Leakage Stop (VLLSx)"]
     _100,
@@ -164,6 +164,8 @@ pub enum RUNMR {
     _00,
     #[doc = "Very-Low-Power Run mode (VLPR)"]
     _10,
+    #[doc = "High Speed Run mode (HSRUN)"]
+    _11,
     #[doc = r" Reserved"]
     _Reserved(u8),
 }
@@ -174,6 +176,7 @@ impl RUNMR {
         match *self {
             RUNMR::_00 => 0,
             RUNMR::_10 => 2,
+            RUNMR::_11 => 3,
             RUNMR::_Reserved(bits) => bits,
         }
     }
@@ -184,6 +187,7 @@ impl RUNMR {
         match value {
             0 => RUNMR::_00,
             2 => RUNMR::_10,
+            3 => RUNMR::_11,
             i => RUNMR::_Reserved(i),
         }
     }
@@ -197,52 +201,10 @@ impl RUNMR {
     pub fn is_10(&self) -> bool {
         *self == RUNMR::_10
     }
-}
-#[doc = "Possible values of the field `LPWUI`"]
-#[derive(Clone, Copy, Debug, PartialEq)]
-pub enum LPWUIR {
-    #[doc = "The system remains in a VLP mode on an interrupt"]
-    _0,
-    #[doc = "The system exits to Normal RUN mode on an interrupt"]
-    _1,
-}
-impl LPWUIR {
-    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[doc = "Checks if the value of the field is `_11`"]
     #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        match *self {
-            LPWUIR::_0 => false,
-            LPWUIR::_1 => true,
-        }
-    }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: bool) -> LPWUIR {
-        match value {
-            false => LPWUIR::_0,
-            true => LPWUIR::_1,
-        }
-    }
-    #[doc = "Checks if the value of the field is `_0`"]
-    #[inline]
-    pub fn is_0(&self) -> bool {
-        *self == LPWUIR::_0
-    }
-    #[doc = "Checks if the value of the field is `_1`"]
-    #[inline]
-    pub fn is_1(&self) -> bool {
-        *self == LPWUIR::_1
+    pub fn is_11(&self) -> bool {
+        *self == RUNMR::_11
     }
 }
 #[doc = "Values that can be written to the field `STOPM`"]
@@ -251,7 +213,7 @@ pub enum STOPMW {
     _000,
     #[doc = "Very-Low-Power Stop (VLPS)"]
     _010,
-    #[doc = "Low-Leakage Stop (LLS)"]
+    #[doc = "Low-Leakage Stop (LLSx)"]
     _011,
     #[doc = "Very-Low-Leakage Stop (VLLSx)"]
     _100,
@@ -292,7 +254,7 @@ impl<'a> _STOPMW<'a> {
     pub fn _010(self) -> &'a mut W {
         self.variant(STOPMW::_010)
     }
-    #[doc = "Low-Leakage Stop (LLS)"]
+    #[doc = "Low-Leakage Stop (LLSx)"]
     #[inline]
     pub fn _011(self) -> &'a mut W {
         self.variant(STOPMW::_011)
@@ -323,6 +285,8 @@ pub enum RUNMW {
     _00,
     #[doc = "Very-Low-Power Run mode (VLPR)"]
     _10,
+    #[doc = "High Speed Run mode (HSRUN)"]
+    _11,
 }
 impl RUNMW {
     #[allow(missing_docs)]
@@ -332,6 +296,7 @@ impl RUNMW {
         match *self {
             RUNMW::_00 => 0,
             RUNMW::_10 => 2,
+            RUNMW::_11 => 3,
         }
     }
 }
@@ -355,69 +320,16 @@ impl<'a> _RUNMW<'a> {
     pub fn _10(self) -> &'a mut W {
         self.variant(RUNMW::_10)
     }
+    #[doc = "High Speed Run mode (HSRUN)"]
+    #[inline]
+    pub fn _11(self) -> &'a mut W {
+        self.variant(RUNMW::_11)
+    }
     #[doc = r" Writes raw bits to the field"]
     #[inline]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
         const MASK: u8 = 3;
         const OFFSET: u8 = 5;
-        self.w.bits &= !((MASK as u8) << OFFSET);
-        self.w.bits |= ((value & MASK) as u8) << OFFSET;
-        self.w
-    }
-}
-#[doc = "Values that can be written to the field `LPWUI`"]
-pub enum LPWUIW {
-    #[doc = "The system remains in a VLP mode on an interrupt"]
-    _0,
-    #[doc = "The system exits to Normal RUN mode on an interrupt"]
-    _1,
-}
-impl LPWUIW {
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _bits(&self) -> bool {
-        match *self {
-            LPWUIW::_0 => false,
-            LPWUIW::_1 => true,
-        }
-    }
-}
-#[doc = r" Proxy"]
-pub struct _LPWUIW<'a> {
-    w: &'a mut W,
-}
-impl<'a> _LPWUIW<'a> {
-    #[doc = r" Writes `variant` to the field"]
-    #[inline]
-    pub fn variant(self, variant: LPWUIW) -> &'a mut W {
-        {
-            self.bit(variant._bits())
-        }
-    }
-    #[doc = "The system remains in a VLP mode on an interrupt"]
-    #[inline]
-    pub fn _0(self) -> &'a mut W {
-        self.variant(LPWUIW::_0)
-    }
-    #[doc = "The system exits to Normal RUN mode on an interrupt"]
-    #[inline]
-    pub fn _1(self) -> &'a mut W {
-        self.variant(LPWUIW::_1)
-    }
-    #[doc = r" Sets the field bit"]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r" Clears the field bit"]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 7;
         self.w.bits &= !((MASK as u8) << OFFSET);
         self.w.bits |= ((value & MASK) as u8) << OFFSET;
         self.w
@@ -456,15 +368,6 @@ impl R {
             ((self.bits >> OFFSET) & MASK as u8) as u8
         })
     }
-    #[doc = "Bit 7 - Low-Power Wake Up On Interrupt"]
-    #[inline]
-    pub fn lpwui(&self) -> LPWUIR {
-        LPWUIR::_from({
-            const MASK: bool = true;
-            const OFFSET: u8 = 7;
-            ((self.bits >> OFFSET) & MASK as u8) != 0
-        })
-    }
 }
 impl W {
     #[doc = r" Reset value of the register"]
@@ -487,10 +390,5 @@ impl W {
     #[inline]
     pub fn runm(&mut self) -> _RUNMW {
         _RUNMW { w: self }
-    }
-    #[doc = "Bit 7 - Low-Power Wake Up On Interrupt"]
-    #[inline]
-    pub fn lpwui(&mut self) -> _LPWUIW {
-        _LPWUIW { w: self }
     }
 }

@@ -74,7 +74,7 @@ impl R {
     pub fn bits(&self) -> u32 {
         self.bits
     }
-    #[doc = "Bits 0:31 - Last source Address Adjustment"]
+    #[doc = "Bits 0:31 - Last Source Address Adjustment"]
     #[inline]
     pub fn slast(&self) -> SLASTR {
         let bits = {
@@ -97,7 +97,7 @@ impl W {
         self.bits = bits;
         self
     }
-    #[doc = "Bits 0:31 - Last source Address Adjustment"]
+    #[doc = "Bits 0:31 - Last Source Address Adjustment"]
     #[inline]
     pub fn slast(&mut self) -> _SLASTW {
         _SLASTW { w: self }

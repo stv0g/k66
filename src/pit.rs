@@ -3,7 +3,12 @@
 pub struct RegisterBlock {
     #[doc = "0x00 - PIT Module Control Register"]
     pub mcr: MCR,
-    _reserved0: [u8; 252usize],
+    _reserved0: [u8; 220usize],
+    #[doc = "0xe0 - PIT Upper Lifetime Timer Register"]
+    pub ltmr64h: LTMR64H,
+    #[doc = "0xe4 - PIT Lower Lifetime Timer Register"]
+    pub ltmr64l: LTMR64L,
+    _reserved1: [u8; 24usize],
     #[doc = "0x100 - Timer Load Value Register"]
     pub ldval0: LDVAL,
     #[doc = "0x104 - Current Timer Value Register"]
@@ -43,6 +48,18 @@ pub struct MCR {
 }
 #[doc = "PIT Module Control Register"]
 pub mod mcr;
+#[doc = "PIT Upper Lifetime Timer Register"]
+pub struct LTMR64H {
+    register: ::vcell::VolatileCell<u32>,
+}
+#[doc = "PIT Upper Lifetime Timer Register"]
+pub mod ltmr64h;
+#[doc = "PIT Lower Lifetime Timer Register"]
+pub struct LTMR64L {
+    register: ::vcell::VolatileCell<u32>,
+}
+#[doc = "PIT Lower Lifetime Timer Register"]
+pub mod ltmr64l;
 #[doc = "Timer Load Value Register"]
 pub struct LDVAL {
     register: ::vcell::VolatileCell<u32>,

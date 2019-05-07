@@ -168,16 +168,15 @@ impl RETRYDISR {
         self.bit()
     }
 }
-#[doc = r" Value of the field"]
-pub struct HOSTWOHUBR {
-    bits: bool,
+#[doc = "Possible values of the field `HOSTWOHUB`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum HOSTWOHUBR {
+    #[doc = "Low-speed device connected to Host through a hub. PRE_PID will be generated as required."]
+    _0,
+    #[doc = "Low-speed device directly connected. No hub, or no low-speed device attached."]
+    _1,
 }
 impl HOSTWOHUBR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
     #[doc = r" Returns `true` if the bit is clear (0)"]
     #[inline]
     pub fn bit_is_clear(&self) -> bool {
@@ -187,6 +186,33 @@ impl HOSTWOHUBR {
     #[inline]
     pub fn bit_is_set(&self) -> bool {
         self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            HOSTWOHUBR::_0 => false,
+            HOSTWOHUBR::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> HOSTWOHUBR {
+        match value {
+            false => HOSTWOHUBR::_0,
+            true => HOSTWOHUBR::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == HOSTWOHUBR::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == HOSTWOHUBR::_1
     }
 }
 #[doc = r" Proxy"]
@@ -327,11 +353,46 @@ impl<'a> _RETRYDISW<'a> {
         self.w
     }
 }
+#[doc = "Values that can be written to the field `HOSTWOHUB`"]
+pub enum HOSTWOHUBW {
+    #[doc = "Low-speed device connected to Host through a hub. PRE_PID will be generated as required."]
+    _0,
+    #[doc = "Low-speed device directly connected. No hub, or no low-speed device attached."]
+    _1,
+}
+impl HOSTWOHUBW {
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _bits(&self) -> bool {
+        match *self {
+            HOSTWOHUBW::_0 => false,
+            HOSTWOHUBW::_1 => true,
+        }
+    }
+}
 #[doc = r" Proxy"]
 pub struct _HOSTWOHUBW<'a> {
     w: &'a mut W,
 }
 impl<'a> _HOSTWOHUBW<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: HOSTWOHUBW) -> &'a mut W {
+        {
+            self.bit(variant._bits())
+        }
+    }
+    #[doc = "Low-speed device connected to Host through a hub. PRE_PID will be generated as required."]
+    #[inline]
+    pub fn _0(self) -> &'a mut W {
+        self.variant(HOSTWOHUBW::_0)
+    }
+    #[doc = "Low-speed device directly connected. No hub, or no low-speed device attached."]
+    #[inline]
+    pub fn _1(self) -> &'a mut W {
+        self.variant(HOSTWOHUBW::_1)
+    }
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
@@ -376,7 +437,7 @@ impl R {
         };
         EPSTALLR { bits }
     }
-    #[doc = "Bit 2 - This bit, when set, enables the endpoint for TX transfers."]
+    #[doc = "Bit 2 - This bit, when set, enables the endpoint for TX transfers. See"]
     #[inline]
     pub fn eptxen(&self) -> EPTXENR {
         let bits = {
@@ -386,7 +447,7 @@ impl R {
         };
         EPTXENR { bits }
     }
-    #[doc = "Bit 3 - This bit, when set, enables the endpoint for RX transfers."]
+    #[doc = "Bit 3 - This bit, when set, enables the endpoint for RX transfers. See"]
     #[inline]
     pub fn eprxen(&self) -> EPRXENR {
         let bits = {
@@ -416,15 +477,14 @@ impl R {
         };
         RETRYDISR { bits }
     }
-    #[doc = "Bit 7 - This is a Host mode only field and is present in the control register for endpoint 0 (ENDPT0) only"]
+    #[doc = "Bit 7 - Host without a hub This is a Host mode only field and is present in the control register for endpoint 0 (ENDPT0) only"]
     #[inline]
     pub fn hostwohub(&self) -> HOSTWOHUBR {
-        let bits = {
+        HOSTWOHUBR::_from({
             const MASK: bool = true;
             const OFFSET: u8 = 7;
             ((self.bits >> OFFSET) & MASK as u8) != 0
-        };
-        HOSTWOHUBR { bits }
+        })
     }
 }
 impl W {
@@ -449,12 +509,12 @@ impl W {
     pub fn epstall(&mut self) -> _EPSTALLW {
         _EPSTALLW { w: self }
     }
-    #[doc = "Bit 2 - This bit, when set, enables the endpoint for TX transfers."]
+    #[doc = "Bit 2 - This bit, when set, enables the endpoint for TX transfers. See"]
     #[inline]
     pub fn eptxen(&mut self) -> _EPTXENW {
         _EPTXENW { w: self }
     }
-    #[doc = "Bit 3 - This bit, when set, enables the endpoint for RX transfers."]
+    #[doc = "Bit 3 - This bit, when set, enables the endpoint for RX transfers. See"]
     #[inline]
     pub fn eprxen(&mut self) -> _EPRXENW {
         _EPRXENW { w: self }
@@ -469,7 +529,7 @@ impl W {
     pub fn retrydis(&mut self) -> _RETRYDISW {
         _RETRYDISW { w: self }
     }
-    #[doc = "Bit 7 - This is a Host mode only field and is present in the control register for endpoint 0 (ENDPT0) only"]
+    #[doc = "Bit 7 - Host without a hub This is a Host mode only field and is present in the control register for endpoint 0 (ENDPT0) only"]
     #[inline]
     pub fn hostwohub(&mut self) -> _HOSTWOHUBW {
         _HOSTWOHUBW { w: self }

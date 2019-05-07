@@ -56,9 +56,9 @@ impl VOSELR {
 #[doc = "Possible values of the field `VRSEL`"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum VRSELR {
-    #[doc = "V is selected as resistor ladder network supply reference V. in1 in"]
+    #[doc = "Vin1 is selected as resistor ladder network supply reference."]
     _0,
-    #[doc = "V is selected as resistor ladder network supply reference V. in2 in"]
+    #[doc = "Vin2 is selected as resistor ladder network supply reference."]
     _1,
 }
 impl VRSELR {
@@ -164,9 +164,9 @@ impl<'a> _VOSELW<'a> {
 }
 #[doc = "Values that can be written to the field `VRSEL`"]
 pub enum VRSELW {
-    #[doc = "V is selected as resistor ladder network supply reference V. in1 in"]
+    #[doc = "Vin1 is selected as resistor ladder network supply reference."]
     _0,
-    #[doc = "V is selected as resistor ladder network supply reference V. in2 in"]
+    #[doc = "Vin2 is selected as resistor ladder network supply reference."]
     _1,
 }
 impl VRSELW {
@@ -192,12 +192,12 @@ impl<'a> _VRSELW<'a> {
             self.bit(variant._bits())
         }
     }
-    #[doc = "V is selected as resistor ladder network supply reference V. in1 in"]
+    #[doc = "Vin1 is selected as resistor ladder network supply reference."]
     #[inline]
     pub fn _0(self) -> &'a mut W {
         self.variant(VRSELW::_0)
     }
-    #[doc = "V is selected as resistor ladder network supply reference V. in2 in"]
+    #[doc = "Vin2 is selected as resistor ladder network supply reference."]
     #[inline]
     pub fn _1(self) -> &'a mut W {
         self.variant(VRSELW::_1)

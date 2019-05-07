@@ -37,9 +37,6 @@ pub struct RegisterBlock {
     pub pacro: PACRO,
     #[doc = "0x6c - Peripheral Access Control Register"]
     pub pacrp: PACRP,
-    _reserved2: [u8; 16usize],
-    #[doc = "0x80 - Peripheral Access Control Register"]
-    pub pacru: PACRU,
 }
 #[doc = "Master Privilege Register A"]
 pub struct MPRA {
@@ -143,9 +140,3 @@ pub struct PACRP {
 }
 #[doc = "Peripheral Access Control Register"]
 pub mod pacrp;
-#[doc = "Peripheral Access Control Register"]
-pub struct PACRU {
-    register: ::vcell::VolatileCell<u32>,
-}
-#[doc = "Peripheral Access Control Register"]
-pub mod pacru;

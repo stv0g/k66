@@ -27,6 +27,14 @@ pub struct RegisterBlock {
     pub c7: C7,
     #[doc = "0x0d - MCG Control 8 Register"]
     pub c8: C8,
+    #[doc = "0x0e - MCG Control 9 Register"]
+    pub c9: C9,
+    _reserved2: [u8; 1usize],
+    #[doc = "0x10 - MCG Control 11 Register"]
+    pub c11: C11,
+    _reserved3: [u8; 1usize],
+    #[doc = "0x12 - MCG Status 2 Register"]
+    pub s2: S2,
 }
 #[doc = "MCG Control 1 Register"]
 pub struct C1 {
@@ -100,3 +108,21 @@ pub struct C8 {
 }
 #[doc = "MCG Control 8 Register"]
 pub mod c8;
+#[doc = "MCG Control 9 Register"]
+pub struct C9 {
+    register: ::vcell::VolatileCell<u8>,
+}
+#[doc = "MCG Control 9 Register"]
+pub mod c9;
+#[doc = "MCG Control 11 Register"]
+pub struct C11 {
+    register: ::vcell::VolatileCell<u8>,
+}
+#[doc = "MCG Control 11 Register"]
+pub mod c11;
+#[doc = "MCG Status 2 Register"]
+pub struct S2 {
+    register: ::vcell::VolatileCell<u8>,
+}
+#[doc = "MCG Status 2 Register"]
+pub mod s2;

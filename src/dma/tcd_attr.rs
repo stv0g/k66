@@ -73,9 +73,9 @@ pub enum SSIZER {
     _001,
     #[doc = "32-bit"]
     _010,
-    #[doc = "16-byte"]
+    #[doc = "16-byte burst"]
     _100,
-    #[doc = "32-byte"]
+    #[doc = "32-byte burst"]
     _101,
     #[doc = r" Reserved"]
     _Reserved(u8),
@@ -202,9 +202,9 @@ pub enum SSIZEW {
     _001,
     #[doc = "32-bit"]
     _010,
-    #[doc = "16-byte"]
+    #[doc = "16-byte burst"]
     _100,
-    #[doc = "32-byte"]
+    #[doc = "32-byte burst"]
     _101,
 }
 impl SSIZEW {
@@ -246,12 +246,12 @@ impl<'a> _SSIZEW<'a> {
     pub fn _010(self) -> &'a mut W {
         self.variant(SSIZEW::_010)
     }
-    #[doc = "16-byte"]
+    #[doc = "16-byte burst"]
     #[inline]
     pub fn _100(self) -> &'a mut W {
         self.variant(SSIZEW::_100)
     }
-    #[doc = "32-byte"]
+    #[doc = "32-byte burst"]
     #[inline]
     pub fn _101(self) -> &'a mut W {
         self.variant(SSIZEW::_101)
@@ -312,7 +312,7 @@ impl R {
     pub fn bits(&self) -> u16 {
         self.bits
     }
-    #[doc = "Bits 0:2 - Destination Data Transfer Size"]
+    #[doc = "Bits 0:2 - Destination data transfer size"]
     #[inline]
     pub fn dsize(&self) -> DSIZER {
         let bits = {
@@ -341,7 +341,7 @@ impl R {
             ((self.bits >> OFFSET) & MASK as u16) as u8
         })
     }
-    #[doc = "Bits 11:15 - Source Address Modulo."]
+    #[doc = "Bits 11:15 - Source Address Modulo"]
     #[inline]
     pub fn smod(&self) -> SMODR {
         SMODR::_from({
@@ -363,7 +363,7 @@ impl W {
         self.bits = bits;
         self
     }
-    #[doc = "Bits 0:2 - Destination Data Transfer Size"]
+    #[doc = "Bits 0:2 - Destination data transfer size"]
     #[inline]
     pub fn dsize(&mut self) -> _DSIZEW {
         _DSIZEW { w: self }
@@ -378,7 +378,7 @@ impl W {
     pub fn ssize(&mut self) -> _SSIZEW {
         _SSIZEW { w: self }
     }
-    #[doc = "Bits 11:15 - Source Address Modulo."]
+    #[doc = "Bits 11:15 - Source Address Modulo"]
     #[inline]
     pub fn smod(&mut self) -> _SMODW {
         _SMODW { w: self }

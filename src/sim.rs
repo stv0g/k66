@@ -5,7 +5,9 @@ pub struct RegisterBlock {
     pub sopt1: SOPT1,
     #[doc = "0x04 - SOPT1 Configuration Register"]
     pub sopt1cfg: SOPT1CFG,
-    _reserved0: [u8; 4092usize],
+    #[doc = "0x08 - USB PHY Control Register"]
+    pub usbphyctl: USBPHYCTL,
+    _reserved0: [u8; 4088usize],
     #[doc = "0x1004 - System Options Register 2"]
     pub sopt2: SOPT2,
     _reserved1: [u8; 4usize],
@@ -16,7 +18,10 @@ pub struct RegisterBlock {
     _reserved2: [u8; 4usize],
     #[doc = "0x1018 - System Options Register 7"]
     pub sopt7: SOPT7,
-    _reserved3: [u8; 8usize],
+    #[doc = "0x101c - System Options Register 8"]
+    pub sopt8: SOPT8,
+    #[doc = "0x1020 - System Options Register 9"]
+    pub sopt9: SOPT9,
     #[doc = "0x1024 - System Device Identification Register"]
     pub sdid: SDID,
     #[doc = "0x1028 - System Clock Gating Control Register 1"]
@@ -49,6 +54,10 @@ pub struct RegisterBlock {
     pub uidml: UIDML,
     #[doc = "0x1060 - Unique Identification Register Low"]
     pub uidl: UIDL,
+    #[doc = "0x1064 - System Clock Divider Register 3"]
+    pub clkdiv3: CLKDIV3,
+    #[doc = "0x1068 - System Clock Divider Register 4"]
+    pub clkdiv4: CLKDIV4,
 }
 #[doc = "System Options Register 1"]
 pub struct SOPT1 {
@@ -62,6 +71,12 @@ pub struct SOPT1CFG {
 }
 #[doc = "SOPT1 Configuration Register"]
 pub mod sopt1cfg;
+#[doc = "USB PHY Control Register"]
+pub struct USBPHYCTL {
+    register: ::vcell::VolatileCell<u32>,
+}
+#[doc = "USB PHY Control Register"]
+pub mod usbphyctl;
 #[doc = "System Options Register 2"]
 pub struct SOPT2 {
     register: ::vcell::VolatileCell<u32>,
@@ -86,6 +101,18 @@ pub struct SOPT7 {
 }
 #[doc = "System Options Register 7"]
 pub mod sopt7;
+#[doc = "System Options Register 8"]
+pub struct SOPT8 {
+    register: ::vcell::VolatileCell<u32>,
+}
+#[doc = "System Options Register 8"]
+pub mod sopt8;
+#[doc = "System Options Register 9"]
+pub struct SOPT9 {
+    register: ::vcell::VolatileCell<u32>,
+}
+#[doc = "System Options Register 9"]
+pub mod sopt9;
 #[doc = "System Device Identification Register"]
 pub struct SDID {
     register: ::vcell::VolatileCell<u32>,
@@ -182,3 +209,15 @@ pub struct UIDL {
 }
 #[doc = "Unique Identification Register Low"]
 pub mod uidl;
+#[doc = "System Clock Divider Register 3"]
+pub struct CLKDIV3 {
+    register: ::vcell::VolatileCell<u32>,
+}
+#[doc = "System Clock Divider Register 3"]
+pub mod clkdiv3;
+#[doc = "System Clock Divider Register 4"]
+pub struct CLKDIV4 {
+    register: ::vcell::VolatileCell<u32>,
+}
+#[doc = "System Clock Divider Register 4"]
+pub mod clkdiv4;

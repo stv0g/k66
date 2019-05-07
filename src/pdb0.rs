@@ -39,7 +39,7 @@ pub struct RegisterBlock {
     #[doc = "0x190 - Pulse-Out n Enable register"]
     pub poen: POEN,
     #[doc = "0x194 - Pulse-Out n Delay register"]
-    pub podly: [PODLY; 3],
+    pub podly: [PODLY; 4],
 }
 #[doc = "Status and Control register"]
 pub struct SC {

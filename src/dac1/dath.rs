@@ -74,7 +74,7 @@ impl R {
     pub fn bits(&self) -> u8 {
         self.bits
     }
-    #[doc = "Bits 0:3 - When the DAC Buffer is not enabled, DATA\\[11:0\\] controls the output voltage based on the following formula"]
+    #[doc = "Bits 0:3 - DATA1"]
     #[inline]
     pub fn data1(&self) -> DATA1R {
         let bits = {
@@ -97,7 +97,7 @@ impl W {
         self.bits = bits;
         self
     }
-    #[doc = "Bits 0:3 - When the DAC Buffer is not enabled, DATA\\[11:0\\] controls the output voltage based on the following formula"]
+    #[doc = "Bits 0:3 - DATA1"]
     #[inline]
     pub fn data1(&mut self) -> _DATA1W {
         _DATA1W { w: self }

@@ -74,7 +74,7 @@ impl R {
     pub fn bits(&self) -> u16 {
         self.bits
     }
-    #[doc = "Bits 0:15 - Destination Address Signed offset"]
+    #[doc = "Bits 0:15 - Destination Address Signed Offset"]
     #[inline]
     pub fn doff(&self) -> DOFFR {
         let bits = {
@@ -97,7 +97,7 @@ impl W {
         self.bits = bits;
         self
     }
-    #[doc = "Bits 0:15 - Destination Address Signed offset"]
+    #[doc = "Bits 0:15 - Destination Address Signed Offset"]
     #[inline]
     pub fn doff(&mut self) -> _DOFFW {
         _DOFFW { w: self }

@@ -277,6 +277,53 @@ impl PMODER {
         *self == PMODER::_1
     }
 }
+#[doc = "Possible values of the field `TRIGM`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum TRIGMR {
+    #[doc = "Trigger mode is disabled."]
+    _0,
+    #[doc = "Trigger mode is enabled."]
+    _1,
+}
+impl TRIGMR {
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            TRIGMR::_0 => false,
+            TRIGMR::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> TRIGMR {
+        match value {
+            false => TRIGMR::_0,
+            true => TRIGMR::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == TRIGMR::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == TRIGMR::_1
+    }
+}
 #[doc = "Possible values of the field `WE`"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum WER {
@@ -661,6 +708,64 @@ impl<'a> _PMODEW<'a> {
         self.w
     }
 }
+#[doc = "Values that can be written to the field `TRIGM`"]
+pub enum TRIGMW {
+    #[doc = "Trigger mode is disabled."]
+    _0,
+    #[doc = "Trigger mode is enabled."]
+    _1,
+}
+impl TRIGMW {
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _bits(&self) -> bool {
+        match *self {
+            TRIGMW::_0 => false,
+            TRIGMW::_1 => true,
+        }
+    }
+}
+#[doc = r" Proxy"]
+pub struct _TRIGMW<'a> {
+    w: &'a mut W,
+}
+impl<'a> _TRIGMW<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: TRIGMW) -> &'a mut W {
+        {
+            self.bit(variant._bits())
+        }
+    }
+    #[doc = "Trigger mode is disabled."]
+    #[inline]
+    pub fn _0(self) -> &'a mut W {
+        self.variant(TRIGMW::_0)
+    }
+    #[doc = "Trigger mode is enabled."]
+    #[inline]
+    pub fn _1(self) -> &'a mut W {
+        self.variant(TRIGMW::_1)
+    }
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 5;
+        self.w.bits &= !((MASK as u8) << OFFSET);
+        self.w.bits |= ((value & MASK) as u8) << OFFSET;
+        self.w
+    }
+}
 #[doc = "Values that can be written to the field `WE`"]
 pub enum WEW {
     #[doc = "Windowing mode is not selected."]
@@ -828,6 +933,15 @@ impl R {
             ((self.bits >> OFFSET) & MASK as u8) != 0
         })
     }
+    #[doc = "Bit 5 - Trigger Mode Enable"]
+    #[inline]
+    pub fn trigm(&self) -> TRIGMR {
+        TRIGMR::_from({
+            const MASK: bool = true;
+            const OFFSET: u8 = 5;
+            ((self.bits >> OFFSET) & MASK as u8) != 0
+        })
+    }
     #[doc = "Bit 6 - Windowing Enable"]
     #[inline]
     pub fn we(&self) -> WER {
@@ -883,6 +997,11 @@ impl W {
     #[inline]
     pub fn pmode(&mut self) -> _PMODEW {
         _PMODEW { w: self }
+    }
+    #[doc = "Bit 5 - Trigger Mode Enable"]
+    #[inline]
+    pub fn trigm(&mut self) -> _TRIGMW {
+        _TRIGMW { w: self }
     }
     #[doc = "Bit 6 - Windowing Enable"]
     #[inline]

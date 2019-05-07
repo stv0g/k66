@@ -28,7 +28,7 @@ impl R {
     pub fn bits(&self) -> u32 {
         self.bits
     }
-    #[doc = "Bits 0:15 - Packet count"]
+    #[doc = "Bits 0:15 - Number of 64-byte receive packets"]
     #[inline]
     pub fn count(&self) -> COUNTR {
         let bits = {

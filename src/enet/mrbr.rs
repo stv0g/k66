@@ -44,12 +44,12 @@ impl super::MRBR {
 }
 #[doc = r" Value of the field"]
 pub struct R_BUF_SIZER {
-    bits: u16,
+    bits: u8,
 }
 impl R_BUF_SIZER {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
-    pub fn bits(&self) -> u16 {
+    pub fn bits(&self) -> u8 {
         self.bits
     }
 }
@@ -60,8 +60,8 @@ pub struct _R_BUF_SIZEW<'a> {
 impl<'a> _R_BUF_SIZEW<'a> {
     #[doc = r" Writes raw bits to the field"]
     #[inline]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        const MASK: u16 = 1023;
+    pub unsafe fn bits(self, value: u8) -> &'a mut W {
+        const MASK: u8 = 127;
         const OFFSET: u8 = 4;
         self.w.bits &= !((MASK as u32) << OFFSET);
         self.w.bits |= ((value & MASK) as u32) << OFFSET;
@@ -74,13 +74,13 @@ impl R {
     pub fn bits(&self) -> u32 {
         self.bits
     }
-    #[doc = "Bits 4:13 - Receive buffer size in bytes."]
+    #[doc = "Bits 4:10 - Receive buffer size in bytes"]
     #[inline]
     pub fn r_buf_size(&self) -> R_BUF_SIZER {
         let bits = {
-            const MASK: u16 = 1023;
+            const MASK: u8 = 127;
             const OFFSET: u8 = 4;
-            ((self.bits >> OFFSET) & MASK as u32) as u16
+            ((self.bits >> OFFSET) & MASK as u32) as u8
         };
         R_BUF_SIZER { bits }
     }
@@ -97,7 +97,7 @@ impl W {
         self.bits = bits;
         self
     }
-    #[doc = "Bits 4:13 - Receive buffer size in bytes."]
+    #[doc = "Bits 4:10 - Receive buffer size in bytes"]
     #[inline]
     pub fn r_buf_size(&mut self) -> _R_BUF_SIZEW {
         _R_BUF_SIZEW { w: self }

@@ -278,6 +278,122 @@ impl<'a> _RCE1W<'a> {
         self.w
     }
 }
+#[doc = "Values that can be written to the field `CFR0`"]
+pub enum CFR0W {
+    #[doc = "No effect."]
+    _0,
+    #[doc = "Receive data channel N FIFO is reset."]
+    _1,
+}
+impl CFR0W {
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _bits(&self) -> bool {
+        match *self {
+            CFR0W::_0 => false,
+            CFR0W::_1 => true,
+        }
+    }
+}
+#[doc = r" Proxy"]
+pub struct _CFR0W<'a> {
+    w: &'a mut W,
+}
+impl<'a> _CFR0W<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: CFR0W) -> &'a mut W {
+        {
+            self.bit(variant._bits())
+        }
+    }
+    #[doc = "No effect."]
+    #[inline]
+    pub fn _0(self) -> &'a mut W {
+        self.variant(CFR0W::_0)
+    }
+    #[doc = "Receive data channel N FIFO is reset."]
+    #[inline]
+    pub fn _1(self) -> &'a mut W {
+        self.variant(CFR0W::_1)
+    }
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 24;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = "Values that can be written to the field `CFR1`"]
+pub enum CFR1W {
+    #[doc = "No effect."]
+    _0,
+    #[doc = "Receive data channel N FIFO is reset."]
+    _1,
+}
+impl CFR1W {
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _bits(&self) -> bool {
+        match *self {
+            CFR1W::_0 => false,
+            CFR1W::_1 => true,
+        }
+    }
+}
+#[doc = r" Proxy"]
+pub struct _CFR1W<'a> {
+    w: &'a mut W,
+}
+impl<'a> _CFR1W<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: CFR1W) -> &'a mut W {
+        {
+            self.bit(variant._bits())
+        }
+    }
+    #[doc = "No effect."]
+    #[inline]
+    pub fn _0(self) -> &'a mut W {
+        self.variant(CFR1W::_0)
+    }
+    #[doc = "Receive data channel N FIFO is reset."]
+    #[inline]
+    pub fn _1(self) -> &'a mut W {
+        self.variant(CFR1W::_1)
+    }
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 25;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
 impl R {
     #[doc = r" Value of the register as raw bits"]
     #[inline]
@@ -339,5 +455,15 @@ impl W {
     #[inline]
     pub fn rce1(&mut self) -> _RCE1W {
         _RCE1W { w: self }
+    }
+    #[doc = "Bit 24 - Channel FIFO Reset"]
+    #[inline]
+    pub fn cfr0(&mut self) -> _CFR0W {
+        _CFR0W { w: self }
+    }
+    #[doc = "Bit 25 - Channel FIFO Reset"]
+    #[inline]
+    pub fn cfr1(&mut self) -> _CFR1W {
+        _CFR1W { w: self }
     }
 }

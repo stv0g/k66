@@ -47,6 +47,8 @@ impl super::CHCFG {
 pub enum SOURCER {
     #[doc = "Disable_Signal"]
     _0,
+    #[doc = "TSI0_Signal"]
+    _1,
     #[doc = "UART0_Rx_Signal"]
     _2,
     #[doc = "UART0_Tx_Signal"]
@@ -65,8 +67,6 @@ pub enum SOURCER {
     _9,
     #[doc = "UART4_Signal"]
     _10,
-    #[doc = "UART5_Signal"]
-    _11,
     #[doc = "I2S0_Rx_Signal"]
     _12,
     #[doc = "I2S0_Tx_Signal"]
@@ -75,11 +75,11 @@ pub enum SOURCER {
     _14,
     #[doc = "SPI0_Tx_Signal"]
     _15,
-    #[doc = "SPI1_Signal"]
+    #[doc = "SPI1_Rx_Signal"]
     _16,
-    #[doc = "SPI2_Signal"]
+    #[doc = "SPI1_Tx_Signal"]
     _17,
-    #[doc = "I2C0_Signal"]
+    #[doc = "I2C0_I2C3_Signal"]
     _18,
     #[doc = "I2C1_I2C2_Signal"]
     _19,
@@ -99,13 +99,13 @@ pub enum SOURCER {
     _26,
     #[doc = "FTM0_Channel7_Signal"]
     _27,
-    #[doc = "FTM1_Channel0_Signal"]
+    #[doc = "FTM1_TPM1_Channel0_Signal"]
     _28,
-    #[doc = "FTM1_Channel1_Signal"]
+    #[doc = "FTM1_TPM1_Channel1_Signal"]
     _29,
-    #[doc = "FTM2_Channel0_Signal"]
+    #[doc = "FTM2_TPM2_Channel0_Signal"]
     _30,
-    #[doc = "FTM2_Channel1_Signal"]
+    #[doc = "FTM2_TPM2_Channel1_Signal"]
     _31,
     #[doc = "FTM3_Channel0_Signal"]
     _32,
@@ -119,9 +119,9 @@ pub enum SOURCER {
     _36,
     #[doc = "FTM3_Channel5_Signal"]
     _37,
-    #[doc = "FTM3_Channel6_Signal"]
+    #[doc = "FTM3_Channel6_SPI2_Rx_Signal"]
     _38,
-    #[doc = "FTM3_Channel7_Signal"]
+    #[doc = "FTM3_Channel7_SPI2_Tx_Signal"]
     _39,
     #[doc = "ADC0_Signal"]
     _40,
@@ -131,7 +131,7 @@ pub enum SOURCER {
     _42,
     #[doc = "CMP1_Signal"]
     _43,
-    #[doc = "CMP2_Signal"]
+    #[doc = "CMP2_CMP3_Signal"]
     _44,
     #[doc = "DAC0_Signal"]
     _45,
@@ -153,15 +153,15 @@ pub enum SOURCER {
     _53,
     #[doc = "IEEE1588Timer0_Signal"]
     _54,
-    #[doc = "IEEE1588Timer1_Signal"]
+    #[doc = "IEEE1588Timer1_TPM1_Overflow_Signal"]
     _55,
-    #[doc = "IEEE1588Timer2_Signal"]
+    #[doc = "IEEE1588Timer2_TPM2_Overflow_Signal"]
     _56,
     #[doc = "IEEE1588Timer3_Signal"]
     _57,
-    #[doc = "AlwaysOn58_Signal"]
+    #[doc = "LPUART0_Rx_Signal"]
     _58,
-    #[doc = "AlwaysOn59_Signal"]
+    #[doc = "LPUART0_Tx_Signal"]
     _59,
     #[doc = "AlwaysOn60_Signal"]
     _60,
@@ -180,6 +180,7 @@ impl SOURCER {
     pub fn bits(&self) -> u8 {
         match *self {
             SOURCER::_0 => 0,
+            SOURCER::_1 => 1,
             SOURCER::_2 => 2,
             SOURCER::_3 => 3,
             SOURCER::_4 => 4,
@@ -189,7 +190,6 @@ impl SOURCER {
             SOURCER::_8 => 8,
             SOURCER::_9 => 9,
             SOURCER::_10 => 10,
-            SOURCER::_11 => 11,
             SOURCER::_12 => 12,
             SOURCER::_13 => 13,
             SOURCER::_14 => 14,
@@ -251,6 +251,7 @@ impl SOURCER {
     pub fn _from(value: u8) -> SOURCER {
         match value {
             0 => SOURCER::_0,
+            1 => SOURCER::_1,
             2 => SOURCER::_2,
             3 => SOURCER::_3,
             4 => SOURCER::_4,
@@ -260,7 +261,6 @@ impl SOURCER {
             8 => SOURCER::_8,
             9 => SOURCER::_9,
             10 => SOURCER::_10,
-            11 => SOURCER::_11,
             12 => SOURCER::_12,
             13 => SOURCER::_13,
             14 => SOURCER::_14,
@@ -321,6 +321,11 @@ impl SOURCER {
     pub fn is_0(&self) -> bool {
         *self == SOURCER::_0
     }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == SOURCER::_1
+    }
     #[doc = "Checks if the value of the field is `_2`"]
     #[inline]
     pub fn is_2(&self) -> bool {
@@ -365,11 +370,6 @@ impl SOURCER {
     #[inline]
     pub fn is_10(&self) -> bool {
         *self == SOURCER::_10
-    }
-    #[doc = "Checks if the value of the field is `_11`"]
-    #[inline]
-    pub fn is_11(&self) -> bool {
-        *self == SOURCER::_11
     }
     #[doc = "Checks if the value of the field is `_12`"]
     #[inline]
@@ -730,6 +730,8 @@ impl ENBLR {
 pub enum SOURCEW {
     #[doc = "Disable_Signal"]
     _0,
+    #[doc = "TSI0_Signal"]
+    _1,
     #[doc = "UART0_Rx_Signal"]
     _2,
     #[doc = "UART0_Tx_Signal"]
@@ -748,8 +750,6 @@ pub enum SOURCEW {
     _9,
     #[doc = "UART4_Signal"]
     _10,
-    #[doc = "UART5_Signal"]
-    _11,
     #[doc = "I2S0_Rx_Signal"]
     _12,
     #[doc = "I2S0_Tx_Signal"]
@@ -758,11 +758,11 @@ pub enum SOURCEW {
     _14,
     #[doc = "SPI0_Tx_Signal"]
     _15,
-    #[doc = "SPI1_Signal"]
+    #[doc = "SPI1_Rx_Signal"]
     _16,
-    #[doc = "SPI2_Signal"]
+    #[doc = "SPI1_Tx_Signal"]
     _17,
-    #[doc = "I2C0_Signal"]
+    #[doc = "I2C0_I2C3_Signal"]
     _18,
     #[doc = "I2C1_I2C2_Signal"]
     _19,
@@ -782,13 +782,13 @@ pub enum SOURCEW {
     _26,
     #[doc = "FTM0_Channel7_Signal"]
     _27,
-    #[doc = "FTM1_Channel0_Signal"]
+    #[doc = "FTM1_TPM1_Channel0_Signal"]
     _28,
-    #[doc = "FTM1_Channel1_Signal"]
+    #[doc = "FTM1_TPM1_Channel1_Signal"]
     _29,
-    #[doc = "FTM2_Channel0_Signal"]
+    #[doc = "FTM2_TPM2_Channel0_Signal"]
     _30,
-    #[doc = "FTM2_Channel1_Signal"]
+    #[doc = "FTM2_TPM2_Channel1_Signal"]
     _31,
     #[doc = "FTM3_Channel0_Signal"]
     _32,
@@ -802,9 +802,9 @@ pub enum SOURCEW {
     _36,
     #[doc = "FTM3_Channel5_Signal"]
     _37,
-    #[doc = "FTM3_Channel6_Signal"]
+    #[doc = "FTM3_Channel6_SPI2_Rx_Signal"]
     _38,
-    #[doc = "FTM3_Channel7_Signal"]
+    #[doc = "FTM3_Channel7_SPI2_Tx_Signal"]
     _39,
     #[doc = "ADC0_Signal"]
     _40,
@@ -814,7 +814,7 @@ pub enum SOURCEW {
     _42,
     #[doc = "CMP1_Signal"]
     _43,
-    #[doc = "CMP2_Signal"]
+    #[doc = "CMP2_CMP3_Signal"]
     _44,
     #[doc = "DAC0_Signal"]
     _45,
@@ -836,15 +836,15 @@ pub enum SOURCEW {
     _53,
     #[doc = "IEEE1588Timer0_Signal"]
     _54,
-    #[doc = "IEEE1588Timer1_Signal"]
+    #[doc = "IEEE1588Timer1_TPM1_Overflow_Signal"]
     _55,
-    #[doc = "IEEE1588Timer2_Signal"]
+    #[doc = "IEEE1588Timer2_TPM2_Overflow_Signal"]
     _56,
     #[doc = "IEEE1588Timer3_Signal"]
     _57,
-    #[doc = "AlwaysOn58_Signal"]
+    #[doc = "LPUART0_Rx_Signal"]
     _58,
-    #[doc = "AlwaysOn59_Signal"]
+    #[doc = "LPUART0_Tx_Signal"]
     _59,
     #[doc = "AlwaysOn60_Signal"]
     _60,
@@ -862,6 +862,7 @@ impl SOURCEW {
     pub fn _bits(&self) -> u8 {
         match *self {
             SOURCEW::_0 => 0,
+            SOURCEW::_1 => 1,
             SOURCEW::_2 => 2,
             SOURCEW::_3 => 3,
             SOURCEW::_4 => 4,
@@ -871,7 +872,6 @@ impl SOURCEW {
             SOURCEW::_8 => 8,
             SOURCEW::_9 => 9,
             SOURCEW::_10 => 10,
-            SOURCEW::_11 => 11,
             SOURCEW::_12 => 12,
             SOURCEW::_13 => 13,
             SOURCEW::_14 => 14,
@@ -942,6 +942,11 @@ impl<'a> _SOURCEW<'a> {
     pub fn _0(self) -> &'a mut W {
         self.variant(SOURCEW::_0)
     }
+    #[doc = "TSI0_Signal"]
+    #[inline]
+    pub fn _1(self) -> &'a mut W {
+        self.variant(SOURCEW::_1)
+    }
     #[doc = "UART0_Rx_Signal"]
     #[inline]
     pub fn _2(self) -> &'a mut W {
@@ -987,11 +992,6 @@ impl<'a> _SOURCEW<'a> {
     pub fn _10(self) -> &'a mut W {
         self.variant(SOURCEW::_10)
     }
-    #[doc = "UART5_Signal"]
-    #[inline]
-    pub fn _11(self) -> &'a mut W {
-        self.variant(SOURCEW::_11)
-    }
     #[doc = "I2S0_Rx_Signal"]
     #[inline]
     pub fn _12(self) -> &'a mut W {
@@ -1012,17 +1012,17 @@ impl<'a> _SOURCEW<'a> {
     pub fn _15(self) -> &'a mut W {
         self.variant(SOURCEW::_15)
     }
-    #[doc = "SPI1_Signal"]
+    #[doc = "SPI1_Rx_Signal"]
     #[inline]
     pub fn _16(self) -> &'a mut W {
         self.variant(SOURCEW::_16)
     }
-    #[doc = "SPI2_Signal"]
+    #[doc = "SPI1_Tx_Signal"]
     #[inline]
     pub fn _17(self) -> &'a mut W {
         self.variant(SOURCEW::_17)
     }
-    #[doc = "I2C0_Signal"]
+    #[doc = "I2C0_I2C3_Signal"]
     #[inline]
     pub fn _18(self) -> &'a mut W {
         self.variant(SOURCEW::_18)
@@ -1072,22 +1072,22 @@ impl<'a> _SOURCEW<'a> {
     pub fn _27(self) -> &'a mut W {
         self.variant(SOURCEW::_27)
     }
-    #[doc = "FTM1_Channel0_Signal"]
+    #[doc = "FTM1_TPM1_Channel0_Signal"]
     #[inline]
     pub fn _28(self) -> &'a mut W {
         self.variant(SOURCEW::_28)
     }
-    #[doc = "FTM1_Channel1_Signal"]
+    #[doc = "FTM1_TPM1_Channel1_Signal"]
     #[inline]
     pub fn _29(self) -> &'a mut W {
         self.variant(SOURCEW::_29)
     }
-    #[doc = "FTM2_Channel0_Signal"]
+    #[doc = "FTM2_TPM2_Channel0_Signal"]
     #[inline]
     pub fn _30(self) -> &'a mut W {
         self.variant(SOURCEW::_30)
     }
-    #[doc = "FTM2_Channel1_Signal"]
+    #[doc = "FTM2_TPM2_Channel1_Signal"]
     #[inline]
     pub fn _31(self) -> &'a mut W {
         self.variant(SOURCEW::_31)
@@ -1122,12 +1122,12 @@ impl<'a> _SOURCEW<'a> {
     pub fn _37(self) -> &'a mut W {
         self.variant(SOURCEW::_37)
     }
-    #[doc = "FTM3_Channel6_Signal"]
+    #[doc = "FTM3_Channel6_SPI2_Rx_Signal"]
     #[inline]
     pub fn _38(self) -> &'a mut W {
         self.variant(SOURCEW::_38)
     }
-    #[doc = "FTM3_Channel7_Signal"]
+    #[doc = "FTM3_Channel7_SPI2_Tx_Signal"]
     #[inline]
     pub fn _39(self) -> &'a mut W {
         self.variant(SOURCEW::_39)
@@ -1152,7 +1152,7 @@ impl<'a> _SOURCEW<'a> {
     pub fn _43(self) -> &'a mut W {
         self.variant(SOURCEW::_43)
     }
-    #[doc = "CMP2_Signal"]
+    #[doc = "CMP2_CMP3_Signal"]
     #[inline]
     pub fn _44(self) -> &'a mut W {
         self.variant(SOURCEW::_44)
@@ -1207,12 +1207,12 @@ impl<'a> _SOURCEW<'a> {
     pub fn _54(self) -> &'a mut W {
         self.variant(SOURCEW::_54)
     }
-    #[doc = "IEEE1588Timer1_Signal"]
+    #[doc = "IEEE1588Timer1_TPM1_Overflow_Signal"]
     #[inline]
     pub fn _55(self) -> &'a mut W {
         self.variant(SOURCEW::_55)
     }
-    #[doc = "IEEE1588Timer2_Signal"]
+    #[doc = "IEEE1588Timer2_TPM2_Overflow_Signal"]
     #[inline]
     pub fn _56(self) -> &'a mut W {
         self.variant(SOURCEW::_56)
@@ -1222,12 +1222,12 @@ impl<'a> _SOURCEW<'a> {
     pub fn _57(self) -> &'a mut W {
         self.variant(SOURCEW::_57)
     }
-    #[doc = "AlwaysOn58_Signal"]
+    #[doc = "LPUART0_Rx_Signal"]
     #[inline]
     pub fn _58(self) -> &'a mut W {
         self.variant(SOURCEW::_58)
     }
-    #[doc = "AlwaysOn59_Signal"]
+    #[doc = "LPUART0_Tx_Signal"]
     #[inline]
     pub fn _59(self) -> &'a mut W {
         self.variant(SOURCEW::_59)

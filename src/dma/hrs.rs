@@ -763,6 +763,758 @@ impl HRS15R {
         *self == HRS15R::_1
     }
 }
+#[doc = "Possible values of the field `HRS16`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum HRS16R {
+    #[doc = "A hardware service request for channel 16 is not present"]
+    _0,
+    #[doc = "A hardware service request for channel 16 is present"]
+    _1,
+}
+impl HRS16R {
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            HRS16R::_0 => false,
+            HRS16R::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> HRS16R {
+        match value {
+            false => HRS16R::_0,
+            true => HRS16R::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == HRS16R::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == HRS16R::_1
+    }
+}
+#[doc = "Possible values of the field `HRS17`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum HRS17R {
+    #[doc = "A hardware service request for channel 17 is not present"]
+    _0,
+    #[doc = "A hardware service request for channel 17 is present"]
+    _1,
+}
+impl HRS17R {
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            HRS17R::_0 => false,
+            HRS17R::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> HRS17R {
+        match value {
+            false => HRS17R::_0,
+            true => HRS17R::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == HRS17R::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == HRS17R::_1
+    }
+}
+#[doc = "Possible values of the field `HRS18`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum HRS18R {
+    #[doc = "A hardware service request for channel 18 is not present"]
+    _0,
+    #[doc = "A hardware service request for channel 18 is present"]
+    _1,
+}
+impl HRS18R {
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            HRS18R::_0 => false,
+            HRS18R::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> HRS18R {
+        match value {
+            false => HRS18R::_0,
+            true => HRS18R::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == HRS18R::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == HRS18R::_1
+    }
+}
+#[doc = "Possible values of the field `HRS19`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum HRS19R {
+    #[doc = "A hardware service request for channel 19 is not present"]
+    _0,
+    #[doc = "A hardware service request for channel 19 is present"]
+    _1,
+}
+impl HRS19R {
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            HRS19R::_0 => false,
+            HRS19R::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> HRS19R {
+        match value {
+            false => HRS19R::_0,
+            true => HRS19R::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == HRS19R::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == HRS19R::_1
+    }
+}
+#[doc = "Possible values of the field `HRS20`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum HRS20R {
+    #[doc = "A hardware service request for channel 20 is not present"]
+    _0,
+    #[doc = "A hardware service request for channel 20 is present"]
+    _1,
+}
+impl HRS20R {
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            HRS20R::_0 => false,
+            HRS20R::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> HRS20R {
+        match value {
+            false => HRS20R::_0,
+            true => HRS20R::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == HRS20R::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == HRS20R::_1
+    }
+}
+#[doc = "Possible values of the field `HRS21`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum HRS21R {
+    #[doc = "A hardware service request for channel 21 is not present"]
+    _0,
+    #[doc = "A hardware service request for channel 21 is present"]
+    _1,
+}
+impl HRS21R {
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            HRS21R::_0 => false,
+            HRS21R::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> HRS21R {
+        match value {
+            false => HRS21R::_0,
+            true => HRS21R::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == HRS21R::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == HRS21R::_1
+    }
+}
+#[doc = "Possible values of the field `HRS22`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum HRS22R {
+    #[doc = "A hardware service request for channel 22 is not present"]
+    _0,
+    #[doc = "A hardware service request for channel 22 is present"]
+    _1,
+}
+impl HRS22R {
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            HRS22R::_0 => false,
+            HRS22R::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> HRS22R {
+        match value {
+            false => HRS22R::_0,
+            true => HRS22R::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == HRS22R::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == HRS22R::_1
+    }
+}
+#[doc = "Possible values of the field `HRS23`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum HRS23R {
+    #[doc = "A hardware service request for channel 23 is not present"]
+    _0,
+    #[doc = "A hardware service request for channel 23 is present"]
+    _1,
+}
+impl HRS23R {
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            HRS23R::_0 => false,
+            HRS23R::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> HRS23R {
+        match value {
+            false => HRS23R::_0,
+            true => HRS23R::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == HRS23R::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == HRS23R::_1
+    }
+}
+#[doc = "Possible values of the field `HRS24`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum HRS24R {
+    #[doc = "A hardware service request for channel 24 is not present"]
+    _0,
+    #[doc = "A hardware service request for channel 24 is present"]
+    _1,
+}
+impl HRS24R {
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            HRS24R::_0 => false,
+            HRS24R::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> HRS24R {
+        match value {
+            false => HRS24R::_0,
+            true => HRS24R::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == HRS24R::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == HRS24R::_1
+    }
+}
+#[doc = "Possible values of the field `HRS25`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum HRS25R {
+    #[doc = "A hardware service request for channel 25 is not present"]
+    _0,
+    #[doc = "A hardware service request for channel 25 is present"]
+    _1,
+}
+impl HRS25R {
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            HRS25R::_0 => false,
+            HRS25R::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> HRS25R {
+        match value {
+            false => HRS25R::_0,
+            true => HRS25R::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == HRS25R::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == HRS25R::_1
+    }
+}
+#[doc = "Possible values of the field `HRS26`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum HRS26R {
+    #[doc = "A hardware service request for channel 26 is not present"]
+    _0,
+    #[doc = "A hardware service request for channel 26 is present"]
+    _1,
+}
+impl HRS26R {
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            HRS26R::_0 => false,
+            HRS26R::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> HRS26R {
+        match value {
+            false => HRS26R::_0,
+            true => HRS26R::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == HRS26R::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == HRS26R::_1
+    }
+}
+#[doc = "Possible values of the field `HRS27`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum HRS27R {
+    #[doc = "A hardware service request for channel 27 is not present"]
+    _0,
+    #[doc = "A hardware service request for channel 27 is present"]
+    _1,
+}
+impl HRS27R {
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            HRS27R::_0 => false,
+            HRS27R::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> HRS27R {
+        match value {
+            false => HRS27R::_0,
+            true => HRS27R::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == HRS27R::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == HRS27R::_1
+    }
+}
+#[doc = "Possible values of the field `HRS28`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum HRS28R {
+    #[doc = "A hardware service request for channel 28 is not present"]
+    _0,
+    #[doc = "A hardware service request for channel 28 is present"]
+    _1,
+}
+impl HRS28R {
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            HRS28R::_0 => false,
+            HRS28R::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> HRS28R {
+        match value {
+            false => HRS28R::_0,
+            true => HRS28R::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == HRS28R::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == HRS28R::_1
+    }
+}
+#[doc = "Possible values of the field `HRS29`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum HRS29R {
+    #[doc = "A hardware service request for channel 29 is not preset"]
+    _0,
+    #[doc = "A hardware service request for channel 29 is present"]
+    _1,
+}
+impl HRS29R {
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            HRS29R::_0 => false,
+            HRS29R::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> HRS29R {
+        match value {
+            false => HRS29R::_0,
+            true => HRS29R::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == HRS29R::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == HRS29R::_1
+    }
+}
+#[doc = "Possible values of the field `HRS30`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum HRS30R {
+    #[doc = "A hardware service request for channel 30 is not present"]
+    _0,
+    #[doc = "A hardware service request for for channel 30 is present"]
+    _1,
+}
+impl HRS30R {
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            HRS30R::_0 => false,
+            HRS30R::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> HRS30R {
+        match value {
+            false => HRS30R::_0,
+            true => HRS30R::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == HRS30R::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == HRS30R::_1
+    }
+}
+#[doc = "Possible values of the field `HRS31`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum HRS31R {
+    #[doc = "A hardware service request for channel 31 is not present"]
+    _0,
+    #[doc = "A hardware service request for channel 31 is present"]
+    _1,
+}
+impl HRS31R {
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            HRS31R::_0 => false,
+            HRS31R::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> HRS31R {
+        match value {
+            false => HRS31R::_0,
+            true => HRS31R::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == HRS31R::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == HRS31R::_1
+    }
+}
 impl R {
     #[doc = r" Value of the register as raw bits"]
     #[inline]
@@ -910,6 +1662,150 @@ impl R {
         HRS15R::_from({
             const MASK: bool = true;
             const OFFSET: u8 = 15;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        })
+    }
+    #[doc = "Bit 16 - Hardware Request Status Channel 16"]
+    #[inline]
+    pub fn hrs16(&self) -> HRS16R {
+        HRS16R::_from({
+            const MASK: bool = true;
+            const OFFSET: u8 = 16;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        })
+    }
+    #[doc = "Bit 17 - Hardware Request Status Channel 17"]
+    #[inline]
+    pub fn hrs17(&self) -> HRS17R {
+        HRS17R::_from({
+            const MASK: bool = true;
+            const OFFSET: u8 = 17;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        })
+    }
+    #[doc = "Bit 18 - Hardware Request Status Channel 18"]
+    #[inline]
+    pub fn hrs18(&self) -> HRS18R {
+        HRS18R::_from({
+            const MASK: bool = true;
+            const OFFSET: u8 = 18;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        })
+    }
+    #[doc = "Bit 19 - Hardware Request Status Channel 19"]
+    #[inline]
+    pub fn hrs19(&self) -> HRS19R {
+        HRS19R::_from({
+            const MASK: bool = true;
+            const OFFSET: u8 = 19;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        })
+    }
+    #[doc = "Bit 20 - Hardware Request Status Channel 20"]
+    #[inline]
+    pub fn hrs20(&self) -> HRS20R {
+        HRS20R::_from({
+            const MASK: bool = true;
+            const OFFSET: u8 = 20;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        })
+    }
+    #[doc = "Bit 21 - Hardware Request Status Channel 21"]
+    #[inline]
+    pub fn hrs21(&self) -> HRS21R {
+        HRS21R::_from({
+            const MASK: bool = true;
+            const OFFSET: u8 = 21;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        })
+    }
+    #[doc = "Bit 22 - Hardware Request Status Channel 22"]
+    #[inline]
+    pub fn hrs22(&self) -> HRS22R {
+        HRS22R::_from({
+            const MASK: bool = true;
+            const OFFSET: u8 = 22;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        })
+    }
+    #[doc = "Bit 23 - Hardware Request Status Channel 23"]
+    #[inline]
+    pub fn hrs23(&self) -> HRS23R {
+        HRS23R::_from({
+            const MASK: bool = true;
+            const OFFSET: u8 = 23;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        })
+    }
+    #[doc = "Bit 24 - Hardware Request Status Channel 24"]
+    #[inline]
+    pub fn hrs24(&self) -> HRS24R {
+        HRS24R::_from({
+            const MASK: bool = true;
+            const OFFSET: u8 = 24;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        })
+    }
+    #[doc = "Bit 25 - Hardware Request Status Channel 25"]
+    #[inline]
+    pub fn hrs25(&self) -> HRS25R {
+        HRS25R::_from({
+            const MASK: bool = true;
+            const OFFSET: u8 = 25;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        })
+    }
+    #[doc = "Bit 26 - Hardware Request Status Channel 26"]
+    #[inline]
+    pub fn hrs26(&self) -> HRS26R {
+        HRS26R::_from({
+            const MASK: bool = true;
+            const OFFSET: u8 = 26;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        })
+    }
+    #[doc = "Bit 27 - Hardware Request Status Channel 27"]
+    #[inline]
+    pub fn hrs27(&self) -> HRS27R {
+        HRS27R::_from({
+            const MASK: bool = true;
+            const OFFSET: u8 = 27;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        })
+    }
+    #[doc = "Bit 28 - Hardware Request Status Channel 28"]
+    #[inline]
+    pub fn hrs28(&self) -> HRS28R {
+        HRS28R::_from({
+            const MASK: bool = true;
+            const OFFSET: u8 = 28;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        })
+    }
+    #[doc = "Bit 29 - Hardware Request Status Channel 29"]
+    #[inline]
+    pub fn hrs29(&self) -> HRS29R {
+        HRS29R::_from({
+            const MASK: bool = true;
+            const OFFSET: u8 = 29;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        })
+    }
+    #[doc = "Bit 30 - Hardware Request Status Channel 30"]
+    #[inline]
+    pub fn hrs30(&self) -> HRS30R {
+        HRS30R::_from({
+            const MASK: bool = true;
+            const OFFSET: u8 = 30;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        })
+    }
+    #[doc = "Bit 31 - Hardware Request Status Channel 31"]
+    #[inline]
+    pub fn hrs31(&self) -> HRS31R {
+        HRS31R::_from({
+            const MASK: bool = true;
+            const OFFSET: u8 = 31;
             ((self.bits >> OFFSET) & MASK as u32) != 0
         })
     }

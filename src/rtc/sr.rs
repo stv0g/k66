@@ -183,6 +183,53 @@ impl TAFR {
         *self == TAFR::_1
     }
 }
+#[doc = "Possible values of the field `MOF`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum MOFR {
+    #[doc = "Monotonic counter overflow has not occurred."]
+    _0,
+    #[doc = "Monotonic counter overflow has occurred and monotonic counter is read as zero."]
+    _1,
+}
+impl MOFR {
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            MOFR::_0 => false,
+            MOFR::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> MOFR {
+        match value {
+            false => MOFR::_0,
+            true => MOFR::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == MOFR::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == MOFR::_1
+    }
+}
 #[doc = "Possible values of the field `TCE`"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum TCER {
@@ -318,6 +365,15 @@ impl R {
         TAFR::_from({
             const MASK: bool = true;
             const OFFSET: u8 = 2;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        })
+    }
+    #[doc = "Bit 3 - Monotonic Overflow Flag"]
+    #[inline]
+    pub fn mof(&self) -> MOFR {
+        MOFR::_from({
+            const MASK: bool = true;
+            const OFFSET: u8 = 3;
             ((self.bits >> OFFSET) & MASK as u32) != 0
         })
     }

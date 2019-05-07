@@ -75,8 +75,8 @@ pub enum ADC0TRGSELR {
     _1101,
     #[doc = "Low-power timer (LPTMR) trigger"]
     _1110,
-    #[doc = r" Reserved"]
-    _Reserved(u8),
+    #[doc = "TPM1 channel 0 (A pretrigger) and channel 1 (B pretrigger)"]
+    _1111,
 }
 impl ADC0TRGSELR {
     #[doc = r" Value of the field as raw bits"]
@@ -98,7 +98,7 @@ impl ADC0TRGSELR {
             ADC0TRGSELR::_1100 => 12,
             ADC0TRGSELR::_1101 => 13,
             ADC0TRGSELR::_1110 => 14,
-            ADC0TRGSELR::_Reserved(bits) => bits,
+            ADC0TRGSELR::_1111 => 15,
         }
     }
     #[allow(missing_docs)]
@@ -121,7 +121,8 @@ impl ADC0TRGSELR {
             12 => ADC0TRGSELR::_1100,
             13 => ADC0TRGSELR::_1101,
             14 => ADC0TRGSELR::_1110,
-            i => ADC0TRGSELR::_Reserved(i),
+            15 => ADC0TRGSELR::_1111,
+            _ => unreachable!(),
         }
     }
     #[doc = "Checks if the value of the field is `_0000`"]
@@ -198,6 +199,11 @@ impl ADC0TRGSELR {
     #[inline]
     pub fn is_1110(&self) -> bool {
         *self == ADC0TRGSELR::_1110
+    }
+    #[doc = "Checks if the value of the field is `_1111`"]
+    #[inline]
+    pub fn is_1111(&self) -> bool {
+        *self == ADC0TRGSELR::_1111
     }
 }
 #[doc = "Possible values of the field `ADC0PRETRGSEL`"]
@@ -327,8 +333,8 @@ pub enum ADC1TRGSELR {
     _1101,
     #[doc = "Low-power timer (LPTMR) trigger"]
     _1110,
-    #[doc = r" Reserved"]
-    _Reserved(u8),
+    #[doc = "TPM2 channel 0 (A pretrigger) and channel 1 (B pretrigger)"]
+    _1111,
 }
 impl ADC1TRGSELR {
     #[doc = r" Value of the field as raw bits"]
@@ -350,7 +356,7 @@ impl ADC1TRGSELR {
             ADC1TRGSELR::_1100 => 12,
             ADC1TRGSELR::_1101 => 13,
             ADC1TRGSELR::_1110 => 14,
-            ADC1TRGSELR::_Reserved(bits) => bits,
+            ADC1TRGSELR::_1111 => 15,
         }
     }
     #[allow(missing_docs)]
@@ -373,7 +379,8 @@ impl ADC1TRGSELR {
             12 => ADC1TRGSELR::_1100,
             13 => ADC1TRGSELR::_1101,
             14 => ADC1TRGSELR::_1110,
-            i => ADC1TRGSELR::_Reserved(i),
+            15 => ADC1TRGSELR::_1111,
+            _ => unreachable!(),
         }
     }
     #[doc = "Checks if the value of the field is `_0000`"]
@@ -450,6 +457,11 @@ impl ADC1TRGSELR {
     #[inline]
     pub fn is_1110(&self) -> bool {
         *self == ADC1TRGSELR::_1110
+    }
+    #[doc = "Checks if the value of the field is `_1111`"]
+    #[inline]
+    pub fn is_1111(&self) -> bool {
+        *self == ADC1TRGSELR::_1111
     }
 }
 #[doc = "Possible values of the field `ADC1PRETRGSEL`"]
@@ -578,6 +590,8 @@ pub enum ADC0TRGSELW {
     _1101,
     #[doc = "Low-power timer (LPTMR) trigger"]
     _1110,
+    #[doc = "TPM1 channel 0 (A pretrigger) and channel 1 (B pretrigger)"]
+    _1111,
 }
 impl ADC0TRGSELW {
     #[allow(missing_docs)]
@@ -600,6 +614,7 @@ impl ADC0TRGSELW {
             ADC0TRGSELW::_1100 => 12,
             ADC0TRGSELW::_1101 => 13,
             ADC0TRGSELW::_1110 => 14,
+            ADC0TRGSELW::_1111 => 15,
         }
     }
 }
@@ -611,7 +626,9 @@ impl<'a> _ADC0TRGSELW<'a> {
     #[doc = r" Writes `variant` to the field"]
     #[inline]
     pub fn variant(self, variant: ADC0TRGSELW) -> &'a mut W {
-        unsafe { self.bits(variant._bits()) }
+        {
+            self.bits(variant._bits())
+        }
     }
     #[doc = "PDB external trigger pin input (PDB0_EXTRG)"]
     #[inline]
@@ -688,9 +705,14 @@ impl<'a> _ADC0TRGSELW<'a> {
     pub fn _1110(self) -> &'a mut W {
         self.variant(ADC0TRGSELW::_1110)
     }
+    #[doc = "TPM1 channel 0 (A pretrigger) and channel 1 (B pretrigger)"]
+    #[inline]
+    pub fn _1111(self) -> &'a mut W {
+        self.variant(ADC0TRGSELW::_1111)
+    }
     #[doc = r" Writes raw bits to the field"]
     #[inline]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
+    pub fn bits(self, value: u8) -> &'a mut W {
         const MASK: u8 = 15;
         const OFFSET: u8 = 0;
         self.w.bits &= !((MASK as u32) << OFFSET);
@@ -846,6 +868,8 @@ pub enum ADC1TRGSELW {
     _1101,
     #[doc = "Low-power timer (LPTMR) trigger"]
     _1110,
+    #[doc = "TPM2 channel 0 (A pretrigger) and channel 1 (B pretrigger)"]
+    _1111,
 }
 impl ADC1TRGSELW {
     #[allow(missing_docs)]
@@ -868,6 +892,7 @@ impl ADC1TRGSELW {
             ADC1TRGSELW::_1100 => 12,
             ADC1TRGSELW::_1101 => 13,
             ADC1TRGSELW::_1110 => 14,
+            ADC1TRGSELW::_1111 => 15,
         }
     }
 }
@@ -879,7 +904,9 @@ impl<'a> _ADC1TRGSELW<'a> {
     #[doc = r" Writes `variant` to the field"]
     #[inline]
     pub fn variant(self, variant: ADC1TRGSELW) -> &'a mut W {
-        unsafe { self.bits(variant._bits()) }
+        {
+            self.bits(variant._bits())
+        }
     }
     #[doc = "PDB external trigger pin input (PDB0_EXTRG)"]
     #[inline]
@@ -956,9 +983,14 @@ impl<'a> _ADC1TRGSELW<'a> {
     pub fn _1110(self) -> &'a mut W {
         self.variant(ADC1TRGSELW::_1110)
     }
+    #[doc = "TPM2 channel 0 (A pretrigger) and channel 1 (B pretrigger)"]
+    #[inline]
+    pub fn _1111(self) -> &'a mut W {
+        self.variant(ADC1TRGSELW::_1111)
+    }
     #[doc = r" Writes raw bits to the field"]
     #[inline]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
+    pub fn bits(self, value: u8) -> &'a mut W {
         const MASK: u8 = 15;
         const OFFSET: u8 = 8;
         self.w.bits &= !((MASK as u32) << OFFSET);

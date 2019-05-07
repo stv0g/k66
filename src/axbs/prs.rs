@@ -594,6 +594,98 @@ impl M5R {
         *self == M5R::_111
     }
 }
+#[doc = "Possible values of the field `M6`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum M6R {
+    #[doc = "This master has level 1, or highest, priority when accessing the slave port."]
+    _000,
+    #[doc = "This master has level 2 priority when accessing the slave port."]
+    _001,
+    #[doc = "This master has level 3 priority when accessing the slave port."]
+    _010,
+    #[doc = "This master has level 4 priority when accessing the slave port."]
+    _011,
+    #[doc = "This master has level 5 priority when accessing the slave port."]
+    _100,
+    #[doc = "This master has level 6 priority when accessing the slave port."]
+    _101,
+    #[doc = "This master has level 7 priority when accessing the slave port."]
+    _110,
+    #[doc = "This master has level 8, or lowest, priority when accessing the slave port."]
+    _111,
+}
+impl M6R {
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bits(&self) -> u8 {
+        match *self {
+            M6R::_000 => 0,
+            M6R::_001 => 1,
+            M6R::_010 => 2,
+            M6R::_011 => 3,
+            M6R::_100 => 4,
+            M6R::_101 => 5,
+            M6R::_110 => 6,
+            M6R::_111 => 7,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: u8) -> M6R {
+        match value {
+            0 => M6R::_000,
+            1 => M6R::_001,
+            2 => M6R::_010,
+            3 => M6R::_011,
+            4 => M6R::_100,
+            5 => M6R::_101,
+            6 => M6R::_110,
+            7 => M6R::_111,
+            _ => unreachable!(),
+        }
+    }
+    #[doc = "Checks if the value of the field is `_000`"]
+    #[inline]
+    pub fn is_000(&self) -> bool {
+        *self == M6R::_000
+    }
+    #[doc = "Checks if the value of the field is `_001`"]
+    #[inline]
+    pub fn is_001(&self) -> bool {
+        *self == M6R::_001
+    }
+    #[doc = "Checks if the value of the field is `_010`"]
+    #[inline]
+    pub fn is_010(&self) -> bool {
+        *self == M6R::_010
+    }
+    #[doc = "Checks if the value of the field is `_011`"]
+    #[inline]
+    pub fn is_011(&self) -> bool {
+        *self == M6R::_011
+    }
+    #[doc = "Checks if the value of the field is `_100`"]
+    #[inline]
+    pub fn is_100(&self) -> bool {
+        *self == M6R::_100
+    }
+    #[doc = "Checks if the value of the field is `_101`"]
+    #[inline]
+    pub fn is_101(&self) -> bool {
+        *self == M6R::_101
+    }
+    #[doc = "Checks if the value of the field is `_110`"]
+    #[inline]
+    pub fn is_110(&self) -> bool {
+        *self == M6R::_110
+    }
+    #[doc = "Checks if the value of the field is `_111`"]
+    #[inline]
+    pub fn is_111(&self) -> bool {
+        *self == M6R::_111
+    }
+}
 #[doc = "Values that can be written to the field `M0`"]
 pub enum M0W {
     #[doc = "This master has level 1, or highest, priority when accessing the slave port."]
@@ -1182,6 +1274,104 @@ impl<'a> _M5W<'a> {
         self.w
     }
 }
+#[doc = "Values that can be written to the field `M6`"]
+pub enum M6W {
+    #[doc = "This master has level 1, or highest, priority when accessing the slave port."]
+    _000,
+    #[doc = "This master has level 2 priority when accessing the slave port."]
+    _001,
+    #[doc = "This master has level 3 priority when accessing the slave port."]
+    _010,
+    #[doc = "This master has level 4 priority when accessing the slave port."]
+    _011,
+    #[doc = "This master has level 5 priority when accessing the slave port."]
+    _100,
+    #[doc = "This master has level 6 priority when accessing the slave port."]
+    _101,
+    #[doc = "This master has level 7 priority when accessing the slave port."]
+    _110,
+    #[doc = "This master has level 8, or lowest, priority when accessing the slave port."]
+    _111,
+}
+impl M6W {
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _bits(&self) -> u8 {
+        match *self {
+            M6W::_000 => 0,
+            M6W::_001 => 1,
+            M6W::_010 => 2,
+            M6W::_011 => 3,
+            M6W::_100 => 4,
+            M6W::_101 => 5,
+            M6W::_110 => 6,
+            M6W::_111 => 7,
+        }
+    }
+}
+#[doc = r" Proxy"]
+pub struct _M6W<'a> {
+    w: &'a mut W,
+}
+impl<'a> _M6W<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: M6W) -> &'a mut W {
+        {
+            self.bits(variant._bits())
+        }
+    }
+    #[doc = "This master has level 1, or highest, priority when accessing the slave port."]
+    #[inline]
+    pub fn _000(self) -> &'a mut W {
+        self.variant(M6W::_000)
+    }
+    #[doc = "This master has level 2 priority when accessing the slave port."]
+    #[inline]
+    pub fn _001(self) -> &'a mut W {
+        self.variant(M6W::_001)
+    }
+    #[doc = "This master has level 3 priority when accessing the slave port."]
+    #[inline]
+    pub fn _010(self) -> &'a mut W {
+        self.variant(M6W::_010)
+    }
+    #[doc = "This master has level 4 priority when accessing the slave port."]
+    #[inline]
+    pub fn _011(self) -> &'a mut W {
+        self.variant(M6W::_011)
+    }
+    #[doc = "This master has level 5 priority when accessing the slave port."]
+    #[inline]
+    pub fn _100(self) -> &'a mut W {
+        self.variant(M6W::_100)
+    }
+    #[doc = "This master has level 6 priority when accessing the slave port."]
+    #[inline]
+    pub fn _101(self) -> &'a mut W {
+        self.variant(M6W::_101)
+    }
+    #[doc = "This master has level 7 priority when accessing the slave port."]
+    #[inline]
+    pub fn _110(self) -> &'a mut W {
+        self.variant(M6W::_110)
+    }
+    #[doc = "This master has level 8, or lowest, priority when accessing the slave port."]
+    #[inline]
+    pub fn _111(self) -> &'a mut W {
+        self.variant(M6W::_111)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bits(self, value: u8) -> &'a mut W {
+        const MASK: u8 = 7;
+        const OFFSET: u8 = 24;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
 impl R {
     #[doc = r" Value of the register as raw bits"]
     #[inline]
@@ -1242,12 +1432,21 @@ impl R {
             ((self.bits >> OFFSET) & MASK as u32) as u8
         })
     }
+    #[doc = "Bits 24:26 - Master 6 Priority. Sets the arbitration priority for this port on the associated slave port."]
+    #[inline]
+    pub fn m6(&self) -> M6R {
+        M6R::_from({
+            const MASK: u8 = 7;
+            const OFFSET: u8 = 24;
+            ((self.bits >> OFFSET) & MASK as u32) as u8
+        })
+    }
 }
 impl W {
     #[doc = r" Reset value of the register"]
     #[inline]
     pub fn reset_value() -> W {
-        W { bits: 5517840 }
+        W { bits: 106181136 }
     }
     #[doc = r" Writes raw bits to the register"]
     #[inline]
@@ -1284,5 +1483,10 @@ impl W {
     #[inline]
     pub fn m5(&mut self) -> _M5W {
         _M5W { w: self }
+    }
+    #[doc = "Bits 24:26 - Master 6 Priority. Sets the arbitration priority for this port on the associated slave port."]
+    #[inline]
+    pub fn m6(&mut self) -> _M6W {
+        _M6W { w: self }
     }
 }

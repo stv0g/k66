@@ -135,7 +135,10 @@ pub struct RegisterBlock {
     _reserved43: [u8; 3usize],
     #[doc = "0x144 - IRC48M oscillator enable register"]
     pub clk_recover_irc_en: CLK_RECOVER_IRC_EN,
-    _reserved44: [u8; 23usize],
+    _reserved44: [u8; 15usize],
+    #[doc = "0x154 - Clock recovery combined interrupt enable"]
+    pub clk_recover_int_en: CLK_RECOVER_INT_EN,
+    _reserved45: [u8; 7usize],
     #[doc = "0x15c - Clock recovery separated interrupt status"]
     pub clk_recover_int_status: CLK_RECOVER_INT_STATUS,
 }
@@ -319,6 +322,12 @@ pub struct CLK_RECOVER_IRC_EN {
 }
 #[doc = "IRC48M oscillator enable register"]
 pub mod clk_recover_irc_en;
+#[doc = "Clock recovery combined interrupt enable"]
+pub struct CLK_RECOVER_INT_EN {
+    register: ::vcell::VolatileCell<u8>,
+}
+#[doc = "Clock recovery combined interrupt enable"]
+pub mod clk_recover_int_en;
 #[doc = "Clock recovery separated interrupt status"]
 pub struct CLK_RECOVER_INT_STATUS {
     register: ::vcell::VolatileCell<u8>,

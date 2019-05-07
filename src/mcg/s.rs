@@ -218,7 +218,7 @@ impl IREFSTR {
 pub enum PLLSTR {
     #[doc = "Source of PLLS clock is FLL clock."]
     _0,
-    #[doc = "Source of PLLS clock is PLL output clock."]
+    #[doc = "Source of PLLS clock is PLLCS output clock."]
     _1,
 }
 impl PLLSTR {

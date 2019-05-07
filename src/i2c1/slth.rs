@@ -74,7 +74,7 @@ impl R {
     pub fn bits(&self) -> u8 {
         self.bits
     }
-    #[doc = "Bits 0:7 - Most significant byte of SCL low timeout value that determines the timeout period of SCL low."]
+    #[doc = "Bits 0:7 - SSLT\\[15:8\\]"]
     #[inline]
     pub fn sslt(&self) -> SSLTR {
         let bits = {
@@ -97,7 +97,7 @@ impl W {
         self.bits = bits;
         self
     }
-    #[doc = "Bits 0:7 - Most significant byte of SCL low timeout value that determines the timeout period of SCL low."]
+    #[doc = "Bits 0:7 - SSLT\\[15:8\\]"]
     #[inline]
     pub fn sslt(&mut self) -> _SSLTW {
         _SSLTW { w: self }

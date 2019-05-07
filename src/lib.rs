@@ -1,4 +1,4 @@
-#![doc = "Peripheral access API for MK64F12 microcontrollers (generated using svd2rust v0.14.0)\n\nYou can find an overview of the API [here].\n\n[here]: https://docs.rs/svd2rust/0.14.0/svd2rust/#peripheral-api"]
+#![doc = "Peripheral access API for MK66F18 microcontrollers (generated using svd2rust v0.14.0)\n\nYou can find an overview of the API [here].\n\n[here]: https://docs.rs/svd2rust/0.14.0/svd2rust/#peripheral-api"]
 #![deny(missing_docs)]
 #![deny(warnings)]
 #![allow(non_camel_case_types)]
@@ -14,22 +14,22 @@ use core::ops::Deref;
 pub const NVIC_PRIO_BITS: u8 = 4;
 #[cfg(feature = "rt")]
 extern "C" {
-    fn DMA0();
-    fn DMA1();
-    fn DMA2();
-    fn DMA3();
-    fn DMA4();
-    fn DMA5();
-    fn DMA6();
-    fn DMA7();
-    fn DMA8();
-    fn DMA9();
-    fn DMA10();
-    fn DMA11();
-    fn DMA12();
-    fn DMA13();
-    fn DMA14();
-    fn DMA15();
+    fn DMA0_DMA16();
+    fn DMA1_DMA17();
+    fn DMA2_DMA18();
+    fn DMA3_DMA19();
+    fn DMA4_DMA20();
+    fn DMA5_DMA21();
+    fn DMA6_DMA22();
+    fn DMA7_DMA23();
+    fn DMA8_DMA24();
+    fn DMA9_DMA25();
+    fn DMA10_DMA26();
+    fn DMA11_DMA27();
+    fn DMA12_DMA28();
+    fn DMA13_DMA29();
+    fn DMA14_DMA30();
+    fn DMA15_DMA31();
     fn DMA_ERROR();
     fn MCM();
     fn FTFE();
@@ -44,7 +44,6 @@ extern "C" {
     fn SPI1();
     fn I2S0_TX();
     fn I2S0_RX();
-    fn UART0_LON();
     fn UART0_RX_TX();
     fn UART0_ERR();
     fn UART1_RX_TX();
@@ -79,8 +78,6 @@ extern "C" {
     fn SPI2();
     fn UART4_RX_TX();
     fn UART4_ERR();
-    fn UART5_RX_TX();
-    fn UART5_ERR();
     fn CMP2();
     fn FTM3();
     fn DAC1();
@@ -97,6 +94,20 @@ extern "C" {
     fn ENET_TRANSMIT();
     fn ENET_RECEIVE();
     fn ENET_ERROR();
+    fn LPUART0();
+    fn TSI0();
+    fn TPM1();
+    fn TPM2();
+    fn USBHSDCD();
+    fn I2C3();
+    fn CMP3();
+    fn USBHS();
+    fn CAN1_ORED_MESSAGE_BUFFER();
+    fn CAN1_BUS_OFF();
+    fn CAN1_ERROR();
+    fn CAN1_TX_WARNING();
+    fn CAN1_RX_WARNING();
+    fn CAN1_WAKE_UP();
 }
 #[doc(hidden)]
 pub union Vector {
@@ -107,23 +118,55 @@ pub union Vector {
 #[doc(hidden)]
 #[link_section = ".vector_table.interrupts"]
 #[no_mangle]
-pub static __INTERRUPTS: [Vector; 86] = [
-    Vector { _handler: DMA0 },
-    Vector { _handler: DMA1 },
-    Vector { _handler: DMA2 },
-    Vector { _handler: DMA3 },
-    Vector { _handler: DMA4 },
-    Vector { _handler: DMA5 },
-    Vector { _handler: DMA6 },
-    Vector { _handler: DMA7 },
-    Vector { _handler: DMA8 },
-    Vector { _handler: DMA9 },
-    Vector { _handler: DMA10 },
-    Vector { _handler: DMA11 },
-    Vector { _handler: DMA12 },
-    Vector { _handler: DMA13 },
-    Vector { _handler: DMA14 },
-    Vector { _handler: DMA15 },
+pub static __INTERRUPTS: [Vector; 100] = [
+    Vector {
+        _handler: DMA0_DMA16,
+    },
+    Vector {
+        _handler: DMA1_DMA17,
+    },
+    Vector {
+        _handler: DMA2_DMA18,
+    },
+    Vector {
+        _handler: DMA3_DMA19,
+    },
+    Vector {
+        _handler: DMA4_DMA20,
+    },
+    Vector {
+        _handler: DMA5_DMA21,
+    },
+    Vector {
+        _handler: DMA6_DMA22,
+    },
+    Vector {
+        _handler: DMA7_DMA23,
+    },
+    Vector {
+        _handler: DMA8_DMA24,
+    },
+    Vector {
+        _handler: DMA9_DMA25,
+    },
+    Vector {
+        _handler: DMA10_DMA26,
+    },
+    Vector {
+        _handler: DMA11_DMA27,
+    },
+    Vector {
+        _handler: DMA12_DMA28,
+    },
+    Vector {
+        _handler: DMA13_DMA29,
+    },
+    Vector {
+        _handler: DMA14_DMA30,
+    },
+    Vector {
+        _handler: DMA15_DMA31,
+    },
     Vector {
         _handler: DMA_ERROR,
     },
@@ -142,9 +185,7 @@ pub static __INTERRUPTS: [Vector; 86] = [
     Vector { _handler: SPI1 },
     Vector { _handler: I2S0_TX },
     Vector { _handler: I2S0_RX },
-    Vector {
-        _handler: UART0_LON,
-    },
+    Vector { _reserved: 0 },
     Vector {
         _handler: UART0_RX_TX,
     },
@@ -204,12 +245,8 @@ pub static __INTERRUPTS: [Vector; 86] = [
     Vector {
         _handler: UART4_ERR,
     },
-    Vector {
-        _handler: UART5_RX_TX,
-    },
-    Vector {
-        _handler: UART5_ERR,
-    },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
     Vector { _handler: CMP2 },
     Vector { _handler: FTM3 },
     Vector { _handler: DAC1 },
@@ -246,41 +283,67 @@ pub static __INTERRUPTS: [Vector; 86] = [
     Vector {
         _handler: ENET_ERROR,
     },
+    Vector { _handler: LPUART0 },
+    Vector { _handler: TSI0 },
+    Vector { _handler: TPM1 },
+    Vector { _handler: TPM2 },
+    Vector { _handler: USBHSDCD },
+    Vector { _handler: I2C3 },
+    Vector { _handler: CMP3 },
+    Vector { _handler: USBHS },
+    Vector {
+        _handler: CAN1_ORED_MESSAGE_BUFFER,
+    },
+    Vector {
+        _handler: CAN1_BUS_OFF,
+    },
+    Vector {
+        _handler: CAN1_ERROR,
+    },
+    Vector {
+        _handler: CAN1_TX_WARNING,
+    },
+    Vector {
+        _handler: CAN1_RX_WARNING,
+    },
+    Vector {
+        _handler: CAN1_WAKE_UP,
+    },
 ];
 #[doc = r" Enumeration of all the interrupts"]
 pub enum Interrupt {
-    #[doc = "0 - DMA0"]
-    DMA0,
-    #[doc = "1 - DMA1"]
-    DMA1,
-    #[doc = "2 - DMA2"]
-    DMA2,
-    #[doc = "3 - DMA3"]
-    DMA3,
-    #[doc = "4 - DMA4"]
-    DMA4,
-    #[doc = "5 - DMA5"]
-    DMA5,
-    #[doc = "6 - DMA6"]
-    DMA6,
-    #[doc = "7 - DMA7"]
-    DMA7,
-    #[doc = "8 - DMA8"]
-    DMA8,
-    #[doc = "9 - DMA9"]
-    DMA9,
-    #[doc = "10 - DMA10"]
-    DMA10,
-    #[doc = "11 - DMA11"]
-    DMA11,
-    #[doc = "12 - DMA12"]
-    DMA12,
-    #[doc = "13 - DMA13"]
-    DMA13,
-    #[doc = "14 - DMA14"]
-    DMA14,
-    #[doc = "15 - DMA15"]
-    DMA15,
+    #[doc = "0 - DMA0_DMA16"]
+    DMA0_DMA16,
+    #[doc = "1 - DMA1_DMA17"]
+    DMA1_DMA17,
+    #[doc = "2 - DMA2_DMA18"]
+    DMA2_DMA18,
+    #[doc = "3 - DMA3_DMA19"]
+    DMA3_DMA19,
+    #[doc = "4 - DMA4_DMA20"]
+    DMA4_DMA20,
+    #[doc = "5 - DMA5_DMA21"]
+    DMA5_DMA21,
+    #[doc = "6 - DMA6_DMA22"]
+    DMA6_DMA22,
+    #[doc = "7 - DMA7_DMA23"]
+    DMA7_DMA23,
+    #[doc = "8 - DMA8_DMA24"]
+    DMA8_DMA24,
+    #[doc = "9 - DMA9_DMA25"]
+    DMA9_DMA25,
+    #[doc = "10 - DMA10_DMA26"]
+    DMA10_DMA26,
+    #[doc = "11 - DMA11_DMA27"]
+    DMA11_DMA27,
+    #[doc = "12 - DMA12_DMA28"]
+    DMA12_DMA28,
+    #[doc = "13 - DMA13_DMA29"]
+    DMA13_DMA29,
+    #[doc = "14 - DMA14_DMA30"]
+    DMA14_DMA30,
+    #[doc = "15 - DMA15_DMA31"]
+    DMA15_DMA31,
     #[doc = "16 - DMA_Error"]
     DMA_ERROR,
     #[doc = "17 - MCM"]
@@ -309,8 +372,6 @@ pub enum Interrupt {
     I2S0_TX,
     #[doc = "29 - I2S0_Rx"]
     I2S0_RX,
-    #[doc = "30 - UART0_LON"]
-    UART0_LON,
     #[doc = "31 - UART0_RX_TX"]
     UART0_RX_TX,
     #[doc = "32 - UART0_ERR"]
@@ -379,10 +440,6 @@ pub enum Interrupt {
     UART4_RX_TX,
     #[doc = "67 - UART4_ERR"]
     UART4_ERR,
-    #[doc = "68 - UART5_RX_TX"]
-    UART5_RX_TX,
-    #[doc = "69 - UART5_ERR"]
-    UART5_ERR,
     #[doc = "70 - CMP2"]
     CMP2,
     #[doc = "71 - FTM3"]
@@ -415,27 +472,55 @@ pub enum Interrupt {
     ENET_RECEIVE,
     #[doc = "85 - ENET_Error"]
     ENET_ERROR,
+    #[doc = "86 - LPUART0"]
+    LPUART0,
+    #[doc = "87 - TSI0"]
+    TSI0,
+    #[doc = "88 - TPM1"]
+    TPM1,
+    #[doc = "89 - TPM2"]
+    TPM2,
+    #[doc = "90 - USBHSDCD"]
+    USBHSDCD,
+    #[doc = "91 - I2C3"]
+    I2C3,
+    #[doc = "92 - CMP3"]
+    CMP3,
+    #[doc = "93 - USBHS"]
+    USBHS,
+    #[doc = "94 - CAN1_ORed_Message_buffer"]
+    CAN1_ORED_MESSAGE_BUFFER,
+    #[doc = "95 - CAN1_Bus_Off"]
+    CAN1_BUS_OFF,
+    #[doc = "96 - CAN1_Error"]
+    CAN1_ERROR,
+    #[doc = "97 - CAN1_Tx_Warning"]
+    CAN1_TX_WARNING,
+    #[doc = "98 - CAN1_Rx_Warning"]
+    CAN1_RX_WARNING,
+    #[doc = "99 - CAN1_Wake_Up"]
+    CAN1_WAKE_UP,
 }
 unsafe impl ::bare_metal::Nr for Interrupt {
     #[inline]
     fn nr(&self) -> u8 {
         match *self {
-            Interrupt::DMA0 => 0,
-            Interrupt::DMA1 => 1,
-            Interrupt::DMA2 => 2,
-            Interrupt::DMA3 => 3,
-            Interrupt::DMA4 => 4,
-            Interrupt::DMA5 => 5,
-            Interrupt::DMA6 => 6,
-            Interrupt::DMA7 => 7,
-            Interrupt::DMA8 => 8,
-            Interrupt::DMA9 => 9,
-            Interrupt::DMA10 => 10,
-            Interrupt::DMA11 => 11,
-            Interrupt::DMA12 => 12,
-            Interrupt::DMA13 => 13,
-            Interrupt::DMA14 => 14,
-            Interrupt::DMA15 => 15,
+            Interrupt::DMA0_DMA16 => 0,
+            Interrupt::DMA1_DMA17 => 1,
+            Interrupt::DMA2_DMA18 => 2,
+            Interrupt::DMA3_DMA19 => 3,
+            Interrupt::DMA4_DMA20 => 4,
+            Interrupt::DMA5_DMA21 => 5,
+            Interrupt::DMA6_DMA22 => 6,
+            Interrupt::DMA7_DMA23 => 7,
+            Interrupt::DMA8_DMA24 => 8,
+            Interrupt::DMA9_DMA25 => 9,
+            Interrupt::DMA10_DMA26 => 10,
+            Interrupt::DMA11_DMA27 => 11,
+            Interrupt::DMA12_DMA28 => 12,
+            Interrupt::DMA13_DMA29 => 13,
+            Interrupt::DMA14_DMA30 => 14,
+            Interrupt::DMA15_DMA31 => 15,
             Interrupt::DMA_ERROR => 16,
             Interrupt::MCM => 17,
             Interrupt::FTFE => 18,
@@ -450,7 +535,6 @@ unsafe impl ::bare_metal::Nr for Interrupt {
             Interrupt::SPI1 => 27,
             Interrupt::I2S0_TX => 28,
             Interrupt::I2S0_RX => 29,
-            Interrupt::UART0_LON => 30,
             Interrupt::UART0_RX_TX => 31,
             Interrupt::UART0_ERR => 32,
             Interrupt::UART1_RX_TX => 33,
@@ -485,8 +569,6 @@ unsafe impl ::bare_metal::Nr for Interrupt {
             Interrupt::SPI2 => 65,
             Interrupt::UART4_RX_TX => 66,
             Interrupt::UART4_ERR => 67,
-            Interrupt::UART5_RX_TX => 68,
-            Interrupt::UART5_ERR => 69,
             Interrupt::CMP2 => 70,
             Interrupt::FTM3 => 71,
             Interrupt::DAC1 => 72,
@@ -503,6 +585,20 @@ unsafe impl ::bare_metal::Nr for Interrupt {
             Interrupt::ENET_TRANSMIT => 83,
             Interrupt::ENET_RECEIVE => 84,
             Interrupt::ENET_ERROR => 85,
+            Interrupt::LPUART0 => 86,
+            Interrupt::TSI0 => 87,
+            Interrupt::TPM1 => 88,
+            Interrupt::TPM2 => 89,
+            Interrupt::USBHSDCD => 90,
+            Interrupt::I2C3 => 91,
+            Interrupt::CMP3 => 92,
+            Interrupt::USBHS => 93,
+            Interrupt::CAN1_ORED_MESSAGE_BUFFER => 94,
+            Interrupt::CAN1_BUS_OFF => 95,
+            Interrupt::CAN1_ERROR => 96,
+            Interrupt::CAN1_TX_WARNING => 97,
+            Interrupt::CAN1_RX_WARNING => 98,
+            Interrupt::CAN1_WAKE_UP => 99,
         }
     }
 }
@@ -645,7 +741,26 @@ impl Deref for SYSMPU {
 }
 #[doc = "Memory protection unit"]
 pub mod sysmpu;
-#[doc = "Flash Memory Controller"]
+#[doc = "Synchronous DRAM Controller"]
+pub struct SDRAM {
+    _marker: PhantomData<*const ()>,
+}
+unsafe impl Send for SDRAM {}
+impl SDRAM {
+    #[doc = r" Returns a pointer to the register block"]
+    pub fn ptr() -> *const sdram::RegisterBlock {
+        1073803264 as *const _
+    }
+}
+impl Deref for SDRAM {
+    type Target = sdram::RegisterBlock;
+    fn deref(&self) -> &sdram::RegisterBlock {
+        unsafe { &*SDRAM::ptr() }
+    }
+}
+#[doc = "Synchronous DRAM Controller"]
+pub mod sdram;
+#[doc = "Flash Memory Controller-greg"]
 pub struct FMC {
     _marker: PhantomData<*const ()>,
 }
@@ -662,7 +777,7 @@ impl Deref for FMC {
         unsafe { &*FMC::ptr() }
     }
 }
-#[doc = "Flash Memory Controller"]
+#[doc = "Flash Memory Controller-greg"]
 pub mod fmc;
 #[doc = "Flash Memory Interface"]
 pub struct FTFE {
@@ -721,25 +836,25 @@ impl Deref for CAN0 {
 }
 #[doc = "Flex Controller Area Network module"]
 pub mod can0;
-#[doc = "Random Number Generator Accelerator"]
-pub struct RNG {
+#[doc = "Flex Controller Area Network module"]
+pub struct CAN1 {
     _marker: PhantomData<*const ()>,
 }
-unsafe impl Send for RNG {}
-impl RNG {
+unsafe impl Send for CAN1 {}
+impl CAN1 {
     #[doc = r" Returns a pointer to the register block"]
-    pub fn ptr() -> *const rng::RegisterBlock {
-        1073909760 as *const _
+    pub fn ptr() -> *const can1::RegisterBlock {
+        1074413568 as *const _
     }
 }
-impl Deref for RNG {
-    type Target = rng::RegisterBlock;
-    fn deref(&self) -> &rng::RegisterBlock {
-        unsafe { &*RNG::ptr() }
+impl Deref for CAN1 {
+    type Target = can1::RegisterBlock;
+    fn deref(&self) -> &can1::RegisterBlock {
+        unsafe { &*CAN1::ptr() }
     }
 }
-#[doc = "Random Number Generator Accelerator"]
-pub mod rng;
+#[doc = "Flex Controller Area Network module"]
+pub mod can1;
 #[doc = "Serial Peripheral Interface"]
 pub struct SPI0 {
     _marker: PhantomData<*const ()>,
@@ -1082,6 +1197,25 @@ impl Deref for RFSYS {
 }
 #[doc = "System register file"]
 pub mod rfsys;
+#[doc = "Touch sense input"]
+pub struct TSI0 {
+    _marker: PhantomData<*const ()>,
+}
+unsafe impl Send for TSI0 {}
+impl TSI0 {
+    #[doc = r" Returns a pointer to the register block"]
+    pub fn ptr() -> *const tsi0::RegisterBlock {
+        1074024448 as *const _
+    }
+}
+impl Deref for TSI0 {
+    type Target = tsi0::RegisterBlock;
+    fn deref(&self) -> &tsi0::RegisterBlock {
+        unsafe { &*TSI0::ptr() }
+    }
+}
+#[doc = "Touch sense input"]
+pub mod tsi0;
 #[doc = "System Integration Module"]
 pub struct SIM {
     _marker: PhantomData<*const ()>,
@@ -1348,6 +1482,25 @@ impl Deref for I2C2 {
 }
 #[doc = "Inter-Integrated Circuit"]
 pub mod i2c2;
+#[doc = "Inter-Integrated Circuit"]
+pub struct I2C3 {
+    _marker: PhantomData<*const ()>,
+}
+unsafe impl Send for I2C3 {}
+impl I2C3 {
+    #[doc = r" Returns a pointer to the register block"]
+    pub fn ptr() -> *const i2c3::RegisterBlock {
+        1074688000 as *const _
+    }
+}
+impl Deref for I2C3 {
+    type Target = i2c3::RegisterBlock;
+    fn deref(&self) -> &i2c3::RegisterBlock {
+        unsafe { &*I2C3::ptr() }
+    }
+}
+#[doc = "Inter-Integrated Circuit"]
+pub mod i2c3;
 #[doc = "Serial Communication Interface"]
 pub struct UART0 {
     _marker: PhantomData<*const ()>,
@@ -1443,25 +1596,6 @@ impl Deref for UART4 {
 }
 #[doc = "Serial Communication Interface"]
 pub mod uart4;
-#[doc = "Serial Communication Interface"]
-pub struct UART5 {
-    _marker: PhantomData<*const ()>,
-}
-unsafe impl Send for UART5 {}
-impl UART5 {
-    #[doc = r" Returns a pointer to the register block"]
-    pub fn ptr() -> *const uart5::RegisterBlock {
-        1074704384 as *const _
-    }
-}
-impl Deref for UART5 {
-    type Target = uart5::RegisterBlock;
-    fn deref(&self) -> &uart5::RegisterBlock {
-        unsafe { &*UART5::ptr() }
-    }
-}
-#[doc = "Serial Communication Interface"]
-pub mod uart5;
 #[doc = "Universal Serial Bus, OTG Capable Controller"]
 pub struct USB0 {
     _marker: PhantomData<*const ()>,
@@ -1538,6 +1672,25 @@ impl Deref for CMP2 {
 }
 #[doc = "High-Speed Comparator (CMP), Voltage Reference (VREF) Digital-to-Analog Converter (DAC), and Analog Mux (ANMUX)"]
 pub mod cmp2;
+#[doc = "High-Speed Comparator (CMP), Voltage Reference (VREF) Digital-to-Analog Converter (DAC), and Analog Mux (ANMUX)"]
+pub struct CMP3 {
+    _marker: PhantomData<*const ()>,
+}
+unsafe impl Send for CMP3 {}
+impl CMP3 {
+    #[doc = r" Returns a pointer to the register block"]
+    pub fn ptr() -> *const cmp3::RegisterBlock {
+        1074212888 as *const _
+    }
+}
+impl Deref for CMP3 {
+    type Target = cmp3::RegisterBlock;
+    fn deref(&self) -> &cmp3::RegisterBlock {
+        unsafe { &*CMP3::ptr() }
+    }
+}
+#[doc = "High-Speed Comparator (CMP), Voltage Reference (VREF) Digital-to-Analog Converter (DAC), and Analog Mux (ANMUX)"]
+pub mod cmp3;
 #[doc = "Voltage Reference"]
 pub struct VREF {
     _marker: PhantomData<*const ()>,
@@ -1633,6 +1786,82 @@ impl Deref for RCM {
 }
 #[doc = "Reset Control Module"]
 pub mod rcm;
+#[doc = "Random Number Generator Accelerator"]
+pub struct RNG {
+    _marker: PhantomData<*const ()>,
+}
+unsafe impl Send for RNG {}
+impl RNG {
+    #[doc = r" Returns a pointer to the register block"]
+    pub fn ptr() -> *const rng::RegisterBlock {
+        1074397184 as *const _
+    }
+}
+impl Deref for RNG {
+    type Target = rng::RegisterBlock;
+    fn deref(&self) -> &rng::RegisterBlock {
+        unsafe { &*RNG::ptr() }
+    }
+}
+#[doc = "Random Number Generator Accelerator"]
+pub mod rng;
+#[doc = "USB HS/FS/LS OTG Controller"]
+pub struct USBHS {
+    _marker: PhantomData<*const ()>,
+}
+unsafe impl Send for USBHS {}
+impl USBHS {
+    #[doc = r" Returns a pointer to the register block"]
+    pub fn ptr() -> *const usbhs::RegisterBlock {
+        1074401280 as *const _
+    }
+}
+impl Deref for USBHS {
+    type Target = usbhs::RegisterBlock;
+    fn deref(&self) -> &usbhs::RegisterBlock {
+        unsafe { &*USBHS::ptr() }
+    }
+}
+#[doc = "USB HS/FS/LS OTG Controller"]
+pub mod usbhs;
+#[doc = "USBPHY Register Reference Index"]
+pub struct USBPHY {
+    _marker: PhantomData<*const ()>,
+}
+unsafe impl Send for USBPHY {}
+impl USBPHY {
+    #[doc = r" Returns a pointer to the register block"]
+    pub fn ptr() -> *const usbphy::RegisterBlock {
+        1074405376 as *const _
+    }
+}
+impl Deref for USBPHY {
+    type Target = usbphy::RegisterBlock;
+    fn deref(&self) -> &usbphy::RegisterBlock {
+        unsafe { &*USBPHY::ptr() }
+    }
+}
+#[doc = "USBPHY Register Reference Index"]
+pub mod usbphy;
+#[doc = "USB Device Charger Detection module"]
+pub struct USBHSDCD {
+    _marker: PhantomData<*const ()>,
+}
+unsafe impl Send for USBHSDCD {}
+impl USBHSDCD {
+    #[doc = r" Returns a pointer to the register block"]
+    pub fn ptr() -> *const usbhsdcd::RegisterBlock {
+        1074409472 as *const _
+    }
+}
+impl Deref for USBHSDCD {
+    type Target = usbhsdcd::RegisterBlock;
+    fn deref(&self) -> &usbhsdcd::RegisterBlock {
+        unsafe { &*USBHSDCD::ptr() }
+    }
+}
+#[doc = "USB Device Charger Detection module"]
+pub mod usbhsdcd;
 #[doc = "Secured Digital Host Controller"]
 pub struct SDHC {
     _marker: PhantomData<*const ()>,
@@ -1671,6 +1900,63 @@ impl Deref for ENET {
 }
 #[doc = "Ethernet MAC-NET Core"]
 pub mod enet;
+#[doc = "Universal Asynchronous Receiver/Transmitter"]
+pub struct LPUART0 {
+    _marker: PhantomData<*const ()>,
+}
+unsafe impl Send for LPUART0 {}
+impl LPUART0 {
+    #[doc = r" Returns a pointer to the register block"]
+    pub fn ptr() -> *const lpuart0::RegisterBlock {
+        1074544640 as *const _
+    }
+}
+impl Deref for LPUART0 {
+    type Target = lpuart0::RegisterBlock;
+    fn deref(&self) -> &lpuart0::RegisterBlock {
+        unsafe { &*LPUART0::ptr() }
+    }
+}
+#[doc = "Universal Asynchronous Receiver/Transmitter"]
+pub mod lpuart0;
+#[doc = "Timer/PWM Module"]
+pub struct TPM1 {
+    _marker: PhantomData<*const ()>,
+}
+unsafe impl Send for TPM1 {}
+impl TPM1 {
+    #[doc = r" Returns a pointer to the register block"]
+    pub fn ptr() -> *const tpm1::RegisterBlock {
+        1074565120 as *const _
+    }
+}
+impl Deref for TPM1 {
+    type Target = tpm1::RegisterBlock;
+    fn deref(&self) -> &tpm1::RegisterBlock {
+        unsafe { &*TPM1::ptr() }
+    }
+}
+#[doc = "Timer/PWM Module"]
+pub mod tpm1;
+#[doc = "Timer/PWM Module"]
+pub struct TPM2 {
+    _marker: PhantomData<*const ()>,
+}
+unsafe impl Send for TPM2 {}
+impl TPM2 {
+    #[doc = r" Returns a pointer to the register block"]
+    pub fn ptr() -> *const tpm2::RegisterBlock {
+        1074569216 as *const _
+    }
+}
+impl Deref for TPM2 {
+    type Target = tpm2::RegisterBlock;
+    fn deref(&self) -> &tpm2::RegisterBlock {
+        unsafe { &*TPM2::ptr() }
+    }
+}
+#[doc = "Timer/PWM Module"]
+pub mod tpm2;
 #[doc = "12-Bit Digital-to-Analog Converter"]
 pub struct DAC0 {
     _marker: PhantomData<*const ()>,
@@ -1880,6 +2166,25 @@ impl Deref for CAU {
 }
 #[doc = "Memory Mapped Cryptographic Acceleration Unit (MMCAU)"]
 pub mod cau;
+#[doc = "Local Memory Controller"]
+pub struct LMEM {
+    _marker: PhantomData<*const ()>,
+}
+unsafe impl Send for LMEM {}
+impl LMEM {
+    #[doc = r" Returns a pointer to the register block"]
+    pub fn ptr() -> *const lmem::RegisterBlock {
+        3758628864 as *const _
+    }
+}
+impl Deref for LMEM {
+    type Target = lmem::RegisterBlock;
+    fn deref(&self) -> &lmem::RegisterBlock {
+        unsafe { &*LMEM::ptr() }
+    }
+}
+#[doc = "Local Memory Controller"]
+pub mod lmem;
 #[allow(renamed_and_removed_lints)]
 #[allow(private_no_mangle_statics)]
 #[no_mangle]
@@ -1901,6 +2206,8 @@ pub struct Peripherals {
     pub FB: FB,
     #[doc = "SYSMPU"]
     pub SYSMPU: SYSMPU,
+    #[doc = "SDRAM"]
+    pub SDRAM: SDRAM,
     #[doc = "FMC"]
     pub FMC: FMC,
     #[doc = "FTFE"]
@@ -1909,8 +2216,8 @@ pub struct Peripherals {
     pub DMAMUX: DMAMUX,
     #[doc = "CAN0"]
     pub CAN0: CAN0,
-    #[doc = "RNG"]
-    pub RNG: RNG,
+    #[doc = "CAN1"]
+    pub CAN1: CAN1,
     #[doc = "SPI0"]
     pub SPI0: SPI0,
     #[doc = "SPI1"]
@@ -1947,6 +2254,8 @@ pub struct Peripherals {
     pub LPTMR0: LPTMR0,
     #[doc = "RFSYS"]
     pub RFSYS: RFSYS,
+    #[doc = "TSI0"]
+    pub TSI0: TSI0,
     #[doc = "SIM"]
     pub SIM: SIM,
     #[doc = "PORTA"]
@@ -1975,6 +2284,8 @@ pub struct Peripherals {
     pub I2C1: I2C1,
     #[doc = "I2C2"]
     pub I2C2: I2C2,
+    #[doc = "I2C3"]
+    pub I2C3: I2C3,
     #[doc = "UART0"]
     pub UART0: UART0,
     #[doc = "UART1"]
@@ -1985,8 +2296,6 @@ pub struct Peripherals {
     pub UART3: UART3,
     #[doc = "UART4"]
     pub UART4: UART4,
-    #[doc = "UART5"]
-    pub UART5: UART5,
     #[doc = "USB0"]
     pub USB0: USB0,
     #[doc = "CMP0"]
@@ -1995,6 +2304,8 @@ pub struct Peripherals {
     pub CMP1: CMP1,
     #[doc = "CMP2"]
     pub CMP2: CMP2,
+    #[doc = "CMP3"]
+    pub CMP3: CMP3,
     #[doc = "VREF"]
     pub VREF: VREF,
     #[doc = "LLWU"]
@@ -2005,10 +2316,24 @@ pub struct Peripherals {
     pub SMC: SMC,
     #[doc = "RCM"]
     pub RCM: RCM,
+    #[doc = "RNG"]
+    pub RNG: RNG,
+    #[doc = "USBHS"]
+    pub USBHS: USBHS,
+    #[doc = "USBPHY"]
+    pub USBPHY: USBPHY,
+    #[doc = "USBHSDCD"]
+    pub USBHSDCD: USBHSDCD,
     #[doc = "SDHC"]
     pub SDHC: SDHC,
     #[doc = "ENET"]
     pub ENET: ENET,
+    #[doc = "LPUART0"]
+    pub LPUART0: LPUART0,
+    #[doc = "TPM1"]
+    pub TPM1: TPM1,
+    #[doc = "TPM2"]
+    pub TPM2: TPM2,
     #[doc = "DAC0"]
     pub DAC0: DAC0,
     #[doc = "DAC1"]
@@ -2031,6 +2356,8 @@ pub struct Peripherals {
     pub MCM: MCM,
     #[doc = "CAU"]
     pub CAU: CAU,
+    #[doc = "LMEM"]
+    pub LMEM: LMEM,
 }
 impl Peripherals {
     #[doc = r" Returns all the peripherals *once*"]
@@ -2070,6 +2397,9 @@ impl Peripherals {
             SYSMPU: SYSMPU {
                 _marker: PhantomData,
             },
+            SDRAM: SDRAM {
+                _marker: PhantomData,
+            },
             FMC: FMC {
                 _marker: PhantomData,
             },
@@ -2082,7 +2412,7 @@ impl Peripherals {
             CAN0: CAN0 {
                 _marker: PhantomData,
             },
-            RNG: RNG {
+            CAN1: CAN1 {
                 _marker: PhantomData,
             },
             SPI0: SPI0 {
@@ -2139,6 +2469,9 @@ impl Peripherals {
             RFSYS: RFSYS {
                 _marker: PhantomData,
             },
+            TSI0: TSI0 {
+                _marker: PhantomData,
+            },
             SIM: SIM {
                 _marker: PhantomData,
             },
@@ -2181,6 +2514,9 @@ impl Peripherals {
             I2C2: I2C2 {
                 _marker: PhantomData,
             },
+            I2C3: I2C3 {
+                _marker: PhantomData,
+            },
             UART0: UART0 {
                 _marker: PhantomData,
             },
@@ -2196,9 +2532,6 @@ impl Peripherals {
             UART4: UART4 {
                 _marker: PhantomData,
             },
-            UART5: UART5 {
-                _marker: PhantomData,
-            },
             USB0: USB0 {
                 _marker: PhantomData,
             },
@@ -2209,6 +2542,9 @@ impl Peripherals {
                 _marker: PhantomData,
             },
             CMP2: CMP2 {
+                _marker: PhantomData,
+            },
+            CMP3: CMP3 {
                 _marker: PhantomData,
             },
             VREF: VREF {
@@ -2226,10 +2562,31 @@ impl Peripherals {
             RCM: RCM {
                 _marker: PhantomData,
             },
+            RNG: RNG {
+                _marker: PhantomData,
+            },
+            USBHS: USBHS {
+                _marker: PhantomData,
+            },
+            USBPHY: USBPHY {
+                _marker: PhantomData,
+            },
+            USBHSDCD: USBHSDCD {
+                _marker: PhantomData,
+            },
             SDHC: SDHC {
                 _marker: PhantomData,
             },
             ENET: ENET {
+                _marker: PhantomData,
+            },
+            LPUART0: LPUART0 {
+                _marker: PhantomData,
+            },
+            TPM1: TPM1 {
+                _marker: PhantomData,
+            },
+            TPM2: TPM2 {
                 _marker: PhantomData,
             },
             DAC0: DAC0 {
@@ -2263,6 +2620,9 @@ impl Peripherals {
                 _marker: PhantomData,
             },
             CAU: CAU {
+                _marker: PhantomData,
+            },
+            LMEM: LMEM {
                 _marker: PhantomData,
             },
         }

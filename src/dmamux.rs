@@ -2,7 +2,7 @@
 #[repr(C)]
 pub struct RegisterBlock {
     #[doc = "0x00 - Channel Configuration register"]
-    pub chcfg: [CHCFG; 16],
+    pub chcfg: [CHCFG; 32],
 }
 #[doc = "Channel Configuration register"]
 pub struct CHCFG {

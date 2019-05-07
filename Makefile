@@ -14,7 +14,7 @@ setup:
 .PHONY: generate
 generate: clean
 	echo "\`\`\`bash" > WARNINGS.md
-	svd2rust -i MK64F12.svd 2>> WARNINGS.md
+	svd2rust -i MK66F18.svd 2>> WARNINGS.md
 	echo "\`\`\`" >> WARNINGS.md
 	form -i lib.rs -o src/ && rm lib.rs
 	cargo fmt

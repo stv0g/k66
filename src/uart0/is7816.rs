@@ -183,6 +183,53 @@ impl GTVR {
         *self == GTVR::_1
     }
 }
+#[doc = "Possible values of the field `ADT`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum ADTR {
+    #[doc = "ATR Duration time (ADT) has not been violated."]
+    _0,
+    #[doc = "ATR Duration time (ADT) has been violated."]
+    _1,
+}
+impl ADTR {
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            ADTR::_0 => false,
+            ADTR::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> ADTR {
+        match value {
+            false => ADTR::_0,
+            true => ADTR::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == ADTR::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == ADTR::_1
+    }
+}
 #[doc = "Possible values of the field `INITD`"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum INITDR {
@@ -545,6 +592,64 @@ impl<'a> _GTVW<'a> {
         self.w
     }
 }
+#[doc = "Values that can be written to the field `ADT`"]
+pub enum ADTW {
+    #[doc = "ATR Duration time (ADT) has not been violated."]
+    _0,
+    #[doc = "ATR Duration time (ADT) has been violated."]
+    _1,
+}
+impl ADTW {
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _bits(&self) -> bool {
+        match *self {
+            ADTW::_0 => false,
+            ADTW::_1 => true,
+        }
+    }
+}
+#[doc = r" Proxy"]
+pub struct _ADTW<'a> {
+    w: &'a mut W,
+}
+impl<'a> _ADTW<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: ADTW) -> &'a mut W {
+        {
+            self.bit(variant._bits())
+        }
+    }
+    #[doc = "ATR Duration time (ADT) has not been violated."]
+    #[inline]
+    pub fn _0(self) -> &'a mut W {
+        self.variant(ADTW::_0)
+    }
+    #[doc = "ATR Duration time (ADT) has been violated."]
+    #[inline]
+    pub fn _1(self) -> &'a mut W {
+        self.variant(ADTW::_1)
+    }
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 3;
+        self.w.bits &= !((MASK as u8) << OFFSET);
+        self.w.bits |= ((value & MASK) as u8) << OFFSET;
+        self.w
+    }
+}
 #[doc = "Values that can be written to the field `INITD`"]
 pub enum INITDW {
     #[doc = "A valid initial character has not been received."]
@@ -810,6 +915,15 @@ impl R {
             ((self.bits >> OFFSET) & MASK as u8) != 0
         })
     }
+    #[doc = "Bit 3 - ATR Duration Time Interrupt"]
+    #[inline]
+    pub fn adt(&self) -> ADTR {
+        ADTR::_from({
+            const MASK: bool = true;
+            const OFFSET: u8 = 3;
+            ((self.bits >> OFFSET) & MASK as u8) != 0
+        })
+    }
     #[doc = "Bit 4 - Initial Character Detected Interrupt"]
     #[inline]
     pub fn initd(&self) -> INITDR {
@@ -873,6 +987,11 @@ impl W {
     #[inline]
     pub fn gtv(&mut self) -> _GTVW {
         _GTVW { w: self }
+    }
+    #[doc = "Bit 3 - ATR Duration Time Interrupt"]
+    #[inline]
+    pub fn adt(&mut self) -> _ADTW {
+        _ADTW { w: self }
     }
     #[doc = "Bit 4 - Initial Character Detected Interrupt"]
     #[inline]

@@ -188,7 +188,7 @@ impl TXRTSPOLR {
 pub enum RXRTSER {
     #[doc = "The receiver has no effect on RTS."]
     _0,
-    #[doc = "RTS is deasserted if the number of characters in the receiver data register (FIFO) is equal to or greater than RWFIFO\\[RXWATER\\]. RTS is asserted when the number of characters in the receiver data register (FIFO) is less than RWFIFO\\[RXWATER\\]."]
+    #[doc = "RTS is deasserted if the number of characters in the receiver data register (FIFO) is equal to or greater than RWFIFO\\[RXWATER\\]. RTS is asserted when the number of characters in the receiver data register (FIFO) is less than RWFIFO\\[RXWATER\\]. See Hardware flow control"]
     _1,
 }
 impl RXRTSER {
@@ -408,7 +408,7 @@ impl<'a> _TXRTSPOLW<'a> {
 pub enum RXRTSEW {
     #[doc = "The receiver has no effect on RTS."]
     _0,
-    #[doc = "RTS is deasserted if the number of characters in the receiver data register (FIFO) is equal to or greater than RWFIFO\\[RXWATER\\]. RTS is asserted when the number of characters in the receiver data register (FIFO) is less than RWFIFO\\[RXWATER\\]."]
+    #[doc = "RTS is deasserted if the number of characters in the receiver data register (FIFO) is equal to or greater than RWFIFO\\[RXWATER\\]. RTS is asserted when the number of characters in the receiver data register (FIFO) is less than RWFIFO\\[RXWATER\\]. See Hardware flow control"]
     _1,
 }
 impl RXRTSEW {
@@ -439,7 +439,7 @@ impl<'a> _RXRTSEW<'a> {
     pub fn _0(self) -> &'a mut W {
         self.variant(RXRTSEW::_0)
     }
-    #[doc = "RTS is deasserted if the number of characters in the receiver data register (FIFO) is equal to or greater than RWFIFO\\[RXWATER\\]. RTS is asserted when the number of characters in the receiver data register (FIFO) is less than RWFIFO\\[RXWATER\\]."]
+    #[doc = "RTS is deasserted if the number of characters in the receiver data register (FIFO) is equal to or greater than RWFIFO\\[RXWATER\\]. RTS is asserted when the number of characters in the receiver data register (FIFO) is less than RWFIFO\\[RXWATER\\]. See Hardware flow control"]
     #[inline]
     pub fn _1(self) -> &'a mut W {
         self.variant(RXRTSEW::_1)

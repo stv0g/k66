@@ -94,25 +94,25 @@ impl TDRER {
 pub enum TMODER {
     #[doc = "Timer Channel is disabled."]
     _0000,
-    #[doc = "Timer Channel is configured for Input Capture on rising edge"]
+    #[doc = "Timer Channel is configured for Input Capture on rising edge."]
     _0001,
-    #[doc = "Timer Channel is configured for Input Capture on falling edge"]
+    #[doc = "Timer Channel is configured for Input Capture on falling edge."]
     _0010,
-    #[doc = "Timer Channel is configured for Input Capture on both edges"]
+    #[doc = "Timer Channel is configured for Input Capture on both edges."]
     _0011,
-    #[doc = "Timer Channel is configured for Output Compare - software only"]
+    #[doc = "Timer Channel is configured for Output Compare - software only."]
     _0100,
-    #[doc = "Timer Channel is configured for Output Compare - toggle output on compare"]
+    #[doc = "Timer Channel is configured for Output Compare - toggle output on compare."]
     _0101,
-    #[doc = "Timer Channel is configured for Output Compare - clear output on compare"]
+    #[doc = "Timer Channel is configured for Output Compare - clear output on compare."]
     _0110,
-    #[doc = "Timer Channel is configured for Output Compare - set output on compare"]
+    #[doc = "Timer Channel is configured for Output Compare - set output on compare."]
     _0111,
-    #[doc = "Timer Channel is configured for Output Compare - clear output on compare, set output on overflow"]
+    #[doc = "Timer Channel is configured for Output Compare - clear output on compare, set output on overflow."]
     _1010,
-    #[doc = "Timer Channel is configured for Output Compare - pulse output low on compare for one 1588 clock cycle"]
+    #[doc = "Timer Channel is configured for Output Compare - pulse output low on compare for one 1588-clock cycle."]
     _1110,
-    #[doc = "Timer Channel is configured for Output Compare - pulse output high on compare for one 1588 clock cycle"]
+    #[doc = "Timer Channel is configured for Output Compare - pulse output high on compare for one 1588-clock cycle."]
     _1111,
     #[doc = r" Reserved"]
     _Reserved(u8),
@@ -261,9 +261,9 @@ impl TIER {
 #[doc = "Possible values of the field `TF`"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum TFR {
-    #[doc = "Input Capture or Output Compare has not occurred"]
+    #[doc = "Input Capture or Output Compare has not occurred."]
     _0,
-    #[doc = "Input Capture or Output Compare has occurred"]
+    #[doc = "Input Capture or Output Compare has occurred."]
     _1,
 }
 impl TFR {
@@ -367,25 +367,25 @@ impl<'a> _TDREW<'a> {
 pub enum TMODEW {
     #[doc = "Timer Channel is disabled."]
     _0000,
-    #[doc = "Timer Channel is configured for Input Capture on rising edge"]
+    #[doc = "Timer Channel is configured for Input Capture on rising edge."]
     _0001,
-    #[doc = "Timer Channel is configured for Input Capture on falling edge"]
+    #[doc = "Timer Channel is configured for Input Capture on falling edge."]
     _0010,
-    #[doc = "Timer Channel is configured for Input Capture on both edges"]
+    #[doc = "Timer Channel is configured for Input Capture on both edges."]
     _0011,
-    #[doc = "Timer Channel is configured for Output Compare - software only"]
+    #[doc = "Timer Channel is configured for Output Compare - software only."]
     _0100,
-    #[doc = "Timer Channel is configured for Output Compare - toggle output on compare"]
+    #[doc = "Timer Channel is configured for Output Compare - toggle output on compare."]
     _0101,
-    #[doc = "Timer Channel is configured for Output Compare - clear output on compare"]
+    #[doc = "Timer Channel is configured for Output Compare - clear output on compare."]
     _0110,
-    #[doc = "Timer Channel is configured for Output Compare - set output on compare"]
+    #[doc = "Timer Channel is configured for Output Compare - set output on compare."]
     _0111,
-    #[doc = "Timer Channel is configured for Output Compare - clear output on compare, set output on overflow"]
+    #[doc = "Timer Channel is configured for Output Compare - clear output on compare, set output on overflow."]
     _1010,
-    #[doc = "Timer Channel is configured for Output Compare - pulse output low on compare for one 1588 clock cycle"]
+    #[doc = "Timer Channel is configured for Output Compare - pulse output low on compare for one 1588-clock cycle."]
     _1110,
-    #[doc = "Timer Channel is configured for Output Compare - pulse output high on compare for one 1588 clock cycle"]
+    #[doc = "Timer Channel is configured for Output Compare - pulse output high on compare for one 1588-clock cycle."]
     _1111,
 }
 impl TMODEW {
@@ -423,52 +423,52 @@ impl<'a> _TMODEW<'a> {
     pub fn _0000(self) -> &'a mut W {
         self.variant(TMODEW::_0000)
     }
-    #[doc = "Timer Channel is configured for Input Capture on rising edge"]
+    #[doc = "Timer Channel is configured for Input Capture on rising edge."]
     #[inline]
     pub fn _0001(self) -> &'a mut W {
         self.variant(TMODEW::_0001)
     }
-    #[doc = "Timer Channel is configured for Input Capture on falling edge"]
+    #[doc = "Timer Channel is configured for Input Capture on falling edge."]
     #[inline]
     pub fn _0010(self) -> &'a mut W {
         self.variant(TMODEW::_0010)
     }
-    #[doc = "Timer Channel is configured for Input Capture on both edges"]
+    #[doc = "Timer Channel is configured for Input Capture on both edges."]
     #[inline]
     pub fn _0011(self) -> &'a mut W {
         self.variant(TMODEW::_0011)
     }
-    #[doc = "Timer Channel is configured for Output Compare - software only"]
+    #[doc = "Timer Channel is configured for Output Compare - software only."]
     #[inline]
     pub fn _0100(self) -> &'a mut W {
         self.variant(TMODEW::_0100)
     }
-    #[doc = "Timer Channel is configured for Output Compare - toggle output on compare"]
+    #[doc = "Timer Channel is configured for Output Compare - toggle output on compare."]
     #[inline]
     pub fn _0101(self) -> &'a mut W {
         self.variant(TMODEW::_0101)
     }
-    #[doc = "Timer Channel is configured for Output Compare - clear output on compare"]
+    #[doc = "Timer Channel is configured for Output Compare - clear output on compare."]
     #[inline]
     pub fn _0110(self) -> &'a mut W {
         self.variant(TMODEW::_0110)
     }
-    #[doc = "Timer Channel is configured for Output Compare - set output on compare"]
+    #[doc = "Timer Channel is configured for Output Compare - set output on compare."]
     #[inline]
     pub fn _0111(self) -> &'a mut W {
         self.variant(TMODEW::_0111)
     }
-    #[doc = "Timer Channel is configured for Output Compare - clear output on compare, set output on overflow"]
+    #[doc = "Timer Channel is configured for Output Compare - clear output on compare, set output on overflow."]
     #[inline]
     pub fn _1010(self) -> &'a mut W {
         self.variant(TMODEW::_1010)
     }
-    #[doc = "Timer Channel is configured for Output Compare - pulse output low on compare for one 1588 clock cycle"]
+    #[doc = "Timer Channel is configured for Output Compare - pulse output low on compare for one 1588-clock cycle."]
     #[inline]
     pub fn _1110(self) -> &'a mut W {
         self.variant(TMODEW::_1110)
     }
-    #[doc = "Timer Channel is configured for Output Compare - pulse output high on compare for one 1588 clock cycle"]
+    #[doc = "Timer Channel is configured for Output Compare - pulse output high on compare for one 1588-clock cycle."]
     #[inline]
     pub fn _1111(self) -> &'a mut W {
         self.variant(TMODEW::_1111)
@@ -543,9 +543,9 @@ impl<'a> _TIEW<'a> {
 }
 #[doc = "Values that can be written to the field `TF`"]
 pub enum TFW {
-    #[doc = "Input Capture or Output Compare has not occurred"]
+    #[doc = "Input Capture or Output Compare has not occurred."]
     _0,
-    #[doc = "Input Capture or Output Compare has occurred"]
+    #[doc = "Input Capture or Output Compare has occurred."]
     _1,
 }
 impl TFW {
@@ -571,12 +571,12 @@ impl<'a> _TFW<'a> {
             self.bit(variant._bits())
         }
     }
-    #[doc = "Input Capture or Output Compare has not occurred"]
+    #[doc = "Input Capture or Output Compare has not occurred."]
     #[inline]
     pub fn _0(self) -> &'a mut W {
         self.variant(TFW::_0)
     }
-    #[doc = "Input Capture or Output Compare has occurred"]
+    #[doc = "Input Capture or Output Compare has occurred."]
     #[inline]
     pub fn _1(self) -> &'a mut W {
         self.variant(TFW::_1)

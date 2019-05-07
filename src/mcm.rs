@@ -16,9 +16,18 @@ pub struct RegisterBlock {
     pub etbrl: ETBRL,
     #[doc = "0x1c - ETB Counter Value register"]
     pub etbcnt: ETBCNT,
-    _reserved1: [u8; 16usize],
+    #[doc = "0x20 - Fault address register"]
+    pub fadr: FADR,
+    #[doc = "0x24 - Fault attributes register"]
+    pub fatr: FATR,
+    #[doc = "0x28 - Fault data register"]
+    pub fdr: FDR,
+    _reserved1: [u8; 4usize],
     #[doc = "0x30 - Process ID register"]
     pub pid: PID,
+    _reserved2: [u8; 12usize],
+    #[doc = "0x40 - Compute Operation Control Register"]
+    pub cpo: CPO,
 }
 #[doc = "Crossbar Switch (AXBS) Slave Configuration"]
 pub struct PLASC {
@@ -62,9 +71,33 @@ pub struct ETBCNT {
 }
 #[doc = "ETB Counter Value register"]
 pub mod etbcnt;
+#[doc = "Fault address register"]
+pub struct FADR {
+    register: ::vcell::VolatileCell<u32>,
+}
+#[doc = "Fault address register"]
+pub mod fadr;
+#[doc = "Fault attributes register"]
+pub struct FATR {
+    register: ::vcell::VolatileCell<u32>,
+}
+#[doc = "Fault attributes register"]
+pub mod fatr;
+#[doc = "Fault data register"]
+pub struct FDR {
+    register: ::vcell::VolatileCell<u32>,
+}
+#[doc = "Fault data register"]
+pub mod fdr;
 #[doc = "Process ID register"]
 pub struct PID {
     register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "Process ID register"]
 pub mod pid;
+#[doc = "Compute Operation Control Register"]
+pub struct CPO {
+    register: ::vcell::VolatileCell<u32>,
+}
+#[doc = "Compute Operation Control Register"]
+pub mod cpo;

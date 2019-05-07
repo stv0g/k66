@@ -22,7 +22,7 @@ impl<'a> _CDNEW<'a> {
     #[doc = r" Writes raw bits to the field"]
     #[inline]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 15;
+        const MASK: u8 = 31;
         const OFFSET: u8 = 0;
         self.w.bits &= !((MASK as u8) << OFFSET);
         self.w.bits |= ((value & MASK) as u8) << OFFSET;
@@ -157,7 +157,7 @@ impl W {
         self.bits = bits;
         self
     }
-    #[doc = "Bits 0:3 - Clear DONE Bit"]
+    #[doc = "Bits 0:4 - Clear DONE Bit"]
     #[inline]
     pub fn cdne(&mut self) -> _CDNEW {
         _CDNEW { w: self }

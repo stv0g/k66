@@ -45,9 +45,9 @@ impl super::TCD_CSR {
 #[doc = "Possible values of the field `START`"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum STARTR {
-    #[doc = "The channel is not explicitly started"]
+    #[doc = "The channel is not explicitly started."]
     _0,
-    #[doc = "The channel is explicitly started via a software initiated service request"]
+    #[doc = "The channel is explicitly started via a software initiated service request."]
     _1,
 }
 impl STARTR {
@@ -92,9 +92,9 @@ impl STARTR {
 #[doc = "Possible values of the field `INTMAJOR`"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum INTMAJORR {
-    #[doc = "The end-of-major loop interrupt is disabled"]
+    #[doc = "The end-of-major loop interrupt is disabled."]
     _0,
-    #[doc = "The end-of-major loop interrupt is enabled"]
+    #[doc = "The end-of-major loop interrupt is enabled."]
     _1,
 }
 impl INTMAJORR {
@@ -139,9 +139,9 @@ impl INTMAJORR {
 #[doc = "Possible values of the field `INTHALF`"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum INTHALFR {
-    #[doc = "The half-point interrupt is disabled"]
+    #[doc = "The half-point interrupt is disabled."]
     _0,
-    #[doc = "The half-point interrupt is enabled"]
+    #[doc = "The half-point interrupt is enabled."]
     _1,
 }
 impl INTHALFR {
@@ -186,9 +186,9 @@ impl INTHALFR {
 #[doc = "Possible values of the field `DREQ`"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum DREQR {
-    #[doc = "The channel's ERQ bit is not affected"]
+    #[doc = "The channel's ERQ bit is not affected."]
     _0,
-    #[doc = "The channel's ERQ bit is cleared when the major loop is complete"]
+    #[doc = "The channel's ERQ bit is cleared when the major loop is complete."]
     _1,
 }
 impl DREQR {
@@ -280,9 +280,9 @@ impl ESGR {
 #[doc = "Possible values of the field `MAJORELINK`"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum MAJORELINKR {
-    #[doc = "The channel-to-channel linking is disabled"]
+    #[doc = "The channel-to-channel linking is disabled."]
     _0,
-    #[doc = "The channel-to-channel linking is enabled"]
+    #[doc = "The channel-to-channel linking is enabled."]
     _1,
 }
 impl MAJORELINKR {
@@ -382,9 +382,9 @@ impl MAJORLINKCHR {
 pub enum BWCR {
     #[doc = "No eDMA engine stalls"]
     _00,
-    #[doc = "eDMA engine stalls for 4 cycles after each r/w"]
+    #[doc = "eDMA engine stalls for 4 cycles after each R/W."]
     _10,
-    #[doc = "eDMA engine stalls for 8 cycles after each r/w"]
+    #[doc = "eDMA engine stalls for 8 cycles after each R/W."]
     _11,
     #[doc = r" Reserved"]
     _Reserved(u8),
@@ -429,9 +429,9 @@ impl BWCR {
 }
 #[doc = "Values that can be written to the field `START`"]
 pub enum STARTW {
-    #[doc = "The channel is not explicitly started"]
+    #[doc = "The channel is not explicitly started."]
     _0,
-    #[doc = "The channel is explicitly started via a software initiated service request"]
+    #[doc = "The channel is explicitly started via a software initiated service request."]
     _1,
 }
 impl STARTW {
@@ -457,12 +457,12 @@ impl<'a> _STARTW<'a> {
             self.bit(variant._bits())
         }
     }
-    #[doc = "The channel is not explicitly started"]
+    #[doc = "The channel is not explicitly started."]
     #[inline]
     pub fn _0(self) -> &'a mut W {
         self.variant(STARTW::_0)
     }
-    #[doc = "The channel is explicitly started via a software initiated service request"]
+    #[doc = "The channel is explicitly started via a software initiated service request."]
     #[inline]
     pub fn _1(self) -> &'a mut W {
         self.variant(STARTW::_1)
@@ -487,9 +487,9 @@ impl<'a> _STARTW<'a> {
 }
 #[doc = "Values that can be written to the field `INTMAJOR`"]
 pub enum INTMAJORW {
-    #[doc = "The end-of-major loop interrupt is disabled"]
+    #[doc = "The end-of-major loop interrupt is disabled."]
     _0,
-    #[doc = "The end-of-major loop interrupt is enabled"]
+    #[doc = "The end-of-major loop interrupt is enabled."]
     _1,
 }
 impl INTMAJORW {
@@ -515,12 +515,12 @@ impl<'a> _INTMAJORW<'a> {
             self.bit(variant._bits())
         }
     }
-    #[doc = "The end-of-major loop interrupt is disabled"]
+    #[doc = "The end-of-major loop interrupt is disabled."]
     #[inline]
     pub fn _0(self) -> &'a mut W {
         self.variant(INTMAJORW::_0)
     }
-    #[doc = "The end-of-major loop interrupt is enabled"]
+    #[doc = "The end-of-major loop interrupt is enabled."]
     #[inline]
     pub fn _1(self) -> &'a mut W {
         self.variant(INTMAJORW::_1)
@@ -545,9 +545,9 @@ impl<'a> _INTMAJORW<'a> {
 }
 #[doc = "Values that can be written to the field `INTHALF`"]
 pub enum INTHALFW {
-    #[doc = "The half-point interrupt is disabled"]
+    #[doc = "The half-point interrupt is disabled."]
     _0,
-    #[doc = "The half-point interrupt is enabled"]
+    #[doc = "The half-point interrupt is enabled."]
     _1,
 }
 impl INTHALFW {
@@ -573,12 +573,12 @@ impl<'a> _INTHALFW<'a> {
             self.bit(variant._bits())
         }
     }
-    #[doc = "The half-point interrupt is disabled"]
+    #[doc = "The half-point interrupt is disabled."]
     #[inline]
     pub fn _0(self) -> &'a mut W {
         self.variant(INTHALFW::_0)
     }
-    #[doc = "The half-point interrupt is enabled"]
+    #[doc = "The half-point interrupt is enabled."]
     #[inline]
     pub fn _1(self) -> &'a mut W {
         self.variant(INTHALFW::_1)
@@ -603,9 +603,9 @@ impl<'a> _INTHALFW<'a> {
 }
 #[doc = "Values that can be written to the field `DREQ`"]
 pub enum DREQW {
-    #[doc = "The channel's ERQ bit is not affected"]
+    #[doc = "The channel's ERQ bit is not affected."]
     _0,
-    #[doc = "The channel's ERQ bit is cleared when the major loop is complete"]
+    #[doc = "The channel's ERQ bit is cleared when the major loop is complete."]
     _1,
 }
 impl DREQW {
@@ -631,12 +631,12 @@ impl<'a> _DREQW<'a> {
             self.bit(variant._bits())
         }
     }
-    #[doc = "The channel's ERQ bit is not affected"]
+    #[doc = "The channel's ERQ bit is not affected."]
     #[inline]
     pub fn _0(self) -> &'a mut W {
         self.variant(DREQW::_0)
     }
-    #[doc = "The channel's ERQ bit is cleared when the major loop is complete"]
+    #[doc = "The channel's ERQ bit is cleared when the major loop is complete."]
     #[inline]
     pub fn _1(self) -> &'a mut W {
         self.variant(DREQW::_1)
@@ -719,9 +719,9 @@ impl<'a> _ESGW<'a> {
 }
 #[doc = "Values that can be written to the field `MAJORELINK`"]
 pub enum MAJORELINKW {
-    #[doc = "The channel-to-channel linking is disabled"]
+    #[doc = "The channel-to-channel linking is disabled."]
     _0,
-    #[doc = "The channel-to-channel linking is enabled"]
+    #[doc = "The channel-to-channel linking is enabled."]
     _1,
 }
 impl MAJORELINKW {
@@ -747,12 +747,12 @@ impl<'a> _MAJORELINKW<'a> {
             self.bit(variant._bits())
         }
     }
-    #[doc = "The channel-to-channel linking is disabled"]
+    #[doc = "The channel-to-channel linking is disabled."]
     #[inline]
     pub fn _0(self) -> &'a mut W {
         self.variant(MAJORELINKW::_0)
     }
-    #[doc = "The channel-to-channel linking is enabled"]
+    #[doc = "The channel-to-channel linking is enabled."]
     #[inline]
     pub fn _1(self) -> &'a mut W {
         self.variant(MAJORELINKW::_1)
@@ -829,7 +829,7 @@ impl<'a> _MAJORLINKCHW<'a> {
     #[doc = r" Writes raw bits to the field"]
     #[inline]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 15;
+        const MASK: u8 = 31;
         const OFFSET: u8 = 8;
         self.w.bits &= !((MASK as u16) << OFFSET);
         self.w.bits |= ((value & MASK) as u16) << OFFSET;
@@ -840,9 +840,9 @@ impl<'a> _MAJORLINKCHW<'a> {
 pub enum BWCW {
     #[doc = "No eDMA engine stalls"]
     _00,
-    #[doc = "eDMA engine stalls for 4 cycles after each r/w"]
+    #[doc = "eDMA engine stalls for 4 cycles after each R/W."]
     _10,
-    #[doc = "eDMA engine stalls for 8 cycles after each r/w"]
+    #[doc = "eDMA engine stalls for 8 cycles after each R/W."]
     _11,
 }
 impl BWCW {
@@ -872,12 +872,12 @@ impl<'a> _BWCW<'a> {
     pub fn _00(self) -> &'a mut W {
         self.variant(BWCW::_00)
     }
-    #[doc = "eDMA engine stalls for 4 cycles after each r/w"]
+    #[doc = "eDMA engine stalls for 4 cycles after each R/W."]
     #[inline]
     pub fn _10(self) -> &'a mut W {
         self.variant(BWCW::_10)
     }
-    #[doc = "eDMA engine stalls for 8 cycles after each r/w"]
+    #[doc = "eDMA engine stalls for 8 cycles after each R/W."]
     #[inline]
     pub fn _11(self) -> &'a mut W {
         self.variant(BWCW::_11)
@@ -907,7 +907,7 @@ impl R {
             ((self.bits >> OFFSET) & MASK as u16) != 0
         })
     }
-    #[doc = "Bit 1 - Enable an interrupt when major iteration count completes"]
+    #[doc = "Bit 1 - Enable an interrupt when major iteration count completes."]
     #[inline]
     pub fn intmajor(&self) -> INTMAJORR {
         INTMAJORR::_from({
@@ -972,11 +972,11 @@ impl R {
         };
         DONER { bits }
     }
-    #[doc = "Bits 8:11 - Link Channel Number"]
+    #[doc = "Bits 8:12 - Major Loop Link Channel Number"]
     #[inline]
     pub fn majorlinkch(&self) -> MAJORLINKCHR {
         let bits = {
-            const MASK: u8 = 15;
+            const MASK: u8 = 31;
             const OFFSET: u8 = 8;
             ((self.bits >> OFFSET) & MASK as u16) as u8
         };
@@ -1009,7 +1009,7 @@ impl W {
     pub fn start(&mut self) -> _STARTW {
         _STARTW { w: self }
     }
-    #[doc = "Bit 1 - Enable an interrupt when major iteration count completes"]
+    #[doc = "Bit 1 - Enable an interrupt when major iteration count completes."]
     #[inline]
     pub fn intmajor(&mut self) -> _INTMAJORW {
         _INTMAJORW { w: self }
@@ -1044,7 +1044,7 @@ impl W {
     pub fn done(&mut self) -> _DONEW {
         _DONEW { w: self }
     }
-    #[doc = "Bits 8:11 - Link Channel Number"]
+    #[doc = "Bits 8:12 - Major Loop Link Channel Number"]
     #[inline]
     pub fn majorlinkch(&mut self) -> _MAJORLINKCHW {
         _MAJORLINKCHW { w: self }

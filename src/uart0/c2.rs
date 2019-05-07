@@ -233,9 +233,9 @@ impl TER {
 #[doc = "Possible values of the field `ILIE`"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum ILIER {
-    #[doc = "IDLE interrupt requests disabled. and DMA transfer"]
+    #[doc = "IDLE interrupt requests disabled."]
     _0,
-    #[doc = "IDLE interrupt requests enabled. or DMA transfer"]
+    #[doc = "IDLE interrupt requests enabled."]
     _1,
 }
 impl ILIER {
@@ -327,9 +327,9 @@ impl RIER {
 #[doc = "Possible values of the field `TCIE`"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum TCIER {
-    #[doc = "TC interrupt and DMA transfer requests disabled."]
+    #[doc = "TC interrupt requests disabled."]
     _0,
-    #[doc = "TC interrupt or DMA transfer requests enabled."]
+    #[doc = "TC interrupt requests enabled."]
     _1,
 }
 impl TCIER {
@@ -652,9 +652,9 @@ impl<'a> _TEW<'a> {
 }
 #[doc = "Values that can be written to the field `ILIE`"]
 pub enum ILIEW {
-    #[doc = "IDLE interrupt requests disabled. and DMA transfer"]
+    #[doc = "IDLE interrupt requests disabled."]
     _0,
-    #[doc = "IDLE interrupt requests enabled. or DMA transfer"]
+    #[doc = "IDLE interrupt requests enabled."]
     _1,
 }
 impl ILIEW {
@@ -680,12 +680,12 @@ impl<'a> _ILIEW<'a> {
             self.bit(variant._bits())
         }
     }
-    #[doc = "IDLE interrupt requests disabled. and DMA transfer"]
+    #[doc = "IDLE interrupt requests disabled."]
     #[inline]
     pub fn _0(self) -> &'a mut W {
         self.variant(ILIEW::_0)
     }
-    #[doc = "IDLE interrupt requests enabled. or DMA transfer"]
+    #[doc = "IDLE interrupt requests enabled."]
     #[inline]
     pub fn _1(self) -> &'a mut W {
         self.variant(ILIEW::_1)
@@ -768,9 +768,9 @@ impl<'a> _RIEW<'a> {
 }
 #[doc = "Values that can be written to the field `TCIE`"]
 pub enum TCIEW {
-    #[doc = "TC interrupt and DMA transfer requests disabled."]
+    #[doc = "TC interrupt requests disabled."]
     _0,
-    #[doc = "TC interrupt or DMA transfer requests enabled."]
+    #[doc = "TC interrupt requests enabled."]
     _1,
 }
 impl TCIEW {
@@ -796,12 +796,12 @@ impl<'a> _TCIEW<'a> {
             self.bit(variant._bits())
         }
     }
-    #[doc = "TC interrupt and DMA transfer requests disabled."]
+    #[doc = "TC interrupt requests disabled."]
     #[inline]
     pub fn _0(self) -> &'a mut W {
         self.variant(TCIEW::_0)
     }
-    #[doc = "TC interrupt or DMA transfer requests enabled."]
+    #[doc = "TC interrupt requests enabled."]
     #[inline]
     pub fn _1(self) -> &'a mut W {
         self.variant(TCIEW::_1)
@@ -924,7 +924,7 @@ impl R {
             ((self.bits >> OFFSET) & MASK as u8) != 0
         })
     }
-    #[doc = "Bit 4 - Idle Line Interrupt DMA Transfer Enable"]
+    #[doc = "Bit 4 - Idle Line Interrupt Enable"]
     #[inline]
     pub fn ilie(&self) -> ILIER {
         ILIER::_from({
@@ -942,7 +942,7 @@ impl R {
             ((self.bits >> OFFSET) & MASK as u8) != 0
         })
     }
-    #[doc = "Bit 6 - Transmission Complete Interrupt or DMA Transfer Enable"]
+    #[doc = "Bit 6 - Transmission Complete Interrupt Enable"]
     #[inline]
     pub fn tcie(&self) -> TCIER {
         TCIER::_from({
@@ -993,7 +993,7 @@ impl W {
     pub fn te(&mut self) -> _TEW {
         _TEW { w: self }
     }
-    #[doc = "Bit 4 - Idle Line Interrupt DMA Transfer Enable"]
+    #[doc = "Bit 4 - Idle Line Interrupt Enable"]
     #[inline]
     pub fn ilie(&mut self) -> _ILIEW {
         _ILIEW { w: self }
@@ -1003,7 +1003,7 @@ impl W {
     pub fn rie(&mut self) -> _RIEW {
         _RIEW { w: self }
     }
-    #[doc = "Bit 6 - Transmission Complete Interrupt or DMA Transfer Enable"]
+    #[doc = "Bit 6 - Transmission Complete Interrupt Enable"]
     #[inline]
     pub fn tcie(&mut self) -> _TCIEW {
         _TCIEW { w: self }

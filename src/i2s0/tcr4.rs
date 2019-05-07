@@ -136,6 +136,53 @@ impl FSPR {
         *self == FSPR::_1
     }
 }
+#[doc = "Possible values of the field `ONDEM`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum ONDEMR {
+    #[doc = "Internal frame sync is generated continuously."]
+    _0,
+    #[doc = "Internal frame sync is generated when the FIFO warning flag is clear."]
+    _1,
+}
+impl ONDEMR {
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            ONDEMR::_0 => false,
+            ONDEMR::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> ONDEMR {
+        match value {
+            false => ONDEMR::_0,
+            true => ONDEMR::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == ONDEMR::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == ONDEMR::_1
+    }
+}
 #[doc = "Possible values of the field `FSE`"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum FSER {
@@ -252,6 +299,159 @@ impl FRSZR {
         self.bits
     }
 }
+#[doc = "Possible values of the field `FPACK`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum FPACKR {
+    #[doc = "FIFO packing is disabled"]
+    _00,
+    #[doc = "8-bit FIFO packing is enabled"]
+    _10,
+    #[doc = "16-bit FIFO packing is enabled"]
+    _11,
+    #[doc = r" Reserved"]
+    _Reserved(u8),
+}
+impl FPACKR {
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bits(&self) -> u8 {
+        match *self {
+            FPACKR::_00 => 0,
+            FPACKR::_10 => 2,
+            FPACKR::_11 => 3,
+            FPACKR::_Reserved(bits) => bits,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: u8) -> FPACKR {
+        match value {
+            0 => FPACKR::_00,
+            2 => FPACKR::_10,
+            3 => FPACKR::_11,
+            i => FPACKR::_Reserved(i),
+        }
+    }
+    #[doc = "Checks if the value of the field is `_00`"]
+    #[inline]
+    pub fn is_00(&self) -> bool {
+        *self == FPACKR::_00
+    }
+    #[doc = "Checks if the value of the field is `_10`"]
+    #[inline]
+    pub fn is_10(&self) -> bool {
+        *self == FPACKR::_10
+    }
+    #[doc = "Checks if the value of the field is `_11`"]
+    #[inline]
+    pub fn is_11(&self) -> bool {
+        *self == FPACKR::_11
+    }
+}
+#[doc = "Possible values of the field `FCOMB`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum FCOMBR {
+    #[doc = "FIFO combine mode disabled."]
+    _00,
+    #[doc = "FIFO combine mode enabled on FIFO reads (from transmit shift registers)."]
+    _01,
+    #[doc = "FIFO combine mode enabled on FIFO writes (by software)."]
+    _10,
+    #[doc = "FIFO combine mode enabled on FIFO reads (from transmit shift registers) and writes (by software)."]
+    _11,
+}
+impl FCOMBR {
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bits(&self) -> u8 {
+        match *self {
+            FCOMBR::_00 => 0,
+            FCOMBR::_01 => 1,
+            FCOMBR::_10 => 2,
+            FCOMBR::_11 => 3,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: u8) -> FCOMBR {
+        match value {
+            0 => FCOMBR::_00,
+            1 => FCOMBR::_01,
+            2 => FCOMBR::_10,
+            3 => FCOMBR::_11,
+            _ => unreachable!(),
+        }
+    }
+    #[doc = "Checks if the value of the field is `_00`"]
+    #[inline]
+    pub fn is_00(&self) -> bool {
+        *self == FCOMBR::_00
+    }
+    #[doc = "Checks if the value of the field is `_01`"]
+    #[inline]
+    pub fn is_01(&self) -> bool {
+        *self == FCOMBR::_01
+    }
+    #[doc = "Checks if the value of the field is `_10`"]
+    #[inline]
+    pub fn is_10(&self) -> bool {
+        *self == FCOMBR::_10
+    }
+    #[doc = "Checks if the value of the field is `_11`"]
+    #[inline]
+    pub fn is_11(&self) -> bool {
+        *self == FCOMBR::_11
+    }
+}
+#[doc = "Possible values of the field `FCONT`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum FCONTR {
+    #[doc = "On FIFO error, the SAI will continue from the start of the next frame after the FIFO error flag has been cleared."]
+    _0,
+    #[doc = "On FIFO error, the SAI will continue from the same word that caused the FIFO error to set after the FIFO warning flag has been cleared."]
+    _1,
+}
+impl FCONTR {
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            FCONTR::_0 => false,
+            FCONTR::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> FCONTR {
+        match value {
+            false => FCONTR::_0,
+            true => FCONTR::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == FCONTR::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == FCONTR::_1
+    }
+}
 #[doc = "Values that can be written to the field `FSD`"]
 pub enum FSDW {
     #[doc = "Frame sync is generated externally in Slave mode."]
@@ -363,6 +563,64 @@ impl<'a> _FSPW<'a> {
     pub fn bit(self, value: bool) -> &'a mut W {
         const MASK: bool = true;
         const OFFSET: u8 = 1;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = "Values that can be written to the field `ONDEM`"]
+pub enum ONDEMW {
+    #[doc = "Internal frame sync is generated continuously."]
+    _0,
+    #[doc = "Internal frame sync is generated when the FIFO warning flag is clear."]
+    _1,
+}
+impl ONDEMW {
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _bits(&self) -> bool {
+        match *self {
+            ONDEMW::_0 => false,
+            ONDEMW::_1 => true,
+        }
+    }
+}
+#[doc = r" Proxy"]
+pub struct _ONDEMW<'a> {
+    w: &'a mut W,
+}
+impl<'a> _ONDEMW<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: ONDEMW) -> &'a mut W {
+        {
+            self.bit(variant._bits())
+        }
+    }
+    #[doc = "Internal frame sync is generated continuously."]
+    #[inline]
+    pub fn _0(self) -> &'a mut W {
+        self.variant(ONDEMW::_0)
+    }
+    #[doc = "Internal frame sync is generated when the FIFO warning flag is clear."]
+    #[inline]
+    pub fn _1(self) -> &'a mut W {
+        self.variant(ONDEMW::_1)
+    }
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 2;
         self.w.bits &= !((MASK as u32) << OFFSET);
         self.w.bits |= ((value & MASK) as u32) << OFFSET;
         self.w
@@ -514,6 +772,186 @@ impl<'a> _FRSZW<'a> {
         self.w
     }
 }
+#[doc = "Values that can be written to the field `FPACK`"]
+pub enum FPACKW {
+    #[doc = "FIFO packing is disabled"]
+    _00,
+    #[doc = "8-bit FIFO packing is enabled"]
+    _10,
+    #[doc = "16-bit FIFO packing is enabled"]
+    _11,
+}
+impl FPACKW {
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _bits(&self) -> u8 {
+        match *self {
+            FPACKW::_00 => 0,
+            FPACKW::_10 => 2,
+            FPACKW::_11 => 3,
+        }
+    }
+}
+#[doc = r" Proxy"]
+pub struct _FPACKW<'a> {
+    w: &'a mut W,
+}
+impl<'a> _FPACKW<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: FPACKW) -> &'a mut W {
+        unsafe { self.bits(variant._bits()) }
+    }
+    #[doc = "FIFO packing is disabled"]
+    #[inline]
+    pub fn _00(self) -> &'a mut W {
+        self.variant(FPACKW::_00)
+    }
+    #[doc = "8-bit FIFO packing is enabled"]
+    #[inline]
+    pub fn _10(self) -> &'a mut W {
+        self.variant(FPACKW::_10)
+    }
+    #[doc = "16-bit FIFO packing is enabled"]
+    #[inline]
+    pub fn _11(self) -> &'a mut W {
+        self.variant(FPACKW::_11)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub unsafe fn bits(self, value: u8) -> &'a mut W {
+        const MASK: u8 = 3;
+        const OFFSET: u8 = 24;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = "Values that can be written to the field `FCOMB`"]
+pub enum FCOMBW {
+    #[doc = "FIFO combine mode disabled."]
+    _00,
+    #[doc = "FIFO combine mode enabled on FIFO reads (from transmit shift registers)."]
+    _01,
+    #[doc = "FIFO combine mode enabled on FIFO writes (by software)."]
+    _10,
+    #[doc = "FIFO combine mode enabled on FIFO reads (from transmit shift registers) and writes (by software)."]
+    _11,
+}
+impl FCOMBW {
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _bits(&self) -> u8 {
+        match *self {
+            FCOMBW::_00 => 0,
+            FCOMBW::_01 => 1,
+            FCOMBW::_10 => 2,
+            FCOMBW::_11 => 3,
+        }
+    }
+}
+#[doc = r" Proxy"]
+pub struct _FCOMBW<'a> {
+    w: &'a mut W,
+}
+impl<'a> _FCOMBW<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: FCOMBW) -> &'a mut W {
+        {
+            self.bits(variant._bits())
+        }
+    }
+    #[doc = "FIFO combine mode disabled."]
+    #[inline]
+    pub fn _00(self) -> &'a mut W {
+        self.variant(FCOMBW::_00)
+    }
+    #[doc = "FIFO combine mode enabled on FIFO reads (from transmit shift registers)."]
+    #[inline]
+    pub fn _01(self) -> &'a mut W {
+        self.variant(FCOMBW::_01)
+    }
+    #[doc = "FIFO combine mode enabled on FIFO writes (by software)."]
+    #[inline]
+    pub fn _10(self) -> &'a mut W {
+        self.variant(FCOMBW::_10)
+    }
+    #[doc = "FIFO combine mode enabled on FIFO reads (from transmit shift registers) and writes (by software)."]
+    #[inline]
+    pub fn _11(self) -> &'a mut W {
+        self.variant(FCOMBW::_11)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bits(self, value: u8) -> &'a mut W {
+        const MASK: u8 = 3;
+        const OFFSET: u8 = 26;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = "Values that can be written to the field `FCONT`"]
+pub enum FCONTW {
+    #[doc = "On FIFO error, the SAI will continue from the start of the next frame after the FIFO error flag has been cleared."]
+    _0,
+    #[doc = "On FIFO error, the SAI will continue from the same word that caused the FIFO error to set after the FIFO warning flag has been cleared."]
+    _1,
+}
+impl FCONTW {
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _bits(&self) -> bool {
+        match *self {
+            FCONTW::_0 => false,
+            FCONTW::_1 => true,
+        }
+    }
+}
+#[doc = r" Proxy"]
+pub struct _FCONTW<'a> {
+    w: &'a mut W,
+}
+impl<'a> _FCONTW<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: FCONTW) -> &'a mut W {
+        {
+            self.bit(variant._bits())
+        }
+    }
+    #[doc = "On FIFO error, the SAI will continue from the start of the next frame after the FIFO error flag has been cleared."]
+    #[inline]
+    pub fn _0(self) -> &'a mut W {
+        self.variant(FCONTW::_0)
+    }
+    #[doc = "On FIFO error, the SAI will continue from the same word that caused the FIFO error to set after the FIFO warning flag has been cleared."]
+    #[inline]
+    pub fn _1(self) -> &'a mut W {
+        self.variant(FCONTW::_1)
+    }
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 28;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
 impl R {
     #[doc = r" Value of the register as raw bits"]
     #[inline]
@@ -535,6 +973,15 @@ impl R {
         FSPR::_from({
             const MASK: bool = true;
             const OFFSET: u8 = 1;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        })
+    }
+    #[doc = "Bit 2 - On Demand Mode"]
+    #[inline]
+    pub fn ondem(&self) -> ONDEMR {
+        ONDEMR::_from({
+            const MASK: bool = true;
+            const OFFSET: u8 = 2;
             ((self.bits >> OFFSET) & MASK as u32) != 0
         })
     }
@@ -576,6 +1023,33 @@ impl R {
         };
         FRSZR { bits }
     }
+    #[doc = "Bits 24:25 - FIFO Packing Mode"]
+    #[inline]
+    pub fn fpack(&self) -> FPACKR {
+        FPACKR::_from({
+            const MASK: u8 = 3;
+            const OFFSET: u8 = 24;
+            ((self.bits >> OFFSET) & MASK as u32) as u8
+        })
+    }
+    #[doc = "Bits 26:27 - FIFO Combine Mode"]
+    #[inline]
+    pub fn fcomb(&self) -> FCOMBR {
+        FCOMBR::_from({
+            const MASK: u8 = 3;
+            const OFFSET: u8 = 26;
+            ((self.bits >> OFFSET) & MASK as u32) as u8
+        })
+    }
+    #[doc = "Bit 28 - FIFO Continue on Error"]
+    #[inline]
+    pub fn fcont(&self) -> FCONTR {
+        FCONTR::_from({
+            const MASK: bool = true;
+            const OFFSET: u8 = 28;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        })
+    }
 }
 impl W {
     #[doc = r" Reset value of the register"]
@@ -599,6 +1073,11 @@ impl W {
     pub fn fsp(&mut self) -> _FSPW {
         _FSPW { w: self }
     }
+    #[doc = "Bit 2 - On Demand Mode"]
+    #[inline]
+    pub fn ondem(&mut self) -> _ONDEMW {
+        _ONDEMW { w: self }
+    }
     #[doc = "Bit 3 - Frame Sync Early"]
     #[inline]
     pub fn fse(&mut self) -> _FSEW {
@@ -618,5 +1097,20 @@ impl W {
     #[inline]
     pub fn frsz(&mut self) -> _FRSZW {
         _FRSZW { w: self }
+    }
+    #[doc = "Bits 24:25 - FIFO Packing Mode"]
+    #[inline]
+    pub fn fpack(&mut self) -> _FPACKW {
+        _FPACKW { w: self }
+    }
+    #[doc = "Bits 26:27 - FIFO Combine Mode"]
+    #[inline]
+    pub fn fcomb(&mut self) -> _FCOMBW {
+        _FCOMBW { w: self }
+    }
+    #[doc = "Bit 28 - FIFO Continue on Error"]
+    #[inline]
+    pub fn fcont(&mut self) -> _FCONTW {
+        _FCONTW { w: self }
     }
 }

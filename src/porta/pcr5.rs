@@ -466,23 +466,23 @@ impl LKR {
 #[doc = "Possible values of the field `IRQC`"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum IRQCR {
-    #[doc = "Interrupt/DMA request disabled."]
+    #[doc = "Interrupt Status Flag (ISF) is disabled."]
     _0000,
-    #[doc = "DMA request on rising edge."]
+    #[doc = "ISF flag and DMA request on rising edge."]
     _0001,
-    #[doc = "DMA request on falling edge."]
+    #[doc = "ISF flag and DMA request on falling edge."]
     _0010,
-    #[doc = "DMA request on either edge."]
+    #[doc = "ISF flag and DMA request on either edge."]
     _0011,
-    #[doc = "Interrupt when logic 0."]
+    #[doc = "ISF flag and Interrupt when logic 0."]
     _1000,
-    #[doc = "Interrupt on rising-edge."]
+    #[doc = "ISF flag and Interrupt on rising-edge."]
     _1001,
-    #[doc = "Interrupt on falling-edge."]
+    #[doc = "ISF flag and Interrupt on falling-edge."]
     _1010,
-    #[doc = "Interrupt on either edge."]
+    #[doc = "ISF flag and Interrupt on either edge."]
     _1011,
-    #[doc = "Interrupt when logic 1."]
+    #[doc = "ISF flag and Interrupt when logic 1."]
     _1100,
     #[doc = r" Reserved"]
     _Reserved(u8),
@@ -788,64 +788,6 @@ impl<'a> _SREW<'a> {
         self.w
     }
 }
-#[doc = "Values that can be written to the field `PFE`"]
-pub enum PFEW {
-    #[doc = "Passive input filter is disabled on the corresponding pin."]
-    _0,
-    #[doc = "Passive input filter is enabled on the corresponding pin, if the pin is configured as a digital input. Refer to the device data sheet for filter characteristics."]
-    _1,
-}
-impl PFEW {
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _bits(&self) -> bool {
-        match *self {
-            PFEW::_0 => false,
-            PFEW::_1 => true,
-        }
-    }
-}
-#[doc = r" Proxy"]
-pub struct _PFEW<'a> {
-    w: &'a mut W,
-}
-impl<'a> _PFEW<'a> {
-    #[doc = r" Writes `variant` to the field"]
-    #[inline]
-    pub fn variant(self, variant: PFEW) -> &'a mut W {
-        {
-            self.bit(variant._bits())
-        }
-    }
-    #[doc = "Passive input filter is disabled on the corresponding pin."]
-    #[inline]
-    pub fn _0(self) -> &'a mut W {
-        self.variant(PFEW::_0)
-    }
-    #[doc = "Passive input filter is enabled on the corresponding pin, if the pin is configured as a digital input. Refer to the device data sheet for filter characteristics."]
-    #[inline]
-    pub fn _1(self) -> &'a mut W {
-        self.variant(PFEW::_1)
-    }
-    #[doc = r" Sets the field bit"]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r" Clears the field bit"]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 4;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
-        self.w
-    }
-}
 #[doc = "Values that can be written to the field `ODE`"]
 pub enum ODEW {
     #[doc = "Open drain output is disabled on the corresponding pin."]
@@ -899,64 +841,6 @@ impl<'a> _ODEW<'a> {
     pub fn bit(self, value: bool) -> &'a mut W {
         const MASK: bool = true;
         const OFFSET: u8 = 5;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
-        self.w
-    }
-}
-#[doc = "Values that can be written to the field `DSE`"]
-pub enum DSEW {
-    #[doc = "Low drive strength is configured on the corresponding pin, if pin is configured as a digital output."]
-    _0,
-    #[doc = "High drive strength is configured on the corresponding pin, if pin is configured as a digital output."]
-    _1,
-}
-impl DSEW {
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _bits(&self) -> bool {
-        match *self {
-            DSEW::_0 => false,
-            DSEW::_1 => true,
-        }
-    }
-}
-#[doc = r" Proxy"]
-pub struct _DSEW<'a> {
-    w: &'a mut W,
-}
-impl<'a> _DSEW<'a> {
-    #[doc = r" Writes `variant` to the field"]
-    #[inline]
-    pub fn variant(self, variant: DSEW) -> &'a mut W {
-        {
-            self.bit(variant._bits())
-        }
-    }
-    #[doc = "Low drive strength is configured on the corresponding pin, if pin is configured as a digital output."]
-    #[inline]
-    pub fn _0(self) -> &'a mut W {
-        self.variant(DSEW::_0)
-    }
-    #[doc = "High drive strength is configured on the corresponding pin, if pin is configured as a digital output."]
-    #[inline]
-    pub fn _1(self) -> &'a mut W {
-        self.variant(DSEW::_1)
-    }
-    #[doc = r" Sets the field bit"]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r" Clears the field bit"]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 6;
         self.w.bits &= !((MASK as u32) << OFFSET);
         self.w.bits |= ((value & MASK) as u32) << OFFSET;
         self.w
@@ -1120,23 +1004,23 @@ impl<'a> _LKW<'a> {
 }
 #[doc = "Values that can be written to the field `IRQC`"]
 pub enum IRQCW {
-    #[doc = "Interrupt/DMA request disabled."]
+    #[doc = "Interrupt Status Flag (ISF) is disabled."]
     _0000,
-    #[doc = "DMA request on rising edge."]
+    #[doc = "ISF flag and DMA request on rising edge."]
     _0001,
-    #[doc = "DMA request on falling edge."]
+    #[doc = "ISF flag and DMA request on falling edge."]
     _0010,
-    #[doc = "DMA request on either edge."]
+    #[doc = "ISF flag and DMA request on either edge."]
     _0011,
-    #[doc = "Interrupt when logic 0."]
+    #[doc = "ISF flag and Interrupt when logic 0."]
     _1000,
-    #[doc = "Interrupt on rising-edge."]
+    #[doc = "ISF flag and Interrupt on rising-edge."]
     _1001,
-    #[doc = "Interrupt on falling-edge."]
+    #[doc = "ISF flag and Interrupt on falling-edge."]
     _1010,
-    #[doc = "Interrupt on either edge."]
+    #[doc = "ISF flag and Interrupt on either edge."]
     _1011,
-    #[doc = "Interrupt when logic 1."]
+    #[doc = "ISF flag and Interrupt when logic 1."]
     _1100,
 }
 impl IRQCW {
@@ -1167,47 +1051,47 @@ impl<'a> _IRQCW<'a> {
     pub fn variant(self, variant: IRQCW) -> &'a mut W {
         unsafe { self.bits(variant._bits()) }
     }
-    #[doc = "Interrupt/DMA request disabled."]
+    #[doc = "Interrupt Status Flag (ISF) is disabled."]
     #[inline]
     pub fn _0000(self) -> &'a mut W {
         self.variant(IRQCW::_0000)
     }
-    #[doc = "DMA request on rising edge."]
+    #[doc = "ISF flag and DMA request on rising edge."]
     #[inline]
     pub fn _0001(self) -> &'a mut W {
         self.variant(IRQCW::_0001)
     }
-    #[doc = "DMA request on falling edge."]
+    #[doc = "ISF flag and DMA request on falling edge."]
     #[inline]
     pub fn _0010(self) -> &'a mut W {
         self.variant(IRQCW::_0010)
     }
-    #[doc = "DMA request on either edge."]
+    #[doc = "ISF flag and DMA request on either edge."]
     #[inline]
     pub fn _0011(self) -> &'a mut W {
         self.variant(IRQCW::_0011)
     }
-    #[doc = "Interrupt when logic 0."]
+    #[doc = "ISF flag and Interrupt when logic 0."]
     #[inline]
     pub fn _1000(self) -> &'a mut W {
         self.variant(IRQCW::_1000)
     }
-    #[doc = "Interrupt on rising-edge."]
+    #[doc = "ISF flag and Interrupt on rising-edge."]
     #[inline]
     pub fn _1001(self) -> &'a mut W {
         self.variant(IRQCW::_1001)
     }
-    #[doc = "Interrupt on falling-edge."]
+    #[doc = "ISF flag and Interrupt on falling-edge."]
     #[inline]
     pub fn _1010(self) -> &'a mut W {
         self.variant(IRQCW::_1010)
     }
-    #[doc = "Interrupt on either edge."]
+    #[doc = "ISF flag and Interrupt on either edge."]
     #[inline]
     pub fn _1011(self) -> &'a mut W {
         self.variant(IRQCW::_1011)
     }
-    #[doc = "Interrupt when logic 1."]
+    #[doc = "ISF flag and Interrupt when logic 1."]
     #[inline]
     pub fn _1100(self) -> &'a mut W {
         self.variant(IRQCW::_1100)
@@ -1381,7 +1265,7 @@ impl W {
     #[doc = r" Reset value of the register"]
     #[inline]
     pub fn reset_value() -> W {
-        W { bits: 65 }
+        W { bits: 1 }
     }
     #[doc = r" Writes raw bits to the register"]
     #[inline]
@@ -1404,20 +1288,10 @@ impl W {
     pub fn sre(&mut self) -> _SREW {
         _SREW { w: self }
     }
-    #[doc = "Bit 4 - Passive Filter Enable"]
-    #[inline]
-    pub fn pfe(&mut self) -> _PFEW {
-        _PFEW { w: self }
-    }
     #[doc = "Bit 5 - Open Drain Enable"]
     #[inline]
     pub fn ode(&mut self) -> _ODEW {
         _ODEW { w: self }
-    }
-    #[doc = "Bit 6 - Drive Strength Enable"]
-    #[inline]
-    pub fn dse(&mut self) -> _DSEW {
-        _DSEW { w: self }
     }
     #[doc = "Bits 8:10 - Pin Mux Control"]
     #[inline]

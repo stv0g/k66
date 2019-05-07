@@ -42,53 +42,6 @@ impl super::VENDOR {
         self.write(|w| w)
     }
 }
-#[doc = "Possible values of the field `EXTDMAEN`"]
-#[derive(Clone, Copy, Debug, PartialEq)]
-pub enum EXTDMAENR {
-    #[doc = "In any scenario, SDHC does not send out the external DMA request."]
-    _0,
-    #[doc = "When internal DMA is not active, the external DMA request will be sent out."]
-    _1,
-}
-impl EXTDMAENR {
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        match *self {
-            EXTDMAENR::_0 => false,
-            EXTDMAENR::_1 => true,
-        }
-    }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: bool) -> EXTDMAENR {
-        match value {
-            false => EXTDMAENR::_0,
-            true => EXTDMAENR::_1,
-        }
-    }
-    #[doc = "Checks if the value of the field is `_0`"]
-    #[inline]
-    pub fn is_0(&self) -> bool {
-        *self == EXTDMAENR::_0
-    }
-    #[doc = "Checks if the value of the field is `_1`"]
-    #[inline]
-    pub fn is_1(&self) -> bool {
-        *self == EXTDMAENR::_1
-    }
-}
 #[doc = "Possible values of the field `EXBLKNU`"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum EXBLKNUR {
@@ -145,64 +98,6 @@ impl INTSTVALR {
     #[inline]
     pub fn bits(&self) -> u8 {
         self.bits
-    }
-}
-#[doc = "Values that can be written to the field `EXTDMAEN`"]
-pub enum EXTDMAENW {
-    #[doc = "In any scenario, SDHC does not send out the external DMA request."]
-    _0,
-    #[doc = "When internal DMA is not active, the external DMA request will be sent out."]
-    _1,
-}
-impl EXTDMAENW {
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _bits(&self) -> bool {
-        match *self {
-            EXTDMAENW::_0 => false,
-            EXTDMAENW::_1 => true,
-        }
-    }
-}
-#[doc = r" Proxy"]
-pub struct _EXTDMAENW<'a> {
-    w: &'a mut W,
-}
-impl<'a> _EXTDMAENW<'a> {
-    #[doc = r" Writes `variant` to the field"]
-    #[inline]
-    pub fn variant(self, variant: EXTDMAENW) -> &'a mut W {
-        {
-            self.bit(variant._bits())
-        }
-    }
-    #[doc = "In any scenario, SDHC does not send out the external DMA request."]
-    #[inline]
-    pub fn _0(self) -> &'a mut W {
-        self.variant(EXTDMAENW::_0)
-    }
-    #[doc = "When internal DMA is not active, the external DMA request will be sent out."]
-    #[inline]
-    pub fn _1(self) -> &'a mut W {
-        self.variant(EXTDMAENW::_1)
-    }
-    #[doc = r" Sets the field bit"]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r" Clears the field bit"]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 0;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
-        self.w
     }
 }
 #[doc = "Values that can be written to the field `EXBLKNU`"]
@@ -269,15 +164,6 @@ impl R {
     pub fn bits(&self) -> u32 {
         self.bits
     }
-    #[doc = "Bit 0 - External DMA Request Enable"]
-    #[inline]
-    pub fn extdmaen(&self) -> EXTDMAENR {
-        EXTDMAENR::_from({
-            const MASK: bool = true;
-            const OFFSET: u8 = 0;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        })
-    }
     #[doc = "Bit 1 - Exact Block Number Block Read Enable For SDIO CMD53"]
     #[inline]
     pub fn exblknu(&self) -> EXBLKNUR {
@@ -309,11 +195,6 @@ impl W {
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;
         self
-    }
-    #[doc = "Bit 0 - External DMA Request Enable"]
-    #[inline]
-    pub fn extdmaen(&mut self) -> _EXTDMAENW {
-        _EXTDMAENW { w: self }
     }
     #[doc = "Bit 1 - Exact Block Number Block Read Enable For SDIO CMD53"]
     #[inline]

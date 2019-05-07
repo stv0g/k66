@@ -53,10 +53,8 @@ pub enum TFWRR {
     _000010,
     #[doc = "192 bytes written."]
     _000011,
-    #[doc = "3968 bytes written."]
-    _111110,
-    #[doc = "4032 bytes written."]
-    _111111,
+    #[doc = "1984 bytes written."]
+    _011111,
     #[doc = r" Reserved"]
     _Reserved(u8),
 }
@@ -69,8 +67,7 @@ impl TFWRR {
             TFWRR::_000001 => 1,
             TFWRR::_000010 => 2,
             TFWRR::_000011 => 3,
-            TFWRR::_111110 => 62,
-            TFWRR::_111111 => 63,
+            TFWRR::_011111 => 31,
             TFWRR::_Reserved(bits) => bits,
         }
     }
@@ -83,8 +80,7 @@ impl TFWRR {
             1 => TFWRR::_000001,
             2 => TFWRR::_000010,
             3 => TFWRR::_000011,
-            62 => TFWRR::_111110,
-            63 => TFWRR::_111111,
+            31 => TFWRR::_011111,
             i => TFWRR::_Reserved(i),
         }
     }
@@ -108,15 +104,10 @@ impl TFWRR {
     pub fn is_000011(&self) -> bool {
         *self == TFWRR::_000011
     }
-    #[doc = "Checks if the value of the field is `_111110`"]
+    #[doc = "Checks if the value of the field is `_011111`"]
     #[inline]
-    pub fn is_111110(&self) -> bool {
-        *self == TFWRR::_111110
-    }
-    #[doc = "Checks if the value of the field is `_111111`"]
-    #[inline]
-    pub fn is_111111(&self) -> bool {
-        *self == TFWRR::_111111
+    pub fn is_011111(&self) -> bool {
+        *self == TFWRR::_011111
     }
 }
 #[doc = "Possible values of the field `STRFWD`"]
@@ -176,10 +167,8 @@ pub enum TFWRW {
     _000010,
     #[doc = "192 bytes written."]
     _000011,
-    #[doc = "3968 bytes written."]
-    _111110,
-    #[doc = "4032 bytes written."]
-    _111111,
+    #[doc = "1984 bytes written."]
+    _011111,
 }
 impl TFWRW {
     #[allow(missing_docs)]
@@ -191,8 +180,7 @@ impl TFWRW {
             TFWRW::_000001 => 1,
             TFWRW::_000010 => 2,
             TFWRW::_000011 => 3,
-            TFWRW::_111110 => 62,
-            TFWRW::_111111 => 63,
+            TFWRW::_011111 => 31,
         }
     }
 }
@@ -226,15 +214,10 @@ impl<'a> _TFWRW<'a> {
     pub fn _000011(self) -> &'a mut W {
         self.variant(TFWRW::_000011)
     }
-    #[doc = "3968 bytes written."]
+    #[doc = "1984 bytes written."]
     #[inline]
-    pub fn _111110(self) -> &'a mut W {
-        self.variant(TFWRW::_111110)
-    }
-    #[doc = "4032 bytes written."]
-    #[inline]
-    pub fn _111111(self) -> &'a mut W {
-        self.variant(TFWRW::_111111)
+    pub fn _011111(self) -> &'a mut W {
+        self.variant(TFWRW::_011111)
     }
     #[doc = r" Writes raw bits to the field"]
     #[inline]

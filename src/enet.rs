@@ -78,7 +78,9 @@ pub struct RegisterBlock {
     pub tacc: TACC,
     #[doc = "0x1c4 - Receive Accelerator Function Configuration"]
     pub racc: RACC,
-    _reserved13: [u8; 60usize],
+    _reserved13: [u8; 56usize],
+    #[doc = "0x200 - Reserved Statistic Register"]
+    pub rmon_t_drop: RMON_T_DROP,
     #[doc = "0x204 - Tx Packet Count Statistic Register"]
     pub rmon_t_packets: RMON_T_PACKETS,
     #[doc = "0x208 - Tx Broadcast Packets Statistic Register"]
@@ -113,7 +115,8 @@ pub struct RegisterBlock {
     pub rmon_t_p_gte2048: RMON_T_P_GTE2048,
     #[doc = "0x244 - Tx Octets Statistic Register"]
     pub rmon_t_octets: RMON_T_OCTETS,
-    _reserved14: [u8; 4usize],
+    #[doc = "0x248 - IEEE_T_DROP Reserved Statistic Register"]
+    pub ieee_t_drop: IEEE_T_DROP,
     #[doc = "0x24c - Frames Transmitted OK Statistic Register"]
     pub ieee_t_frame_ok: IEEE_T_FRAME_OK,
     #[doc = "0x250 - Frames Transmitted with Single Collision Statistic Register"]
@@ -130,12 +133,13 @@ pub struct RegisterBlock {
     pub ieee_t_macerr: IEEE_T_MACERR,
     #[doc = "0x268 - Frames Transmitted with Carrier Sense Error Statistic Register"]
     pub ieee_t_cserr: IEEE_T_CSERR,
-    _reserved15: [u8; 4usize],
+    #[doc = "0x26c - no description available"]
+    pub ieee_t_sqe: IEEE_T_SQE,
     #[doc = "0x270 - Flow Control Pause Frames Transmitted Statistic Register"]
     pub ieee_t_fdxfc: IEEE_T_FDXFC,
     #[doc = "0x274 - Octet Count for Frames Transmitted w/o Error Statistic Register"]
     pub ieee_t_octets_ok: IEEE_T_OCTETS_OK,
-    _reserved16: [u8; 12usize],
+    _reserved14: [u8; 12usize],
     #[doc = "0x284 - Rx Packet Count Statistic Register"]
     pub rmon_r_packets: RMON_R_PACKETS,
     #[doc = "0x288 - Rx Broadcast Packets Statistic Register"]
@@ -152,7 +156,8 @@ pub struct RegisterBlock {
     pub rmon_r_frag: RMON_R_FRAG,
     #[doc = "0x2a0 - Rx Packets Greater Than MAX_FL Bytes and Bad CRC Statistic Register"]
     pub rmon_r_jab: RMON_R_JAB,
-    _reserved17: [u8; 4usize],
+    #[doc = "0x2a4 - Reserved Statistic Register"]
+    pub rmon_r_resvd_0: RMON_R_RESVD_0,
     #[doc = "0x2a8 - Rx 64-Byte Packets Statistic Register"]
     pub rmon_r_p64: RMON_R_P64,
     #[doc = "0x2ac - Rx 65- to 127-Byte Packets Statistic Register"]
@@ -183,7 +188,7 @@ pub struct RegisterBlock {
     pub ieee_r_fdxfc: IEEE_R_FDXFC,
     #[doc = "0x2e0 - Octet Count for Frames Received without Error Statistic Register"]
     pub ieee_r_octets_ok: IEEE_R_OCTETS_OK,
-    _reserved18: [u8; 284usize],
+    _reserved15: [u8; 284usize],
     #[doc = "0x400 - Adjustable Timer Control Register"]
     pub atcr: ATCR,
     #[doc = "0x404 - Timer Value Register"]
@@ -198,7 +203,7 @@ pub struct RegisterBlock {
     pub atinc: ATINC,
     #[doc = "0x418 - Timestamp of Last Transmitted Frame"]
     pub atstmp: ATSTMP,
-    _reserved19: [u8; 488usize],
+    _reserved16: [u8; 488usize],
     #[doc = "0x604 - Timer Global Status Register"]
     pub tgsr: TGSR,
     #[doc = "0x608 - Timer Control Status Register"]
@@ -410,6 +415,12 @@ pub struct RACC {
 }
 #[doc = "Receive Accelerator Function Configuration"]
 pub mod racc;
+#[doc = "Reserved Statistic Register"]
+pub struct RMON_T_DROP {
+    register: ::vcell::VolatileCell<u32>,
+}
+#[doc = "Reserved Statistic Register"]
+pub mod rmon_t_drop;
 #[doc = "Tx Packet Count Statistic Register"]
 pub struct RMON_T_PACKETS {
     register: ::vcell::VolatileCell<u32>,
@@ -512,6 +523,12 @@ pub struct RMON_T_OCTETS {
 }
 #[doc = "Tx Octets Statistic Register"]
 pub mod rmon_t_octets;
+#[doc = "IEEE_T_DROP Reserved Statistic Register"]
+pub struct IEEE_T_DROP {
+    register: ::vcell::VolatileCell<u32>,
+}
+#[doc = "IEEE_T_DROP Reserved Statistic Register"]
+pub mod ieee_t_drop;
 #[doc = "Frames Transmitted OK Statistic Register"]
 pub struct IEEE_T_FRAME_OK {
     register: ::vcell::VolatileCell<u32>,
@@ -560,6 +577,12 @@ pub struct IEEE_T_CSERR {
 }
 #[doc = "Frames Transmitted with Carrier Sense Error Statistic Register"]
 pub mod ieee_t_cserr;
+#[doc = "no description available"]
+pub struct IEEE_T_SQE {
+    register: ::vcell::VolatileCell<u32>,
+}
+#[doc = "no description available"]
+pub mod ieee_t_sqe;
 #[doc = "Flow Control Pause Frames Transmitted Statistic Register"]
 pub struct IEEE_T_FDXFC {
     register: ::vcell::VolatileCell<u32>,
@@ -620,6 +643,12 @@ pub struct RMON_R_JAB {
 }
 #[doc = "Rx Packets Greater Than MAX_FL Bytes and Bad CRC Statistic Register"]
 pub mod rmon_r_jab;
+#[doc = "Reserved Statistic Register"]
+pub struct RMON_R_RESVD_0 {
+    register: ::vcell::VolatileCell<u32>,
+}
+#[doc = "Reserved Statistic Register"]
+pub mod rmon_r_resvd_0;
 #[doc = "Rx 64-Byte Packets Statistic Register"]
 pub struct RMON_R_P64 {
     register: ::vcell::VolatileCell<u32>,

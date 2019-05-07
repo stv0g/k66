@@ -183,6 +183,53 @@ impl FTM0FLT2R {
         *self == FTM0FLT2R::_1
     }
 }
+#[doc = "Possible values of the field `FTM0FLT3`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum FTM0FLT3R {
+    #[doc = "FTM0_FLT3 pin"]
+    _0,
+    #[doc = "CMP3 out"]
+    _1,
+}
+impl FTM0FLT3R {
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            FTM0FLT3R::_0 => false,
+            FTM0FLT3R::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> FTM0FLT3R {
+        match value {
+            false => FTM0FLT3R::_0,
+            true => FTM0FLT3R::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == FTM0FLT3R::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == FTM0FLT3R::_1
+    }
+}
 #[doc = "Possible values of the field `FTM1FLT0`"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum FTM1FLT0R {
@@ -428,6 +475,53 @@ impl FTM2CH0SRCR {
     #[inline]
     pub fn is_10(&self) -> bool {
         *self == FTM2CH0SRCR::_10
+    }
+}
+#[doc = "Possible values of the field `FTM2CH1SRC`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum FTM2CH1SRCR {
+    #[doc = "FTM2_CH1 signal"]
+    _0,
+    #[doc = "Exclusive OR of FTM2_CH1, FTM2_CH0 and FTM1_CH1."]
+    _1,
+}
+impl FTM2CH1SRCR {
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            FTM2CH1SRCR::_0 => false,
+            FTM2CH1SRCR::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> FTM2CH1SRCR {
+        match value {
+            false => FTM2CH1SRCR::_0,
+            true => FTM2CH1SRCR::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == FTM2CH1SRCR::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == FTM2CH1SRCR::_1
     }
 }
 #[doc = "Possible values of the field `FTM0CLKSEL`"]
@@ -970,6 +1064,64 @@ impl<'a> _FTM0FLT2W<'a> {
         self.w
     }
 }
+#[doc = "Values that can be written to the field `FTM0FLT3`"]
+pub enum FTM0FLT3W {
+    #[doc = "FTM0_FLT3 pin"]
+    _0,
+    #[doc = "CMP3 out"]
+    _1,
+}
+impl FTM0FLT3W {
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _bits(&self) -> bool {
+        match *self {
+            FTM0FLT3W::_0 => false,
+            FTM0FLT3W::_1 => true,
+        }
+    }
+}
+#[doc = r" Proxy"]
+pub struct _FTM0FLT3W<'a> {
+    w: &'a mut W,
+}
+impl<'a> _FTM0FLT3W<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: FTM0FLT3W) -> &'a mut W {
+        {
+            self.bit(variant._bits())
+        }
+    }
+    #[doc = "FTM0_FLT3 pin"]
+    #[inline]
+    pub fn _0(self) -> &'a mut W {
+        self.variant(FTM0FLT3W::_0)
+    }
+    #[doc = "CMP3 out"]
+    #[inline]
+    pub fn _1(self) -> &'a mut W {
+        self.variant(FTM0FLT3W::_1)
+    }
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 3;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
 #[doc = "Values that can be written to the field `FTM1FLT0`"]
 pub enum FTM1FLT0W {
     #[doc = "FTM1_FLT0 pin"]
@@ -1261,6 +1413,64 @@ impl<'a> _FTM2CH0SRCW<'a> {
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
         const MASK: u8 = 3;
         const OFFSET: u8 = 20;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = "Values that can be written to the field `FTM2CH1SRC`"]
+pub enum FTM2CH1SRCW {
+    #[doc = "FTM2_CH1 signal"]
+    _0,
+    #[doc = "Exclusive OR of FTM2_CH1, FTM2_CH0 and FTM1_CH1."]
+    _1,
+}
+impl FTM2CH1SRCW {
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _bits(&self) -> bool {
+        match *self {
+            FTM2CH1SRCW::_0 => false,
+            FTM2CH1SRCW::_1 => true,
+        }
+    }
+}
+#[doc = r" Proxy"]
+pub struct _FTM2CH1SRCW<'a> {
+    w: &'a mut W,
+}
+impl<'a> _FTM2CH1SRCW<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: FTM2CH1SRCW) -> &'a mut W {
+        {
+            self.bit(variant._bits())
+        }
+    }
+    #[doc = "FTM2_CH1 signal"]
+    #[inline]
+    pub fn _0(self) -> &'a mut W {
+        self.variant(FTM2CH1SRCW::_0)
+    }
+    #[doc = "Exclusive OR of FTM2_CH1, FTM2_CH0 and FTM1_CH1."]
+    #[inline]
+    pub fn _1(self) -> &'a mut W {
+        self.variant(FTM2CH1SRCW::_1)
+    }
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 22;
         self.w.bits &= !((MASK as u32) << OFFSET);
         self.w.bits |= ((value & MASK) as u32) << OFFSET;
         self.w
@@ -1747,6 +1957,15 @@ impl R {
             ((self.bits >> OFFSET) & MASK as u32) != 0
         })
     }
+    #[doc = "Bit 3 - FTM0 Fault 3 Select"]
+    #[inline]
+    pub fn ftm0flt3(&self) -> FTM0FLT3R {
+        FTM0FLT3R::_from({
+            const MASK: bool = true;
+            const OFFSET: u8 = 3;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        })
+    }
     #[doc = "Bit 4 - FTM1 Fault 0 Select"]
     #[inline]
     pub fn ftm1flt0(&self) -> FTM1FLT0R {
@@ -1790,6 +2009,15 @@ impl R {
             const MASK: u8 = 3;
             const OFFSET: u8 = 20;
             ((self.bits >> OFFSET) & MASK as u32) as u8
+        })
+    }
+    #[doc = "Bit 22 - FTM2 channel 1 input capture source select"]
+    #[inline]
+    pub fn ftm2ch1src(&self) -> FTM2CH1SRCR {
+        FTM2CH1SRCR::_from({
+            const MASK: bool = true;
+            const OFFSET: u8 = 22;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
         })
     }
     #[doc = "Bit 24 - FlexTimer 0 External Clock Pin Select"]
@@ -1892,6 +2120,11 @@ impl W {
     pub fn ftm0flt2(&mut self) -> _FTM0FLT2W {
         _FTM0FLT2W { w: self }
     }
+    #[doc = "Bit 3 - FTM0 Fault 3 Select"]
+    #[inline]
+    pub fn ftm0flt3(&mut self) -> _FTM0FLT3W {
+        _FTM0FLT3W { w: self }
+    }
     #[doc = "Bit 4 - FTM1 Fault 0 Select"]
     #[inline]
     pub fn ftm1flt0(&mut self) -> _FTM1FLT0W {
@@ -1916,6 +2149,11 @@ impl W {
     #[inline]
     pub fn ftm2ch0src(&mut self) -> _FTM2CH0SRCW {
         _FTM2CH0SRCW { w: self }
+    }
+    #[doc = "Bit 22 - FTM2 channel 1 input capture source select"]
+    #[inline]
+    pub fn ftm2ch1src(&mut self) -> _FTM2CH1SRCW {
+        _FTM2CH1SRCW { w: self }
     }
     #[doc = "Bit 24 - FlexTimer 0 External Clock Pin Select"]
     #[inline]

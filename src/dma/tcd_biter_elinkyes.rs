@@ -134,7 +134,7 @@ impl<'a> _LINKCHW<'a> {
     #[doc = r" Writes raw bits to the field"]
     #[inline]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 15;
+        const MASK: u8 = 31;
         const OFFSET: u8 = 9;
         self.w.bits &= !((MASK as u16) << OFFSET);
         self.w.bits |= ((value & MASK) as u16) << OFFSET;
@@ -205,7 +205,7 @@ impl R {
     pub fn bits(&self) -> u16 {
         self.bits
     }
-    #[doc = "Bits 0:8 - Starting Major Iteration Count"]
+    #[doc = "Bits 0:8 - Starting major iteration count"]
     #[inline]
     pub fn biter(&self) -> BITERR {
         let bits = {
@@ -215,11 +215,11 @@ impl R {
         };
         BITERR { bits }
     }
-    #[doc = "Bits 9:12 - Link Channel Number"]
+    #[doc = "Bits 9:13 - Link Channel Number"]
     #[inline]
     pub fn linkch(&self) -> LINKCHR {
         let bits = {
-            const MASK: u8 = 15;
+            const MASK: u8 = 31;
             const OFFSET: u8 = 9;
             ((self.bits >> OFFSET) & MASK as u16) as u8
         };
@@ -247,12 +247,12 @@ impl W {
         self.bits = bits;
         self
     }
-    #[doc = "Bits 0:8 - Starting Major Iteration Count"]
+    #[doc = "Bits 0:8 - Starting major iteration count"]
     #[inline]
     pub fn biter(&mut self) -> _BITERW {
         _BITERW { w: self }
     }
-    #[doc = "Bits 9:12 - Link Channel Number"]
+    #[doc = "Bits 9:13 - Link Channel Number"]
     #[inline]
     pub fn linkch(&mut self) -> _LINKCHW {
         _LINKCHW { w: self }

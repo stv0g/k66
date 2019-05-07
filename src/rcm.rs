@@ -13,6 +13,10 @@ pub struct RegisterBlock {
     _reserved1: [u8; 1usize],
     #[doc = "0x07 - Mode Register"]
     pub mr: MR,
+    #[doc = "0x08 - Sticky System Reset Status Register 0"]
+    pub ssrs0: SSRS0,
+    #[doc = "0x09 - Sticky System Reset Status Register 1"]
+    pub ssrs1: SSRS1,
 }
 #[doc = "System Reset Status Register 0"]
 pub struct SRS0 {
@@ -44,3 +48,15 @@ pub struct MR {
 }
 #[doc = "Mode Register"]
 pub mod mr;
+#[doc = "Sticky System Reset Status Register 0"]
+pub struct SSRS0 {
+    register: ::vcell::VolatileCell<u8>,
+}
+#[doc = "Sticky System Reset Status Register 0"]
+pub mod ssrs0;
+#[doc = "Sticky System Reset Status Register 1"]
+pub struct SSRS1 {
+    register: ::vcell::VolatileCell<u8>,
+}
+#[doc = "Sticky System Reset Status Register 1"]
+pub mod ssrs1;

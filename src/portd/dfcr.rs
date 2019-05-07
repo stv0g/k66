@@ -47,7 +47,7 @@ impl super::DFCR {
 pub enum CSR {
     #[doc = "Digital filters are clocked by the bus clock."]
     _0,
-    #[doc = "Digital filters are clocked by the 1 kHz LPO clock."]
+    #[doc = "Digital filters are clocked by the LPO clock."]
     _1,
 }
 impl CSR {
@@ -93,7 +93,7 @@ impl CSR {
 pub enum CSW {
     #[doc = "Digital filters are clocked by the bus clock."]
     _0,
-    #[doc = "Digital filters are clocked by the 1 kHz LPO clock."]
+    #[doc = "Digital filters are clocked by the LPO clock."]
     _1,
 }
 impl CSW {
@@ -124,7 +124,7 @@ impl<'a> _CSW<'a> {
     pub fn _0(self) -> &'a mut W {
         self.variant(CSW::_0)
     }
-    #[doc = "Digital filters are clocked by the 1 kHz LPO clock."]
+    #[doc = "Digital filters are clocked by the LPO clock."]
     #[inline]
     pub fn _1(self) -> &'a mut W {
         self.variant(CSW::_1)

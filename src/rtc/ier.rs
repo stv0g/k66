@@ -183,6 +183,53 @@ impl TAIER {
         *self == TAIER::_1
     }
 }
+#[doc = "Possible values of the field `MOIE`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum MOIER {
+    #[doc = "Monotonic overflow flag does not generate an interrupt."]
+    _0,
+    #[doc = "Monotonic overflow flag does generate an interrupt."]
+    _1,
+}
+impl MOIER {
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            MOIER::_0 => false,
+            MOIER::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> MOIER {
+        match value {
+            false => MOIER::_0,
+            true => MOIER::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == MOIER::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == MOIER::_1
+    }
+}
 #[doc = "Possible values of the field `TSIE`"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum TSIER {
@@ -451,6 +498,64 @@ impl<'a> _TAIEW<'a> {
         self.w
     }
 }
+#[doc = "Values that can be written to the field `MOIE`"]
+pub enum MOIEW {
+    #[doc = "Monotonic overflow flag does not generate an interrupt."]
+    _0,
+    #[doc = "Monotonic overflow flag does generate an interrupt."]
+    _1,
+}
+impl MOIEW {
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _bits(&self) -> bool {
+        match *self {
+            MOIEW::_0 => false,
+            MOIEW::_1 => true,
+        }
+    }
+}
+#[doc = r" Proxy"]
+pub struct _MOIEW<'a> {
+    w: &'a mut W,
+}
+impl<'a> _MOIEW<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: MOIEW) -> &'a mut W {
+        {
+            self.bit(variant._bits())
+        }
+    }
+    #[doc = "Monotonic overflow flag does not generate an interrupt."]
+    #[inline]
+    pub fn _0(self) -> &'a mut W {
+        self.variant(MOIEW::_0)
+    }
+    #[doc = "Monotonic overflow flag does generate an interrupt."]
+    #[inline]
+    pub fn _1(self) -> &'a mut W {
+        self.variant(MOIEW::_1)
+    }
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 3;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
 #[doc = "Values that can be written to the field `TSIE`"]
 pub enum TSIEW {
     #[doc = "Seconds interrupt is disabled."]
@@ -600,6 +705,15 @@ impl R {
             ((self.bits >> OFFSET) & MASK as u32) != 0
         })
     }
+    #[doc = "Bit 3 - Monotonic Overflow Interrupt Enable"]
+    #[inline]
+    pub fn moie(&self) -> MOIER {
+        MOIER::_from({
+            const MASK: bool = true;
+            const OFFSET: u8 = 3;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        })
+    }
     #[doc = "Bit 4 - Time Seconds Interrupt Enable"]
     #[inline]
     pub fn tsie(&self) -> TSIER {
@@ -645,6 +759,11 @@ impl W {
     #[inline]
     pub fn taie(&mut self) -> _TAIEW {
         _TAIEW { w: self }
+    }
+    #[doc = "Bit 3 - Monotonic Overflow Interrupt Enable"]
+    #[inline]
+    pub fn moie(&mut self) -> _MOIEW {
+        _MOIEW { w: self }
     }
     #[doc = "Bit 4 - Time Seconds Interrupt Enable"]
     #[inline]

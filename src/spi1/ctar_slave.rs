@@ -271,7 +271,7 @@ impl<'a> _FMSZW<'a> {
     #[doc = r" Writes raw bits to the field"]
     #[inline]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 31;
+        const MASK: u8 = 15;
         const OFFSET: u8 = 27;
         self.w.bits &= !((MASK as u32) << OFFSET);
         self.w.bits |= ((value & MASK) as u32) << OFFSET;
@@ -302,11 +302,11 @@ impl R {
             ((self.bits >> OFFSET) & MASK as u32) != 0
         })
     }
-    #[doc = "Bits 27:31 - Frame Size"]
+    #[doc = "Bits 27:30 - Frame Size"]
     #[inline]
     pub fn fmsz(&self) -> FMSZR {
         let bits = {
-            const MASK: u8 = 31;
+            const MASK: u8 = 15;
             const OFFSET: u8 = 27;
             ((self.bits >> OFFSET) & MASK as u32) as u8
         };
@@ -335,7 +335,7 @@ impl W {
     pub fn cpol(&mut self) -> _CPOLW {
         _CPOLW { w: self }
     }
-    #[doc = "Bits 27:31 - Frame Size"]
+    #[doc = "Bits 27:30 - Frame Size"]
     #[inline]
     pub fn fmsz(&mut self) -> _FMSZW {
         _FMSZW { w: self }

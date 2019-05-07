@@ -278,7 +278,7 @@ impl FRDIVR {
 #[doc = "Possible values of the field `CLKS`"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum CLKSR {
-    #[doc = "Encoding 0 - Output of FLL or PLL is selected (depends on PLLS control bit)."]
+    #[doc = "Encoding 0 - Output of FLL or PLLCS is selected (depends on PLLS control bit)."]
     _00,
     #[doc = "Encoding 1 - Internal reference clock is selected."]
     _01,
@@ -605,7 +605,7 @@ impl<'a> _FRDIVW<'a> {
 }
 #[doc = "Values that can be written to the field `CLKS`"]
 pub enum CLKSW {
-    #[doc = "Encoding 0 - Output of FLL or PLL is selected (depends on PLLS control bit)."]
+    #[doc = "Encoding 0 - Output of FLL or PLLCS is selected (depends on PLLS control bit)."]
     _00,
     #[doc = "Encoding 1 - Internal reference clock is selected."]
     _01,
@@ -639,7 +639,7 @@ impl<'a> _CLKSW<'a> {
             self.bits(variant._bits())
         }
     }
-    #[doc = "Encoding 0 - Output of FLL or PLL is selected (depends on PLLS control bit)."]
+    #[doc = "Encoding 0 - Output of FLL or PLLCS is selected (depends on PLLS control bit)."]
     #[inline]
     pub fn _00(self) -> &'a mut W {
         self.variant(CLKSW::_00)

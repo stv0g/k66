@@ -89,6 +89,53 @@ impl LPTMRR {
         *self == LPTMRR::_1
     }
 }
+#[doc = "Possible values of the field `TSI`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum TSIR {
+    #[doc = "Clock disabled"]
+    _0,
+    #[doc = "Clock enabled"]
+    _1,
+}
+impl TSIR {
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            TSIR::_0 => false,
+            TSIR::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> TSIR {
+        match value {
+            false => TSIR::_0,
+            true => TSIR::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == TSIR::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == TSIR::_1
+    }
+}
 #[doc = "Possible values of the field `PORTA`"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum PORTAR {
@@ -377,6 +424,64 @@ impl<'a> _LPTMRW<'a> {
     pub fn bit(self, value: bool) -> &'a mut W {
         const MASK: bool = true;
         const OFFSET: u8 = 0;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = "Values that can be written to the field `TSI`"]
+pub enum TSIW {
+    #[doc = "Clock disabled"]
+    _0,
+    #[doc = "Clock enabled"]
+    _1,
+}
+impl TSIW {
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _bits(&self) -> bool {
+        match *self {
+            TSIW::_0 => false,
+            TSIW::_1 => true,
+        }
+    }
+}
+#[doc = r" Proxy"]
+pub struct _TSIW<'a> {
+    w: &'a mut W,
+}
+impl<'a> _TSIW<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: TSIW) -> &'a mut W {
+        {
+            self.bit(variant._bits())
+        }
+    }
+    #[doc = "Clock disabled"]
+    #[inline]
+    pub fn _0(self) -> &'a mut W {
+        self.variant(TSIW::_0)
+    }
+    #[doc = "Clock enabled"]
+    #[inline]
+    pub fn _1(self) -> &'a mut W {
+        self.variant(TSIW::_1)
+    }
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 5;
         self.w.bits &= !((MASK as u32) << OFFSET);
         self.w.bits |= ((value & MASK) as u32) << OFFSET;
         self.w
@@ -687,6 +792,15 @@ impl R {
             ((self.bits >> OFFSET) & MASK as u32) != 0
         })
     }
+    #[doc = "Bit 5 - TSI Clock Gate Control"]
+    #[inline]
+    pub fn tsi(&self) -> TSIR {
+        TSIR::_from({
+            const MASK: bool = true;
+            const OFFSET: u8 = 5;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        })
+    }
     #[doc = "Bit 9 - Port A Clock Gate Control"]
     #[inline]
     pub fn porta(&self) -> PORTAR {
@@ -749,6 +863,11 @@ impl W {
     #[inline]
     pub fn lptmr(&mut self) -> _LPTMRW {
         _LPTMRW { w: self }
+    }
+    #[doc = "Bit 5 - TSI Clock Gate Control"]
+    #[inline]
+    pub fn tsi(&mut self) -> _TSIW {
+        _TSIW { w: self }
     }
     #[doc = "Bit 9 - Port A Clock Gate Control"]
     #[inline]

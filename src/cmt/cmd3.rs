@@ -74,7 +74,7 @@ impl R {
     pub fn bits(&self) -> u8 {
         self.bits
     }
-    #[doc = "Bits 0:7 - Controls the upper space periods of the modulator for all modes."]
+    #[doc = "Bits 0:7 - SB\\[15:8\\]"]
     #[inline]
     pub fn sb(&self) -> SBR {
         let bits = {
@@ -97,7 +97,7 @@ impl W {
         self.bits = bits;
         self
     }
-    #[doc = "Bits 0:7 - Controls the upper space periods of the modulator for all modes."]
+    #[doc = "Bits 0:7 - SB\\[15:8\\]"]
     #[inline]
     pub fn sb(&mut self) -> _SBW {
         _SBW { w: self }

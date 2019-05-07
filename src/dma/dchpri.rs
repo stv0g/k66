@@ -53,12 +53,23 @@ impl CHPRIR {
         self.bits
     }
 }
+#[doc = r" Value of the field"]
+pub struct GRPPRIR {
+    bits: u8,
+}
+impl GRPPRIR {
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bits(&self) -> u8 {
+        self.bits
+    }
+}
 #[doc = "Possible values of the field `DPA`"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum DPAR {
-    #[doc = "Channel n can suspend a lower priority channel"]
+    #[doc = "Channel n can suspend a lower priority channel."]
     _0,
-    #[doc = "Channel n cannot suspend any channel, regardless of channel priority"]
+    #[doc = "Channel n cannot suspend any channel, regardless of channel priority."]
     _1,
 }
 impl DPAR {
@@ -103,9 +114,9 @@ impl DPAR {
 #[doc = "Possible values of the field `ECP`"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum ECPR {
-    #[doc = "Channel n cannot be suspended by a higher priority channel's service request"]
+    #[doc = "Channel n cannot be suspended by a higher priority channel's service request."]
     _0,
-    #[doc = "Channel n can be temporarily suspended by the service request of a higher priority channel"]
+    #[doc = "Channel n can be temporarily suspended by the service request of a higher priority channel."]
     _1,
 }
 impl ECPR {
@@ -164,9 +175,9 @@ impl<'a> _CHPRIW<'a> {
 }
 #[doc = "Values that can be written to the field `DPA`"]
 pub enum DPAW {
-    #[doc = "Channel n can suspend a lower priority channel"]
+    #[doc = "Channel n can suspend a lower priority channel."]
     _0,
-    #[doc = "Channel n cannot suspend any channel, regardless of channel priority"]
+    #[doc = "Channel n cannot suspend any channel, regardless of channel priority."]
     _1,
 }
 impl DPAW {
@@ -192,12 +203,12 @@ impl<'a> _DPAW<'a> {
             self.bit(variant._bits())
         }
     }
-    #[doc = "Channel n can suspend a lower priority channel"]
+    #[doc = "Channel n can suspend a lower priority channel."]
     #[inline]
     pub fn _0(self) -> &'a mut W {
         self.variant(DPAW::_0)
     }
-    #[doc = "Channel n cannot suspend any channel, regardless of channel priority"]
+    #[doc = "Channel n cannot suspend any channel, regardless of channel priority."]
     #[inline]
     pub fn _1(self) -> &'a mut W {
         self.variant(DPAW::_1)
@@ -222,9 +233,9 @@ impl<'a> _DPAW<'a> {
 }
 #[doc = "Values that can be written to the field `ECP`"]
 pub enum ECPW {
-    #[doc = "Channel n cannot be suspended by a higher priority channel's service request"]
+    #[doc = "Channel n cannot be suspended by a higher priority channel's service request."]
     _0,
-    #[doc = "Channel n can be temporarily suspended by the service request of a higher priority channel"]
+    #[doc = "Channel n can be temporarily suspended by the service request of a higher priority channel."]
     _1,
 }
 impl ECPW {
@@ -250,12 +261,12 @@ impl<'a> _ECPW<'a> {
             self.bit(variant._bits())
         }
     }
-    #[doc = "Channel n cannot be suspended by a higher priority channel's service request"]
+    #[doc = "Channel n cannot be suspended by a higher priority channel's service request."]
     #[inline]
     pub fn _0(self) -> &'a mut W {
         self.variant(ECPW::_0)
     }
-    #[doc = "Channel n can be temporarily suspended by the service request of a higher priority channel"]
+    #[doc = "Channel n can be temporarily suspended by the service request of a higher priority channel."]
     #[inline]
     pub fn _1(self) -> &'a mut W {
         self.variant(ECPW::_1)
@@ -294,7 +305,17 @@ impl R {
         };
         CHPRIR { bits }
     }
-    #[doc = "Bit 6 - Disable Preempt Ability"]
+    #[doc = "Bits 4:5 - Channel n Current Group Priority"]
+    #[inline]
+    pub fn grppri(&self) -> GRPPRIR {
+        let bits = {
+            const MASK: u8 = 3;
+            const OFFSET: u8 = 4;
+            ((self.bits >> OFFSET) & MASK as u8) as u8
+        };
+        GRPPRIR { bits }
+    }
+    #[doc = "Bit 6 - Disable Preempt Ability."]
     #[inline]
     pub fn dpa(&self) -> DPAR {
         DPAR::_from({
@@ -303,7 +324,7 @@ impl R {
             ((self.bits >> OFFSET) & MASK as u8) != 0
         })
     }
-    #[doc = "Bit 7 - Enable Channel Preemption"]
+    #[doc = "Bit 7 - Enable Channel Preemption."]
     #[inline]
     pub fn ecp(&self) -> ECPR {
         ECPR::_from({
@@ -330,12 +351,12 @@ impl W {
     pub fn chpri(&mut self) -> _CHPRIW {
         _CHPRIW { w: self }
     }
-    #[doc = "Bit 6 - Disable Preempt Ability"]
+    #[doc = "Bit 6 - Disable Preempt Ability."]
     #[inline]
     pub fn dpa(&mut self) -> _DPAW {
         _DPAW { w: self }
     }
-    #[doc = "Bit 7 - Enable Channel Preemption"]
+    #[doc = "Bit 7 - Enable Channel Preemption."]
     #[inline]
     pub fn ecp(&mut self) -> _ECPW {
         _ECPW { w: self }

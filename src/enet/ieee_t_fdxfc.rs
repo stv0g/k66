@@ -28,7 +28,7 @@ impl R {
     pub fn bits(&self) -> u32 {
         self.bits
     }
-    #[doc = "Bits 0:15 - Frame count"]
+    #[doc = "Bits 0:15 - Number of flow-control pause frames transmitted"]
     #[inline]
     pub fn count(&self) -> COUNTR {
         let bits = {

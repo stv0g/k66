@@ -48,6 +48,9 @@ pub struct RegisterBlock {
     _reserved14: [u8; 252usize],
     #[doc = "0xd00 - Master General Purpose Control Register"]
     pub mgpcr5: MGPCR,
+    _reserved15: [u8; 252usize],
+    #[doc = "0xe00 - Master General Purpose Control Register"]
+    pub mgpcr6: MGPCR,
 }
 #[doc = "Priority Registers Slave"]
 pub struct PRS {

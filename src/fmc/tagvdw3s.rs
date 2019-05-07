@@ -105,8 +105,8 @@ impl<'a> _TAGW<'a> {
     #[doc = r" Writes raw bits to the field"]
     #[inline]
     pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        const MASK: u16 = 16383;
-        const OFFSET: u8 = 5;
+        const MASK: u16 = 65535;
+        const OFFSET: u8 = 6;
         self.w.bits &= !((MASK as u32) << OFFSET);
         self.w.bits |= ((value & MASK) as u32) << OFFSET;
         self.w
@@ -128,12 +128,12 @@ impl R {
         };
         VALIDR { bits }
     }
-    #[doc = "Bits 5:18 - 14-bit tag for cache entry"]
+    #[doc = "Bits 6:21 - 16-bit tag for cache entry"]
     #[inline]
     pub fn tag(&self) -> TAGR {
         let bits = {
-            const MASK: u16 = 16383;
-            const OFFSET: u8 = 5;
+            const MASK: u16 = 65535;
+            const OFFSET: u8 = 6;
             ((self.bits >> OFFSET) & MASK as u32) as u16
         };
         TAGR { bits }
@@ -156,7 +156,7 @@ impl W {
     pub fn valid(&mut self) -> _VALIDW {
         _VALIDW { w: self }
     }
-    #[doc = "Bits 5:18 - 14-bit tag for cache entry"]
+    #[doc = "Bits 6:21 - 16-bit tag for cache entry"]
     #[inline]
     pub fn tag(&mut self) -> _TAGW {
         _TAGW { w: self }

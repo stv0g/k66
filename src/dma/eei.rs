@@ -794,6 +794,758 @@ impl EEI15R {
         *self == EEI15R::_1
     }
 }
+#[doc = "Possible values of the field `EEI16`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum EEI16R {
+    #[doc = "The error signal for corresponding channel does not generate an error interrupt"]
+    _0,
+    #[doc = "The assertion of the error signal for corresponding channel generates an error interrupt request"]
+    _1,
+}
+impl EEI16R {
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            EEI16R::_0 => false,
+            EEI16R::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> EEI16R {
+        match value {
+            false => EEI16R::_0,
+            true => EEI16R::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == EEI16R::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == EEI16R::_1
+    }
+}
+#[doc = "Possible values of the field `EEI17`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum EEI17R {
+    #[doc = "The error signal for corresponding channel does not generate an error interrupt"]
+    _0,
+    #[doc = "The assertion of the error signal for corresponding channel generates an error interrupt request"]
+    _1,
+}
+impl EEI17R {
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            EEI17R::_0 => false,
+            EEI17R::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> EEI17R {
+        match value {
+            false => EEI17R::_0,
+            true => EEI17R::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == EEI17R::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == EEI17R::_1
+    }
+}
+#[doc = "Possible values of the field `EEI18`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum EEI18R {
+    #[doc = "The error signal for corresponding channel does not generate an error interrupt"]
+    _0,
+    #[doc = "The assertion of the error signal for corresponding channel generates an error interrupt request"]
+    _1,
+}
+impl EEI18R {
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            EEI18R::_0 => false,
+            EEI18R::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> EEI18R {
+        match value {
+            false => EEI18R::_0,
+            true => EEI18R::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == EEI18R::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == EEI18R::_1
+    }
+}
+#[doc = "Possible values of the field `EEI19`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum EEI19R {
+    #[doc = "The error signal for corresponding channel does not generate an error interrupt"]
+    _0,
+    #[doc = "The assertion of the error signal for corresponding channel generates an error interrupt request"]
+    _1,
+}
+impl EEI19R {
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            EEI19R::_0 => false,
+            EEI19R::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> EEI19R {
+        match value {
+            false => EEI19R::_0,
+            true => EEI19R::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == EEI19R::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == EEI19R::_1
+    }
+}
+#[doc = "Possible values of the field `EEI20`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum EEI20R {
+    #[doc = "The error signal for corresponding channel does not generate an error interrupt"]
+    _0,
+    #[doc = "The assertion of the error signal for corresponding channel generates an error interrupt request"]
+    _1,
+}
+impl EEI20R {
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            EEI20R::_0 => false,
+            EEI20R::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> EEI20R {
+        match value {
+            false => EEI20R::_0,
+            true => EEI20R::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == EEI20R::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == EEI20R::_1
+    }
+}
+#[doc = "Possible values of the field `EEI21`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum EEI21R {
+    #[doc = "The error signal for corresponding channel does not generate an error interrupt"]
+    _0,
+    #[doc = "The assertion of the error signal for corresponding channel generates an error interrupt request"]
+    _1,
+}
+impl EEI21R {
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            EEI21R::_0 => false,
+            EEI21R::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> EEI21R {
+        match value {
+            false => EEI21R::_0,
+            true => EEI21R::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == EEI21R::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == EEI21R::_1
+    }
+}
+#[doc = "Possible values of the field `EEI22`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum EEI22R {
+    #[doc = "The error signal for corresponding channel does not generate an error interrupt"]
+    _0,
+    #[doc = "The assertion of the error signal for corresponding channel generates an error interrupt request"]
+    _1,
+}
+impl EEI22R {
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            EEI22R::_0 => false,
+            EEI22R::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> EEI22R {
+        match value {
+            false => EEI22R::_0,
+            true => EEI22R::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == EEI22R::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == EEI22R::_1
+    }
+}
+#[doc = "Possible values of the field `EEI23`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum EEI23R {
+    #[doc = "The error signal for corresponding channel does not generate an error interrupt"]
+    _0,
+    #[doc = "The assertion of the error signal for corresponding channel generates an error interrupt request"]
+    _1,
+}
+impl EEI23R {
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            EEI23R::_0 => false,
+            EEI23R::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> EEI23R {
+        match value {
+            false => EEI23R::_0,
+            true => EEI23R::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == EEI23R::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == EEI23R::_1
+    }
+}
+#[doc = "Possible values of the field `EEI24`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum EEI24R {
+    #[doc = "The error signal for corresponding channel does not generate an error interrupt"]
+    _0,
+    #[doc = "The assertion of the error signal for corresponding channel generates an error interrupt request"]
+    _1,
+}
+impl EEI24R {
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            EEI24R::_0 => false,
+            EEI24R::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> EEI24R {
+        match value {
+            false => EEI24R::_0,
+            true => EEI24R::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == EEI24R::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == EEI24R::_1
+    }
+}
+#[doc = "Possible values of the field `EEI25`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum EEI25R {
+    #[doc = "The error signal for corresponding channel does not generate an error interrupt"]
+    _0,
+    #[doc = "The assertion of the error signal for corresponding channel generates an error interrupt request"]
+    _1,
+}
+impl EEI25R {
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            EEI25R::_0 => false,
+            EEI25R::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> EEI25R {
+        match value {
+            false => EEI25R::_0,
+            true => EEI25R::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == EEI25R::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == EEI25R::_1
+    }
+}
+#[doc = "Possible values of the field `EEI26`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum EEI26R {
+    #[doc = "The error signal for corresponding channel does not generate an error interrupt"]
+    _0,
+    #[doc = "The assertion of the error signal for corresponding channel generates an error interrupt request"]
+    _1,
+}
+impl EEI26R {
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            EEI26R::_0 => false,
+            EEI26R::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> EEI26R {
+        match value {
+            false => EEI26R::_0,
+            true => EEI26R::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == EEI26R::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == EEI26R::_1
+    }
+}
+#[doc = "Possible values of the field `EEI27`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum EEI27R {
+    #[doc = "The error signal for corresponding channel does not generate an error interrupt"]
+    _0,
+    #[doc = "The assertion of the error signal for corresponding channel generates an error interrupt request"]
+    _1,
+}
+impl EEI27R {
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            EEI27R::_0 => false,
+            EEI27R::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> EEI27R {
+        match value {
+            false => EEI27R::_0,
+            true => EEI27R::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == EEI27R::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == EEI27R::_1
+    }
+}
+#[doc = "Possible values of the field `EEI28`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum EEI28R {
+    #[doc = "The error signal for corresponding channel does not generate an error interrupt"]
+    _0,
+    #[doc = "The assertion of the error signal for corresponding channel generates an error interrupt request"]
+    _1,
+}
+impl EEI28R {
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            EEI28R::_0 => false,
+            EEI28R::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> EEI28R {
+        match value {
+            false => EEI28R::_0,
+            true => EEI28R::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == EEI28R::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == EEI28R::_1
+    }
+}
+#[doc = "Possible values of the field `EEI29`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum EEI29R {
+    #[doc = "The error signal for corresponding channel does not generate an error interrupt"]
+    _0,
+    #[doc = "The assertion of the error signal for corresponding channel generates an error interrupt request"]
+    _1,
+}
+impl EEI29R {
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            EEI29R::_0 => false,
+            EEI29R::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> EEI29R {
+        match value {
+            false => EEI29R::_0,
+            true => EEI29R::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == EEI29R::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == EEI29R::_1
+    }
+}
+#[doc = "Possible values of the field `EEI30`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum EEI30R {
+    #[doc = "The error signal for corresponding channel does not generate an error interrupt"]
+    _0,
+    #[doc = "The assertion of the error signal for corresponding channel generates an error interrupt request"]
+    _1,
+}
+impl EEI30R {
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            EEI30R::_0 => false,
+            EEI30R::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> EEI30R {
+        match value {
+            false => EEI30R::_0,
+            true => EEI30R::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == EEI30R::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == EEI30R::_1
+    }
+}
+#[doc = "Possible values of the field `EEI31`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum EEI31R {
+    #[doc = "The error signal for corresponding channel does not generate an error interrupt"]
+    _0,
+    #[doc = "The assertion of the error signal for corresponding channel generates an error interrupt request"]
+    _1,
+}
+impl EEI31R {
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            EEI31R::_0 => false,
+            EEI31R::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> EEI31R {
+        match value {
+            false => EEI31R::_0,
+            true => EEI31R::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == EEI31R::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == EEI31R::_1
+    }
+}
 #[doc = "Values that can be written to the field `EEI0`"]
 pub enum EEI0W {
     #[doc = "The error signal for corresponding channel does not generate an error interrupt"]
@@ -1722,6 +2474,934 @@ impl<'a> _EEI15W<'a> {
         self.w
     }
 }
+#[doc = "Values that can be written to the field `EEI16`"]
+pub enum EEI16W {
+    #[doc = "The error signal for corresponding channel does not generate an error interrupt"]
+    _0,
+    #[doc = "The assertion of the error signal for corresponding channel generates an error interrupt request"]
+    _1,
+}
+impl EEI16W {
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _bits(&self) -> bool {
+        match *self {
+            EEI16W::_0 => false,
+            EEI16W::_1 => true,
+        }
+    }
+}
+#[doc = r" Proxy"]
+pub struct _EEI16W<'a> {
+    w: &'a mut W,
+}
+impl<'a> _EEI16W<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: EEI16W) -> &'a mut W {
+        {
+            self.bit(variant._bits())
+        }
+    }
+    #[doc = "The error signal for corresponding channel does not generate an error interrupt"]
+    #[inline]
+    pub fn _0(self) -> &'a mut W {
+        self.variant(EEI16W::_0)
+    }
+    #[doc = "The assertion of the error signal for corresponding channel generates an error interrupt request"]
+    #[inline]
+    pub fn _1(self) -> &'a mut W {
+        self.variant(EEI16W::_1)
+    }
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 16;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = "Values that can be written to the field `EEI17`"]
+pub enum EEI17W {
+    #[doc = "The error signal for corresponding channel does not generate an error interrupt"]
+    _0,
+    #[doc = "The assertion of the error signal for corresponding channel generates an error interrupt request"]
+    _1,
+}
+impl EEI17W {
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _bits(&self) -> bool {
+        match *self {
+            EEI17W::_0 => false,
+            EEI17W::_1 => true,
+        }
+    }
+}
+#[doc = r" Proxy"]
+pub struct _EEI17W<'a> {
+    w: &'a mut W,
+}
+impl<'a> _EEI17W<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: EEI17W) -> &'a mut W {
+        {
+            self.bit(variant._bits())
+        }
+    }
+    #[doc = "The error signal for corresponding channel does not generate an error interrupt"]
+    #[inline]
+    pub fn _0(self) -> &'a mut W {
+        self.variant(EEI17W::_0)
+    }
+    #[doc = "The assertion of the error signal for corresponding channel generates an error interrupt request"]
+    #[inline]
+    pub fn _1(self) -> &'a mut W {
+        self.variant(EEI17W::_1)
+    }
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 17;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = "Values that can be written to the field `EEI18`"]
+pub enum EEI18W {
+    #[doc = "The error signal for corresponding channel does not generate an error interrupt"]
+    _0,
+    #[doc = "The assertion of the error signal for corresponding channel generates an error interrupt request"]
+    _1,
+}
+impl EEI18W {
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _bits(&self) -> bool {
+        match *self {
+            EEI18W::_0 => false,
+            EEI18W::_1 => true,
+        }
+    }
+}
+#[doc = r" Proxy"]
+pub struct _EEI18W<'a> {
+    w: &'a mut W,
+}
+impl<'a> _EEI18W<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: EEI18W) -> &'a mut W {
+        {
+            self.bit(variant._bits())
+        }
+    }
+    #[doc = "The error signal for corresponding channel does not generate an error interrupt"]
+    #[inline]
+    pub fn _0(self) -> &'a mut W {
+        self.variant(EEI18W::_0)
+    }
+    #[doc = "The assertion of the error signal for corresponding channel generates an error interrupt request"]
+    #[inline]
+    pub fn _1(self) -> &'a mut W {
+        self.variant(EEI18W::_1)
+    }
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 18;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = "Values that can be written to the field `EEI19`"]
+pub enum EEI19W {
+    #[doc = "The error signal for corresponding channel does not generate an error interrupt"]
+    _0,
+    #[doc = "The assertion of the error signal for corresponding channel generates an error interrupt request"]
+    _1,
+}
+impl EEI19W {
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _bits(&self) -> bool {
+        match *self {
+            EEI19W::_0 => false,
+            EEI19W::_1 => true,
+        }
+    }
+}
+#[doc = r" Proxy"]
+pub struct _EEI19W<'a> {
+    w: &'a mut W,
+}
+impl<'a> _EEI19W<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: EEI19W) -> &'a mut W {
+        {
+            self.bit(variant._bits())
+        }
+    }
+    #[doc = "The error signal for corresponding channel does not generate an error interrupt"]
+    #[inline]
+    pub fn _0(self) -> &'a mut W {
+        self.variant(EEI19W::_0)
+    }
+    #[doc = "The assertion of the error signal for corresponding channel generates an error interrupt request"]
+    #[inline]
+    pub fn _1(self) -> &'a mut W {
+        self.variant(EEI19W::_1)
+    }
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 19;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = "Values that can be written to the field `EEI20`"]
+pub enum EEI20W {
+    #[doc = "The error signal for corresponding channel does not generate an error interrupt"]
+    _0,
+    #[doc = "The assertion of the error signal for corresponding channel generates an error interrupt request"]
+    _1,
+}
+impl EEI20W {
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _bits(&self) -> bool {
+        match *self {
+            EEI20W::_0 => false,
+            EEI20W::_1 => true,
+        }
+    }
+}
+#[doc = r" Proxy"]
+pub struct _EEI20W<'a> {
+    w: &'a mut W,
+}
+impl<'a> _EEI20W<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: EEI20W) -> &'a mut W {
+        {
+            self.bit(variant._bits())
+        }
+    }
+    #[doc = "The error signal for corresponding channel does not generate an error interrupt"]
+    #[inline]
+    pub fn _0(self) -> &'a mut W {
+        self.variant(EEI20W::_0)
+    }
+    #[doc = "The assertion of the error signal for corresponding channel generates an error interrupt request"]
+    #[inline]
+    pub fn _1(self) -> &'a mut W {
+        self.variant(EEI20W::_1)
+    }
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 20;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = "Values that can be written to the field `EEI21`"]
+pub enum EEI21W {
+    #[doc = "The error signal for corresponding channel does not generate an error interrupt"]
+    _0,
+    #[doc = "The assertion of the error signal for corresponding channel generates an error interrupt request"]
+    _1,
+}
+impl EEI21W {
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _bits(&self) -> bool {
+        match *self {
+            EEI21W::_0 => false,
+            EEI21W::_1 => true,
+        }
+    }
+}
+#[doc = r" Proxy"]
+pub struct _EEI21W<'a> {
+    w: &'a mut W,
+}
+impl<'a> _EEI21W<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: EEI21W) -> &'a mut W {
+        {
+            self.bit(variant._bits())
+        }
+    }
+    #[doc = "The error signal for corresponding channel does not generate an error interrupt"]
+    #[inline]
+    pub fn _0(self) -> &'a mut W {
+        self.variant(EEI21W::_0)
+    }
+    #[doc = "The assertion of the error signal for corresponding channel generates an error interrupt request"]
+    #[inline]
+    pub fn _1(self) -> &'a mut W {
+        self.variant(EEI21W::_1)
+    }
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 21;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = "Values that can be written to the field `EEI22`"]
+pub enum EEI22W {
+    #[doc = "The error signal for corresponding channel does not generate an error interrupt"]
+    _0,
+    #[doc = "The assertion of the error signal for corresponding channel generates an error interrupt request"]
+    _1,
+}
+impl EEI22W {
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _bits(&self) -> bool {
+        match *self {
+            EEI22W::_0 => false,
+            EEI22W::_1 => true,
+        }
+    }
+}
+#[doc = r" Proxy"]
+pub struct _EEI22W<'a> {
+    w: &'a mut W,
+}
+impl<'a> _EEI22W<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: EEI22W) -> &'a mut W {
+        {
+            self.bit(variant._bits())
+        }
+    }
+    #[doc = "The error signal for corresponding channel does not generate an error interrupt"]
+    #[inline]
+    pub fn _0(self) -> &'a mut W {
+        self.variant(EEI22W::_0)
+    }
+    #[doc = "The assertion of the error signal for corresponding channel generates an error interrupt request"]
+    #[inline]
+    pub fn _1(self) -> &'a mut W {
+        self.variant(EEI22W::_1)
+    }
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 22;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = "Values that can be written to the field `EEI23`"]
+pub enum EEI23W {
+    #[doc = "The error signal for corresponding channel does not generate an error interrupt"]
+    _0,
+    #[doc = "The assertion of the error signal for corresponding channel generates an error interrupt request"]
+    _1,
+}
+impl EEI23W {
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _bits(&self) -> bool {
+        match *self {
+            EEI23W::_0 => false,
+            EEI23W::_1 => true,
+        }
+    }
+}
+#[doc = r" Proxy"]
+pub struct _EEI23W<'a> {
+    w: &'a mut W,
+}
+impl<'a> _EEI23W<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: EEI23W) -> &'a mut W {
+        {
+            self.bit(variant._bits())
+        }
+    }
+    #[doc = "The error signal for corresponding channel does not generate an error interrupt"]
+    #[inline]
+    pub fn _0(self) -> &'a mut W {
+        self.variant(EEI23W::_0)
+    }
+    #[doc = "The assertion of the error signal for corresponding channel generates an error interrupt request"]
+    #[inline]
+    pub fn _1(self) -> &'a mut W {
+        self.variant(EEI23W::_1)
+    }
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 23;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = "Values that can be written to the field `EEI24`"]
+pub enum EEI24W {
+    #[doc = "The error signal for corresponding channel does not generate an error interrupt"]
+    _0,
+    #[doc = "The assertion of the error signal for corresponding channel generates an error interrupt request"]
+    _1,
+}
+impl EEI24W {
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _bits(&self) -> bool {
+        match *self {
+            EEI24W::_0 => false,
+            EEI24W::_1 => true,
+        }
+    }
+}
+#[doc = r" Proxy"]
+pub struct _EEI24W<'a> {
+    w: &'a mut W,
+}
+impl<'a> _EEI24W<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: EEI24W) -> &'a mut W {
+        {
+            self.bit(variant._bits())
+        }
+    }
+    #[doc = "The error signal for corresponding channel does not generate an error interrupt"]
+    #[inline]
+    pub fn _0(self) -> &'a mut W {
+        self.variant(EEI24W::_0)
+    }
+    #[doc = "The assertion of the error signal for corresponding channel generates an error interrupt request"]
+    #[inline]
+    pub fn _1(self) -> &'a mut W {
+        self.variant(EEI24W::_1)
+    }
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 24;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = "Values that can be written to the field `EEI25`"]
+pub enum EEI25W {
+    #[doc = "The error signal for corresponding channel does not generate an error interrupt"]
+    _0,
+    #[doc = "The assertion of the error signal for corresponding channel generates an error interrupt request"]
+    _1,
+}
+impl EEI25W {
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _bits(&self) -> bool {
+        match *self {
+            EEI25W::_0 => false,
+            EEI25W::_1 => true,
+        }
+    }
+}
+#[doc = r" Proxy"]
+pub struct _EEI25W<'a> {
+    w: &'a mut W,
+}
+impl<'a> _EEI25W<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: EEI25W) -> &'a mut W {
+        {
+            self.bit(variant._bits())
+        }
+    }
+    #[doc = "The error signal for corresponding channel does not generate an error interrupt"]
+    #[inline]
+    pub fn _0(self) -> &'a mut W {
+        self.variant(EEI25W::_0)
+    }
+    #[doc = "The assertion of the error signal for corresponding channel generates an error interrupt request"]
+    #[inline]
+    pub fn _1(self) -> &'a mut W {
+        self.variant(EEI25W::_1)
+    }
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 25;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = "Values that can be written to the field `EEI26`"]
+pub enum EEI26W {
+    #[doc = "The error signal for corresponding channel does not generate an error interrupt"]
+    _0,
+    #[doc = "The assertion of the error signal for corresponding channel generates an error interrupt request"]
+    _1,
+}
+impl EEI26W {
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _bits(&self) -> bool {
+        match *self {
+            EEI26W::_0 => false,
+            EEI26W::_1 => true,
+        }
+    }
+}
+#[doc = r" Proxy"]
+pub struct _EEI26W<'a> {
+    w: &'a mut W,
+}
+impl<'a> _EEI26W<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: EEI26W) -> &'a mut W {
+        {
+            self.bit(variant._bits())
+        }
+    }
+    #[doc = "The error signal for corresponding channel does not generate an error interrupt"]
+    #[inline]
+    pub fn _0(self) -> &'a mut W {
+        self.variant(EEI26W::_0)
+    }
+    #[doc = "The assertion of the error signal for corresponding channel generates an error interrupt request"]
+    #[inline]
+    pub fn _1(self) -> &'a mut W {
+        self.variant(EEI26W::_1)
+    }
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 26;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = "Values that can be written to the field `EEI27`"]
+pub enum EEI27W {
+    #[doc = "The error signal for corresponding channel does not generate an error interrupt"]
+    _0,
+    #[doc = "The assertion of the error signal for corresponding channel generates an error interrupt request"]
+    _1,
+}
+impl EEI27W {
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _bits(&self) -> bool {
+        match *self {
+            EEI27W::_0 => false,
+            EEI27W::_1 => true,
+        }
+    }
+}
+#[doc = r" Proxy"]
+pub struct _EEI27W<'a> {
+    w: &'a mut W,
+}
+impl<'a> _EEI27W<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: EEI27W) -> &'a mut W {
+        {
+            self.bit(variant._bits())
+        }
+    }
+    #[doc = "The error signal for corresponding channel does not generate an error interrupt"]
+    #[inline]
+    pub fn _0(self) -> &'a mut W {
+        self.variant(EEI27W::_0)
+    }
+    #[doc = "The assertion of the error signal for corresponding channel generates an error interrupt request"]
+    #[inline]
+    pub fn _1(self) -> &'a mut W {
+        self.variant(EEI27W::_1)
+    }
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 27;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = "Values that can be written to the field `EEI28`"]
+pub enum EEI28W {
+    #[doc = "The error signal for corresponding channel does not generate an error interrupt"]
+    _0,
+    #[doc = "The assertion of the error signal for corresponding channel generates an error interrupt request"]
+    _1,
+}
+impl EEI28W {
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _bits(&self) -> bool {
+        match *self {
+            EEI28W::_0 => false,
+            EEI28W::_1 => true,
+        }
+    }
+}
+#[doc = r" Proxy"]
+pub struct _EEI28W<'a> {
+    w: &'a mut W,
+}
+impl<'a> _EEI28W<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: EEI28W) -> &'a mut W {
+        {
+            self.bit(variant._bits())
+        }
+    }
+    #[doc = "The error signal for corresponding channel does not generate an error interrupt"]
+    #[inline]
+    pub fn _0(self) -> &'a mut W {
+        self.variant(EEI28W::_0)
+    }
+    #[doc = "The assertion of the error signal for corresponding channel generates an error interrupt request"]
+    #[inline]
+    pub fn _1(self) -> &'a mut W {
+        self.variant(EEI28W::_1)
+    }
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 28;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = "Values that can be written to the field `EEI29`"]
+pub enum EEI29W {
+    #[doc = "The error signal for corresponding channel does not generate an error interrupt"]
+    _0,
+    #[doc = "The assertion of the error signal for corresponding channel generates an error interrupt request"]
+    _1,
+}
+impl EEI29W {
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _bits(&self) -> bool {
+        match *self {
+            EEI29W::_0 => false,
+            EEI29W::_1 => true,
+        }
+    }
+}
+#[doc = r" Proxy"]
+pub struct _EEI29W<'a> {
+    w: &'a mut W,
+}
+impl<'a> _EEI29W<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: EEI29W) -> &'a mut W {
+        {
+            self.bit(variant._bits())
+        }
+    }
+    #[doc = "The error signal for corresponding channel does not generate an error interrupt"]
+    #[inline]
+    pub fn _0(self) -> &'a mut W {
+        self.variant(EEI29W::_0)
+    }
+    #[doc = "The assertion of the error signal for corresponding channel generates an error interrupt request"]
+    #[inline]
+    pub fn _1(self) -> &'a mut W {
+        self.variant(EEI29W::_1)
+    }
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 29;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = "Values that can be written to the field `EEI30`"]
+pub enum EEI30W {
+    #[doc = "The error signal for corresponding channel does not generate an error interrupt"]
+    _0,
+    #[doc = "The assertion of the error signal for corresponding channel generates an error interrupt request"]
+    _1,
+}
+impl EEI30W {
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _bits(&self) -> bool {
+        match *self {
+            EEI30W::_0 => false,
+            EEI30W::_1 => true,
+        }
+    }
+}
+#[doc = r" Proxy"]
+pub struct _EEI30W<'a> {
+    w: &'a mut W,
+}
+impl<'a> _EEI30W<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: EEI30W) -> &'a mut W {
+        {
+            self.bit(variant._bits())
+        }
+    }
+    #[doc = "The error signal for corresponding channel does not generate an error interrupt"]
+    #[inline]
+    pub fn _0(self) -> &'a mut W {
+        self.variant(EEI30W::_0)
+    }
+    #[doc = "The assertion of the error signal for corresponding channel generates an error interrupt request"]
+    #[inline]
+    pub fn _1(self) -> &'a mut W {
+        self.variant(EEI30W::_1)
+    }
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 30;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = "Values that can be written to the field `EEI31`"]
+pub enum EEI31W {
+    #[doc = "The error signal for corresponding channel does not generate an error interrupt"]
+    _0,
+    #[doc = "The assertion of the error signal for corresponding channel generates an error interrupt request"]
+    _1,
+}
+impl EEI31W {
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _bits(&self) -> bool {
+        match *self {
+            EEI31W::_0 => false,
+            EEI31W::_1 => true,
+        }
+    }
+}
+#[doc = r" Proxy"]
+pub struct _EEI31W<'a> {
+    w: &'a mut W,
+}
+impl<'a> _EEI31W<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: EEI31W) -> &'a mut W {
+        {
+            self.bit(variant._bits())
+        }
+    }
+    #[doc = "The error signal for corresponding channel does not generate an error interrupt"]
+    #[inline]
+    pub fn _0(self) -> &'a mut W {
+        self.variant(EEI31W::_0)
+    }
+    #[doc = "The assertion of the error signal for corresponding channel generates an error interrupt request"]
+    #[inline]
+    pub fn _1(self) -> &'a mut W {
+        self.variant(EEI31W::_1)
+    }
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 31;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
 impl R {
     #[doc = r" Value of the register as raw bits"]
     #[inline]
@@ -1872,6 +3552,150 @@ impl R {
             ((self.bits >> OFFSET) & MASK as u32) != 0
         })
     }
+    #[doc = "Bit 16 - Enable Error Interrupt 16"]
+    #[inline]
+    pub fn eei16(&self) -> EEI16R {
+        EEI16R::_from({
+            const MASK: bool = true;
+            const OFFSET: u8 = 16;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        })
+    }
+    #[doc = "Bit 17 - Enable Error Interrupt 17"]
+    #[inline]
+    pub fn eei17(&self) -> EEI17R {
+        EEI17R::_from({
+            const MASK: bool = true;
+            const OFFSET: u8 = 17;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        })
+    }
+    #[doc = "Bit 18 - Enable Error Interrupt 18"]
+    #[inline]
+    pub fn eei18(&self) -> EEI18R {
+        EEI18R::_from({
+            const MASK: bool = true;
+            const OFFSET: u8 = 18;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        })
+    }
+    #[doc = "Bit 19 - Enable Error Interrupt 19"]
+    #[inline]
+    pub fn eei19(&self) -> EEI19R {
+        EEI19R::_from({
+            const MASK: bool = true;
+            const OFFSET: u8 = 19;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        })
+    }
+    #[doc = "Bit 20 - Enable Error Interrupt 20"]
+    #[inline]
+    pub fn eei20(&self) -> EEI20R {
+        EEI20R::_from({
+            const MASK: bool = true;
+            const OFFSET: u8 = 20;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        })
+    }
+    #[doc = "Bit 21 - Enable Error Interrupt 21"]
+    #[inline]
+    pub fn eei21(&self) -> EEI21R {
+        EEI21R::_from({
+            const MASK: bool = true;
+            const OFFSET: u8 = 21;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        })
+    }
+    #[doc = "Bit 22 - Enable Error Interrupt 22"]
+    #[inline]
+    pub fn eei22(&self) -> EEI22R {
+        EEI22R::_from({
+            const MASK: bool = true;
+            const OFFSET: u8 = 22;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        })
+    }
+    #[doc = "Bit 23 - Enable Error Interrupt 23"]
+    #[inline]
+    pub fn eei23(&self) -> EEI23R {
+        EEI23R::_from({
+            const MASK: bool = true;
+            const OFFSET: u8 = 23;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        })
+    }
+    #[doc = "Bit 24 - Enable Error Interrupt 24"]
+    #[inline]
+    pub fn eei24(&self) -> EEI24R {
+        EEI24R::_from({
+            const MASK: bool = true;
+            const OFFSET: u8 = 24;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        })
+    }
+    #[doc = "Bit 25 - Enable Error Interrupt 25"]
+    #[inline]
+    pub fn eei25(&self) -> EEI25R {
+        EEI25R::_from({
+            const MASK: bool = true;
+            const OFFSET: u8 = 25;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        })
+    }
+    #[doc = "Bit 26 - Enable Error Interrupt 26"]
+    #[inline]
+    pub fn eei26(&self) -> EEI26R {
+        EEI26R::_from({
+            const MASK: bool = true;
+            const OFFSET: u8 = 26;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        })
+    }
+    #[doc = "Bit 27 - Enable Error Interrupt 27"]
+    #[inline]
+    pub fn eei27(&self) -> EEI27R {
+        EEI27R::_from({
+            const MASK: bool = true;
+            const OFFSET: u8 = 27;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        })
+    }
+    #[doc = "Bit 28 - Enable Error Interrupt 28"]
+    #[inline]
+    pub fn eei28(&self) -> EEI28R {
+        EEI28R::_from({
+            const MASK: bool = true;
+            const OFFSET: u8 = 28;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        })
+    }
+    #[doc = "Bit 29 - Enable Error Interrupt 29"]
+    #[inline]
+    pub fn eei29(&self) -> EEI29R {
+        EEI29R::_from({
+            const MASK: bool = true;
+            const OFFSET: u8 = 29;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        })
+    }
+    #[doc = "Bit 30 - Enable Error Interrupt 30"]
+    #[inline]
+    pub fn eei30(&self) -> EEI30R {
+        EEI30R::_from({
+            const MASK: bool = true;
+            const OFFSET: u8 = 30;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        })
+    }
+    #[doc = "Bit 31 - Enable Error Interrupt 31"]
+    #[inline]
+    pub fn eei31(&self) -> EEI31R {
+        EEI31R::_from({
+            const MASK: bool = true;
+            const OFFSET: u8 = 31;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        })
+    }
 }
 impl W {
     #[doc = r" Reset value of the register"]
@@ -1964,5 +3788,85 @@ impl W {
     #[inline]
     pub fn eei15(&mut self) -> _EEI15W {
         _EEI15W { w: self }
+    }
+    #[doc = "Bit 16 - Enable Error Interrupt 16"]
+    #[inline]
+    pub fn eei16(&mut self) -> _EEI16W {
+        _EEI16W { w: self }
+    }
+    #[doc = "Bit 17 - Enable Error Interrupt 17"]
+    #[inline]
+    pub fn eei17(&mut self) -> _EEI17W {
+        _EEI17W { w: self }
+    }
+    #[doc = "Bit 18 - Enable Error Interrupt 18"]
+    #[inline]
+    pub fn eei18(&mut self) -> _EEI18W {
+        _EEI18W { w: self }
+    }
+    #[doc = "Bit 19 - Enable Error Interrupt 19"]
+    #[inline]
+    pub fn eei19(&mut self) -> _EEI19W {
+        _EEI19W { w: self }
+    }
+    #[doc = "Bit 20 - Enable Error Interrupt 20"]
+    #[inline]
+    pub fn eei20(&mut self) -> _EEI20W {
+        _EEI20W { w: self }
+    }
+    #[doc = "Bit 21 - Enable Error Interrupt 21"]
+    #[inline]
+    pub fn eei21(&mut self) -> _EEI21W {
+        _EEI21W { w: self }
+    }
+    #[doc = "Bit 22 - Enable Error Interrupt 22"]
+    #[inline]
+    pub fn eei22(&mut self) -> _EEI22W {
+        _EEI22W { w: self }
+    }
+    #[doc = "Bit 23 - Enable Error Interrupt 23"]
+    #[inline]
+    pub fn eei23(&mut self) -> _EEI23W {
+        _EEI23W { w: self }
+    }
+    #[doc = "Bit 24 - Enable Error Interrupt 24"]
+    #[inline]
+    pub fn eei24(&mut self) -> _EEI24W {
+        _EEI24W { w: self }
+    }
+    #[doc = "Bit 25 - Enable Error Interrupt 25"]
+    #[inline]
+    pub fn eei25(&mut self) -> _EEI25W {
+        _EEI25W { w: self }
+    }
+    #[doc = "Bit 26 - Enable Error Interrupt 26"]
+    #[inline]
+    pub fn eei26(&mut self) -> _EEI26W {
+        _EEI26W { w: self }
+    }
+    #[doc = "Bit 27 - Enable Error Interrupt 27"]
+    #[inline]
+    pub fn eei27(&mut self) -> _EEI27W {
+        _EEI27W { w: self }
+    }
+    #[doc = "Bit 28 - Enable Error Interrupt 28"]
+    #[inline]
+    pub fn eei28(&mut self) -> _EEI28W {
+        _EEI28W { w: self }
+    }
+    #[doc = "Bit 29 - Enable Error Interrupt 29"]
+    #[inline]
+    pub fn eei29(&mut self) -> _EEI29W {
+        _EEI29W { w: self }
+    }
+    #[doc = "Bit 30 - Enable Error Interrupt 30"]
+    #[inline]
+    pub fn eei30(&mut self) -> _EEI30W {
+        _EEI30W { w: self }
+    }
+    #[doc = "Bit 31 - Enable Error Interrupt 31"]
+    #[inline]
+    pub fn eei31(&mut self) -> _EEI31W {
+        _EEI31W { w: self }
     }
 }

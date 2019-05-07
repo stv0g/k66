@@ -183,6 +183,53 @@ impl GTVER {
         *self == GTVER::_1
     }
 }
+#[doc = "Possible values of the field `ADTE`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum ADTER {
+    #[doc = "The assertion of IS7816\\[ADT\\] does not result in the generation of an interrupt."]
+    _0,
+    #[doc = "The assertion of IS7816\\[ADT\\] results in the generation of an interrupt."]
+    _1,
+}
+impl ADTER {
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            ADTER::_0 => false,
+            ADTER::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> ADTER {
+        match value {
+            false => ADTER::_0,
+            true => ADTER::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == ADTER::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == ADTER::_1
+    }
+}
 #[doc = "Possible values of the field `INITDE`"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum INITDER {
@@ -545,6 +592,64 @@ impl<'a> _GTVEW<'a> {
         self.w
     }
 }
+#[doc = "Values that can be written to the field `ADTE`"]
+pub enum ADTEW {
+    #[doc = "The assertion of IS7816\\[ADT\\] does not result in the generation of an interrupt."]
+    _0,
+    #[doc = "The assertion of IS7816\\[ADT\\] results in the generation of an interrupt."]
+    _1,
+}
+impl ADTEW {
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _bits(&self) -> bool {
+        match *self {
+            ADTEW::_0 => false,
+            ADTEW::_1 => true,
+        }
+    }
+}
+#[doc = r" Proxy"]
+pub struct _ADTEW<'a> {
+    w: &'a mut W,
+}
+impl<'a> _ADTEW<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: ADTEW) -> &'a mut W {
+        {
+            self.bit(variant._bits())
+        }
+    }
+    #[doc = "The assertion of IS7816\\[ADT\\] does not result in the generation of an interrupt."]
+    #[inline]
+    pub fn _0(self) -> &'a mut W {
+        self.variant(ADTEW::_0)
+    }
+    #[doc = "The assertion of IS7816\\[ADT\\] results in the generation of an interrupt."]
+    #[inline]
+    pub fn _1(self) -> &'a mut W {
+        self.variant(ADTEW::_1)
+    }
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 3;
+        self.w.bits &= !((MASK as u8) << OFFSET);
+        self.w.bits |= ((value & MASK) as u8) << OFFSET;
+        self.w
+    }
+}
 #[doc = "Values that can be written to the field `INITDE`"]
 pub enum INITDEW {
     #[doc = "The assertion of IS7816\\[INITD\\] does not result in the generation of an interrupt."]
@@ -810,6 +915,15 @@ impl R {
             ((self.bits >> OFFSET) & MASK as u8) != 0
         })
     }
+    #[doc = "Bit 3 - ATR Duration Timer Interrupt Enable"]
+    #[inline]
+    pub fn adte(&self) -> ADTER {
+        ADTER::_from({
+            const MASK: bool = true;
+            const OFFSET: u8 = 3;
+            ((self.bits >> OFFSET) & MASK as u8) != 0
+        })
+    }
     #[doc = "Bit 4 - Initial Character Detected Interrupt Enable"]
     #[inline]
     pub fn initde(&self) -> INITDER {
@@ -873,6 +987,11 @@ impl W {
     #[inline]
     pub fn gtve(&mut self) -> _GTVEW {
         _GTVEW { w: self }
+    }
+    #[doc = "Bit 3 - ATR Duration Timer Interrupt Enable"]
+    #[inline]
+    pub fn adte(&mut self) -> _ADTEW {
+        _ADTEW { w: self }
     }
     #[doc = "Bit 4 - Initial Character Detected Interrupt Enable"]
     #[inline]

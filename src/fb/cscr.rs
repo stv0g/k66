@@ -388,13 +388,13 @@ impl WRAHR {
 #[doc = "Possible values of the field `RDAH`"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum RDAHR {
-    #[doc = "When AA is 0b, 1 cycle. When AA is 1b, 0 cycles."]
+    #[doc = "When AA is 1b, 1 cycle. When AA is 0b, 0 cycles."]
     _00,
-    #[doc = "When AA is 0b, 2 cycles. When AA is 1b, 1 cycle."]
+    #[doc = "When AA is 1b, 2 cycles. When AA is 0b, 1 cycle."]
     _01,
-    #[doc = "When AA is 0b, 3 cycles. When AA is 1b, 2 cycles."]
+    #[doc = "When AA is 1b, 3 cycles. When AA is 0b, 2 cycles."]
     _10,
-    #[doc = "When AA is 0b, 4 cycles. When AA is 1b, 3 cycles."]
+    #[doc = "When AA is 1b, 4 cycles. When AA is 0b, 3 cycles."]
     _11,
 }
 impl RDAHR {
@@ -1023,13 +1023,13 @@ impl<'a> _WRAHW<'a> {
 }
 #[doc = "Values that can be written to the field `RDAH`"]
 pub enum RDAHW {
-    #[doc = "When AA is 0b, 1 cycle. When AA is 1b, 0 cycles."]
+    #[doc = "When AA is 1b, 1 cycle. When AA is 0b, 0 cycles."]
     _00,
-    #[doc = "When AA is 0b, 2 cycles. When AA is 1b, 1 cycle."]
+    #[doc = "When AA is 1b, 2 cycles. When AA is 0b, 1 cycle."]
     _01,
-    #[doc = "When AA is 0b, 3 cycles. When AA is 1b, 2 cycles."]
+    #[doc = "When AA is 1b, 3 cycles. When AA is 0b, 2 cycles."]
     _10,
-    #[doc = "When AA is 0b, 4 cycles. When AA is 1b, 3 cycles."]
+    #[doc = "When AA is 1b, 4 cycles. When AA is 0b, 3 cycles."]
     _11,
 }
 impl RDAHW {
@@ -1057,22 +1057,22 @@ impl<'a> _RDAHW<'a> {
             self.bits(variant._bits())
         }
     }
-    #[doc = "When AA is 0b, 1 cycle. When AA is 1b, 0 cycles."]
+    #[doc = "When AA is 1b, 1 cycle. When AA is 0b, 0 cycles."]
     #[inline]
     pub fn _00(self) -> &'a mut W {
         self.variant(RDAHW::_00)
     }
-    #[doc = "When AA is 0b, 2 cycles. When AA is 1b, 1 cycle."]
+    #[doc = "When AA is 1b, 2 cycles. When AA is 0b, 1 cycle."]
     #[inline]
     pub fn _01(self) -> &'a mut W {
         self.variant(RDAHW::_01)
     }
-    #[doc = "When AA is 0b, 3 cycles. When AA is 1b, 2 cycles."]
+    #[doc = "When AA is 1b, 3 cycles. When AA is 0b, 2 cycles."]
     #[inline]
     pub fn _10(self) -> &'a mut W {
         self.variant(RDAHW::_10)
     }
-    #[doc = "When AA is 0b, 4 cycles. When AA is 1b, 3 cycles."]
+    #[doc = "When AA is 1b, 4 cycles. When AA is 0b, 3 cycles."]
     #[inline]
     pub fn _11(self) -> &'a mut W {
         self.variant(RDAHW::_11)

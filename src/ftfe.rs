@@ -46,6 +46,43 @@ pub struct RegisterBlock {
     pub feprot: FEPROT,
     #[doc = "0x17 - Data Flash Protection Register"]
     pub fdprot: FDPROT,
+    #[doc = "0x18 - Execute-only Access Registers"]
+    pub xacch3: XACC,
+    #[doc = "0x19 - Execute-only Access Registers"]
+    pub xacch2: XACC,
+    #[doc = "0x1a - Execute-only Access Registers"]
+    pub xacch1: XACC,
+    #[doc = "0x1b - Execute-only Access Registers"]
+    pub xacch0: XACC,
+    #[doc = "0x1c - Execute-only Access Registers"]
+    pub xaccl3: XACC,
+    #[doc = "0x1d - Execute-only Access Registers"]
+    pub xaccl2: XACC,
+    #[doc = "0x1e - Execute-only Access Registers"]
+    pub xaccl1: XACC,
+    #[doc = "0x1f - Execute-only Access Registers"]
+    pub xaccl0: XACC,
+    #[doc = "0x20 - Supervisor-only Access Registers"]
+    pub sacch3: SACC,
+    #[doc = "0x21 - Supervisor-only Access Registers"]
+    pub sacch2: SACC,
+    #[doc = "0x22 - Supervisor-only Access Registers"]
+    pub sacch1: SACC,
+    #[doc = "0x23 - Supervisor-only Access Registers"]
+    pub sacch0: SACC,
+    #[doc = "0x24 - Supervisor-only Access Registers"]
+    pub saccl3: SACC,
+    #[doc = "0x25 - Supervisor-only Access Registers"]
+    pub saccl2: SACC,
+    #[doc = "0x26 - Supervisor-only Access Registers"]
+    pub saccl1: SACC,
+    #[doc = "0x27 - Supervisor-only Access Registers"]
+    pub saccl0: SACC,
+    #[doc = "0x28 - Flash Access Segment Size Register"]
+    pub facss: FACSS,
+    _reserved1: [u8; 2usize],
+    #[doc = "0x2b - Flash Access Segment Number Register"]
+    pub facsn: FACSN,
 }
 #[doc = "Flash Status Register"]
 pub struct FSTAT {
@@ -95,3 +132,27 @@ pub struct FDPROT {
 }
 #[doc = "Data Flash Protection Register"]
 pub mod fdprot;
+#[doc = "Execute-only Access Registers"]
+pub struct XACC {
+    register: ::vcell::VolatileCell<u8>,
+}
+#[doc = "Execute-only Access Registers"]
+pub mod xacc;
+#[doc = "Supervisor-only Access Registers"]
+pub struct SACC {
+    register: ::vcell::VolatileCell<u8>,
+}
+#[doc = "Supervisor-only Access Registers"]
+pub mod sacc;
+#[doc = "Flash Access Segment Size Register"]
+pub struct FACSS {
+    register: ::vcell::VolatileCell<u8>,
+}
+#[doc = "Flash Access Segment Size Register"]
+pub mod facss;
+#[doc = "Flash Access Segment Number Register"]
+pub struct FACSN {
+    register: ::vcell::VolatileCell<u8>,
+}
+#[doc = "Flash Access Segment Number Register"]
+pub mod facsn;

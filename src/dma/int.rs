@@ -794,6 +794,758 @@ impl INT15R {
         *self == INT15R::_1
     }
 }
+#[doc = "Possible values of the field `INT16`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum INT16R {
+    #[doc = "The interrupt request for corresponding channel is cleared"]
+    _0,
+    #[doc = "The interrupt request for corresponding channel is active"]
+    _1,
+}
+impl INT16R {
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            INT16R::_0 => false,
+            INT16R::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> INT16R {
+        match value {
+            false => INT16R::_0,
+            true => INT16R::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == INT16R::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == INT16R::_1
+    }
+}
+#[doc = "Possible values of the field `INT17`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum INT17R {
+    #[doc = "The interrupt request for corresponding channel is cleared"]
+    _0,
+    #[doc = "The interrupt request for corresponding channel is active"]
+    _1,
+}
+impl INT17R {
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            INT17R::_0 => false,
+            INT17R::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> INT17R {
+        match value {
+            false => INT17R::_0,
+            true => INT17R::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == INT17R::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == INT17R::_1
+    }
+}
+#[doc = "Possible values of the field `INT18`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum INT18R {
+    #[doc = "The interrupt request for corresponding channel is cleared"]
+    _0,
+    #[doc = "The interrupt request for corresponding channel is active"]
+    _1,
+}
+impl INT18R {
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            INT18R::_0 => false,
+            INT18R::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> INT18R {
+        match value {
+            false => INT18R::_0,
+            true => INT18R::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == INT18R::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == INT18R::_1
+    }
+}
+#[doc = "Possible values of the field `INT19`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum INT19R {
+    #[doc = "The interrupt request for corresponding channel is cleared"]
+    _0,
+    #[doc = "The interrupt request for corresponding channel is active"]
+    _1,
+}
+impl INT19R {
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            INT19R::_0 => false,
+            INT19R::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> INT19R {
+        match value {
+            false => INT19R::_0,
+            true => INT19R::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == INT19R::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == INT19R::_1
+    }
+}
+#[doc = "Possible values of the field `INT20`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum INT20R {
+    #[doc = "The interrupt request for corresponding channel is cleared"]
+    _0,
+    #[doc = "The interrupt request for corresponding channel is active"]
+    _1,
+}
+impl INT20R {
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            INT20R::_0 => false,
+            INT20R::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> INT20R {
+        match value {
+            false => INT20R::_0,
+            true => INT20R::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == INT20R::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == INT20R::_1
+    }
+}
+#[doc = "Possible values of the field `INT21`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum INT21R {
+    #[doc = "The interrupt request for corresponding channel is cleared"]
+    _0,
+    #[doc = "The interrupt request for corresponding channel is active"]
+    _1,
+}
+impl INT21R {
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            INT21R::_0 => false,
+            INT21R::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> INT21R {
+        match value {
+            false => INT21R::_0,
+            true => INT21R::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == INT21R::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == INT21R::_1
+    }
+}
+#[doc = "Possible values of the field `INT22`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum INT22R {
+    #[doc = "The interrupt request for corresponding channel is cleared"]
+    _0,
+    #[doc = "The interrupt request for corresponding channel is active"]
+    _1,
+}
+impl INT22R {
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            INT22R::_0 => false,
+            INT22R::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> INT22R {
+        match value {
+            false => INT22R::_0,
+            true => INT22R::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == INT22R::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == INT22R::_1
+    }
+}
+#[doc = "Possible values of the field `INT23`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum INT23R {
+    #[doc = "The interrupt request for corresponding channel is cleared"]
+    _0,
+    #[doc = "The interrupt request for corresponding channel is active"]
+    _1,
+}
+impl INT23R {
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            INT23R::_0 => false,
+            INT23R::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> INT23R {
+        match value {
+            false => INT23R::_0,
+            true => INT23R::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == INT23R::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == INT23R::_1
+    }
+}
+#[doc = "Possible values of the field `INT24`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum INT24R {
+    #[doc = "The interrupt request for corresponding channel is cleared"]
+    _0,
+    #[doc = "The interrupt request for corresponding channel is active"]
+    _1,
+}
+impl INT24R {
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            INT24R::_0 => false,
+            INT24R::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> INT24R {
+        match value {
+            false => INT24R::_0,
+            true => INT24R::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == INT24R::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == INT24R::_1
+    }
+}
+#[doc = "Possible values of the field `INT25`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum INT25R {
+    #[doc = "The interrupt request for corresponding channel is cleared"]
+    _0,
+    #[doc = "The interrupt request for corresponding channel is active"]
+    _1,
+}
+impl INT25R {
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            INT25R::_0 => false,
+            INT25R::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> INT25R {
+        match value {
+            false => INT25R::_0,
+            true => INT25R::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == INT25R::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == INT25R::_1
+    }
+}
+#[doc = "Possible values of the field `INT26`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum INT26R {
+    #[doc = "The interrupt request for corresponding channel is cleared"]
+    _0,
+    #[doc = "The interrupt request for corresponding channel is active"]
+    _1,
+}
+impl INT26R {
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            INT26R::_0 => false,
+            INT26R::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> INT26R {
+        match value {
+            false => INT26R::_0,
+            true => INT26R::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == INT26R::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == INT26R::_1
+    }
+}
+#[doc = "Possible values of the field `INT27`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum INT27R {
+    #[doc = "The interrupt request for corresponding channel is cleared"]
+    _0,
+    #[doc = "The interrupt request for corresponding channel is active"]
+    _1,
+}
+impl INT27R {
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            INT27R::_0 => false,
+            INT27R::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> INT27R {
+        match value {
+            false => INT27R::_0,
+            true => INT27R::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == INT27R::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == INT27R::_1
+    }
+}
+#[doc = "Possible values of the field `INT28`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum INT28R {
+    #[doc = "The interrupt request for corresponding channel is cleared"]
+    _0,
+    #[doc = "The interrupt request for corresponding channel is active"]
+    _1,
+}
+impl INT28R {
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            INT28R::_0 => false,
+            INT28R::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> INT28R {
+        match value {
+            false => INT28R::_0,
+            true => INT28R::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == INT28R::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == INT28R::_1
+    }
+}
+#[doc = "Possible values of the field `INT29`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum INT29R {
+    #[doc = "The interrupt request for corresponding channel is cleared"]
+    _0,
+    #[doc = "The interrupt request for corresponding channel is active"]
+    _1,
+}
+impl INT29R {
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            INT29R::_0 => false,
+            INT29R::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> INT29R {
+        match value {
+            false => INT29R::_0,
+            true => INT29R::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == INT29R::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == INT29R::_1
+    }
+}
+#[doc = "Possible values of the field `INT30`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum INT30R {
+    #[doc = "The interrupt request for corresponding channel is cleared"]
+    _0,
+    #[doc = "The interrupt request for corresponding channel is active"]
+    _1,
+}
+impl INT30R {
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            INT30R::_0 => false,
+            INT30R::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> INT30R {
+        match value {
+            false => INT30R::_0,
+            true => INT30R::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == INT30R::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == INT30R::_1
+    }
+}
+#[doc = "Possible values of the field `INT31`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum INT31R {
+    #[doc = "The interrupt request for corresponding channel is cleared"]
+    _0,
+    #[doc = "The interrupt request for corresponding channel is active"]
+    _1,
+}
+impl INT31R {
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            INT31R::_0 => false,
+            INT31R::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> INT31R {
+        match value {
+            false => INT31R::_0,
+            true => INT31R::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == INT31R::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == INT31R::_1
+    }
+}
 #[doc = "Values that can be written to the field `INT0`"]
 pub enum INT0W {
     #[doc = "The interrupt request for corresponding channel is cleared"]
@@ -1722,6 +2474,934 @@ impl<'a> _INT15W<'a> {
         self.w
     }
 }
+#[doc = "Values that can be written to the field `INT16`"]
+pub enum INT16W {
+    #[doc = "The interrupt request for corresponding channel is cleared"]
+    _0,
+    #[doc = "The interrupt request for corresponding channel is active"]
+    _1,
+}
+impl INT16W {
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _bits(&self) -> bool {
+        match *self {
+            INT16W::_0 => false,
+            INT16W::_1 => true,
+        }
+    }
+}
+#[doc = r" Proxy"]
+pub struct _INT16W<'a> {
+    w: &'a mut W,
+}
+impl<'a> _INT16W<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: INT16W) -> &'a mut W {
+        {
+            self.bit(variant._bits())
+        }
+    }
+    #[doc = "The interrupt request for corresponding channel is cleared"]
+    #[inline]
+    pub fn _0(self) -> &'a mut W {
+        self.variant(INT16W::_0)
+    }
+    #[doc = "The interrupt request for corresponding channel is active"]
+    #[inline]
+    pub fn _1(self) -> &'a mut W {
+        self.variant(INT16W::_1)
+    }
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 16;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = "Values that can be written to the field `INT17`"]
+pub enum INT17W {
+    #[doc = "The interrupt request for corresponding channel is cleared"]
+    _0,
+    #[doc = "The interrupt request for corresponding channel is active"]
+    _1,
+}
+impl INT17W {
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _bits(&self) -> bool {
+        match *self {
+            INT17W::_0 => false,
+            INT17W::_1 => true,
+        }
+    }
+}
+#[doc = r" Proxy"]
+pub struct _INT17W<'a> {
+    w: &'a mut W,
+}
+impl<'a> _INT17W<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: INT17W) -> &'a mut W {
+        {
+            self.bit(variant._bits())
+        }
+    }
+    #[doc = "The interrupt request for corresponding channel is cleared"]
+    #[inline]
+    pub fn _0(self) -> &'a mut W {
+        self.variant(INT17W::_0)
+    }
+    #[doc = "The interrupt request for corresponding channel is active"]
+    #[inline]
+    pub fn _1(self) -> &'a mut W {
+        self.variant(INT17W::_1)
+    }
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 17;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = "Values that can be written to the field `INT18`"]
+pub enum INT18W {
+    #[doc = "The interrupt request for corresponding channel is cleared"]
+    _0,
+    #[doc = "The interrupt request for corresponding channel is active"]
+    _1,
+}
+impl INT18W {
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _bits(&self) -> bool {
+        match *self {
+            INT18W::_0 => false,
+            INT18W::_1 => true,
+        }
+    }
+}
+#[doc = r" Proxy"]
+pub struct _INT18W<'a> {
+    w: &'a mut W,
+}
+impl<'a> _INT18W<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: INT18W) -> &'a mut W {
+        {
+            self.bit(variant._bits())
+        }
+    }
+    #[doc = "The interrupt request for corresponding channel is cleared"]
+    #[inline]
+    pub fn _0(self) -> &'a mut W {
+        self.variant(INT18W::_0)
+    }
+    #[doc = "The interrupt request for corresponding channel is active"]
+    #[inline]
+    pub fn _1(self) -> &'a mut W {
+        self.variant(INT18W::_1)
+    }
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 18;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = "Values that can be written to the field `INT19`"]
+pub enum INT19W {
+    #[doc = "The interrupt request for corresponding channel is cleared"]
+    _0,
+    #[doc = "The interrupt request for corresponding channel is active"]
+    _1,
+}
+impl INT19W {
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _bits(&self) -> bool {
+        match *self {
+            INT19W::_0 => false,
+            INT19W::_1 => true,
+        }
+    }
+}
+#[doc = r" Proxy"]
+pub struct _INT19W<'a> {
+    w: &'a mut W,
+}
+impl<'a> _INT19W<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: INT19W) -> &'a mut W {
+        {
+            self.bit(variant._bits())
+        }
+    }
+    #[doc = "The interrupt request for corresponding channel is cleared"]
+    #[inline]
+    pub fn _0(self) -> &'a mut W {
+        self.variant(INT19W::_0)
+    }
+    #[doc = "The interrupt request for corresponding channel is active"]
+    #[inline]
+    pub fn _1(self) -> &'a mut W {
+        self.variant(INT19W::_1)
+    }
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 19;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = "Values that can be written to the field `INT20`"]
+pub enum INT20W {
+    #[doc = "The interrupt request for corresponding channel is cleared"]
+    _0,
+    #[doc = "The interrupt request for corresponding channel is active"]
+    _1,
+}
+impl INT20W {
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _bits(&self) -> bool {
+        match *self {
+            INT20W::_0 => false,
+            INT20W::_1 => true,
+        }
+    }
+}
+#[doc = r" Proxy"]
+pub struct _INT20W<'a> {
+    w: &'a mut W,
+}
+impl<'a> _INT20W<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: INT20W) -> &'a mut W {
+        {
+            self.bit(variant._bits())
+        }
+    }
+    #[doc = "The interrupt request for corresponding channel is cleared"]
+    #[inline]
+    pub fn _0(self) -> &'a mut W {
+        self.variant(INT20W::_0)
+    }
+    #[doc = "The interrupt request for corresponding channel is active"]
+    #[inline]
+    pub fn _1(self) -> &'a mut W {
+        self.variant(INT20W::_1)
+    }
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 20;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = "Values that can be written to the field `INT21`"]
+pub enum INT21W {
+    #[doc = "The interrupt request for corresponding channel is cleared"]
+    _0,
+    #[doc = "The interrupt request for corresponding channel is active"]
+    _1,
+}
+impl INT21W {
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _bits(&self) -> bool {
+        match *self {
+            INT21W::_0 => false,
+            INT21W::_1 => true,
+        }
+    }
+}
+#[doc = r" Proxy"]
+pub struct _INT21W<'a> {
+    w: &'a mut W,
+}
+impl<'a> _INT21W<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: INT21W) -> &'a mut W {
+        {
+            self.bit(variant._bits())
+        }
+    }
+    #[doc = "The interrupt request for corresponding channel is cleared"]
+    #[inline]
+    pub fn _0(self) -> &'a mut W {
+        self.variant(INT21W::_0)
+    }
+    #[doc = "The interrupt request for corresponding channel is active"]
+    #[inline]
+    pub fn _1(self) -> &'a mut W {
+        self.variant(INT21W::_1)
+    }
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 21;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = "Values that can be written to the field `INT22`"]
+pub enum INT22W {
+    #[doc = "The interrupt request for corresponding channel is cleared"]
+    _0,
+    #[doc = "The interrupt request for corresponding channel is active"]
+    _1,
+}
+impl INT22W {
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _bits(&self) -> bool {
+        match *self {
+            INT22W::_0 => false,
+            INT22W::_1 => true,
+        }
+    }
+}
+#[doc = r" Proxy"]
+pub struct _INT22W<'a> {
+    w: &'a mut W,
+}
+impl<'a> _INT22W<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: INT22W) -> &'a mut W {
+        {
+            self.bit(variant._bits())
+        }
+    }
+    #[doc = "The interrupt request for corresponding channel is cleared"]
+    #[inline]
+    pub fn _0(self) -> &'a mut W {
+        self.variant(INT22W::_0)
+    }
+    #[doc = "The interrupt request for corresponding channel is active"]
+    #[inline]
+    pub fn _1(self) -> &'a mut W {
+        self.variant(INT22W::_1)
+    }
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 22;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = "Values that can be written to the field `INT23`"]
+pub enum INT23W {
+    #[doc = "The interrupt request for corresponding channel is cleared"]
+    _0,
+    #[doc = "The interrupt request for corresponding channel is active"]
+    _1,
+}
+impl INT23W {
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _bits(&self) -> bool {
+        match *self {
+            INT23W::_0 => false,
+            INT23W::_1 => true,
+        }
+    }
+}
+#[doc = r" Proxy"]
+pub struct _INT23W<'a> {
+    w: &'a mut W,
+}
+impl<'a> _INT23W<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: INT23W) -> &'a mut W {
+        {
+            self.bit(variant._bits())
+        }
+    }
+    #[doc = "The interrupt request for corresponding channel is cleared"]
+    #[inline]
+    pub fn _0(self) -> &'a mut W {
+        self.variant(INT23W::_0)
+    }
+    #[doc = "The interrupt request for corresponding channel is active"]
+    #[inline]
+    pub fn _1(self) -> &'a mut W {
+        self.variant(INT23W::_1)
+    }
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 23;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = "Values that can be written to the field `INT24`"]
+pub enum INT24W {
+    #[doc = "The interrupt request for corresponding channel is cleared"]
+    _0,
+    #[doc = "The interrupt request for corresponding channel is active"]
+    _1,
+}
+impl INT24W {
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _bits(&self) -> bool {
+        match *self {
+            INT24W::_0 => false,
+            INT24W::_1 => true,
+        }
+    }
+}
+#[doc = r" Proxy"]
+pub struct _INT24W<'a> {
+    w: &'a mut W,
+}
+impl<'a> _INT24W<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: INT24W) -> &'a mut W {
+        {
+            self.bit(variant._bits())
+        }
+    }
+    #[doc = "The interrupt request for corresponding channel is cleared"]
+    #[inline]
+    pub fn _0(self) -> &'a mut W {
+        self.variant(INT24W::_0)
+    }
+    #[doc = "The interrupt request for corresponding channel is active"]
+    #[inline]
+    pub fn _1(self) -> &'a mut W {
+        self.variant(INT24W::_1)
+    }
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 24;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = "Values that can be written to the field `INT25`"]
+pub enum INT25W {
+    #[doc = "The interrupt request for corresponding channel is cleared"]
+    _0,
+    #[doc = "The interrupt request for corresponding channel is active"]
+    _1,
+}
+impl INT25W {
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _bits(&self) -> bool {
+        match *self {
+            INT25W::_0 => false,
+            INT25W::_1 => true,
+        }
+    }
+}
+#[doc = r" Proxy"]
+pub struct _INT25W<'a> {
+    w: &'a mut W,
+}
+impl<'a> _INT25W<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: INT25W) -> &'a mut W {
+        {
+            self.bit(variant._bits())
+        }
+    }
+    #[doc = "The interrupt request for corresponding channel is cleared"]
+    #[inline]
+    pub fn _0(self) -> &'a mut W {
+        self.variant(INT25W::_0)
+    }
+    #[doc = "The interrupt request for corresponding channel is active"]
+    #[inline]
+    pub fn _1(self) -> &'a mut W {
+        self.variant(INT25W::_1)
+    }
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 25;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = "Values that can be written to the field `INT26`"]
+pub enum INT26W {
+    #[doc = "The interrupt request for corresponding channel is cleared"]
+    _0,
+    #[doc = "The interrupt request for corresponding channel is active"]
+    _1,
+}
+impl INT26W {
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _bits(&self) -> bool {
+        match *self {
+            INT26W::_0 => false,
+            INT26W::_1 => true,
+        }
+    }
+}
+#[doc = r" Proxy"]
+pub struct _INT26W<'a> {
+    w: &'a mut W,
+}
+impl<'a> _INT26W<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: INT26W) -> &'a mut W {
+        {
+            self.bit(variant._bits())
+        }
+    }
+    #[doc = "The interrupt request for corresponding channel is cleared"]
+    #[inline]
+    pub fn _0(self) -> &'a mut W {
+        self.variant(INT26W::_0)
+    }
+    #[doc = "The interrupt request for corresponding channel is active"]
+    #[inline]
+    pub fn _1(self) -> &'a mut W {
+        self.variant(INT26W::_1)
+    }
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 26;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = "Values that can be written to the field `INT27`"]
+pub enum INT27W {
+    #[doc = "The interrupt request for corresponding channel is cleared"]
+    _0,
+    #[doc = "The interrupt request for corresponding channel is active"]
+    _1,
+}
+impl INT27W {
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _bits(&self) -> bool {
+        match *self {
+            INT27W::_0 => false,
+            INT27W::_1 => true,
+        }
+    }
+}
+#[doc = r" Proxy"]
+pub struct _INT27W<'a> {
+    w: &'a mut W,
+}
+impl<'a> _INT27W<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: INT27W) -> &'a mut W {
+        {
+            self.bit(variant._bits())
+        }
+    }
+    #[doc = "The interrupt request for corresponding channel is cleared"]
+    #[inline]
+    pub fn _0(self) -> &'a mut W {
+        self.variant(INT27W::_0)
+    }
+    #[doc = "The interrupt request for corresponding channel is active"]
+    #[inline]
+    pub fn _1(self) -> &'a mut W {
+        self.variant(INT27W::_1)
+    }
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 27;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = "Values that can be written to the field `INT28`"]
+pub enum INT28W {
+    #[doc = "The interrupt request for corresponding channel is cleared"]
+    _0,
+    #[doc = "The interrupt request for corresponding channel is active"]
+    _1,
+}
+impl INT28W {
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _bits(&self) -> bool {
+        match *self {
+            INT28W::_0 => false,
+            INT28W::_1 => true,
+        }
+    }
+}
+#[doc = r" Proxy"]
+pub struct _INT28W<'a> {
+    w: &'a mut W,
+}
+impl<'a> _INT28W<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: INT28W) -> &'a mut W {
+        {
+            self.bit(variant._bits())
+        }
+    }
+    #[doc = "The interrupt request for corresponding channel is cleared"]
+    #[inline]
+    pub fn _0(self) -> &'a mut W {
+        self.variant(INT28W::_0)
+    }
+    #[doc = "The interrupt request for corresponding channel is active"]
+    #[inline]
+    pub fn _1(self) -> &'a mut W {
+        self.variant(INT28W::_1)
+    }
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 28;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = "Values that can be written to the field `INT29`"]
+pub enum INT29W {
+    #[doc = "The interrupt request for corresponding channel is cleared"]
+    _0,
+    #[doc = "The interrupt request for corresponding channel is active"]
+    _1,
+}
+impl INT29W {
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _bits(&self) -> bool {
+        match *self {
+            INT29W::_0 => false,
+            INT29W::_1 => true,
+        }
+    }
+}
+#[doc = r" Proxy"]
+pub struct _INT29W<'a> {
+    w: &'a mut W,
+}
+impl<'a> _INT29W<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: INT29W) -> &'a mut W {
+        {
+            self.bit(variant._bits())
+        }
+    }
+    #[doc = "The interrupt request for corresponding channel is cleared"]
+    #[inline]
+    pub fn _0(self) -> &'a mut W {
+        self.variant(INT29W::_0)
+    }
+    #[doc = "The interrupt request for corresponding channel is active"]
+    #[inline]
+    pub fn _1(self) -> &'a mut W {
+        self.variant(INT29W::_1)
+    }
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 29;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = "Values that can be written to the field `INT30`"]
+pub enum INT30W {
+    #[doc = "The interrupt request for corresponding channel is cleared"]
+    _0,
+    #[doc = "The interrupt request for corresponding channel is active"]
+    _1,
+}
+impl INT30W {
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _bits(&self) -> bool {
+        match *self {
+            INT30W::_0 => false,
+            INT30W::_1 => true,
+        }
+    }
+}
+#[doc = r" Proxy"]
+pub struct _INT30W<'a> {
+    w: &'a mut W,
+}
+impl<'a> _INT30W<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: INT30W) -> &'a mut W {
+        {
+            self.bit(variant._bits())
+        }
+    }
+    #[doc = "The interrupt request for corresponding channel is cleared"]
+    #[inline]
+    pub fn _0(self) -> &'a mut W {
+        self.variant(INT30W::_0)
+    }
+    #[doc = "The interrupt request for corresponding channel is active"]
+    #[inline]
+    pub fn _1(self) -> &'a mut W {
+        self.variant(INT30W::_1)
+    }
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 30;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = "Values that can be written to the field `INT31`"]
+pub enum INT31W {
+    #[doc = "The interrupt request for corresponding channel is cleared"]
+    _0,
+    #[doc = "The interrupt request for corresponding channel is active"]
+    _1,
+}
+impl INT31W {
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _bits(&self) -> bool {
+        match *self {
+            INT31W::_0 => false,
+            INT31W::_1 => true,
+        }
+    }
+}
+#[doc = r" Proxy"]
+pub struct _INT31W<'a> {
+    w: &'a mut W,
+}
+impl<'a> _INT31W<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: INT31W) -> &'a mut W {
+        {
+            self.bit(variant._bits())
+        }
+    }
+    #[doc = "The interrupt request for corresponding channel is cleared"]
+    #[inline]
+    pub fn _0(self) -> &'a mut W {
+        self.variant(INT31W::_0)
+    }
+    #[doc = "The interrupt request for corresponding channel is active"]
+    #[inline]
+    pub fn _1(self) -> &'a mut W {
+        self.variant(INT31W::_1)
+    }
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 31;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
 impl R {
     #[doc = r" Value of the register as raw bits"]
     #[inline]
@@ -1872,6 +3552,150 @@ impl R {
             ((self.bits >> OFFSET) & MASK as u32) != 0
         })
     }
+    #[doc = "Bit 16 - Interrupt Request 16"]
+    #[inline]
+    pub fn int16(&self) -> INT16R {
+        INT16R::_from({
+            const MASK: bool = true;
+            const OFFSET: u8 = 16;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        })
+    }
+    #[doc = "Bit 17 - Interrupt Request 17"]
+    #[inline]
+    pub fn int17(&self) -> INT17R {
+        INT17R::_from({
+            const MASK: bool = true;
+            const OFFSET: u8 = 17;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        })
+    }
+    #[doc = "Bit 18 - Interrupt Request 18"]
+    #[inline]
+    pub fn int18(&self) -> INT18R {
+        INT18R::_from({
+            const MASK: bool = true;
+            const OFFSET: u8 = 18;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        })
+    }
+    #[doc = "Bit 19 - Interrupt Request 19"]
+    #[inline]
+    pub fn int19(&self) -> INT19R {
+        INT19R::_from({
+            const MASK: bool = true;
+            const OFFSET: u8 = 19;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        })
+    }
+    #[doc = "Bit 20 - Interrupt Request 20"]
+    #[inline]
+    pub fn int20(&self) -> INT20R {
+        INT20R::_from({
+            const MASK: bool = true;
+            const OFFSET: u8 = 20;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        })
+    }
+    #[doc = "Bit 21 - Interrupt Request 21"]
+    #[inline]
+    pub fn int21(&self) -> INT21R {
+        INT21R::_from({
+            const MASK: bool = true;
+            const OFFSET: u8 = 21;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        })
+    }
+    #[doc = "Bit 22 - Interrupt Request 22"]
+    #[inline]
+    pub fn int22(&self) -> INT22R {
+        INT22R::_from({
+            const MASK: bool = true;
+            const OFFSET: u8 = 22;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        })
+    }
+    #[doc = "Bit 23 - Interrupt Request 23"]
+    #[inline]
+    pub fn int23(&self) -> INT23R {
+        INT23R::_from({
+            const MASK: bool = true;
+            const OFFSET: u8 = 23;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        })
+    }
+    #[doc = "Bit 24 - Interrupt Request 24"]
+    #[inline]
+    pub fn int24(&self) -> INT24R {
+        INT24R::_from({
+            const MASK: bool = true;
+            const OFFSET: u8 = 24;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        })
+    }
+    #[doc = "Bit 25 - Interrupt Request 25"]
+    #[inline]
+    pub fn int25(&self) -> INT25R {
+        INT25R::_from({
+            const MASK: bool = true;
+            const OFFSET: u8 = 25;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        })
+    }
+    #[doc = "Bit 26 - Interrupt Request 26"]
+    #[inline]
+    pub fn int26(&self) -> INT26R {
+        INT26R::_from({
+            const MASK: bool = true;
+            const OFFSET: u8 = 26;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        })
+    }
+    #[doc = "Bit 27 - Interrupt Request 27"]
+    #[inline]
+    pub fn int27(&self) -> INT27R {
+        INT27R::_from({
+            const MASK: bool = true;
+            const OFFSET: u8 = 27;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        })
+    }
+    #[doc = "Bit 28 - Interrupt Request 28"]
+    #[inline]
+    pub fn int28(&self) -> INT28R {
+        INT28R::_from({
+            const MASK: bool = true;
+            const OFFSET: u8 = 28;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        })
+    }
+    #[doc = "Bit 29 - Interrupt Request 29"]
+    #[inline]
+    pub fn int29(&self) -> INT29R {
+        INT29R::_from({
+            const MASK: bool = true;
+            const OFFSET: u8 = 29;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        })
+    }
+    #[doc = "Bit 30 - Interrupt Request 30"]
+    #[inline]
+    pub fn int30(&self) -> INT30R {
+        INT30R::_from({
+            const MASK: bool = true;
+            const OFFSET: u8 = 30;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        })
+    }
+    #[doc = "Bit 31 - Interrupt Request 31"]
+    #[inline]
+    pub fn int31(&self) -> INT31R {
+        INT31R::_from({
+            const MASK: bool = true;
+            const OFFSET: u8 = 31;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        })
+    }
 }
 impl W {
     #[doc = r" Reset value of the register"]
@@ -1964,5 +3788,85 @@ impl W {
     #[inline]
     pub fn int15(&mut self) -> _INT15W {
         _INT15W { w: self }
+    }
+    #[doc = "Bit 16 - Interrupt Request 16"]
+    #[inline]
+    pub fn int16(&mut self) -> _INT16W {
+        _INT16W { w: self }
+    }
+    #[doc = "Bit 17 - Interrupt Request 17"]
+    #[inline]
+    pub fn int17(&mut self) -> _INT17W {
+        _INT17W { w: self }
+    }
+    #[doc = "Bit 18 - Interrupt Request 18"]
+    #[inline]
+    pub fn int18(&mut self) -> _INT18W {
+        _INT18W { w: self }
+    }
+    #[doc = "Bit 19 - Interrupt Request 19"]
+    #[inline]
+    pub fn int19(&mut self) -> _INT19W {
+        _INT19W { w: self }
+    }
+    #[doc = "Bit 20 - Interrupt Request 20"]
+    #[inline]
+    pub fn int20(&mut self) -> _INT20W {
+        _INT20W { w: self }
+    }
+    #[doc = "Bit 21 - Interrupt Request 21"]
+    #[inline]
+    pub fn int21(&mut self) -> _INT21W {
+        _INT21W { w: self }
+    }
+    #[doc = "Bit 22 - Interrupt Request 22"]
+    #[inline]
+    pub fn int22(&mut self) -> _INT22W {
+        _INT22W { w: self }
+    }
+    #[doc = "Bit 23 - Interrupt Request 23"]
+    #[inline]
+    pub fn int23(&mut self) -> _INT23W {
+        _INT23W { w: self }
+    }
+    #[doc = "Bit 24 - Interrupt Request 24"]
+    #[inline]
+    pub fn int24(&mut self) -> _INT24W {
+        _INT24W { w: self }
+    }
+    #[doc = "Bit 25 - Interrupt Request 25"]
+    #[inline]
+    pub fn int25(&mut self) -> _INT25W {
+        _INT25W { w: self }
+    }
+    #[doc = "Bit 26 - Interrupt Request 26"]
+    #[inline]
+    pub fn int26(&mut self) -> _INT26W {
+        _INT26W { w: self }
+    }
+    #[doc = "Bit 27 - Interrupt Request 27"]
+    #[inline]
+    pub fn int27(&mut self) -> _INT27W {
+        _INT27W { w: self }
+    }
+    #[doc = "Bit 28 - Interrupt Request 28"]
+    #[inline]
+    pub fn int28(&mut self) -> _INT28W {
+        _INT28W { w: self }
+    }
+    #[doc = "Bit 29 - Interrupt Request 29"]
+    #[inline]
+    pub fn int29(&mut self) -> _INT29W {
+        _INT29W { w: self }
+    }
+    #[doc = "Bit 30 - Interrupt Request 30"]
+    #[inline]
+    pub fn int30(&mut self) -> _INT30W {
+        _INT30W { w: self }
+    }
+    #[doc = "Bit 31 - Interrupt Request 31"]
+    #[inline]
+    pub fn int31(&mut self) -> _INT31W {
+        _INT31W { w: self }
     }
 }

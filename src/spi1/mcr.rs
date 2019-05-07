@@ -2213,7 +2213,7 @@ impl R {
             ((self.bits >> OFFSET) & MASK as u32) != 0
         })
     }
-    #[doc = "Bit 26 - Modified Timing Format Enable"]
+    #[doc = "Bit 26 - Modified Transfer Format Enable"]
     #[inline]
     pub fn mtfe(&self) -> MTFER {
         MTFER::_from({
@@ -2281,7 +2281,7 @@ impl W {
     pub fn smpl_pt(&mut self) -> _SMPL_PTW {
         _SMPL_PTW { w: self }
     }
-    #[doc = "Bit 10 - Flushes the RX FIFO"]
+    #[doc = "Bit 10 - CLR_RXF"]
     #[inline]
     pub fn clr_rxf(&mut self) -> _CLR_RXFW {
         _CLR_RXFW { w: self }
@@ -2351,7 +2351,7 @@ impl W {
     pub fn pcsse(&mut self) -> _PCSSEW {
         _PCSSEW { w: self }
     }
-    #[doc = "Bit 26 - Modified Timing Format Enable"]
+    #[doc = "Bit 26 - Modified Transfer Format Enable"]
     #[inline]
     pub fn mtfe(&mut self) -> _MTFEW {
         _MTFEW { w: self }

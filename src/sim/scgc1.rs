@@ -89,6 +89,53 @@ impl I2C2R {
         *self == I2C2R::_1
     }
 }
+#[doc = "Possible values of the field `I2C3`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum I2C3R {
+    #[doc = "Clock disabled"]
+    _0,
+    #[doc = "Clock enabled"]
+    _1,
+}
+impl I2C3R {
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            I2C3R::_0 => false,
+            I2C3R::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> I2C3R {
+        match value {
+            false => I2C3R::_0,
+            true => I2C3R::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == I2C3R::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == I2C3R::_1
+    }
+}
 #[doc = "Possible values of the field `UART4`"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum UART4R {
@@ -134,53 +181,6 @@ impl UART4R {
     #[inline]
     pub fn is_1(&self) -> bool {
         *self == UART4R::_1
-    }
-}
-#[doc = "Possible values of the field `UART5`"]
-#[derive(Clone, Copy, Debug, PartialEq)]
-pub enum UART5R {
-    #[doc = "Clock disabled"]
-    _0,
-    #[doc = "Clock enabled"]
-    _1,
-}
-impl UART5R {
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        match *self {
-            UART5R::_0 => false,
-            UART5R::_1 => true,
-        }
-    }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: bool) -> UART5R {
-        match value {
-            false => UART5R::_0,
-            true => UART5R::_1,
-        }
-    }
-    #[doc = "Checks if the value of the field is `_0`"]
-    #[inline]
-    pub fn is_0(&self) -> bool {
-        *self == UART5R::_0
-    }
-    #[doc = "Checks if the value of the field is `_1`"]
-    #[inline]
-    pub fn is_1(&self) -> bool {
-        *self == UART5R::_1
     }
 }
 #[doc = "Values that can be written to the field `I2C2`"]
@@ -236,6 +236,64 @@ impl<'a> _I2C2W<'a> {
     pub fn bit(self, value: bool) -> &'a mut W {
         const MASK: bool = true;
         const OFFSET: u8 = 6;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = "Values that can be written to the field `I2C3`"]
+pub enum I2C3W {
+    #[doc = "Clock disabled"]
+    _0,
+    #[doc = "Clock enabled"]
+    _1,
+}
+impl I2C3W {
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _bits(&self) -> bool {
+        match *self {
+            I2C3W::_0 => false,
+            I2C3W::_1 => true,
+        }
+    }
+}
+#[doc = r" Proxy"]
+pub struct _I2C3W<'a> {
+    w: &'a mut W,
+}
+impl<'a> _I2C3W<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: I2C3W) -> &'a mut W {
+        {
+            self.bit(variant._bits())
+        }
+    }
+    #[doc = "Clock disabled"]
+    #[inline]
+    pub fn _0(self) -> &'a mut W {
+        self.variant(I2C3W::_0)
+    }
+    #[doc = "Clock enabled"]
+    #[inline]
+    pub fn _1(self) -> &'a mut W {
+        self.variant(I2C3W::_1)
+    }
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 7;
         self.w.bits &= !((MASK as u32) << OFFSET);
         self.w.bits |= ((value & MASK) as u32) << OFFSET;
         self.w
@@ -299,64 +357,6 @@ impl<'a> _UART4W<'a> {
         self.w
     }
 }
-#[doc = "Values that can be written to the field `UART5`"]
-pub enum UART5W {
-    #[doc = "Clock disabled"]
-    _0,
-    #[doc = "Clock enabled"]
-    _1,
-}
-impl UART5W {
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _bits(&self) -> bool {
-        match *self {
-            UART5W::_0 => false,
-            UART5W::_1 => true,
-        }
-    }
-}
-#[doc = r" Proxy"]
-pub struct _UART5W<'a> {
-    w: &'a mut W,
-}
-impl<'a> _UART5W<'a> {
-    #[doc = r" Writes `variant` to the field"]
-    #[inline]
-    pub fn variant(self, variant: UART5W) -> &'a mut W {
-        {
-            self.bit(variant._bits())
-        }
-    }
-    #[doc = "Clock disabled"]
-    #[inline]
-    pub fn _0(self) -> &'a mut W {
-        self.variant(UART5W::_0)
-    }
-    #[doc = "Clock enabled"]
-    #[inline]
-    pub fn _1(self) -> &'a mut W {
-        self.variant(UART5W::_1)
-    }
-    #[doc = r" Sets the field bit"]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r" Clears the field bit"]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 11;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
-        self.w
-    }
-}
 impl R {
     #[doc = r" Value of the register as raw bits"]
     #[inline]
@@ -372,21 +372,21 @@ impl R {
             ((self.bits >> OFFSET) & MASK as u32) != 0
         })
     }
+    #[doc = "Bit 7 - I2C3 Clock Gate Control"]
+    #[inline]
+    pub fn i2c3(&self) -> I2C3R {
+        I2C3R::_from({
+            const MASK: bool = true;
+            const OFFSET: u8 = 7;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        })
+    }
     #[doc = "Bit 10 - UART4 Clock Gate Control"]
     #[inline]
     pub fn uart4(&self) -> UART4R {
         UART4R::_from({
             const MASK: bool = true;
             const OFFSET: u8 = 10;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        })
-    }
-    #[doc = "Bit 11 - UART5 Clock Gate Control"]
-    #[inline]
-    pub fn uart5(&self) -> UART5R {
-        UART5R::_from({
-            const MASK: bool = true;
-            const OFFSET: u8 = 11;
             ((self.bits >> OFFSET) & MASK as u32) != 0
         })
     }
@@ -408,14 +408,14 @@ impl W {
     pub fn i2c2(&mut self) -> _I2C2W {
         _I2C2W { w: self }
     }
+    #[doc = "Bit 7 - I2C3 Clock Gate Control"]
+    #[inline]
+    pub fn i2c3(&mut self) -> _I2C3W {
+        _I2C3W { w: self }
+    }
     #[doc = "Bit 10 - UART4 Clock Gate Control"]
     #[inline]
     pub fn uart4(&mut self) -> _UART4W {
         _UART4W { w: self }
-    }
-    #[doc = "Bit 11 - UART5 Clock Gate Control"]
-    #[inline]
-    pub fn uart5(&mut self) -> _UART5W {
-        _UART5W { w: self }
     }
 }

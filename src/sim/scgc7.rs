@@ -183,6 +183,53 @@ impl MPUR {
         *self == MPUR::_1
     }
 }
+#[doc = "Possible values of the field `SDRAMC`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum SDRAMCR {
+    #[doc = "Clock disabled"]
+    _0,
+    #[doc = "Clock enabled"]
+    _1,
+}
+impl SDRAMCR {
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        match *self {
+            SDRAMCR::_0 => false,
+            SDRAMCR::_1 => true,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: bool) -> SDRAMCR {
+        match value {
+            false => SDRAMCR::_0,
+            true => SDRAMCR::_1,
+        }
+    }
+    #[doc = "Checks if the value of the field is `_0`"]
+    #[inline]
+    pub fn is_0(&self) -> bool {
+        *self == SDRAMCR::_0
+    }
+    #[doc = "Checks if the value of the field is `_1`"]
+    #[inline]
+    pub fn is_1(&self) -> bool {
+        *self == SDRAMCR::_1
+    }
+}
 #[doc = "Values that can be written to the field `FLEXBUS`"]
 pub enum FLEXBUSW {
     #[doc = "Clock disabled"]
@@ -357,6 +404,64 @@ impl<'a> _MPUW<'a> {
         self.w
     }
 }
+#[doc = "Values that can be written to the field `SDRAMC`"]
+pub enum SDRAMCW {
+    #[doc = "Clock disabled"]
+    _0,
+    #[doc = "Clock enabled"]
+    _1,
+}
+impl SDRAMCW {
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _bits(&self) -> bool {
+        match *self {
+            SDRAMCW::_0 => false,
+            SDRAMCW::_1 => true,
+        }
+    }
+}
+#[doc = r" Proxy"]
+pub struct _SDRAMCW<'a> {
+    w: &'a mut W,
+}
+impl<'a> _SDRAMCW<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: SDRAMCW) -> &'a mut W {
+        {
+            self.bit(variant._bits())
+        }
+    }
+    #[doc = "Clock disabled"]
+    #[inline]
+    pub fn _0(self) -> &'a mut W {
+        self.variant(SDRAMCW::_0)
+    }
+    #[doc = "Clock enabled"]
+    #[inline]
+    pub fn _1(self) -> &'a mut W {
+        self.variant(SDRAMCW::_1)
+    }
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 3;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
 impl R {
     #[doc = r" Value of the register as raw bits"]
     #[inline]
@@ -390,6 +495,15 @@ impl R {
             ((self.bits >> OFFSET) & MASK as u32) != 0
         })
     }
+    #[doc = "Bit 3 - SDRAMC Clock Gate Control"]
+    #[inline]
+    pub fn sdramc(&self) -> SDRAMCR {
+        SDRAMCR::_from({
+            const MASK: bool = true;
+            const OFFSET: u8 = 3;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        })
+    }
 }
 impl W {
     #[doc = r" Reset value of the register"]
@@ -417,5 +531,10 @@ impl W {
     #[inline]
     pub fn mpu(&mut self) -> _MPUW {
         _MPUW { w: self }
+    }
+    #[doc = "Bit 3 - SDRAMC Clock Gate Control"]
+    #[inline]
+    pub fn sdramc(&mut self) -> _SDRAMCW {
+        _SDRAMCW { w: self }
     }
 }
