@@ -1,0 +1,40 @@
+version: 2.1
+jobs:
+  build:
+    docker:
+      - image: rust:latest
+
+    working_directory: ~/k66
+
+    steps:
+      - checkout
+
+      - run:
+          name: Format
+          command: |
+            rustup component add rustfmt
+            cargo fmt -- --check
+
+      - run:
+          name: Clippy
+          command: |
+            rustup component add clippy
+            cargo clippy --examples
+
+      - run:
+          name: Build
+          command: |
+            export RUST_BACKTRACE=1
+            cargo build --verbose
+
+      - run:
+          name: Test
+          command: |
+            export RUST_BACKTRACE=1
+            cargo test --verbose
+
+workflows:
+  version: 2.1
+  build:
+    jobs:
+      - build
