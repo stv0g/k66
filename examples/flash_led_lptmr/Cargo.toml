@@ -10,8 +10,8 @@ cortex-m-rt = "0.6.7"
 cortex-m-semihosting = "0.3.2"
 panic-halt = "0.2.0"
 
-[dependencies.k64]
-version = "0.1.0"
+[dependencies.k66]
+version = "0.0.1"
 features = ["rt"]
 
 [dependencies.lazy_static]

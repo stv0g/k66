@@ -8,10 +8,10 @@ extern crate panic_halt;
 use core::cell::RefCell;
 use cortex_m::interrupt::Mutex;
 use cortex_m_rt::entry;
-use k64::lptmr0::psr::PCSW;
-use k64::GPIOE;
-use k64::LPTMR0;
-use k64::{interrupt, Interrupt, Peripherals};
+use k66::lptmr0::psr::PCSW;
+use k66::GPIOE;
+use k66::LPTMR0;
+use k66::{interrupt, Interrupt, Peripherals};
 
 lazy_static! {
     static ref MUTEX_GPIOE_PTOR: Mutex<RefCell<Option<GPIOE>>> = Mutex::new(RefCell::new(None));
