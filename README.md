@@ -1,3 +1,4 @@
+![CircleCI branch](https://img.shields.io/circleci/project/github/stv0g/k66/master.svg)
 [![Crates.io](https://img.shields.io/crates/v/k66.svg)](https://crates.io/crates/k66)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 

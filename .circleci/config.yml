@@ -25,7 +25,8 @@ jobs:
           name: Build
           command: |
             export RUST_BACKTRACE=1
-            cargo build --verbose
+            rustup target add thumbv7em-none-eabihf
+            cargo build -j1 --verbose
 
       - run:
           name: Test
