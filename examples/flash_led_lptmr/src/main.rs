@@ -9,12 +9,12 @@ use core::cell::RefCell;
 use cortex_m::interrupt::Mutex;
 use cortex_m_rt::entry;
 use k66::lptmr0::psr::PCSW;
-use k66::GPIOE;
+use k66::GPIOC;
 use k66::LPTMR0;
 use k66::{interrupt, Interrupt, Peripherals};
 
 lazy_static! {
-    static ref MUTEX_GPIOE_PTOR: Mutex<RefCell<Option<GPIOE>>> = Mutex::new(RefCell::new(None));
+    static ref MUTEX_GPIOC_PTOR: Mutex<RefCell<Option<GPIOC>>> = Mutex::new(RefCell::new(None));
     static ref MUTEX_LPTRM_CSR: Mutex<RefCell<Option<LPTMR0>>> = Mutex::new(RefCell::new(None));
 }
 
@@ -23,7 +23,7 @@ fn main() -> ! {
     let p = Peripherals::take().unwrap();
     let sim = &p.SIM;
     sim.scgc5
-        .modify(|_, w| w.porte().set_bit().lptmr().set_bit());
+        .modify(|_, w| w.portc().set_bit().lptmr().set_bit());
 
     let lptmr0 = &p.LPTMR0;
     lptmr0
@@ -34,13 +34,13 @@ fn main() -> ! {
         .modify(|_, w| unsafe { w.compare().bits(500 - 1) });
     lptmr0.csr.modify(|_, w| w.tie().set_bit().ten().set_bit());
 
-    let porte = &p.PORTE;
-    porte.pcr26.modify(|_, w| w.mux()._001());
-    let gpioe = &p.GPIOE;
-    gpioe.pddr.modify(|_, w| w.pdd26().set_bit());
+    let portc = &p.PORTC;
+    portc.pcr5.modify(|_, w| w.mux()._001());
+    let gpioc = &p.GPIOC;
+    gpioc.pddr.modify(|_, w| w.pdd5().set_bit());
 
     cortex_m::interrupt::free(|cs| {
-        MUTEX_GPIOE_PTOR.borrow(cs).replace(Some(p.GPIOE));
+        MUTEX_GPIOC_PTOR.borrow(cs).replace(Some(p.GPIOC));
         MUTEX_LPTRM_CSR.borrow(cs).replace(Some(p.LPTMR0));
     });
 
@@ -52,9 +52,9 @@ fn main() -> ! {
 #[interrupt]
 fn LPTMR0() {
     cortex_m::interrupt::free(|cs| {
-        let ref_cell = MUTEX_GPIOE_PTOR.borrow(cs).borrow();
-        if let Some(gpioe) = ref_cell.as_ref() {
-            gpioe.ptor.write(|w| w.ptto26().set_bit());
+        let ref_cell = MUTEX_GPIOC_PTOR.borrow(cs).borrow();
+        if let Some(gpioc) = ref_cell.as_ref() {
+            gpioc.ptor.write(|w| w.ptto5().set_bit());
         }
     });
 
