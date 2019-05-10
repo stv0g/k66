@@ -1,29 +1,21 @@
 PROG = flash_led_ptmr
 
 TARGET = thumbv7em-none-eabihf
-MODE = release
+MODE = debug
 
-all: $(PROG).hex
+PROG_ELF = target/$(TARGET)/$(MODE)/$(PROG)
 
-$(PROG): src/main.rs
-	cargo build --$(MODE)
+all: $(PROG_ELF)
 
-$(PROG).bin: $(PROG)
-	cargo objcopy --bin $(PROG) --$(MODE) -- --output-target=binary $@
+$(PROG_ELF): src/main.rs
+	cargo build
 
-$(PROG).hex: $(PROG).bin
-	# cargo/llvm-binutils can not output Intel Hex files yet...
-	# So we have to fall back to a GCC binutils here.
-	arm-none-eabi-objcopy -I binary -O ihex $^ $@
+flash: $(PROG_ELF)
+	openocd -f openocd.cfg -c "program $^ verify reset exit"
 
-flash: $(PROG).hex
-	teensy_loader_cli -w $^
-
-BOARD_TAG = TEENSY36
-REMOTE_HOST = rock64@rck
-REMOTE_UPLOAD_CMD = teensy_loader_cli -v -s -w --mcu=$(BOARD_TAG)
-
-remote_flash: $(PROG).hex
-	ssh $(REMOTE_HOST) 'TMP=$$(mktemp); cat > $${TMP}; $(REMOTE_UPLOAD_CMD) $${TMP}; rm $${TMP}' < $^
+debug: $(PROG_ELF)
+	openocd -f openocd.cfg &
+	arm-none-eabi-gdb $^ -ex "target remote localhost:3333"
+	killall openocd
 
 .PHONY: flash all
